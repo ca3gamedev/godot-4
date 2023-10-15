@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://5okwtqmaqb77"]
+
+[ext_resource type="PackedScene" uid="uid://c8htcw1gwyg7e" path="res://3D/Weapons/onagre/onager.glb" id="1_3stjs"]
+[ext_resource type="Script" path="res://Code/Tools/Onagre/onagre.gd" id="1_js0s8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbn24"]
+size = Vector3(5.73188, 1.87969, 3.82899)
+
+[node name="Onagre" type="CharacterBody3D"]
+script = ExtResource("1_js0s8")
+
+[node name="onager" parent="." instance=ExtResource("1_3stjs")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162442, 0.371296, 0)
+shape = SubResource("BoxShape3D_hbn24")
+
+[node name="Spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04414, 2.4362, 0)

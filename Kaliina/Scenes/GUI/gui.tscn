@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dae0ywd8rmydy"]
+
+[ext_resource type="Texture2D" uid="uid://e3kcwwtfg15" path="res://2D/GUI/pacifica portrait.png" id="1_x1loe"]
+
+[node name="GUI" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -7.0
+offset_top = 570.0
+offset_right = 346.0
+offset_bottom = 672.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+
+[node name="PacificaPortrait" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(74, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("1_x1loe")
+metadata/_edit_lock_ = true

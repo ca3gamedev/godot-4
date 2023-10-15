@@ -1,0 +1,127 @@
+[gd_scene load_steps=17 format=3 uid="uid://dktftdxrkwac3"]
+
+[ext_resource type="PackedScene" uid="uid://bnyu1u6ixfnbr" path="res://Scenes/Pacifica/pacifica K.tscn" id="1_60a5x"]
+[ext_resource type="Texture2D" uid="uid://bipu3lenpyn0f" path="res://HDRI/meadow_1k.hdr" id="1_q8xlx"]
+[ext_resource type="Texture2D" uid="uid://bh4sj4k0e8rrq" path="res://3D/PBR/grass/stylized-grass1_albedo_export.png" id="2_56kdu"]
+[ext_resource type="PackedScene" uid="uid://5okwtqmaqb77" path="res://Scenes/Tools/Onagre/onagre.tscn" id="3_f1nxe"]
+[ext_resource type="PackedScene" uid="uid://bmck6pptaoki6" path="res://Scenes/Enemies/Test Box/test.tscn" id="3_pr6ml"]
+[ext_resource type="PackedScene" uid="uid://gb5t282xmlim" path="res://Scenes/Houses/House 01/house.tscn" id="3_refso"]
+[ext_resource type="Script" path="res://Code/Camera/Follow.gd" id="3_vgmee"]
+[ext_resource type="Texture2D" uid="uid://d36acf23hrqed" path="res://2D/textures/dust_particles_on_lens_by_kerast_d7mj0cr-fullview.png" id="4_rxt1t"]
+[ext_resource type="PackedScene" uid="uid://dae0ywd8rmydy" path="res://Scenes/GUI/gui.tscn" id="6_r4hn5"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4x1x1"]
+panorama = ExtResource("1_q8xlx")
+
+[sub_resource type="Sky" id="Sky_rs04e"]
+sky_material = SubResource("PanoramaSkyMaterial_4x1x1")
+
+[sub_resource type="Environment" id="Environment_vhqlw"]
+background_mode = 2
+background_energy_multiplier = 0.5
+sky = SubResource("Sky_rs04e")
+ambient_light_source = 3
+tonemap_mode = 3
+tonemap_exposure = 1.1
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+adjustment_enabled = true
+adjustment_saturation = 1.2
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_op3l0"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 20.0
+dof_blur_far_transition = 20.0
+dof_blur_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66j16"]
+albedo_texture = ExtResource("2_56kdu")
+uv1_scale = Vector3(15, 15, 15)
+texture_filter = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_uvxrs"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dv1d2"]
+data = PackedVector3Array(0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0)
+
+[node name="Test" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vhqlw")
+camera_attributes = SubResource("CameraAttributesPractical_op3l0")
+
+[node name="Pacifica" parent="." instance=ExtResource("1_60a5x")]
+transform = Transform3D(1, 0, 0, 0, 0.892287, 0.451469, 0, -0.451469, 0.892287, 0, -0.0901924, 0)
+
+[node name="OnagreManager" type="Node3D" parent="."]
+
+[node name="Onagre" parent="OnagreManager" instance=ExtResource("3_f1nxe")]
+transform = Transform3D(-0.682891, 0, 0.73052, 0, 1, 0, -0.73052, 0, -0.682891, 11.8052, 0, 2.34705)
+
+[node name="Onagre2" parent="OnagreManager" instance=ExtResource("3_f1nxe")]
+transform = Transform3D(0.784354, 0, 0.620313, 0, 1, 0, -0.620313, 0, 0.784354, -14.0406, 0, 2.34705)
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="TestBox" parent="Enemies" instance=ExtResource("3_pr6ml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799137, -5.85348)
+
+[node name="TestBox2" parent="Enemies" instance=ExtResource("3_pr6ml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.29906, 0.799137, -5.85348)
+
+[node name="TestBox3" parent="Enemies" instance=ExtResource("3_pr6ml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24127, 0.799137, -5.85348)
+
+[node name="Camera" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="Camera"]
+transform = Transform3D(0.999945, 0.00800885, -0.00680453, 0, 0.647483, 0.76208, 0.0105092, -0.762038, 0.647447, 0.0943028, 13.3763, 7.64556)
+
+[node name="Follow" type="Node3D" parent="." node_paths=PackedStringArray("Player")]
+script = ExtResource("3_vgmee")
+Player = NodePath("../Pacifica")
+distance = 5.0
+distance_camera = 10.0
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Main" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.411085, -0.789466, 0.455798, 5.60503e-08, 0.5, 0.866026, -0.911597, -0.35601, 0.205542, 0, 20.9358, 0)
+light_color = Color(0.8, 0.792157, 0.521569, 1)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="blue" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.334394, 0.329373, -0.883003, 0.930967, 0.0302654, 0.363848, 0.146566, -0.943715, -0.296515, -4.78315, 19.8814, -4.73769)
+light_color = Color(0.321569, 0.239216, 0.972549, 1)
+light_energy = 0.7
+
+[node name="Houses" type="Node3D" parent="."]
+
+[node name="House" parent="Houses" instance=ExtResource("3_refso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.021)
+
+[node name="House2" parent="Houses" instance=ExtResource("3_refso")]
+transform = Transform3D(-0.492287, 0, -0.870433, 0, 1, 0, 0.870433, 0, -0.492287, -12.0633, 0, -24.8534)
+
+[node name="ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, -8.74228e-06, 200, 0, -200, -8.74228e-06, 0, -0.243673, 0)
+material_override = SubResource("StandardMaterial3D_66j16")
+mesh = SubResource("QuadMesh_uvxrs")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_dv1d2")
+
+[node name="DustParticlesOnLensByKerastD7Mj0Cr-fullview" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(577, 342.25)
+scale = Vector2(1.17578, 1.0131)
+texture = ExtResource("4_rxt1t")
+metadata/_edit_lock_ = true
+
+[node name="GUI" parent="." instance=ExtResource("6_r4hn5")]
