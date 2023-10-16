@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://dktftdxrkwac3"]
+[gd_scene load_steps=18 format=3 uid="uid://dktftdxrkwac3"]
 
 [ext_resource type="PackedScene" uid="uid://bnyu1u6ixfnbr" path="res://Scenes/Pacifica/pacifica K.tscn" id="1_60a5x"]
 [ext_resource type="Texture2D" uid="uid://bipu3lenpyn0f" path="res://HDRI/meadow_1k.hdr" id="1_q8xlx"]
 [ext_resource type="Texture2D" uid="uid://bh4sj4k0e8rrq" path="res://3D/PBR/grass/stylized-grass1_albedo_export.png" id="2_56kdu"]
 [ext_resource type="PackedScene" uid="uid://5okwtqmaqb77" path="res://Scenes/Tools/Onagre/onagre.tscn" id="3_f1nxe"]
+[ext_resource type="Script" path="res://Code/Tools/Onagre/OnagerManager.gd" id="3_ko52m"]
 [ext_resource type="PackedScene" uid="uid://bmck6pptaoki6" path="res://Scenes/Enemies/Test Box/test.tscn" id="3_pr6ml"]
 [ext_resource type="PackedScene" uid="uid://gb5t282xmlim" path="res://Scenes/Houses/House 01/house.tscn" id="3_refso"]
 [ext_resource type="Script" path="res://Code/Camera/Follow.gd" id="3_vgmee"]
@@ -54,13 +55,16 @@ camera_attributes = SubResource("CameraAttributesPractical_op3l0")
 [node name="Pacifica" parent="." instance=ExtResource("1_60a5x")]
 transform = Transform3D(1, 0, 0, 0, 0.892287, 0.451469, 0, -0.451469, 0.892287, 0, -0.0901924, 0)
 
-[node name="OnagreManager" type="Node3D" parent="."]
+[node name="OnagerManager" type="Node3D" parent="."]
+script = ExtResource("3_ko52m")
 
-[node name="Onagre" parent="OnagreManager" instance=ExtResource("3_f1nxe")]
+[node name="Onagre" parent="OnagerManager" instance=ExtResource("3_f1nxe")]
 transform = Transform3D(-0.682891, 0, 0.73052, 0, 1, 0, -0.73052, 0, -0.682891, 11.8052, 0, 2.34705)
 
-[node name="Onagre2" parent="OnagreManager" instance=ExtResource("3_f1nxe")]
+[node name="Onagre2" parent="OnagerManager" instance=ExtResource("3_f1nxe")]
 transform = Transform3D(0.784354, 0, 0.620313, 0, 1, 0, -0.620313, 0, 0.784354, -14.0406, 0, 2.34705)
+
+[node name="BoulderManager" type="Node3D" parent="."]
 
 [node name="Enemies" type="Node3D" parent="."]
 

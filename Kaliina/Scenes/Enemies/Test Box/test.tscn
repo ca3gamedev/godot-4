@@ -3,12 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bjjo8qs1vlnll" path="res://3D/Enemies/Soldiers/soldier.glb" id="1_71yq3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n67ti"]
-size = Vector3(0.653579, 0.534919, 0.460512)
+size = Vector3(2, 2, 1.5)
 
 [node name="TestBox" type="RigidBody3D" groups=["Enemy"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.82585, 0, 0, 0, 3.84608, 0, 0, 0, 3.77553, 0, 0, 0)
 shape = SubResource("BoxShape3D_n67ti")
 
 [node name="soldier" parent="." instance=ExtResource("1_71yq3")]

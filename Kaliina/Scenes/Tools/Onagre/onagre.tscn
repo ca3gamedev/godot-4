@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://5okwtqmaqb77"]
+[gd_scene load_steps=5 format=3 uid="uid://5okwtqmaqb77"]
 
 [ext_resource type="PackedScene" uid="uid://c8htcw1gwyg7e" path="res://3D/Weapons/onagre/onager.glb" id="1_3stjs"]
 [ext_resource type="Script" path="res://Code/Tools/Onagre/onagre.gd" id="1_js0s8"]
+[ext_resource type="PackedScene" uid="uid://bewiuoqs3hpet" path="res://Scenes/Tools/Onagre/boulder.tscn" id="2_ej2gc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hbn24"]
 size = Vector3(5.73188, 1.87969, 3.82899)
 
 [node name="Onagre" type="CharacterBody3D"]
 script = ExtResource("1_js0s8")
+boulder = ExtResource("2_ej2gc")
 
 [node name="onager" parent="." instance=ExtResource("1_3stjs")]
 

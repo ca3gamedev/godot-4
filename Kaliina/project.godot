@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Test/test.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Variables="*res://Code/Variables/variables.tscn"
+
 [display]
 
 window/stretch/mode="viewport"
