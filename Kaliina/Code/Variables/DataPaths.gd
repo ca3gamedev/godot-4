@@ -1,6 +1,22 @@
 extends Node
 
-@onready var BoulderManager = get_tree().get_root().get_node("Test/BoulderManager")
-@onready var OnagerManager = get_tree().get_root().get_node("Test/OnagerManager")
+@onready var BoulderManager 
+@onready var OnagerManager 
 
-@onready var Pacifica = get_tree().get_root().get_node("Test/Pacifica")
+@onready var Pacifica 
+@onready var myGUI 
+@onready var EnemyBullets 
+@onready var HPCore 
+@onready var MyCamera
+
+func SetPaths(DataPaths):
+	
+	BoulderManager = DataPaths.BoulderManager
+	OnagerManager = DataPaths.OnagerManager
+
+	Pacifica = DataPaths.Pacifica
+	myGUI = DataPaths.MyGUI
+	EnemyBullets = DataPaths.EnemyBullets
+	HPCore = DataPaths.HPCore
+	MyCamera = DataPaths.MyCamera
+

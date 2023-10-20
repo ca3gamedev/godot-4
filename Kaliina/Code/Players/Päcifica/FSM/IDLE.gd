@@ -21,7 +21,7 @@ func Update():
 	%AnimsTree.set("parameters/MOVE/blend_position", angle)
 
 func Physics(delta):
-	pass
+	$"../../..".move_and_collide(Vector3.DOWN * delta)
 
 func Start():
 	pass

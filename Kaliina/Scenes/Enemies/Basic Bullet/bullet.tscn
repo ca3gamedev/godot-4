@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://7px6im643anb"]
+
+[ext_resource type="Script" path="res://Code/Enemies/Bullet/bullet.gd" id="1_bak6r"]
+[ext_resource type="Texture2D" uid="uid://be5vk28o5f4de" path="res://2D/GUI/hearth.png" id="1_br4uu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_leedf"]
+
+[node name="Bullet" type="CharacterBody3D"]
+collision_layer = 64
+collision_mask = 64
+script = ExtResource("1_bak6r")
+speed = 10.0
+damage = 5.0
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+billboard = 1
+texture = ExtResource("1_br4uu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_leedf")
+
+[node name="Dead" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Dead" to="." method="_on_dead_timeout"]

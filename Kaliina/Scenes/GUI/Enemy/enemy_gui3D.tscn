@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dukhojk4tsbif"]
+
+[ext_resource type="PackedScene" uid="uid://tblqc8vfapuj" path="res://Scenes/GUI/Enemy/enemy_gui.tscn" id="1_ifhmo"]
+[ext_resource type="Script" path="res://Code/Enemies/GUI/enemy_gui3D.gd" id="1_pwq2x"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yj0kf"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpkdh"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_yj0kf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_uwl7k"]
+size = Vector2(3, 1)
+
+[node name="EnemyGUI" type="Node3D"]
+script = ExtResource("1_pwq2x")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.843926, 0.53646, 0, -0.53646, 0.843926, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_xpkdh")
+mesh = SubResource("QuadMesh_uwl7k")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(220, 50)
+
+[node name="EnemyGUI" parent="SubViewport" instance=ExtResource("1_ifhmo")]

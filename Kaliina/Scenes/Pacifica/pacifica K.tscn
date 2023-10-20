@@ -2383,7 +2383,7 @@ states/Start/position = Vector2(150.667, 92)
 transitions = ["Start", "MOVE", SubResource("AnimationNodeStateMachineTransition_67pp1"), "MOVE", "MELEE", SubResource("AnimationNodeStateMachineTransition_5nfjj"), "MELEE", "MOVE", SubResource("AnimationNodeStateMachineTransition_12toh")]
 graph_offset = Vector2(-55, 33.8549)
 
-[node name="Pacifica" type="CharacterBody3D"]
+[node name="Pacifica" type="CharacterBody3D" groups=["Pacifica", "Player"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68258, -0.228908)
@@ -2550,7 +2550,8 @@ script = ExtResource("13_bwc2t")
 
 [node name="Hitbox" type="Node" parent="Code/FSM/Attacks"]
 script = ExtResource("15_ma2s1")
-kickforce = 5.0
+kickforce = 3.0
+kickY = 1.0
 
 [connection signal="body_entered" from="Parent/Yoffrotation/Melee" to="Code/FSM/Attacks/Hitbox" method="_on_melee_body_entered"]
 

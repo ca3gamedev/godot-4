@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://5okwtqmaqb77"]
+[gd_scene load_steps=7 format=3 uid="uid://5okwtqmaqb77"]
 
 [ext_resource type="PackedScene" uid="uid://c8htcw1gwyg7e" path="res://3D/Weapons/onagre/onager.glb" id="1_3stjs"]
 [ext_resource type="Script" path="res://Code/Tools/Onagre/onagre.gd" id="1_js0s8"]
 [ext_resource type="PackedScene" uid="uid://bewiuoqs3hpet" path="res://Scenes/Tools/Onagre/boulder.tscn" id="2_ej2gc"]
+[ext_resource type="Texture2D" uid="uid://bcrm44nyfvep3" path="res://2D/GUI/white rect.png" id="4_ncqbp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hbn24"]
 size = Vector3(5.73188, 1.87969, 3.82899)
 
-[node name="Onagre" type="CharacterBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_4se6e"]
+size = Vector3(0.314434, 0.320452, 0.536278)
+
+[node name="Onagre" type="StaticBody3D"]
 script = ExtResource("1_js0s8")
 boulder = ExtResource("2_ej2gc")
 
@@ -19,3 +23,16 @@ shape = SubResource("BoxShape3D_hbn24")
 
 [node name="Spawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04414, 2.4362, 0)
+
+[node name="AreaSprite" type="Sprite3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, -1.31134e-06, 10, 0, -30, -4.37114e-07, 0, -0.133601, 0)
+texture = ExtResource("4_ncqbp")
+
+[node name="ActivateArea" type="Area3D" parent="AreaSprite"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaSprite/ActivateArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, -3.26609e-09, 0.224158)
+shape = SubResource("BoxShape3D_4se6e")
+
+[connection signal="body_entered" from="AreaSprite/ActivateArea" to="." method="_on_activate_area_body_entered"]
+[connection signal="body_exited" from="AreaSprite/ActivateArea" to="." method="_on_activate_area_body_exited"]

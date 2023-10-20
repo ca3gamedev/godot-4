@@ -1,20 +1,70 @@
-[gd_scene load_steps=2 format=3 uid="uid://dae0ywd8rmydy"]
+[gd_scene load_steps=5 format=3 uid="uid://dae0ywd8rmydy"]
 
+[ext_resource type="Script" path="res://Code/GUI/gui.gd" id="1_c70uy"]
 [ext_resource type="Texture2D" uid="uid://e3kcwwtfg15" path="res://2D/GUI/pacifica portrait.png" id="1_x1loe"]
+[ext_resource type="Texture2D" uid="uid://be5vk28o5f4de" path="res://2D/GUI/hearth.png" id="2_ts5u7"]
+[ext_resource type="FontFile" uid="uid://cs44wsdjogu30" path="res://Fonts/Teko-VariableFont_wght.ttf" id="3_qvldh"]
 
 [node name="GUI" type="Node2D"]
+script = ExtResource("1_c70uy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = -7.0
-offset_top = 570.0
-offset_right = 346.0
-offset_bottom = 672.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -102.0
+offset_right = 353.0
+grow_vertical = 0
 color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+metadata/_edit_lock_ = true
 
 [node name="PacificaPortrait" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(74, 580)
 scale = Vector2(2, 2)
 texture = ExtResource("1_x1loe")
+metadata/_edit_lock_ = true
+
+[node name="Boulder01" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = -45.0
+offset_right = 322.0
+offset_bottom = -18.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+max_value = 4.0
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_bottom = 102.0
+grow_horizontal = 0
+color = Color(0.101961, 0.0352941, 0.235294, 1)
+metadata/_edit_lock_ = true
+
+[node name="Hearth" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1074, 48)
+scale = Vector2(1.6875, 1.8125)
+texture = ExtResource("2_ts5u7")
+
+[node name="HPLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.971354
+anchor_right = 1.0
+anchor_bottom = 0.0570988
+offset_left = -54.0
+offset_top = 21.0
+offset_right = -14.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_qvldh")
+theme_override_font_sizes/font_size = 40
+text = "99"
+horizontal_alignment = 2
 metadata/_edit_lock_ = true

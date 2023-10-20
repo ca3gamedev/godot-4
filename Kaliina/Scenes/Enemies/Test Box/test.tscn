@@ -1,14 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmck6pptaoki6"]
+[gd_scene load_steps=8 format=3 uid="uid://bmck6pptaoki6"]
 
 [ext_resource type="PackedScene" uid="uid://bjjo8qs1vlnll" path="res://3D/Enemies/Soldiers/soldier.glb" id="1_71yq3"]
+[ext_resource type="Script" path="res://Code/Enemies/Basic/EnemyRoot.gd" id="1_h4wu6"]
+[ext_resource type="Script" path="res://Code/Enemies/Basic/Root.gd" id="1_yluvx"]
+[ext_resource type="PackedScene" uid="uid://7px6im643anb" path="res://Scenes/Enemies/Basic Bullet/bullet.tscn" id="2_26i6f"]
+[ext_resource type="Script" path="res://Code/Enemies/Basic/FSM.gd" id="2_qh266"]
+[ext_resource type="PackedScene" uid="uid://dukhojk4tsbif" path="res://Scenes/GUI/Enemy/enemy_gui3D.tscn" id="5_g8dcw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n67ti"]
 size = Vector3(2, 2, 1.5)
 
-[node name="TestBox" type="RigidBody3D" groups=["Enemy"]]
+[node name="Enemy" type="Node3D"]
+script = ExtResource("1_h4wu6")
+HP = 100
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="EnemyM" type="RigidBody3D" parent="." groups=["Enemy"]]
+unique_name_in_owner = true
+script = ExtResource("1_yluvx")
+Bullet = ExtResource("2_26i6f")
+
+[node name="HIT" type="Timer" parent="EnemyM"]
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyM"]
 shape = SubResource("BoxShape3D_n67ti")
 
-[node name="soldier" parent="." instance=ExtResource("1_71yq3")]
+[node name="soldier" parent="EnemyM" instance=ExtResource("1_71yq3")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="FSM" type="Node" parent="EnemyM"]
+script = ExtResource("2_qh266")
+
+[node name="Timer" type="Timer" parent="EnemyM/FSM"]
+
+[node name="Bullet" type="Timer" parent="EnemyM"]
+autostart = true
+
+[node name="EnemyGUI" parent="." instance=ExtResource("5_g8dcw")]
+MyOffset = Vector3(0, 2, 0)
+
+[connection signal="timeout" from="EnemyM/HIT" to="EnemyM" method="_on_hit_timeout"]
+[connection signal="timeout" from="EnemyM/FSM/Timer" to="EnemyM/FSM" method="_on_timer_timeout"]
+[connection signal="timeout" from="EnemyM/Bullet" to="EnemyM" method="_on_bullet_timeout"]
