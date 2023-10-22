@@ -9,4 +9,4 @@ func _on_melee_body_entered(body):
 		body.HIT()
 		var angle = body.global_position - root.global_position
 		angle.y = kickY
-		body.apply_impulse(angle * kickforce)
+		#body.apply_impulse(angle * kickforce)

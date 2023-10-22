@@ -28,3 +28,4 @@ func _on_timer_timeout():
 	
 	if randf_range(0, 4) > 2.5:
 		vel = Vector3.ZERO
+	

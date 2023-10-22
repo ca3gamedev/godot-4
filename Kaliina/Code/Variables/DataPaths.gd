@@ -9,6 +9,8 @@ extends Node
 @onready var HPCore 
 @onready var MyCamera
 
+@onready var startfinished : bool
+
 func SetPaths(DataPaths):
 	
 	BoulderManager = DataPaths.BoulderManager
@@ -19,4 +21,6 @@ func SetPaths(DataPaths):
 	EnemyBullets = DataPaths.EnemyBullets
 	HPCore = DataPaths.HPCore
 	MyCamera = DataPaths.MyCamera
+	
+	startfinished = true
 

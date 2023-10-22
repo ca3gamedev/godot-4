@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var HP : int
+@export var Damage : int
 
 @onready var Lifebar = $EnemyGUI/SubViewport/EnemyGUI/HP
 

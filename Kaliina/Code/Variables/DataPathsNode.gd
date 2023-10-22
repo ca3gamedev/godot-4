@@ -11,6 +11,7 @@ extends Node
 
 
 func _ready():
+	Variables.get_node("DataPaths").startfinished = false
 	await get_tree().process_frame
 	Variables.get_node("Code/StartBattle").Start()
 	Variables.get_node("DataPaths").SetPaths(self)

@@ -7,7 +7,7 @@ albedo_color = Color(0.905882, 0.0627451, 0, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_efdar"]
 
-[node name="Life" type="CharacterBody3D"]
+[node name="Life" type="CharacterBody3D" groups=["HPCore"]]
 collision_layer = 64
 collision_mask = 64
 
