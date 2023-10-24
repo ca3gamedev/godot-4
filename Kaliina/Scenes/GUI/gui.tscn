@@ -11,12 +11,14 @@ script = ExtResource("1_c70uy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect3" type="ColorRect" parent="CanvasLayer"]
-offset_left = 352.0
-offset_top = 581.0
-offset_right = 746.0
-offset_bottom = 649.0
-color = Color(0.129412, 0.0941176, 0.290196, 1)
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -102.0
+offset_right = 1162.0
+grow_vertical = 0
+color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 
 [node name="Score" type="Label" parent="CanvasLayer"]
 offset_left = 428.0
@@ -32,21 +34,10 @@ position = Vector2(392, 615)
 scale = Vector2(2, 2)
 texture = ExtResource("2_idqqi")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -102.0
-offset_right = 353.0
-grow_vertical = 0
-color = Color(0.0862745, 0.0862745, 0.0862745, 1)
-metadata/_edit_lock_ = true
-
 [node name="PacificaPortrait" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(74, 580)
 scale = Vector2(2, 2)
 texture = ExtResource("1_x1loe")
-metadata/_edit_lock_ = true
 
 [node name="Boulder01" type="ProgressBar" parent="CanvasLayer"]
 anchors_preset = 2
@@ -60,18 +51,8 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 max_value = 4.0
 
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -119.0
-offset_bottom = 102.0
-grow_horizontal = 0
-color = Color(0.101961, 0.0352941, 0.235294, 1)
-metadata/_edit_lock_ = true
-
 [node name="Hearth" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1074, 48)
+position = Vector2(1080.5, 615)
 scale = Vector2(1.6875, 1.8125)
 texture = ExtResource("2_ts5u7")
 
@@ -80,13 +61,12 @@ anchors_preset = -1
 anchor_left = 0.971354
 anchor_right = 1.0
 anchor_bottom = 0.0570988
-offset_left = -54.0
-offset_top = 21.0
-offset_right = -14.0
-offset_bottom = 45.0
+offset_left = -47.5
+offset_top = 588.0
+offset_right = -7.5
+offset_bottom = 612.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("3_qvldh")
 theme_override_font_sizes/font_size = 40
 text = "99"
 horizontal_alignment = 2
-metadata/_edit_lock_ = true
