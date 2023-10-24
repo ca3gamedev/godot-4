@@ -17,7 +17,7 @@ size = Vector3(2, 2, 1.5)
 
 [node name="Enemy" type="Node3D"]
 script = ExtResource("1_h4wu6")
-HP = 100
+HP = 30
 Damage = 10
 
 [node name="ATTACKrANGE" type="Area3D" parent="."]
@@ -51,6 +51,9 @@ script = ExtResource("2_qh266")
 [node name="Bullet" type="Timer" parent="EnemyM"]
 unique_name_in_owner = true
 
+[node name="BulletTrees" type="Timer" parent="EnemyM"]
+unique_name_in_owner = true
+
 [node name="nav" type="NavigationAgent3D" parent="EnemyM"]
 unique_name_in_owner = true
 
@@ -65,4 +68,5 @@ MyOffset = Vector3(0, 2, 0)
 [connection signal="body_entered" from="ATTACKrANGE" to="ATTACKrANGE" method="_on_body_entered"]
 [connection signal="timeout" from="EnemyM/FSM/Timer" to="EnemyM/FSM" method="_on_timer_timeout"]
 [connection signal="timeout" from="EnemyM/Bullet" to="EnemyM" method="_on_bullet_timeout"]
+[connection signal="timeout" from="EnemyM/BulletTrees" to="EnemyM" method="_on_bullet_trees_timeout"]
 [connection signal="timeout" from="EnemyM/Sleepy" to="EnemyM" method="_on_sleepy_timeout"]

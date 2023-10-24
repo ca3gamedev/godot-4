@@ -2508,6 +2508,9 @@ walk_speed = 3.0
 dash_speed = 10.0
 dir = Vector2i(0, 1)
 Root = NodePath("../..")
+Damages = {
+"kick": 10
+}
 
 [node name="Start" type="Node" parent="Code"]
 script = ExtResource("2_imb5b")

@@ -6,7 +6,8 @@ extends Node3D
 @onready var Lifebar = $EnemyGUI/SubViewport/EnemyGUI/HP
 
 func _ready():
-	Lifebar.max_value - HP
+	await  get_tree().process_frame
+	Lifebar.max_value = HP
 	Lifebar.value = HP
 
 
@@ -14,3 +15,6 @@ func HIT(damage):
 	HP -= damage
 	Lifebar.value = HP
 	$EnemyM.HIT()
+	
+	if HP < 1:
+		self.queue_free()

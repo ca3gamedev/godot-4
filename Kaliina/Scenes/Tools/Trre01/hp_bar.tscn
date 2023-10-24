@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://yf2olno637sc"]
+
+[node name="HOBar" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 139.0
+offset_bottom = 41.0
+color = Color(0.498039, 0.815686, 0.462745, 1)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 18.0
+offset_top = 6.0
+offset_right = 132.0
+offset_bottom = 33.0

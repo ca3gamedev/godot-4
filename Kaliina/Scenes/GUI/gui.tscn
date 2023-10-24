@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dae0ywd8rmydy"]
+[gd_scene load_steps=6 format=3 uid="uid://dae0ywd8rmydy"]
 
 [ext_resource type="Script" path="res://Code/GUI/gui.gd" id="1_c70uy"]
 [ext_resource type="Texture2D" uid="uid://e3kcwwtfg15" path="res://2D/GUI/pacifica portrait.png" id="1_x1loe"]
+[ext_resource type="Texture2D" uid="uid://cpy7ukyunrxbb" path="res://2D/GUI/coin.png" id="2_idqqi"]
 [ext_resource type="Texture2D" uid="uid://be5vk28o5f4de" path="res://2D/GUI/hearth.png" id="2_ts5u7"]
 [ext_resource type="FontFile" uid="uid://cs44wsdjogu30" path="res://Fonts/Teko-VariableFont_wght.ttf" id="3_qvldh"]
 
@@ -9,6 +10,27 @@
 script = ExtResource("1_c70uy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer"]
+offset_left = 352.0
+offset_top = 581.0
+offset_right = 746.0
+offset_bottom = 649.0
+color = Color(0.129412, 0.0941176, 0.290196, 1)
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 428.0
+offset_top = 589.0
+offset_right = 729.0
+offset_bottom = 644.0
+theme_override_font_sizes/font_size = 20
+text = "000000000000000000000000000"
+vertical_alignment = 1
+
+[node name="Coin" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(392, 615)
+scale = Vector2(2, 2)
+texture = ExtResource("2_idqqi")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 2

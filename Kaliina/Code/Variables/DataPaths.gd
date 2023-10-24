@@ -8,6 +8,7 @@ extends Node
 @onready var EnemyBullets 
 @onready var HPCore 
 @onready var MyCamera
+@onready var TreeManager
 
 @onready var startfinished : bool
 
@@ -21,6 +22,7 @@ func SetPaths(DataPaths):
 	EnemyBullets = DataPaths.EnemyBullets
 	HPCore = DataPaths.HPCore
 	MyCamera = DataPaths.MyCamera
+	TreeManager = DataPaths.TreeManager
 	
 	startfinished = true
 

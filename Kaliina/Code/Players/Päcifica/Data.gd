@@ -5,3 +5,6 @@ extends Node
 @export var dir : Vector2i
 
 @export var Root : CharacterBody3D
+
+@export var Damages : Dictionary
+var currentdamage = 10

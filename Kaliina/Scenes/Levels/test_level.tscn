@@ -66,7 +66,7 @@ data = PackedVector3Array(150, -25, 0, -150, -25, 0, 150, 25, 0, -150, -25, 0, -
 environment = SubResource("Environment_uybxt")
 camera_attributes = SubResource("CameraAttributesPractical_hpvb1")
 
-[node name="DataPaths" parent="." node_paths=PackedStringArray("BoulderManager", "OnagerManager", "Pacifica", "MyGUI", "EnemyBullets", "HPCore", "MyCamera") instance=ExtResource("1_p1unx")]
+[node name="DataPaths" parent="." node_paths=PackedStringArray("BoulderManager", "OnagerManager", "Pacifica", "MyGUI", "EnemyBullets", "HPCore", "MyCamera", "TreeManager") instance=ExtResource("1_p1unx")]
 BoulderManager = NodePath("../BoulderManager")
 OnagerManager = NodePath("../Map/OnagerManager")
 Pacifica = NodePath("../Pacifica")
@@ -74,6 +74,7 @@ MyGUI = NodePath("../GUI")
 EnemyBullets = NodePath("../EnemyBullets")
 HPCore = NodePath("../Enemies/Life")
 MyCamera = NodePath("../Camera/Camera3D")
+TreeManager = NodePath("../Map/Tree")
 
 [node name="Rosa" parent="." node_paths=PackedStringArray("Pacifica") instance=ExtResource("3_jqrsy")]
 transform = Transform3D(0.792066, 0, 0.610435, 0, 1, 0, -0.610435, 0, 0.792066, -44.483, 0, -0.694375)

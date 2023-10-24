@@ -8,6 +8,7 @@ extends Node
 @export var EnemyBullets : Node3D
 @export var HPCore : CharacterBody3D
 @export var MyCamera : Camera3D
+@export var TreeManager : Node3D
 
 
 func _ready():

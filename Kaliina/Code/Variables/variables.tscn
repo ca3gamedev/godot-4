@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d21boa2obgf1c"]
+[gd_scene load_steps=7 format=3 uid="uid://d21boa2obgf1c"]
 
 [ext_resource type="Script" path="res://Code/Variables/DataPaths.gd" id="1_qaf3h"]
 [ext_resource type="Script" path="res://Code/Variables/CombatVars.gd" id="1_td1gf"]
 [ext_resource type="Script" path="res://Code/Variables/BoulderSpawn.gd" id="2_tlntn"]
 [ext_resource type="Script" path="res://Code/Variables/HPHit.gd" id="4_mowq4"]
 [ext_resource type="Script" path="res://Code/Variables/StartBattle.gd" id="5_qn6im"]
+[ext_resource type="Script" path="res://Code/Variables/Score.gd" id="6_fihrc"]
 
 [node name="Variables" type="Node"]
 
@@ -31,3 +32,6 @@ PostBattle = "res://Scenes/Scenes/game_over.tscn"
 
 [node name="StartBattle" type="Node" parent="Code"]
 script = ExtResource("5_qn6im")
+
+[node name="Score" type="Node" parent="."]
+script = ExtResource("6_fihrc")
