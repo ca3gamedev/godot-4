@@ -26,7 +26,7 @@ offset_top = 589.0
 offset_right = 729.0
 offset_bottom = 644.0
 theme_override_font_sizes/font_size = 20
-text = "000000000000000000000000000"
+text = "Score"
 vertical_alignment = 1
 
 [node name="Coin" type="Sprite2D" parent="CanvasLayer"]
