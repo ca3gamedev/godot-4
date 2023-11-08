@@ -1,72 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://dae0ywd8rmydy"]
-
-[ext_resource type="Script" path="res://Code/GUI/gui.gd" id="1_c70uy"]
-[ext_resource type="Texture2D" uid="uid://e3kcwwtfg15" path="res://2D/GUI/pacifica portrait.png" id="1_x1loe"]
-[ext_resource type="Texture2D" uid="uid://cpy7ukyunrxbb" path="res://2D/GUI/coin.png" id="2_idqqi"]
-[ext_resource type="Texture2D" uid="uid://be5vk28o5f4de" path="res://2D/GUI/hearth.png" id="2_ts5u7"]
-[ext_resource type="FontFile" uid="uid://cs44wsdjogu30" path="res://Fonts/Teko-VariableFont_wght.ttf" id="3_qvldh"]
+[gd_scene format=3 uid="uid://cc5vd572mg7dr"]
 
 [node name="GUI" type="Node2D"]
-script = ExtResource("1_c70uy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -102.0
-offset_right = 1162.0
-grow_vertical = 0
-color = Color(0.0862745, 0.0862745, 0.0862745, 1)
-
-[node name="Score" type="Label" parent="CanvasLayer"]
-offset_left = 428.0
-offset_top = 589.0
-offset_right = 729.0
-offset_bottom = 644.0
-theme_override_font_sizes/font_size = 20
-text = "Score"
-vertical_alignment = 1
-
-[node name="Coin" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(392, 615)
-scale = Vector2(2, 2)
-texture = ExtResource("2_idqqi")
-
-[node name="PacificaPortrait" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(74, 580)
-scale = Vector2(2, 2)
-texture = ExtResource("1_x1loe")
-
-[node name="Boulder01" type="ProgressBar" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 131.0
-offset_top = -45.0
-offset_right = 322.0
-offset_bottom = -18.0
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-max_value = 4.0
-
-[node name="Hearth" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1080.5, 615)
-scale = Vector2(1.6875, 1.8125)
-texture = ExtResource("2_ts5u7")
-
-[node name="HPLabel" type="Label" parent="CanvasLayer"]
+[node name="testinputbuffer" type="Label" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.971354
-anchor_right = 1.0
-anchor_bottom = 0.0570988
-offset_left = -47.5
-offset_top = 588.0
-offset_right = -7.5
-offset_bottom = 612.0
-grow_horizontal = 0
-theme_override_fonts/font = ExtResource("3_qvldh")
-theme_override_font_sizes/font_size = 40
-text = "99"
-horizontal_alignment = 2
+anchor_right = 0.017
+anchor_bottom = 0.035
+offset_left = 34.0
+offset_top = 32.0
+offset_right = 642.416
+offset_bottom = 118.32
+text = "999999999"
+
+[node name="arrowbuffer" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0

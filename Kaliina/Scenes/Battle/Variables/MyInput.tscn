@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2wogtljh1etl"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/KeyReader.gd" id="1_l0knc"]
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/InputBuffer.gd" id="2_dhowa"]
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/InputCheck.gd" id="3_v4vn0"]
+
+[node name="INPUT" type="Node"]
+
+[node name="KeyReader" type="Node" parent="."]
+script = ExtResource("1_l0knc")
+
+[node name="InputBuffer" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_dhowa")
+maxarrowtimer = 0.2
+
+[node name="InputCheck" type="Node" parent="."]
+script = ExtResource("3_v4vn0")

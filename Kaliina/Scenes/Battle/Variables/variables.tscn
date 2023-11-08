@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcvdmo5crn0lw"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/DataPaths.gd" id="1_do0jy"]
+
+[node name="Variables" type="Node"]
+
+[node name="DataPaths" type="Node" parent="."]
+script = ExtResource("1_do0jy")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwlxgw4ioacee"]
+
+[ext_resource type="PackedScene" uid="uid://b1mmrir7fh3s5" path="res://Scenes/Battle/Pacifica/pacifica.tscn" id="1_q54h1"]
+[ext_resource type="PackedScene" uid="uid://cc5vd572mg7dr" path="res://Scenes/GUI/gui.tscn" id="2_5ehvk"]
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/DataPathsNode.gd" id="3_h2spf"]
+
+[node name="Battle" type="Node2D"]
+
+[node name="Pacifica" parent="." instance=ExtResource("1_q54h1")]
+position = Vector2(379, 401)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(386, 218)
+zoom = Vector2(1.5, 1.5)
+
+[node name="GUI" parent="." instance=ExtResource("2_5ehvk")]
+
+[node name="DataPaths" type="Node" parent="." node_paths=PackedStringArray("Player", "Camera", "GUI")]
+script = ExtResource("3_h2spf")
+Player = NodePath("../Pacifica")
+Camera = NodePath("../Camera2D")
+GUI = NodePath("../GUI")
