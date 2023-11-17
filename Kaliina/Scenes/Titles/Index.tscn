@@ -1,0 +1,141 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlcnm0gngn0ug"]
+
+[ext_resource type="PackedScene" uid="uid://1hg1n0i1tg0y" path="res://Scenes/Titles/continue button.tscn" id="1_107bq"]
+[ext_resource type="Script" path="res://Scenes/Titles/LevelSelector.gd" id="1_sbo5g"]
+
+[node name="Index" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 8.0
+offset_top = 360.0
+offset_right = 320.0
+offset_bottom = 593.0
+color = Color(0.0627451, 0.0627451, 0.0627451, 0.513726)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 216.0
+offset_top = 256.0
+offset_right = 469.0
+offset_bottom = 457.0
+color = Color(0.0627451, 0.0627451, 0.454902, 0.513726)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 393.0
+offset_top = 145.0
+offset_right = 646.0
+offset_bottom = 346.0
+color = Color(0.486275, 0.607843, 0.996078, 0.631373)
+
+[node name="LevelSelector" type="Node2D" parent="."]
+script = ExtResource("1_sbo5g")
+
+[node name="Continue1" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 92.0
+offset_top = 142.0
+offset_right = 300.0
+offset_bottom = 188.0
+text = "SCENE 01"
+Next = "res://Scenes/VN/scenes/scene 00.tscn"
+
+[node name="Continue2" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 92.0
+offset_top = 201.0
+offset_right = 300.0
+offset_bottom = 247.0
+text = "SCENE 02"
+
+[node name="Continue3" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 90.0
+offset_top = 263.0
+offset_right = 298.0
+offset_bottom = 309.0
+text = "SCENE 03"
+Next = "res://Scenes/VN/scenes/scene 02.tscn"
+
+[node name="Continue4" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 318.0
+offset_top = 142.0
+offset_right = 526.0
+offset_bottom = 188.0
+text = "SCENE 04"
+Next = "res://Scenes/VN/scenes/scene 03.tscn"
+
+[node name="Continue5" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 318.0
+offset_top = 202.0
+offset_right = 526.0
+offset_bottom = 248.0
+text = "SCENE 05"
+Next = "res://Scenes/VN/scenes/scene 04.tscn"
+
+[node name="Continue6" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 318.0
+offset_top = 262.0
+offset_right = 526.0
+offset_bottom = 308.0
+text = "SCENE 06"
+Next = "res://Scenes/VN/scenes/scene 05.tscn"
+
+[node name="Continue7" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 97.0
+offset_top = 388.0
+offset_right = 305.0
+offset_bottom = 434.0
+text = "SCENE 07"
+Next = "res://Scenes/VN/scenes/scene 06.tscn"
+
+[node name="Continue8" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 99.0
+offset_top = 441.0
+offset_right = 307.0
+offset_bottom = 487.0
+text = "SCENE 08"
+Next = "res://Scenes/VN/scenes/scene 07.tscn"
+
+[node name="Continue9" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 101.0
+offset_top = 494.0
+offset_right = 309.0
+offset_bottom = 540.0
+text = "SCENE 09"
+Next = "res://Scenes/VN/scenes/scene 08.tscn"
+
+[node name="Continue10" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 328.0
+offset_top = 386.0
+offset_right = 536.0
+offset_bottom = 432.0
+text = "SCENE 10"
+Next = "res://Scenes/VN/scenes/scene 09.tscn"
+
+[node name="Continue11" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 328.0
+offset_top = 438.0
+offset_right = 536.0
+offset_bottom = 484.0
+text = "SCENE 11"
+Next = "res://Scenes/VN/scenes/scene 10.tscn"
+
+[node name="Continue12" parent="LevelSelector" instance=ExtResource("1_107bq")]
+offset_left = 330.0
+offset_top = 490.0
+offset_right = 538.0
+offset_bottom = 536.0
+text = "SCENE 12"
+Next = "res://Scenes/VN/scenes/scene 11.tscn"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 15.0
+offset_right = 227.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.180392, 0.117647, 0.466667, 1)
+theme_override_font_sizes/font_size = 48
+text = "INDEX"
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = -17.0
+offset_top = 81.0
+offset_right = 689.0
+offset_bottom = 95.0
+color = Color(0.113725, 0.105882, 0.407843, 1)

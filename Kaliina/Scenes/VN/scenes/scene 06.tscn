@@ -1,0 +1,126 @@
+[gd_scene load_steps=22 format=3 uid="uid://by2xt6eulg4xc"]
+
+[ext_resource type="Script" path="res://Scenes/VN/scenes/GUI/Pages.gd" id="1_x4mjm"]
+[ext_resource type="Texture2D" uid="uid://cqspnbla21h16" path="res://2D VN/Scene VN/Titles/escena 7.png" id="2_vlw5i"]
+[ext_resource type="Texture2D" uid="uid://b7n2xf3borffw" path="res://2D VN/Scene VN/scene 07/00.png" id="3_upsms"]
+[ext_resource type="Texture2D" uid="uid://ca3g6ni61hato" path="res://2D VN/Scene VN/scene 07/01.png" id="4_0r3vx"]
+[ext_resource type="Texture2D" uid="uid://4yhfsw1wh4b2" path="res://2D VN/Scene VN/scene 07/02.png" id="5_jox2j"]
+[ext_resource type="Texture2D" uid="uid://dcs6wwhev85da" path="res://2D VN/Scene VN/scene 07/03.png" id="6_bmves"]
+[ext_resource type="Texture2D" uid="uid://0ofjv4mhp4nv" path="res://2D VN/Scene VN/scene 07/04.png" id="7_a275r"]
+[ext_resource type="Texture2D" uid="uid://4xmwyst03kik" path="res://2D VN/Scene VN/scene 07/05.png" id="8_oqrji"]
+[ext_resource type="Texture2D" uid="uid://dtg78yja36fav" path="res://2D VN/Scene VN/scene 07/06.png" id="9_dk03w"]
+[ext_resource type="Texture2D" uid="uid://cu5iji5yvryxw" path="res://2D VN/Scene VN/scene 07/07.png" id="10_n36y5"]
+[ext_resource type="Texture2D" uid="uid://bokoqtmw2wftu" path="res://2D VN/Scene VN/scene 07/08.png" id="11_6aojk"]
+[ext_resource type="Texture2D" uid="uid://b1s1he3u1xlov" path="res://2D VN/Scene VN/scene 07/09.png" id="12_hjjh4"]
+[ext_resource type="Texture2D" uid="uid://5cmsrtr41y31" path="res://2D VN/Scene VN/scene 07/10.png" id="13_jf2wg"]
+[ext_resource type="Texture2D" uid="uid://t64t5y03nhjx" path="res://2D VN/Scene VN/scene 07/11.png" id="14_hcixu"]
+[ext_resource type="Texture2D" uid="uid://dmm1eaou4yi7d" path="res://2D VN/Scene VN/scene 07/12.png" id="15_41gtx"]
+[ext_resource type="Texture2D" uid="uid://dbqgburf76kn4" path="res://2D VN/Scene VN/scene 07/13.png" id="16_j3lvr"]
+[ext_resource type="Texture2D" uid="uid://dssl7xvure8rw" path="res://2D VN/Scene VN/Titles/Continue.png" id="17_cxmqs"]
+[ext_resource type="Texture2D" uid="uid://cavug12vl65bt" path="res://2D VN/Scene VN/scene 07/14.png" id="17_n2tj1"]
+[ext_resource type="Texture2D" uid="uid://ya78vgt5lhrt" path="res://2D VN/Scene VN/scene 07/15.png" id="18_a32s4"]
+[ext_resource type="Texture2D" uid="uid://byq3vliis6qvv" path="res://2D VN/Scene VN/scene 07/16.png" id="19_bpo84"]
+[ext_resource type="PackedScene" uid="uid://1hg1n0i1tg0y" path="res://Scenes/Titles/continue button.tscn" id="21_l3psc"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="Pages" type="Node2D" parent="."]
+script = ExtResource("1_x4mjm")
+max_id = 18
+intro_name = "Escena5"
+ending_name = "Continue"
+
+[node name="Escena5" type="Sprite2D" parent="Pages"]
+position = Vector2(398, 285)
+texture = ExtResource("2_vlw5i")
+
+[node name="00" type="Sprite2D" parent="Pages"]
+position = Vector2(1412, 313)
+texture = ExtResource("3_upsms")
+
+[node name="01" type="Sprite2D" parent="Pages"]
+position = Vector2(1452, 1067)
+texture = ExtResource("4_0r3vx")
+
+[node name="02" type="Sprite2D" parent="Pages"]
+position = Vector2(1398, 1807)
+texture = ExtResource("5_jox2j")
+
+[node name="03" type="Sprite2D" parent="Pages"]
+position = Vector2(2340, 1793)
+texture = ExtResource("6_bmves")
+
+[node name="04" type="Sprite2D" parent="Pages"]
+position = Vector2(2354, 2547)
+texture = ExtResource("7_a275r")
+
+[node name="05" type="Sprite2D" parent="Pages"]
+position = Vector2(2354, 3408)
+texture = ExtResource("8_oqrji")
+
+[node name="06" type="Sprite2D" parent="Pages"]
+position = Vector2(2367, 4269)
+texture = ExtResource("9_dk03w")
+
+[node name="07" type="Sprite2D" parent="Pages"]
+position = Vector2(3013, 4282)
+texture = ExtResource("10_n36y5")
+
+[node name="08" type="Sprite2D" parent="Pages"]
+position = Vector2(3026, 5157)
+texture = ExtResource("11_6aojk")
+
+[node name="09" type="Sprite2D" parent="Pages"]
+position = Vector2(3040, 6005)
+texture = ExtResource("12_hjjh4")
+
+[node name="10" type="Sprite2D" parent="Pages"]
+position = Vector2(3807, 6018)
+texture = ExtResource("13_jf2wg")
+
+[node name="11" type="Sprite2D" parent="Pages"]
+position = Vector2(3847, 6677)
+texture = ExtResource("14_hcixu")
+
+[node name="12" type="Sprite2D" parent="Pages"]
+position = Vector2(3861, 7390)
+texture = ExtResource("15_41gtx")
+
+[node name="13" type="Sprite2D" parent="Pages"]
+position = Vector2(4775, 7390)
+texture = ExtResource("16_j3lvr")
+
+[node name="14" type="Sprite2D" parent="Pages"]
+position = Vector2(4789, 8077)
+texture = ExtResource("17_n2tj1")
+
+[node name="15" type="Sprite2D" parent="Pages"]
+position = Vector2(4816, 8857)
+texture = ExtResource("18_a32s4")
+
+[node name="16" type="Sprite2D" parent="Pages"]
+position = Vector2(5756, 8842)
+texture = ExtResource("19_bpo84")
+
+[node name="17" type="Sprite2D" parent="Pages"]
+position = Vector2(5756, 8842)
+texture = ExtResource("19_bpo84")
+
+[node name="Continue" type="Sprite2D" parent="Pages"]
+position = Vector2(6980, 8893)
+texture = ExtResource("17_cxmqs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(404, 296)
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Continue" parent="." instance=ExtResource("21_l3psc")]
+offset_left = 7017.0
+offset_top = 8960.0
+offset_right = 7225.0
+offset_bottom = 9006.0
+Next = "res://Scenes/Battle Levels/battle 05.tscn"
+id = 7
+end_battle = true

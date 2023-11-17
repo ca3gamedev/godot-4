@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Kaliina"
-run/main_scene="res://Scenes/Battle/battle.tscn"
+run/main_scene="res://Scenes/Titles/Title.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,35 @@ config/icon="res://icon.svg"
 
 MyInput="*res://Scenes/Battle/Variables/MyInput.tscn"
 Variables="*res://Scenes/Battle/Variables/variables.tscn"
+DataPaths="*res://Scenes/Battle/Variables/data_paths.tscn"
+CurrentLevel="*res://Scenes/Battle/Variables/current_level.tscn"
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+
+[importer_defaults]
+
+texture={
+"compress/channel_pack": 0,
+"compress/hdr_compression": 1,
+"compress/high_quality": false,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d/compress_to": 0,
+"mipmaps/generate": false,
+"mipmaps/limit": -1,
+"process/fix_alpha_border": true,
+"process/hdr_as_srgb": false,
+"process/hdr_clamp_exposure": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"process/size_limit": 0,
+"roughness/mode": 0,
+"roughness/src_normal": ""
+}
 
 [input]
 
@@ -48,6 +77,17 @@ KICK={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="Pacifica Attack"
+2d_physics/layer_3="Enemy Rigidbody"
+2d_physics/layer_4="Ground"
+2d_physics/layer_5="Rosa Attack"
+2d_physics/layer_6="Pacifica Collision"
+2d_physics/layer_7="Rosa Collision"
+2d_physics/layer_8="Enemy being HIT"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=3
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)

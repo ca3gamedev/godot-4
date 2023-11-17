@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://bnydt6e0gal0c"]
+
+[ext_resource type="PackedScene" uid="uid://cm5fs3b1uq5vc" path="res://Scenes/Battle/datapaths battle.tscn" id="1_a071x"]
+[ext_resource type="Texture2D" uid="uid://5saanuyisnaq" path="res://2D/background.png" id="2_v5a04"]
+[ext_resource type="Texture2D" uid="uid://cmjti2bj2qy7j" path="res://2D VN/Scene VN/Titles/escena 5.png" id="3_a3vbo"]
+[ext_resource type="Texture2D" uid="uid://ev46m8k0eosu" path="res://2D VN/Scene VN/scene 06/09.png" id="4_2wagb"]
+[ext_resource type="Script" path="res://Scenes/Battle/Camera/CameraFollow.gd" id="4_5cnap"]
+[ext_resource type="PackedScene" uid="uid://mbva1tcr0pds" path="res://Scenes/Battle/Rosa/rosa.tscn" id="5_cl6ew"]
+[ext_resource type="PackedScene" uid="uid://b1mmrir7fh3s5" path="res://Scenes/Battle/Pacifica/pacifica.tscn" id="6_l4e44"]
+[ext_resource type="PackedScene" uid="uid://c5v6585ajo17k" path="res://Scenes/Battle/GUI/gui.tscn" id="7_ttmuk"]
+[ext_resource type="Script" path="res://Scenes/Battle Levels/Continue.gd" id="8_icneh"]
+[ext_resource type="PackedScene" uid="uid://cuxmwlodnox35" path="res://Scenes/Battle/Enemies/Soldier/enemy_rigidbody_01.tscn" id="9_tpggl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2qvw"]
+size = Vector2(3654, 161)
+
+[node name="Battle" type="Node2D"]
+
+[node name="DataPaths" parent="." node_paths=PackedStringArray("Pacifica", "MyGUI") instance=ExtResource("1_a071x")]
+Pacifica = NodePath("../Pacifica")
+MyGUI = NodePath("../GUI")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1210, 294)
+texture = ExtResource("2_v5a04")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(401, 291)
+texture = ExtResource("3_a3vbo")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(2001, 288)
+texture = ExtResource("2_v5a04")
+
+[node name="09" type="Sprite2D" parent="."]
+position = Vector2(1760, 312)
+texture = ExtResource("4_2wagb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(415, 310)
+metadata/_edit_lock_ = true
+
+[node name="CameraFollow" type="Node2D" parent="."]
+position = Vector2(415, 310)
+script = ExtResource("4_5cnap")
+distance = 300.0
+speedcamera = 0.2
+followspeed = 500.0
+
+[node name="Rosa" parent="." instance=ExtResource("5_cl6ew")]
+position = Vector2(1251, 499)
+
+[node name="Pacifica" parent="." instance=ExtResource("6_l4e44")]
+unique_name_in_owner = true
+position = Vector2(577, 541)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="." groups=["GROUND"]]
+position = Vector2(427, 617)
+collision_layer = 9
+collision_mask = 133
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1173, 26)
+shape = SubResource("RectangleShape2D_c2qvw")
+
+[node name="GUI" parent="." instance=ExtResource("7_ttmuk")]
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 2413.0
+offset_top = 495.0
+offset_right = 2621.0
+offset_bottom = 541.0
+text = "CONTINUE"
+script = ExtResource("8_icneh")
+Next = "res://Scenes/Titles/Index.tscn"
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy Rigidbody 01" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(1095, -823)
+
+[node name="Enemy Rigidbody 02" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(1400, -1140)
+
+[node name="Enemy Rigidbody 03" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(1151, -2113)
+
+[node name="Enemy Rigidbody 04" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(1739, -2588)
+
+[node name="Enemy Rigidbody 05" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(1796, 127)
+
+[node name="Enemy Rigidbody 06" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(1672, -620)
+
+[node name="Enemy Rigidbody 07" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(348, -2973)
+
+[node name="Enemy Rigidbody 08" parent="Enemies" instance=ExtResource("9_tpggl")]
+position = Vector2(699, -65)
+
+[connection signal="pressed" from="Continue" to="Continue" method="_on_pressed"]

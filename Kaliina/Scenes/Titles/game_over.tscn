@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b18dag2777n02"]
+
+[ext_resource type="Texture2D" uid="uid://dsfvo6aysnllr" path="res://2D VN/Scene VN/Titles/el fin.png" id="1_6pj8d"]
+[ext_resource type="PackedScene" uid="uid://1hg1n0i1tg0y" path="res://Scenes/Titles/continue button.tscn" id="2_pjt4o"]
+
+[node name="GAME OVER" type="Node2D"]
+
+[node name="ElFin" type="Sprite2D" parent="."]
+position = Vector2(410, 279)
+texture = ExtResource("1_6pj8d")
+
+[node name="Continue" parent="." instance=ExtResource("2_pjt4o")]
+offset_left = 296.0
+offset_top = 514.0
+offset_right = 504.0
+offset_bottom = 560.0
+Next = "res://Scenes/Titles/Title.tscn"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnbn2lalwwj2k"]
+
+[ext_resource type="PackedScene" path="res://3D/Enemies/Soldier/soldier.glb" id="1_hnjmg"]
+
+[node name="Soldier" type="SubViewportContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="."]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="SubViewport"]
+
+[node name="soldier" parent="SubViewport/Node3D" instance=ExtResource("1_hnjmg")]
+transform = Transform3D(0.433013, 0, 0.25, 0, 0.5, 0, -0.25, 0, 0.433013, -1, 0, -1)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/Node3D"]
+transform = Transform3D(0.999981, 0.00193963, -0.00583147, 0, 0.948888, 0.315614, 0.00614559, -0.315608, 0.94887, -0.625, 1.392, 4.038)
+current = true

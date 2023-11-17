@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4mkbcb4jvijw"]
+
+[ext_resource type="Texture2D" uid="uid://5saanuyisnaq" path="res://2D/background.png" id="1_0yger"]
+[ext_resource type="PackedScene" uid="uid://1hg1n0i1tg0y" path="res://Scenes/Titles/continue button.tscn" id="2_jt081"]
+
+[node name="Title" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(399, 295)
+texture = ExtResource("1_0yger")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 814.0
+offset_bottom = 614.0
+color = Color(1, 1, 1, 0.654902)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 564.0
+offset_top = 384.0
+offset_right = 758.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0.2, 0.298039, 0.882353, 1)
+theme_override_font_sizes/font_size = 50
+text = "KALIINA"
+
+[node name="Continue" parent="." instance=ExtResource("2_jt081")]
+offset_left = 634.0
+offset_top = 499.0
+offset_right = 778.0
+offset_bottom = 545.0
+Next = "res://Scenes/Titles/Index.tscn"
+reset_id = true

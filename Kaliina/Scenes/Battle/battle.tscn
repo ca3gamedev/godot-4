@@ -1,22 +1,75 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwlxgw4ioacee"]
+[gd_scene load_steps=11 format=3 uid="uid://dwlxgw4ioacee"]
 
-[ext_resource type="PackedScene" uid="uid://b1mmrir7fh3s5" path="res://Scenes/Battle/Pacifica/pacifica.tscn" id="1_q54h1"]
-[ext_resource type="PackedScene" uid="uid://cc5vd572mg7dr" path="res://Scenes/GUI/gui.tscn" id="2_5ehvk"]
-[ext_resource type="Script" path="res://Scenes/Battle/Variables/DataPathsNode.gd" id="3_h2spf"]
+[ext_resource type="Texture2D" uid="uid://5saanuyisnaq" path="res://2D/background.png" id="1_ci7w1"]
+[ext_resource type="PackedScene" uid="uid://cm5fs3b1uq5vc" path="res://Scenes/Battle/datapaths battle.tscn" id="1_eoc3f"]
+[ext_resource type="PackedScene" uid="uid://b1mmrir7fh3s5" path="res://Scenes/Battle/Pacifica/pacifica.tscn" id="2_13n3g"]
+[ext_resource type="Script" path="res://Scenes/Battle/Camera/CameraFollow.gd" id="2_mn65a"]
+[ext_resource type="PackedScene" uid="uid://mbva1tcr0pds" path="res://Scenes/Battle/Rosa/rosa.tscn" id="4_oen7p"]
+[ext_resource type="PackedScene" uid="uid://duavlpjyy8uei" path="res://Scenes/Battle/Enemies/Soldier/soldier R.tscn" id="4_qyemw"]
+[ext_resource type="PackedScene" uid="uid://c5v6585ajo17k" path="res://Scenes/Battle/GUI/gui.tscn" id="5_6lv5v"]
+[ext_resource type="Script" path="res://Scenes/Battle/Managers/EnemyManager.gd" id="7_wri5s"]
+[ext_resource type="PackedScene" uid="uid://bfdhgydj4vclu" path="res://Scenes/Battle/Enemies/Soldier/soldier_c.tscn" id="8_u06wt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2qvw"]
+size = Vector2(3654, 161)
 
 [node name="Battle" type="Node2D"]
 
-[node name="Pacifica" parent="." instance=ExtResource("1_q54h1")]
-position = Vector2(379, 401)
+[node name="DataPaths" parent="." node_paths=PackedStringArray("Pacifica", "MyGUI", "EnemyManager") instance=ExtResource("1_eoc3f")]
+Pacifica = NodePath("../Pacifica")
+MyGUI = NodePath("../GUI")
+EnemyManager = NodePath("../Enemies")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(405, 294)
+texture = ExtResource("1_ci7w1")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(-404, 291)
+texture = ExtResource("1_ci7w1")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(1196, 288)
+texture = ExtResource("1_ci7w1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(386, 218)
-zoom = Vector2(1.5, 1.5)
+unique_name_in_owner = true
+position = Vector2(415, 310)
+metadata/_edit_lock_ = true
 
-[node name="GUI" parent="." instance=ExtResource("2_5ehvk")]
+[node name="CameraFollow" type="Node2D" parent="."]
+position = Vector2(415, 310)
+script = ExtResource("2_mn65a")
+distance = 300.0
+speedcamera = 0.2
+followspeed = 500.0
 
-[node name="DataPaths" type="Node" parent="." node_paths=PackedStringArray("Player", "Camera", "GUI")]
-script = ExtResource("3_h2spf")
-Player = NodePath("../Pacifica")
-Camera = NodePath("../Camera2D")
-GUI = NodePath("../GUI")
+[node name="Rosa" parent="." instance=ExtResource("4_oen7p")]
+position = Vector2(352, 491)
+
+[node name="Pacifica" parent="." instance=ExtResource("2_13n3g")]
+unique_name_in_owner = true
+position = Vector2(577, 541)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="." groups=["GROUND"]]
+position = Vector2(427, 617)
+collision_layer = 8
+collision_mask = 132
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(26, 25.5)
+shape = SubResource("RectangleShape2D_c2qvw")
+
+[node name="GUI" parent="." instance=ExtResource("5_6lv5v")]
+
+[node name="Enemies" type="Node2D" parent="."]
+script = ExtResource("7_wri5s")
+Enemy01 = ExtResource("8_u06wt")
+Enemy01_R = ExtResource("4_qyemw")
+
+[node name="HidePosition" type="Node2D" parent="Enemies"]
+position = Vector2(680, 1712)
+
+[node name="Spawn01" type="Node2D" parent="Enemies"]
+position = Vector2(860, 475)

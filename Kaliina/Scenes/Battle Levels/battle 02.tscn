@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://bewwq6npxhi8m"]
+
+[ext_resource type="PackedScene" uid="uid://cm5fs3b1uq5vc" path="res://Scenes/Battle/datapaths battle.tscn" id="1_xs48h"]
+[ext_resource type="Texture2D" uid="uid://5saanuyisnaq" path="res://2D/background.png" id="2_t50ct"]
+[ext_resource type="Texture2D" uid="uid://c2mbdc32em2v4" path="res://2D VN/Scene VN/Titles/escena 3.png" id="3_8ty5o"]
+[ext_resource type="Script" path="res://Scenes/Battle/Camera/CameraFollow.gd" id="4_xboy3"]
+[ext_resource type="PackedScene" uid="uid://mbva1tcr0pds" path="res://Scenes/Battle/Rosa/rosa.tscn" id="5_03oo6"]
+[ext_resource type="PackedScene" uid="uid://b1mmrir7fh3s5" path="res://Scenes/Battle/Pacifica/pacifica.tscn" id="6_p7iag"]
+[ext_resource type="PackedScene" uid="uid://c5v6585ajo17k" path="res://Scenes/Battle/GUI/gui.tscn" id="7_6x3y2"]
+[ext_resource type="Script" path="res://Scenes/Battle Levels/Continue.gd" id="8_5y80l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2qvw"]
+size = Vector2(3654, 161)
+
+[node name="Battle" type="Node2D"]
+
+[node name="DataPaths" parent="." node_paths=PackedStringArray("Pacifica", "MyGUI") instance=ExtResource("1_xs48h")]
+Pacifica = NodePath("../Pacifica")
+MyGUI = NodePath("../GUI")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1210, 294)
+texture = ExtResource("2_t50ct")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(401, 291)
+texture = ExtResource("3_8ty5o")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(2001, 288)
+texture = ExtResource("2_t50ct")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(415, 310)
+metadata/_edit_lock_ = true
+
+[node name="CameraFollow" type="Node2D" parent="."]
+position = Vector2(415, 310)
+script = ExtResource("4_xboy3")
+distance = 300.0
+speedcamera = 0.2
+followspeed = 500.0
+
+[node name="Rosa" parent="." instance=ExtResource("5_03oo6")]
+position = Vector2(1251, 499)
+
+[node name="Pacifica" parent="." instance=ExtResource("6_p7iag")]
+unique_name_in_owner = true
+position = Vector2(577, 541)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="." groups=["GROUND"]]
+position = Vector2(427, 617)
+collision_layer = 8
+collision_mask = 132
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1173, 26)
+shape = SubResource("RectangleShape2D_c2qvw")
+
+[node name="GUI" parent="." instance=ExtResource("7_6x3y2")]
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 2413.0
+offset_top = 495.0
+offset_right = 2621.0
+offset_bottom = 541.0
+text = "CONTINUE"
+script = ExtResource("8_5y80l")
+Next = "res://Scenes/Titles/Index.tscn"
+
+[connection signal="pressed" from="Continue" to="Continue" method="_on_pressed"]

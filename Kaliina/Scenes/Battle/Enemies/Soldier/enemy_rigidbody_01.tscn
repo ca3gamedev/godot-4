@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuxmwlodnox35"]
+
+[ext_resource type="Texture2D" uid="uid://dcswgt6pxsn7r" path="res://2D/Enemies/Soldier/Idle/soldier_export_dir8.png" id="1_nnqnu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5043x"]
+radius = 32.0
+
+[node name="Enemy Rigidbody 01" type="RigidBody2D"]
+gravity_scale = 0.05
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5043x")
+
+[node name="SoldierExportDir8" type="Sprite2D" parent="."]
+position = Vector2(5, 3)
+texture = ExtResource("1_nnqnu")

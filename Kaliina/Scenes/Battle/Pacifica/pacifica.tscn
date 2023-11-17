@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://b1mmrir7fh3s5"]
+[gd_scene load_steps=77 format=3 uid="uid://b1mmrir7fh3s5"]
 
 [ext_resource type="Texture2D" uid="uid://cf1g7bqwjoiwn" path="res://2D/Pacifica/DASH/pacifica_export_DASH_01.png" id="1_i6ij6"]
 [ext_resource type="Texture2D" uid="uid://0jtm3yclvygg" path="res://2D/Pacifica/PHOTO POSE -loop/pacifica_export_PHOTO POSE -loop_01.png" id="1_kumq5"]
@@ -53,6 +53,9 @@
 [ext_resource type="Script" path="res://Scenes/Battle/Pacifica/IDLE.gd" id="49_5xabm"]
 [ext_resource type="Script" path="res://Scenes/Battle/Pacifica/FSM/DASH.gd" id="51_br6wv"]
 [ext_resource type="Script" path="res://Scenes/Battle/Pacifica/FSM/KICK.gd" id="53_me75h"]
+[ext_resource type="Script" path="res://Scenes/Battle/Pacifica/FSM/Collision.gd" id="54_1xpl5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sk775"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q5wk0"]
 animations = [{
@@ -219,8 +222,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au3kc"]
-radius = 15.0
-height = 52.0
+radius = 24.0
+height = 104.0
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r8uh3"]
 animation = &"KICK"
@@ -291,7 +294,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Parent/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("Pic/Parent/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -303,7 +306,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Parent/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("Pic/Parent/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -320,7 +323,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Parent/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("Pic/Parent/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -332,7 +335,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Parent/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("Pic/Parent/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -344,11 +347,11 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_gedii"]
 resource_name = "KICK"
-length = 0.90001
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Parent/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("Pic/Parent/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -360,14 +363,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Parent/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("Pic/Parent/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+"values": [0, 2, 4, 6, 8, 4]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -376,12 +379,36 @@ tracks/2/path = NodePath("FSM/KICK")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.8),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"EndAttack"
 }]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pic/Parent/Hit:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(43.5, -26.5), Vector2(-0.5, -9)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pic/Parent/Hit/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_0ewss"]
@@ -389,7 +416,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Parent/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("Pic/Parent/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -401,7 +428,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Parent/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("Pic/Parent/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -409,6 +436,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pic/Parent/Hit:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pic/Parent/Hit/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_w7xb1"]
@@ -418,7 +469,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Parent/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("Pic/Parent/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -430,7 +481,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Parent/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("Pic/Parent/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -450,17 +501,32 @@ _data = {
 }
 
 [node name="Pacifica" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 8
 
-[node name="Parent" type="Node2D" parent="."]
+[node name="Pic" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Parent" type="Node2D" parent="Pic"]
 unique_name_in_owner = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Parent"]
+[node name="Hit" type="Area2D" parent="Pic/Parent"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pic/Parent/Hit"]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_sk775")
+disabled = true
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pic/Parent"]
 position = Vector2(3, -59)
 sprite_frames = SubResource("SpriteFrames_q5wk0")
 animation = &"IDLE"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -22)
+position = Vector2(5, -35)
 shape = SubResource("CapsuleShape2D_au3kc")
 
 [node name="Anims" type="AnimationTree" parent="."]
@@ -481,8 +547,8 @@ libraries = {
 [node name="Data" type="Node" parent="Values"]
 unique_name_in_owner = true
 script = ExtResource("48_n7alv")
-walkspeed = 100.0
-dashspeed = 200.0
+walkspeed = 200.0
+dashspeed = 400.0
 x_dir = 1
 
 [node name="FSM" type="Node" parent="."]
@@ -500,3 +566,8 @@ script = ExtResource("51_br6wv")
 
 [node name="KICK" type="Node" parent="FSM"]
 script = ExtResource("53_me75h")
+
+[node name="Collision" type="Node" parent="FSM"]
+script = ExtResource("54_1xpl5")
+
+[connection signal="body_entered" from="Pic/Parent/Hit" to="FSM/Collision" method="_on_hit_body_entered"]

@@ -1,0 +1,113 @@
+[gd_scene load_steps=14 format=3 uid="uid://ogyrpds8pleg"]
+
+[ext_resource type="PackedScene" uid="uid://cm5fs3b1uq5vc" path="res://Scenes/Battle/datapaths battle.tscn" id="1_rm0f7"]
+[ext_resource type="Texture2D" uid="uid://cd2lb52ba2pw3" path="res://2D VN/Scene VN/Chapter 01/07.png" id="2_hx07b"]
+[ext_resource type="Texture2D" uid="uid://5saanuyisnaq" path="res://2D/background.png" id="2_s1ysd"]
+[ext_resource type="Texture2D" uid="uid://creunk2o1hvbi" path="res://2D VN/Scene VN/Titles/escena 9.png" id="3_sueos"]
+[ext_resource type="Texture2D" uid="uid://g1xl4d6khiob" path="res://2D/Weapons/Onagre/onager_export.png" id="5_mvyso"]
+[ext_resource type="Script" path="res://Scenes/Battle/Camera/CameraFollow.gd" id="6_vai4m"]
+[ext_resource type="PackedScene" uid="uid://mbva1tcr0pds" path="res://Scenes/Battle/Rosa/rosa.tscn" id="7_fikkk"]
+[ext_resource type="PackedScene" uid="uid://b1mmrir7fh3s5" path="res://Scenes/Battle/Pacifica/pacifica.tscn" id="8_ra58v"]
+[ext_resource type="PackedScene" uid="uid://c5v6585ajo17k" path="res://Scenes/Battle/GUI/gui.tscn" id="9_lq2l4"]
+[ext_resource type="Script" path="res://Scenes/Battle Levels/Continue.gd" id="10_7n65q"]
+[ext_resource type="Texture2D" uid="uid://nfgkj48g3ot4" path="res://2D VN/Scene VN/scene 08/09.png" id="11_go7yt"]
+[ext_resource type="PackedScene" uid="uid://cuxmwlodnox35" path="res://Scenes/Battle/Enemies/Soldier/enemy_rigidbody_01.tscn" id="11_o5lqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2qvw"]
+size = Vector2(3654, 161)
+
+[node name="Battle" type="Node2D"]
+
+[node name="DataPaths" parent="." node_paths=PackedStringArray("Pacifica", "MyGUI") instance=ExtResource("1_rm0f7")]
+Pacifica = NodePath("../Pacifica")
+MyGUI = NodePath("../GUI")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1210, 294)
+texture = ExtResource("2_hx07b")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(2011, 289)
+texture = ExtResource("2_s1ysd")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(401, 291)
+texture = ExtResource("3_sueos")
+
+[node name="OnagerExport" type="Sprite2D" parent="."]
+position = Vector2(1450, 359)
+scale = Vector2(5.3374, 5.46116)
+texture = ExtResource("5_mvyso")
+
+[node name="09" type="Sprite2D" parent="."]
+position = Vector2(1923, 300)
+scale = Vector2(0.613281, 0.638021)
+texture = ExtResource("11_go7yt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(415, 310)
+metadata/_edit_lock_ = true
+
+[node name="CameraFollow" type="Node2D" parent="."]
+position = Vector2(415, 310)
+script = ExtResource("6_vai4m")
+distance = 300.0
+speedcamera = 0.2
+followspeed = 500.0
+
+[node name="Rosa" parent="." instance=ExtResource("7_fikkk")]
+position = Vector2(1251, 499)
+
+[node name="Pacifica" parent="." instance=ExtResource("8_ra58v")]
+unique_name_in_owner = true
+position = Vector2(577, 541)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="." groups=["GROUND"]]
+position = Vector2(427, 617)
+collision_layer = 9
+collision_mask = 133
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1173, 26)
+shape = SubResource("RectangleShape2D_c2qvw")
+
+[node name="GUI" parent="." instance=ExtResource("9_lq2l4")]
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 2413.0
+offset_top = 495.0
+offset_right = 2621.0
+offset_bottom = 541.0
+text = "CONTINUE"
+script = ExtResource("10_7n65q")
+Next = "res://Scenes/Titles/Index.tscn"
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy Rigidbody 01" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(1095, -823)
+
+[node name="Enemy Rigidbody 02" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(1400, -1140)
+
+[node name="Enemy Rigidbody 03" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(1151, -2113)
+
+[node name="Enemy Rigidbody 04" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(1739, -2588)
+
+[node name="Enemy Rigidbody 05" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(1796, 127)
+
+[node name="Enemy Rigidbody 06" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(1672, -620)
+
+[node name="Enemy Rigidbody 07" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(348, -2973)
+
+[node name="Enemy Rigidbody 08" parent="Enemies" instance=ExtResource("11_o5lqb")]
+position = Vector2(699, -65)
+
+[connection signal="pressed" from="Continue" to="Continue" method="_on_pressed"]

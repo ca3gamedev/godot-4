@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgi63arxnxh4g"]
+
+[ext_resource type="PackedScene" uid="uid://1u6meyg1phvr" path="res://3D/House/house.gltf" id="1_qeo5s"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tsycp"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_topdo"]
+sky_material = SubResource("ProceduralSkyMaterial_tsycp")
+
+[sub_resource type="Environment" id="Environment_hd4it"]
+background_mode = 2
+sky = SubResource("Sky_topdo")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oii3x"]
+albedo_color = Color(0.25098, 0.392157, 0.211765, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ewsp6"]
+
+[node name="Background" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hd4it")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.500003, -0.749999, 0.43301, -1.49013e-08, 0.499998, 0.866027, -0.866023, -0.433016, 0.250001, 0, 62, 0)
+shadow_enabled = true
+
+[node name="house" parent="." instance=ExtResource("1_qeo5s")]
+transform = Transform3D(0.881402, 0, 0.472366, 0, 1, 0, -0.472366, 0, 0.881402, -7.87344, -0.0653791, 0.680713)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, -8.74228e-06, 200, 0, -200, -8.74228e-06, 0, 0, -73.3165)
+material_override = SubResource("StandardMaterial3D_oii3x")
+mesh = SubResource("QuadMesh_ewsp6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.824, 27.214)
+current = true
+fov = 70.0
+
+[node name="Enemies" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.7818)

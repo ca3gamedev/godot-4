@@ -10,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	
-	Variables.get_node("DataPaths").GUI.get_node("CanvasLayer/testinputbuffer").text = str(arrowbuffer)
+	
 	
 	if arrowbuffertimer <= maxarrowtimer:
 		arrowbuffertimer += delta

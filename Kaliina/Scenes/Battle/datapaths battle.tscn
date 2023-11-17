@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm5fs3b1uq5vc"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/Datapaths/datapaths battle.gd" id="1_ggbmo"]
+
+[node name="DataPaths" type="Node"]
+script = ExtResource("1_ggbmo")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://1hg1n0i1tg0y"]
+
+[ext_resource type="Script" path="res://Scenes/Battle Levels/Continue.gd" id="1_s2wvs"]
+
+[node name="Continue" type="Button"]
+offset_left = 2413.0
+offset_top = 495.0
+offset_right = 2621.0
+offset_bottom = 541.0
+text = "CONTINUE"
+script = ExtResource("1_s2wvs")
+Next = "res://Scenes/VN/scenes/scene 01.tscn"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

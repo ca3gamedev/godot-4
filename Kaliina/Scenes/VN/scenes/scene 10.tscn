@@ -1,0 +1,101 @@
+[gd_scene load_steps=17 format=3 uid="uid://bkmdmh6ifu64c"]
+
+[ext_resource type="Script" path="res://Scenes/VN/scenes/GUI/Pages.gd" id="1_ikt1f"]
+[ext_resource type="Texture2D" uid="uid://3cw6nario6s3" path="res://2D VN/Scene VN/Titles/escena 11.png" id="2_sxho7"]
+[ext_resource type="Texture2D" uid="uid://b13gwg4t6enpp" path="res://2D VN/Scene VN/scene 11/00.png" id="3_udb55"]
+[ext_resource type="Texture2D" uid="uid://b832xv70tvecn" path="res://2D VN/Scene VN/scene 11/01.png" id="4_xdh0j"]
+[ext_resource type="Texture2D" uid="uid://dq0op26gp32ca" path="res://2D VN/Scene VN/scene 11/02.png" id="5_pkgfg"]
+[ext_resource type="Texture2D" uid="uid://bhmpdddvpmtwa" path="res://2D VN/Scene VN/scene 11/03.png" id="6_b5o4m"]
+[ext_resource type="Texture2D" uid="uid://bd05woipliwdh" path="res://2D VN/Scene VN/scene 11/04.png" id="7_6juax"]
+[ext_resource type="Texture2D" uid="uid://b5ehgehnygbgq" path="res://2D VN/Scene VN/scene 11/05.png" id="8_rd0w4"]
+[ext_resource type="Texture2D" uid="uid://bxkw5tdtaaqkv" path="res://2D VN/Scene VN/scene 11/06.png" id="9_74pxn"]
+[ext_resource type="Texture2D" uid="uid://c6xj6dmyvb3xi" path="res://2D VN/Scene VN/scene 11/07.png" id="10_vltdc"]
+[ext_resource type="Texture2D" uid="uid://qil4b024i6v8" path="res://2D VN/Scene VN/scene 11/08.png" id="11_fbw7r"]
+[ext_resource type="Texture2D" uid="uid://bla5tbpiq4qwa" path="res://2D VN/Scene VN/scene 11/09.png" id="12_dy4vi"]
+[ext_resource type="Texture2D" uid="uid://dbaybuh4l528a" path="res://2D VN/Scene VN/scene 11/10.png" id="13_lr71n"]
+[ext_resource type="Texture2D" uid="uid://b7eyrvspsftl5" path="res://2D VN/Scene VN/scene 11/11.png" id="14_k1mss"]
+[ext_resource type="PackedScene" uid="uid://1hg1n0i1tg0y" path="res://Scenes/Titles/continue button.tscn" id="16_eymer"]
+[ext_resource type="Texture2D" uid="uid://dssl7xvure8rw" path="res://2D VN/Scene VN/Titles/Continue.png" id="18_8hxgf"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="Pages" type="Node2D" parent="."]
+script = ExtResource("1_ikt1f")
+max_id = 13
+intro_name = "Escena5"
+ending_name = "Continue"
+
+[node name="Escena5" type="Sprite2D" parent="Pages"]
+position = Vector2(398, 285)
+texture = ExtResource("2_sxho7")
+
+[node name="00" type="Sprite2D" parent="Pages"]
+position = Vector2(441, 920)
+texture = ExtResource("3_udb55")
+
+[node name="01" type="Sprite2D" parent="Pages"]
+position = Vector2(1231, 920)
+texture = ExtResource("4_xdh0j")
+
+[node name="02" type="Sprite2D" parent="Pages"]
+position = Vector2(1249, 1459)
+texture = ExtResource("5_pkgfg")
+
+[node name="03" type="Sprite2D" parent="Pages"]
+position = Vector2(2106, 1460)
+texture = ExtResource("6_b5o4m")
+
+[node name="04" type="Sprite2D" parent="Pages"]
+position = Vector2(2092, 2281)
+texture = ExtResource("7_6juax")
+
+[node name="05" type="Sprite2D" parent="Pages"]
+position = Vector2(2832, 2241)
+texture = ExtResource("8_rd0w4")
+
+[node name="06" type="Sprite2D" parent="Pages"]
+position = Vector2(2846, 2900)
+texture = ExtResource("9_74pxn")
+
+[node name="07" type="Sprite2D" parent="Pages"]
+position = Vector2(3774, 2900)
+texture = ExtResource("10_vltdc")
+
+[node name="08" type="Sprite2D" parent="Pages"]
+position = Vector2(3774, 3492)
+texture = ExtResource("11_fbw7r")
+
+[node name="09" type="Sprite2D" parent="Pages"]
+position = Vector2(4689, 3465)
+texture = ExtResource("12_dy4vi")
+
+[node name="10" type="Sprite2D" parent="Pages"]
+position = Vector2(4716, 4071)
+texture = ExtResource("13_lr71n")
+
+[node name="11" type="Sprite2D" parent="Pages"]
+position = Vector2(5631, 4057)
+texture = ExtResource("14_k1mss")
+
+[node name="12" type="Sprite2D" parent="Pages"]
+position = Vector2(5631, 4057)
+texture = ExtResource("14_k1mss")
+
+[node name="Continue" type="Sprite2D" parent="Pages"]
+position = Vector2(6472, 4690)
+texture = ExtResource("18_8hxgf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(404, 296)
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Continue" parent="." instance=ExtResource("16_eymer")]
+offset_left = 6475.0
+offset_top = 4743.0
+offset_right = 6683.0
+offset_bottom = 4789.0
+Next = "res://Scenes/Battle Levels/battle 08.tscn"
+id = 11
+end_battle = true

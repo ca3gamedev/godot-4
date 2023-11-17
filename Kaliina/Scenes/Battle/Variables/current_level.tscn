@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwx61hb1a8ob0"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/current_level.gd" id="1_iqxlq"]
+
+[node name="CurrentLevel" type="Node"]
+script = ExtResource("1_iqxlq")
