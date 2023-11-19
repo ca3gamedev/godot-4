@@ -1,0 +1,195 @@
+[gd_scene load_steps=19 format=3 uid="uid://sqrkjxddvh5s"]
+
+[ext_resource type="Script" path="res://Scenes/VN/scenes/GUI/Pages.gd" id="1_7pran"]
+[ext_resource type="Texture2D" uid="uid://bgsd5fq0y663s" path="res://2D VN/Scene VN/Titles/escena 1.png" id="1_j2swk"]
+[ext_resource type="Texture2D" uid="uid://chjg6tdql8ru0" path="res://2D VN/Scene VN/Chapter 01/00.png" id="2_fs8as"]
+[ext_resource type="Texture2D" uid="uid://dn3jswba2n7wm" path="res://2D VN/Scene VN/Chapter 01/01.png" id="3_aynu2"]
+[ext_resource type="Texture2D" uid="uid://bjsxqy05y4gss" path="res://2D VN/Scene VN/Chapter 01/02.png" id="4_e3c3b"]
+[ext_resource type="Texture2D" uid="uid://bv0atwf7f8jdm" path="res://2D VN/Scene VN/Chapter 01/03.png" id="5_6lgrn"]
+[ext_resource type="Texture2D" uid="uid://cuaaqv4evh1ko" path="res://2D VN/Scene VN/Chapter 01/04.png" id="6_3yjgy"]
+[ext_resource type="Texture2D" uid="uid://cxmq137k5goho" path="res://2D VN/Scene VN/Chapter 01/05.png" id="7_kku06"]
+[ext_resource type="Texture2D" uid="uid://stq1yxlsi6m6" path="res://2D VN/Scene VN/Chapter 01/06.png" id="8_v2abc"]
+[ext_resource type="Texture2D" uid="uid://cd2lb52ba2pw3" path="res://2D VN/Scene VN/Chapter 01/07.png" id="9_ut8oj"]
+[ext_resource type="Texture2D" uid="uid://cohweerocr3xi" path="res://2D VN/Scene VN/Chapter 01/08.png" id="10_2c4f2"]
+[ext_resource type="Texture2D" uid="uid://riix2452cby6" path="res://2D VN/Scene VN/Chapter 01/09.png" id="11_23bfv"]
+[ext_resource type="Texture2D" uid="uid://dpk7yxu1k5ihv" path="res://2D VN/Scene VN/Chapter 01/10.png" id="12_mk8i4"]
+[ext_resource type="Texture2D" uid="uid://cwse1baku7v5t" path="res://2D VN/Scene VN/Chapter 01/11.png" id="13_4bou2"]
+[ext_resource type="Texture2D" uid="uid://bbmxlubpuduwi" path="res://2D VN/Scene VN/Chapter 01/12.png" id="14_rpvb0"]
+[ext_resource type="Texture2D" uid="uid://uh27k0kc5f27" path="res://2D VN/Scene VN/Chapter 01/13.png" id="15_idje6"]
+[ext_resource type="Texture2D" uid="uid://dssl7xvure8rw" path="res://2D VN/Scene VN/Titles/Continue.png" id="17_w7wds"]
+[ext_resource type="PackedScene" uid="uid://1hg1n0i1tg0y" path="res://Scenes/Titles/continue button.tscn" id="18_w1ewa"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="Pages" type="Node2D" parent="."]
+script = ExtResource("1_7pran")
+max_id = 22
+intro_name = "Escena1"
+ending_name = "Continue"
+
+[node name="0" type="Sprite2D" parent="Pages"]
+position = Vector2(402, 305)
+texture = ExtResource("1_j2swk")
+
+[node name="1" type="Sprite2D" parent="Pages"]
+position = Vector2(402, 879)
+texture = ExtResource("2_fs8as")
+
+[node name="2" type="Sprite2D" parent="Pages"]
+position = Vector2(1190, 872)
+texture = ExtResource("3_aynu2")
+
+[node name="3" type="Sprite2D" parent="Pages"]
+position = Vector2(1976, 870)
+texture = ExtResource("4_e3c3b")
+
+[node name="4" type="Node2D" parent="Pages"]
+position = Vector2(362, 1505)
+
+[node name="Text" type="RichTextLabel" parent="Pages/4"]
+offset_left = -267.0
+offset_top = -196.0
+offset_right = 344.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "En esta inconmensurable soledad del ente mas abstracto, he de posarme ante su infinitesimal e infinita sabiduria, de los entes mas profundos, mas bellos, mas queridos y deseados que infinitamente han penetrado tales albores de la oscuridad mas maldita.
+
+He de deciros, sin embargo, que os concomitancia de lo concomitante, he de proferios, de mala gana, deciros y deciro mucho, que desearia que estuviesen aqui a mi lado para ver el eclipse mas profundo de mi alma, que he producir una erupcion de emociones y sentimientos arraigados desde eones para producir esta destruccion masiva de todo el concepto de mi ser, para finalmente descarriarse en algo q"
+
+[node name="5" type="Node2D" parent="Pages"]
+position = Vector2(1162, 1505)
+
+[node name="Text" type="RichTextLabel" parent="Pages/5"]
+offset_left = -267.0
+offset_top = -196.0
+offset_right = 344.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "En esta inconmensurable soledad del ente mas abstracto, he de posarme ante su infinitesimal e infinita sabiduria, de los entes mas profundos, mas bellos, mas queridos y deseados que infinitamente han penetrado tales albores de la oscuridad mas maldita.
+
+He de deciros, sin embargo, que os concomitancia de lo concomitante, he de proferios, de mala gana, deciros y deciro mucho, que desearia que estuviesen aqui a mi lado para ver el eclipse mas profundo de mi alma, que he producir una erupcion de emociones y sentimientos arraigados desde eones para producir esta destruccion masiva de todo el concepto de mi ser, para finalmente descarriarse en algo q"
+
+[node name="6" type="Node2D" parent="Pages"]
+position = Vector2(1962, 1505)
+
+[node name="Text" type="RichTextLabel" parent="Pages/6"]
+offset_left = -267.0
+offset_top = -196.0
+offset_right = 344.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "En esta inconmensurable soledad del ente mas abstracto, he de posarme ante su infinitesimal e infinita sabiduria, de los entes mas profundos, mas bellos, mas queridos y deseados que infinitamente han penetrado tales albores de la oscuridad mas maldita.
+
+He de deciros, sin embargo, que os concomitancia de lo concomitante, he de proferios, de mala gana, deciros y deciro mucho, que desearia que estuviesen aqui a mi lado para ver el eclipse mas profundo de mi alma, que he producir una erupcion de emociones y sentimientos arraigados desde eones para producir esta destruccion masiva de todo el concepto de mi ser, para finalmente descarriarse en algo q"
+
+[node name="7" type="Sprite2D" parent="Pages"]
+position = Vector2(398, 2451)
+texture = ExtResource("5_6lgrn")
+
+[node name="8" type="Sprite2D" parent="Pages"]
+position = Vector2(1183, 2450)
+texture = ExtResource("6_3yjgy")
+
+[node name="9" type="Sprite2D" parent="Pages"]
+position = Vector2(404, 3529)
+texture = ExtResource("7_kku06")
+
+[node name="10" type="Node2D" parent="Pages"]
+position = Vector2(369, 4073)
+
+[node name="Text" type="RichTextLabel" parent="Pages/10"]
+offset_left = -267.0
+offset_top = -196.0
+offset_right = 344.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "En esta inconmensurable soledad del ente mas abstracto, he de posarme ante su infinitesimal e infinita sabiduria, de los entes mas profundos, mas bellos, mas queridos y deseados que infinitamente han penetrado tales albores de la oscuridad mas maldita.
+
+He de deciros, sin embargo, que os concomitancia de lo concomitante, he de proferios, de mala gana, deciros y deciro mucho, que desearia que estuviesen aqui a mi lado para ver el eclipse mas profundo de mi alma, que he producir una erupcion de emociones y sentimientos arraigados desde eones para producir esta destruccion masiva de todo el concepto de mi ser, para finalmente descarriarse en algo q"
+
+[node name="11" type="Sprite2D" parent="Pages"]
+position = Vector2(1214, 4072)
+texture = ExtResource("8_v2abc")
+
+[node name="12" type="Sprite2D" parent="Pages"]
+position = Vector2(412, 4597)
+texture = ExtResource("9_ut8oj")
+
+[node name="13" type="Sprite2D" parent="Pages"]
+position = Vector2(1208, 5112)
+texture = ExtResource("10_2c4f2")
+
+[node name="14" type="Node2D" parent="Pages"]
+position = Vector2(1185, 5689)
+
+[node name="Text" type="RichTextLabel" parent="Pages/14"]
+offset_left = -267.0
+offset_top = -196.0
+offset_right = 344.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "En esta inconmensurable soledad del ente mas abstracto, he de posarme ante su infinitesimal e infinita sabiduria, de los entes mas profundos, mas bellos, mas queridos y deseados que infinitamente han penetrado tales albores de la oscuridad mas maldita.
+
+He de deciros, sin embargo, que os concomitancia de lo concomitante, he de proferios, de mala gana, deciros y deciro mucho, que desearia que estuviesen aqui a mi lado para ver el eclipse mas profundo de mi alma, que he producir una erupcion de emociones y sentimientos arraigados desde eones para producir esta destruccion masiva de todo el concepto de mi ser, para finalmente descarriarse en algo q"
+
+[node name="15" type="Sprite2D" parent="Pages"]
+position = Vector2(424, 5664)
+texture = ExtResource("11_23bfv")
+
+[node name="16" type="Sprite2D" parent="Pages"]
+position = Vector2(414, 6206)
+texture = ExtResource("12_mk8i4")
+
+[node name="17" type="Sprite2D" parent="Pages"]
+position = Vector2(1207, 6204)
+texture = ExtResource("13_4bou2")
+
+[node name="18" type="Node2D" parent="Pages"]
+position = Vector2(739, 7003)
+
+[node name="Text" type="RichTextLabel" parent="Pages/18"]
+offset_left = -267.0
+offset_top = -196.0
+offset_right = 344.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "En esta inconmensurable soledad del ente mas abstracto, he de posarme ante su infinitesimal e infinita sabiduria, de los entes mas profundos, mas bellos, mas queridos y deseados que infinitamente han penetrado tales albores de la oscuridad mas maldita.
+
+He de deciros, sin embargo, que os concomitancia de lo concomitante, he de proferios, de mala gana, deciros y deciro mucho, que desearia que estuviesen aqui a mi lado para ver el eclipse mas profundo de mi alma, que he producir una erupcion de emociones y sentimientos arraigados desde eones para producir esta destruccion masiva de todo el concepto de mi ser, para finalmente descarriarse en algo q"
+
+[node name="19" type="Sprite2D" parent="Pages"]
+position = Vector2(1992, 6203)
+texture = ExtResource("14_rpvb0")
+
+[node name="20" type="Sprite2D" parent="Pages"]
+position = Vector2(405, 7833)
+texture = ExtResource("15_idje6")
+
+[node name="21" type="Sprite2D" parent="Pages"]
+position = Vector2(405, 7833)
+texture = ExtResource("15_idje6")
+
+[node name="22" type="Sprite2D" parent="Pages"]
+position = Vector2(1214, 8549)
+texture = ExtResource("17_w7wds")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(404, 296)
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Continue" parent="." instance=ExtResource("18_w1ewa")]
+offset_left = 1360.0
+offset_top = 8581.0
+offset_right = 1568.0
+offset_bottom = 8627.0
+Next = "res://Scenes/Battle Levels/battle 00.tscn"
+id = 1
+end_battle = true

@@ -21,16 +21,8 @@ func _process(delta):
 func GetTarget():
 	var mytarget = Vector2.ZERO
 	
-	if id == max_id:
-		mytarget = get_node(ending_name).global_position
-	elif id == 0:
-		mytarget = get_node(intro_name).global_position
-	elif  id < 11:
-		var name = "0" + str(id-1)
-		mytarget = get_node(name).global_position
-	else:
-		var name = str(id-1)
-		mytarget = get_node(name).global_position
+	var name = str(id)
+	mytarget = get_node(name).global_position
 	
 	return mytarget
 

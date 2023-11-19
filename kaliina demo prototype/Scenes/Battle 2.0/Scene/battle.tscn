@@ -1,0 +1,116 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfa5sj02n0esq"]
+
+[ext_resource type="PackedScene" uid="uid://dopyyycwkwlqe" path="res://Scenes/Battle 2.0/Pacifica/pacifica.tscn" id="1_bli24"]
+[ext_resource type="Script" path="res://Scenes/Battle 2.0/Pacifica/Player.gd" id="1_w2jqe"]
+[ext_resource type="PackedScene" uid="uid://dywpokial5nli" path="res://Scenes/Battle 2.0/Enemies/monstruo_01.tscn" id="2_skoga"]
+[ext_resource type="Script" path="res://Scenes/Battle 2.0/Enemies/Monster.gd" id="3_q8loh"]
+
+[node name="Battle" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+script = ExtResource("1_w2jqe")
+pacifica_id = 2
+
+[node name="Pos1" type="Marker2D" parent="Player"]
+position = Vector2(194, 421)
+
+[node name="Pos2" type="Marker2D" parent="Player"]
+position = Vector2(402, 417)
+
+[node name="Pos3" type="Marker2D" parent="Player"]
+position = Vector2(590, 419)
+
+[node name="Pacifica" parent="Player" instance=ExtResource("1_bli24")]
+position = Vector2(352, 484)
+
+[node name="Monster" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_q8loh")
+
+[node name="Pos1" type="Marker2D" parent="Monster"]
+position = Vector2(188, 231)
+
+[node name="Pos2" type="Marker2D" parent="Monster"]
+position = Vector2(349, 104)
+
+[node name="Pos3" type="Marker2D" parent="Monster"]
+position = Vector2(502, 219)
+
+[node name="monster" parent="Monster" instance=ExtResource("2_skoga")]
+position = Vector2(347, 108)
+
+[node name="GUI" type="Node2D" parent="."]
+
+[node name="DASHBAR" type="ProgressBar" parent="GUI"]
+unique_name_in_owner = true
+offset_left = 11.0
+offset_top = 561.0
+offset_right = 165.0
+offset_bottom = 588.0
+max_value = 3.0
+
+[node name="ATTACK" type="ProgressBar" parent="GUI"]
+unique_name_in_owner = true
+offset_left = 633.0
+offset_top = 561.0
+offset_right = 787.0
+offset_bottom = 588.0
+max_value = 3.0
+fill_mode = 1
+
+[node name="Label" type="Label" parent="GUI"]
+offset_left = 175.0
+offset_top = 563.0
+offset_right = 215.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "DASH"
+
+[node name="Label2" type="Label" parent="GUI"]
+offset_left = 563.0
+offset_top = 562.0
+offset_right = 623.0
+offset_bottom = 588.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ATTACK"
+horizontal_alignment = 2
+
+[node name="TIMELEFT" type="ProgressBar" parent="GUI"]
+unique_name_in_owner = true
+offset_right = 801.0
+offset_bottom = 27.0
+value = 100.0
+
+[node name="Label3" type="Label" parent="GUI"]
+offset_left = 6.0
+offset_top = 33.0
+offset_right = 95.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.886275, 0.101961, 0.180392, 1)
+text = "TIME"
+
+[node name="Continue" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Label" type="Label" parent="Continue"]
+offset_left = 291.0
+offset_top = 281.0
+offset_right = 522.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(0.686275, 0, 0.278431, 1)
+theme_override_colors/font_outline_color = Color(0.411765, 0.00392157, 0.156863, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 37
+text = "YOU WON!!!!!"
+
+[node name="GameOver" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Label" type="Label" parent="GameOver"]
+offset_left = 289.0
+offset_top = 343.0
+offset_right = 532.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0.592157, 0.27451, 0.992157, 1)
+theme_override_font_sizes/font_size = 39
+text = "YOU LOSE!!!!!"

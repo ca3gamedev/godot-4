@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dywpokial5nli"]
+
+[ext_resource type="Script" path="res://Scenes/Battle 2.0/Enemies/monstruo_01.gd" id="1_3b2ov"]
+[ext_resource type="Texture2D" uid="uid://dcswgt6pxsn7r" path="res://2D/Enemies/Soldier/Idle/soldier_export_dir8.png" id="1_uqi4o"]
+
+[node name="monster" type="Node2D"]
+script = ExtResource("1_3b2ov")
+id = 2
+HP = 10
+
+[node name="SoldierExportDir8" type="Sprite2D" parent="."]
+position = Vector2(6, 4)
+texture = ExtResource("1_uqi4o")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -37.0
+offset_top = 47.0
+offset_right = 46.0
+offset_bottom = 74.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
