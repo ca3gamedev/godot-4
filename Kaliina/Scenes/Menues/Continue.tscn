@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdhkkm5u8nmaj"]
+
+[ext_resource type="Script" path="res://Scenes/Menues/Continue.gd" id="1_jewrt"]
+
+[node name="Continue" type="Button"]
+offset_right = 117.0
+offset_bottom = 39.0
+text = "CONTINUE"
+script = ExtResource("1_jewrt")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

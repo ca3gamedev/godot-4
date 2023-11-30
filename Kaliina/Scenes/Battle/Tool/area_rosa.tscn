@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtyrvdjarhxjr"]
+
+[ext_resource type="Texture2D" uid="uid://dpoy2p7d58dxh" path="res://2D/Rosa areas/Area circle.png" id="1_8jq2i"]
+[ext_resource type="Script" path="res://Scenes/Battle/Tool/area_rosa.gd" id="1_i5diw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwvct"]
+radius = 55.109
+
+[node name="AreaRosa" type="Area2D"]
+collision_layer = 64
+collision_mask = 100
+script = ExtResource("1_i5diw")
+maxtimer = 10.0
+colorblack = Color(0.0745098, 0.0745098, 0.0745098, 1)
+colorwhite = Color(0.67451, 0.835294, 0.819608, 1)
+colormiddle = Color(0.360784, 0.396078, 0.360784, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dwvct")
+
+[node name="AreaCircle" type="Sprite2D" parent="."]
+texture = ExtResource("1_8jq2i")
+
+[node name="Die" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Die" to="." method="_on_die_timeout"]

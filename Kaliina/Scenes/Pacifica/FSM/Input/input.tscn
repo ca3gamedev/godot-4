@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://shukkwn5v5os"]
+
+[ext_resource type="Script" path="res://Scenes/Pacifica/FSM/Input/Reader.gd" id="1_r8oy2"]
+[ext_resource type="Script" path="res://Scenes/Pacifica/FSM/Input/Buffer.gd" id="2_8llfe"]
+[ext_resource type="Script" path="res://Scenes/Pacifica/FSM/Input/Check.gd" id="3_sdb2m"]
+
+[node name="INPUT" type="Node"]
+
+[node name="Reader" type="Node" parent="."]
+script = ExtResource("1_r8oy2")
+
+[node name="Buffer" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_8llfe")
+
+[node name="Check" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_sdb2m")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwrifp45osfdp"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/EnemyRoot.gd" id="1_r6qyn"]
+[ext_resource type="Texture2D" uid="uid://oe6ktxd3w3wc" path="res://2D/Enemy/Soldier/soldier_export_dir8.png" id="2_bsii0"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/Collision.gd" id="3_4wm71"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/FSM.gd" id="4_dt8ys"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/WALK.gd" id="5_xdify"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqppm"]
+radius = 13.3417
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxh5u"]
+radius = 39.0
+
+[node name="Soldier" type="CharacterBody2D" groups=["ENEMY"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_r6qyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qqppm")
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="SoldierExportDir8" type="Sprite2D" parent="Sprites"]
+modulate = Color(0.0196078, 0.494118, 0.568627, 1)
+position = Vector2(3, 3)
+texture = ExtResource("2_bsii0")
+
+[node name="Code" type="Node" parent="."]
+
+[node name="Collision" type="Node" parent="Code"]
+unique_name_in_owner = true
+script = ExtResource("3_4wm71")
+
+[node name="FSM" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_dt8ys")
+
+[node name="WALK" type="Node" parent="FSM"]
+script = ExtResource("5_xdify")
+speed = 50.0
+
+[node name="Rosa collision" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rosa collision"]
+shape = SubResource("CircleShape2D_mxh5u")
+
+[connection signal="area_entered" from="Rosa collision" to="Code/Collision" method="_on_rosa_collision_area_entered"]
+[connection signal="area_exited" from="Rosa collision" to="Code/Collision" method="_on_rosa_collision_area_exited"]

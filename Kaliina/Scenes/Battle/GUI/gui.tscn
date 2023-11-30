@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://p6va4y4w0y7a"]
+
+[node name="GUI" type="Node2D"]
+
+[node name="Strenght" type="ProgressBar" parent="."]
+offset_left = 13.0
+offset_top = 613.0
+offset_right = 114.0
+offset_bottom = 640.0
+
+[node name="TimerHP" type="ProgressBar" parent="."]
+offset_left = 46.0
+offset_top = 33.0
+offset_right = 345.0
+offset_bottom = 60.0
+value = 100.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 354.0
+offset_top = 38.0
+offset_right = 425.0
+offset_bottom = 69.0
+text = "TIME"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 123.0
+offset_top = 615.0
+offset_right = 194.0
+offset_bottom = 646.0
+text = "FORCE"
+
+[node name="Stamina" type="ProgressBar" parent="."]
+offset_left = 55.0
+offset_top = 78.0
+offset_right = 208.0
+offset_bottom = 105.0
+
+[node name="StaminaStocks" type="Label" parent="."]
+offset_left = 220.0
+offset_top = 67.0
+offset_right = 260.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 35
+text = "0"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1037.0
+offset_top = 9.0
+offset_right = 1130.0
+offset_bottom = 38.0
+text = "SCORE"
+horizontal_alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 962.0
+offset_top = 37.0
+offset_right = 1134.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 30
+text = "999999999"
+horizontal_alignment = 2
+
+[node name="SuperStock" type="ProgressBar" parent="."]
+offset_left = 15.0
+offset_top = 577.0
+offset_right = 179.0
+offset_bottom = 604.0
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 193.0
+offset_top = 577.0
+offset_right = 249.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 20
+text = "super"

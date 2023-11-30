@@ -1,0 +1,118 @@
+[gd_scene load_steps=18 format=3 uid="uid://d0yfgc8y2jijm"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/EnemyRoot.gd" id="1_0mqcx"]
+[ext_resource type="Texture2D" uid="uid://oe6ktxd3w3wc" path="res://2D/Enemy/Soldier/soldier_export_dir8.png" id="1_iokt4"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/Collision.gd" id="2_2y5xr"]
+[ext_resource type="Texture2D" uid="uid://xmk77ns4gten" path="res://2D/Bomb/GUI/01.png" id="2_pjp2u"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/FSM.gd" id="2_xsgln"]
+[ext_resource type="Texture2D" uid="uid://5gd0bq7hhbip" path="res://2D/Bomb/GUI/01b.png" id="3_r7o0s"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/WALK.gd" id="3_yh1ps"]
+[ext_resource type="Texture2D" uid="uid://dngoqs3xyhk61" path="res://2D/Bomb/GUI/01w.png" id="4_auxce"]
+[ext_resource type="Texture2D" uid="uid://b74pjryiivx25" path="res://2D/Bomb/GUI/02.png" id="5_min3s"]
+[ext_resource type="Texture2D" uid="uid://cgbhwhlm2tdvv" path="res://2D/Bomb/GUI/02b.png" id="6_lgic6"]
+[ext_resource type="Texture2D" uid="uid://ivrobijgy0gp" path="res://2D/Bomb/GUI/02w.png" id="7_4kfr8"]
+[ext_resource type="Texture2D" uid="uid://qb5t5nvcwt71" path="res://2D/Bomb/GUI/03.png" id="8_7c1pi"]
+[ext_resource type="Texture2D" uid="uid://bcuemjyeo8t2b" path="res://2D/Bomb/GUI/03b.png" id="9_cr1n6"]
+[ext_resource type="Texture2D" uid="uid://bw7nw0y1j7ydb" path="res://2D/Bomb/GUI/03w.png" id="10_7c4oc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6v8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pjp2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r7o0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_auxce")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_min3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lgic6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4kfr8")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7c1pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cr1n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7c4oc")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqppm"]
+radius = 15.5242
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxh5u"]
+radius = 49.0
+
+[node name="Soldier" type="CharacterBody2D" groups=["ENEMY"]]
+collision_layer = 2
+collision_mask = 6
+script = ExtResource("1_0mqcx")
+HP = 20
+
+[node name="Aura" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u6v8t")
+animation = &"2"
+centered = false
+offset = Vector2(-52, -81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -28)
+shape = SubResource("CircleShape2D_qqppm")
+
+[node name="Sprites" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(2, -28)
+
+[node name="SoldierExportDir8" type="Sprite2D" parent="Sprites"]
+position = Vector2(0, 23)
+texture = ExtResource("1_iokt4")
+centered = false
+offset = Vector2(-46, -77)
+
+[node name="Code" type="Node" parent="."]
+
+[node name="Collision" type="Node" parent="Code"]
+unique_name_in_owner = true
+script = ExtResource("2_2y5xr")
+
+[node name="FSM" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_xsgln")
+
+[node name="WALK" type="Node" parent="FSM"]
+script = ExtResource("3_yh1ps")
+speed = 50.0
+
+[node name="Rosa collision" type="Area2D" parent="."]
+position = Vector2(2, -28)
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rosa collision"]
+shape = SubResource("CircleShape2D_mxh5u")
+
+[connection signal="area_entered" from="Rosa collision" to="Code/Collision" method="_on_rosa_collision_area_entered"]
+[connection signal="area_exited" from="Rosa collision" to="Code/Collision" method="_on_rosa_collision_area_exited"]

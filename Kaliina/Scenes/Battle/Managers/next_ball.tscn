@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://4isy8dat0ese"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Managers/next_ball.gd" id="1_4cnm7"]
+[ext_resource type="Texture2D" uid="uid://xmk77ns4gten" path="res://2D/Bomb/GUI/01.png" id="1_u4vnd"]
+[ext_resource type="Texture2D" uid="uid://5gd0bq7hhbip" path="res://2D/Bomb/GUI/01b.png" id="2_mbqvb"]
+[ext_resource type="Texture2D" uid="uid://dngoqs3xyhk61" path="res://2D/Bomb/GUI/01w.png" id="3_5hdml"]
+[ext_resource type="Texture2D" uid="uid://b74pjryiivx25" path="res://2D/Bomb/GUI/02.png" id="4_c5vg8"]
+[ext_resource type="Texture2D" uid="uid://cgbhwhlm2tdvv" path="res://2D/Bomb/GUI/02b.png" id="5_76ror"]
+[ext_resource type="Texture2D" uid="uid://ivrobijgy0gp" path="res://2D/Bomb/GUI/02w.png" id="6_sb20k"]
+[ext_resource type="Texture2D" uid="uid://qb5t5nvcwt71" path="res://2D/Bomb/GUI/03.png" id="7_7dv8u"]
+[ext_resource type="Texture2D" uid="uid://bcuemjyeo8t2b" path="res://2D/Bomb/GUI/03b.png" id="8_sm544"]
+[ext_resource type="Texture2D" uid="uid://bw7nw0y1j7ydb" path="res://2D/Bomb/GUI/03w.png" id="9_f8ee0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bve6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u4vnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mbqvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5hdml")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_c5vg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_76ror")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sb20k")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7dv8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sm544")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f8ee0")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}]
+
+[node name="NextBall" type="Node2D"]
+script = ExtResource("1_4cnm7")
+
+[node name="3" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bve6b")
+animation = &"2"
+
+[node name="2" type="AnimatedSprite2D" parent="."]
+position = Vector2(104, 3)
+sprite_frames = SubResource("SpriteFrames_bve6b")
+animation = &"2"
+
+[node name="1" type="AnimatedSprite2D" parent="."]
+position = Vector2(207, 2)
+sprite_frames = SubResource("SpriteFrames_bve6b")
+animation = &"2"
