@@ -1,75 +1,183 @@
-[gd_scene format=3 uid="uid://p6va4y4w0y7a"]
+[gd_scene load_steps=12 format=3 uid="uid://p6va4y4w0y7a"]
 
-[node name="GUI" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://basvtlnh8eiye" path="res://2D/GUI/raw/banner.png" id="1_fu05x"]
+[ext_resource type="Texture2D" uid="uid://l3sceth772gi" path="res://2D/GUI/raw/timer.png" id="1_yda7i"]
+[ext_resource type="Texture2D" uid="uid://doao8i54km3ut" path="res://2D/GUI/raw/mana_bar_cut.png" id="2_7jkkh"]
+[ext_resource type="Texture2D" uid="uid://geksu85gmnc6" path="res://2D/GUI/raw/money.png" id="4_havgp"]
+[ext_resource type="FontFile" uid="uid://xapgxwb6dcqj" path="res://Font/Ordin-Bold.otf" id="5_ocuor"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byca8"]
+bg_color = Color(0.141176, 0.14902, 0.309804, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0980392, 0.694118, 0.698039, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygyxk"]
+bg_color = Color(0.184314, 0.772549, 0.815686, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ej2n"]
+bg_color = Color(0.760784, 0.419608, 0.0705882, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.894118, 0.313726, 0.12549, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qujw"]
+bg_color = Color(0.980392, 0.745098, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpj0k"]
+bg_color = Color(0.588235, 0.172549, 0.172549, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.788235, 0.0705882, 0.0745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myvo2"]
+bg_color = Color(1, 0.243137, 0.133333, 1)
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Banner" type="Sprite2D" parent="."]
+position = Vector2(574, 10)
+scale = Vector2(1.01211, 0.5)
+texture = ExtResource("1_fu05x")
+
+[node name="Banner2" type="Sprite2D" parent="."]
+position = Vector2(577, 640)
+scale = Vector2(1.01211, 0.5)
+texture = ExtResource("1_fu05x")
+
+[node name="Timericon" type="Sprite2D" parent="."]
+position = Vector2(595, 77)
+scale = Vector2(0.185, 0.16)
+texture = ExtResource("1_yda7i")
+
+[node name="ManaBarCut" type="Sprite2D" parent="."]
+position = Vector2(175.25, 523.25)
+scale = Vector2(0.692982, 0.618519)
+texture = ExtResource("2_7jkkh")
+metadata/_edit_lock_ = true
+
+[node name="Money" type="Sprite2D" parent="."]
+position = Vector2(124.75, 73.5)
+scale = Vector2(0.662242, 0.535398)
+texture = ExtResource("4_havgp")
 
 [node name="Strenght" type="ProgressBar" parent="."]
-offset_left = 13.0
-offset_top = 613.0
-offset_right = 114.0
-offset_bottom = 640.0
-
-[node name="TimerHP" type="ProgressBar" parent="."]
-offset_left = 46.0
-offset_top = 33.0
-offset_right = 345.0
-offset_bottom = 60.0
-value = 100.0
+offset_left = 97.0
+offset_top = 574.0
+offset_right = 180.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0.341176, 0.215686, 0.898039, 1)
+theme_override_colors/font_outline_color = Color(0.0745098, 0.0705882, 0.282353, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_ocuor")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/background = SubResource("StyleBoxFlat_byca8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ygyxk")
+show_percentage = false
 
 [node name="Label" type="Label" parent="."]
-offset_left = 354.0
-offset_top = 38.0
-offset_right = 425.0
-offset_bottom = 69.0
+offset_left = 564.0
+offset_top = 95.0
+offset_right = 635.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.152941, 0.0470588, 0.443137, 1)
+theme_override_colors/font_outline_color = Color(0.137255, 0, 0.329412, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_ocuor")
+theme_override_font_sizes/font_size = 15
 text = "TIME"
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 123.0
-offset_top = 615.0
-offset_right = 194.0
-offset_bottom = 646.0
-text = "FORCE"
+horizontal_alignment = 1
 
 [node name="Stamina" type="ProgressBar" parent="."]
-offset_left = 55.0
-offset_top = 78.0
-offset_right = 208.0
-offset_bottom = 105.0
+offset_left = 97.0
+offset_top = 598.0
+offset_right = 206.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0.909804, 0.733333, 0.164706, 1)
+theme_override_colors/font_outline_color = Color(0.376471, 0.168627, 0.0196078, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_ocuor")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/background = SubResource("StyleBoxFlat_3ej2n")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4qujw")
 
 [node name="StaminaStocks" type="Label" parent="."]
-offset_left = 220.0
-offset_top = 67.0
-offset_right = 260.0
-offset_bottom = 119.0
-theme_override_font_sizes/font_size = 35
+offset_left = 44.0
+offset_top = 578.0
+offset_right = 94.0
+offset_bottom = 638.0
+theme_override_colors/font_color = Color(0.917647, 0.65098, 0.137255, 1)
+theme_override_colors/font_outline_color = Color(0.768627, 0.192157, 0.0862745, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_ocuor")
+theme_override_font_sizes/font_size = 40
 text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 1037.0
-offset_top = 9.0
-offset_right = 1130.0
-offset_bottom = 38.0
+offset_left = 50.0
+offset_top = 29.0
+offset_right = 143.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.937255, 0.827451, 0.278431, 1)
+theme_override_colors/font_outline_color = Color(0.678431, 0.196078, 0.0627451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_ocuor")
 text = "SCORE"
 horizontal_alignment = 2
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 962.0
-offset_top = 37.0
-offset_right = 1134.0
-offset_bottom = 96.0
-theme_override_font_sizes/font_size = 30
+offset_left = 31.0
+offset_top = 55.0
+offset_right = 328.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.94902, 0.756863, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0.556863, 0.278431, 0.027451, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_ocuor")
+theme_override_font_sizes/font_size = 40
 text = "999999999"
-horizontal_alignment = 2
 
 [node name="SuperStock" type="ProgressBar" parent="."]
-offset_left = 15.0
-offset_top = 577.0
-offset_right = 179.0
-offset_bottom = 604.0
+offset_left = 26.0
+offset_top = 481.0
+offset_right = 43.0
+offset_bottom = 626.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lpj0k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_myvo2")
+fill_mode = 3
+show_percentage = false
 
-[node name="Label4" type="Label" parent="."]
-offset_left = 193.0
-offset_top = 577.0
-offset_right = 249.0
-offset_bottom = 622.0
-theme_override_font_sizes/font_size = 20
-text = "super"
+[node name="Timer" type="Label" parent="."]
+offset_left = 561.0
+offset_top = 66.0
+offset_right = 638.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.215686, 0.168627, 0.584314, 1)
+theme_override_colors/font_outline_color = Color(0.352941, 0.517647, 0.823529, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_ocuor")
+theme_override_font_sizes/font_size = 30
+text = "899"
+horizontal_alignment = 3
