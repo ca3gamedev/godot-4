@@ -30,4 +30,4 @@ offset_left = 516.0
 offset_top = 544.0
 offset_right = 633.0
 offset_bottom = 583.0
-Next = "res://Scenes/Battle/Scene/battle.tscn"
+Next = "res://Scenes/Battle/Scene/Levels/01/01.tscn"

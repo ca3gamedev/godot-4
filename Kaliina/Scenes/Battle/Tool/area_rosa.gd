@@ -2,11 +2,10 @@ extends Area2D
 
 @export var protectedtimer : float
 @export var maxtimer : float
-@export var id : int
-@export var colorblack : Color
 @export var colorwhite : Color
 @export var colormiddle : Color
 @onready var colortween : Tween
+@onready var starttimer = false
 
 
 func _process(delta):
@@ -26,14 +25,16 @@ func _process(delta):
 		CombatData.Protected = false
 		get_parent().KillArea()
 		self.queue_free()
+		
+	if starttimer:
+		var timeleft = 1 - ($Die.time_left / 10)
+		var old_color = Color(1, 1, 1, $Ring.modulate.a - timeleft)
+		$Ring.modulate = old_color
+		old_color = Color(1, 1, 1, $Ring2.modulate.a - timeleft)
+		$Ring2.modulate = old_color
 
-func SETID(newid):
-	if newid < 0:
-		id = 0
-		$AreaCircle.modulate = colorblack
-	else:
-		id = 1
-		$AreaCircle.modulate = colorwhite
+func SETID():
+	$AreaCircle.modulate = colorwhite
 
 
 func _on_body_entered(body):
@@ -42,6 +43,8 @@ func _on_body_entered(body):
 		$Die.start(10)
 		colortween = create_tween()
 		colortween.tween_property($AreaCircle, "modulate", colormiddle, 10.0)
+		$Active.play("Active")
+		starttimer = true
 	
 	if body.is_in_group("BALL"):
 		if body.hadouken:

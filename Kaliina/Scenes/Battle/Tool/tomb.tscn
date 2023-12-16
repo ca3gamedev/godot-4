@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://buvkheqxc0dlb"]
+
+[ext_resource type="Texture2D" uid="uid://clritrht878el" path="res://2D/Tools/Tomb.png" id="1_k4cfw"]
+[ext_resource type="Script" path="res://Scenes/Battle/Tool/tomb.gd" id="1_oqfau"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_43yx2"]
+radius = 40.2616
+
+[node name="Tomb" type="Node2D"]
+script = ExtResource("1_oqfau")
+
+[node name="Tomb" type="Sprite2D" parent="."]
+position = Vector2(7, 2)
+texture = ExtResource("1_k4cfw")
+
+[node name="TombArea" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 49
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TombArea"]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_43yx2")
+
+[connection signal="body_entered" from="TombArea" to="." method="_on_tomb_area_body_entered"]

@@ -11,6 +11,7 @@ extends Node2D
 @export var hadoukenstrenght : float
 @export var normalshot : bool
 @export var specialshot : bool
+@onready var NextBall = %GUI.get_node("NextBall")
 
 func _process(delta):
 	
@@ -78,12 +79,12 @@ func Spawn(strenght, id, special, damage):
 	timerstrenght = 0
 	%GUI.get_node("Strenght").value = timerstrenght
 	
-	%NextBall.Spawn()
+	%GUI.Spawn()
 	
 	if special :
-		bomb.SetID("super", id, 3, damage)
+		bomb.SetID("super", 3, damage)
 	else:
-		bomb.SetID(str(%NextBall.id[3]), id, %NextBall.id[3], damage)
+		bomb.SetID(str(NextBall.id[3]), NextBall.id[3], damage)
 	if id != 0:
 		bomb.hadouken = true
 

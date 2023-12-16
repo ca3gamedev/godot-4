@@ -1,10 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://j0oswagsulsg"]
+[gd_scene load_steps=7 format=3 uid="uid://j0oswagsulsg"]
 
-[ext_resource type="Texture2D" uid="uid://ce1ei1numu7jc" path="res://2D/Bomb/chest.png" id="1_dn0bk"]
 [ext_resource type="Script" path="res://Scenes/Battle/Items/chest.gd" id="1_phc8m"]
+[ext_resource type="Texture2D" uid="uid://5ll82wgq207x" path="res://2D/Items/chest_export.png" id="2_gon48"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sttp4"]
-radius = 38.833
+radius = 53.7587
+
+[sub_resource type="Animation" id="Animation_aocgm"]
+resource_name = "Start"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chest:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="Animation" id="Animation_d8eay"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chest:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5cnbk"]
+_data = {
+"RESET": SubResource("Animation_d8eay"),
+"Start": SubResource("Animation_aocgm")
+}
 
 [node name="Chest" type="Area2D"]
 collision_layer = 128
@@ -13,9 +50,15 @@ script = ExtResource("1_phc8m")
 
 [node name="Chest" type="Sprite2D" parent="."]
 position = Vector2(3, -2)
-texture = ExtResource("1_dn0bk")
+texture = ExtResource("2_gon48")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sttp4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Start"
+libraries = {
+"": SubResource("AnimationLibrary_5cnbk")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

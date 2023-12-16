@@ -71,6 +71,7 @@ SUPER={
 2d_physics/layer_6="Rosa"
 2d_physics/layer_7="RosaArea"
 2d_physics/layer_8="Items"
+2d_physics/layer_9="Tomb"
 
 [rendering]
 

@@ -17,7 +17,7 @@ func Spawn():
 	var y = randf_range($TopLeft.global_position.y, $BottomRight.global_position.y)
 	tmp.global_position = Vector2(x, y)
 	var id = randf_range(-10, 10)
-	tmp.SETID(id)
+	tmp.SETID()
 
 
 func _on_timer_timeout():
@@ -25,7 +25,7 @@ func _on_timer_timeout():
 
 func Gold():
 	var tmp = GoldChest.instantiate()
-	%Items.add_child(tmp)
+	%Items.call_deferred("add_child", tmp)
 	var x = randf_range($TopLeft.global_position.x, $BottomRight.global_position.x)
 	var y = randf_range($TopLeft.global_position.y, $BottomRight.global_position.y)
 	tmp.global_position = Vector2(x, y)

@@ -1,6 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://bw03pdn502v5d"]
 
 [ext_resource type="PackedScene" uid="uid://bsn7iet4dsb6t" path="res://Scenes/Pacifica/pacifica.tscn" id="1_37m60"]
+[ext_resource type="PackedScene" uid="uid://xgbq3wlvdjvf" path="res://Scenes/Battle/Tiles/test.tscn" id="1_eawws"]
 [ext_resource type="Script" path="res://Scenes/Battle/Variables/DataPaths.gd" id="1_ngsyp"]
 [ext_resource type="Script" path="res://Scenes/Battle/Tool/RosaArea.gd" id="2_c3uor"]
 [ext_resource type="PackedScene" uid="uid://bsrmaqbdmtp4x" path="res://Scenes/Battle/Tool/onagre.tscn" id="2_t7trm"]
@@ -11,7 +12,6 @@
 [ext_resource type="Script" path="res://Scenes/Battle/Managers/Bullets.gd" id="4_p8ntf"]
 [ext_resource type="PackedScene" uid="uid://d0yfgc8y2jijm" path="res://Scenes/Battle/Enemies/soldier.tscn" id="5_1xlqc"]
 [ext_resource type="Script" path="res://Scenes/Battle/Managers/TimerHP.gd" id="9_k88hd"]
-[ext_resource type="PackedScene" uid="uid://4isy8dat0ese" path="res://Scenes/Battle/Managers/next_ball.tscn" id="10_ntk68"]
 [ext_resource type="PackedScene" uid="uid://dtyrvdjarhxjr" path="res://Scenes/Battle/Tool/area_rosa.tscn" id="11_2qusm"]
 [ext_resource type="Script" path="res://Scenes/Battle/Items/Items.gd" id="11_05w3k"]
 [ext_resource type="PackedScene" uid="uid://b78wiga38duti" path="res://Scenes/Battle/Items/coin.tscn" id="11_evg3r"]
@@ -28,6 +28,8 @@ size = Vector2(57, 724)
 
 [node name="Battle" type="Node2D"]
 y_sort_enabled = true
+
+[node name="TileMap" parent="." instance=ExtResource("1_eawws")]
 
 [node name="DataPaths" type="Node2D" parent="." node_paths=PackedStringArray("MyGUI", "Onager", "Rosa")]
 script = ExtResource("1_ngsyp")
@@ -106,7 +108,6 @@ position = Vector2(557, -2)
 collision_layer = 8
 collision_mask = 4
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TOP"]
 position = Vector2(15, -25)
@@ -159,10 +160,6 @@ timeleft = 1000.0
 [node name="SuperStocks" type="Node" parent="Code"]
 unique_name_in_owner = true
 script = ExtResource("15_kwbel")
-
-[node name="NextBall" parent="." instance=ExtResource("10_ntk68")]
-unique_name_in_owner = true
-position = Vector2(884, 582)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 320)

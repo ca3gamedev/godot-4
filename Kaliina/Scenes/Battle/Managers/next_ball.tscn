@@ -1,27 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://4isy8dat0ese"]
+[gd_scene load_steps=7 format=3 uid="uid://4isy8dat0ese"]
 
 [ext_resource type="Script" path="res://Scenes/Battle/Managers/next_ball.gd" id="1_4cnm7"]
-[ext_resource type="Texture2D" uid="uid://xmk77ns4gten" path="res://2D/Bomb/GUI/01.png" id="1_u4vnd"]
-[ext_resource type="Texture2D" uid="uid://5gd0bq7hhbip" path="res://2D/Bomb/GUI/01b.png" id="2_mbqvb"]
-[ext_resource type="Texture2D" uid="uid://dngoqs3xyhk61" path="res://2D/Bomb/GUI/01w.png" id="3_5hdml"]
-[ext_resource type="Texture2D" uid="uid://b74pjryiivx25" path="res://2D/Bomb/GUI/02.png" id="4_c5vg8"]
-[ext_resource type="Texture2D" uid="uid://cgbhwhlm2tdvv" path="res://2D/Bomb/GUI/02b.png" id="5_76ror"]
-[ext_resource type="Texture2D" uid="uid://ivrobijgy0gp" path="res://2D/Bomb/GUI/02w.png" id="6_sb20k"]
-[ext_resource type="Texture2D" uid="uid://qb5t5nvcwt71" path="res://2D/Bomb/GUI/03.png" id="7_7dv8u"]
-[ext_resource type="Texture2D" uid="uid://bcuemjyeo8t2b" path="res://2D/Bomb/GUI/03b.png" id="8_sm544"]
-[ext_resource type="Texture2D" uid="uid://bw7nw0y1j7ydb" path="res://2D/Bomb/GUI/03w.png" id="9_f8ee0"]
+[ext_resource type="Texture2D" uid="uid://c6kkj68lnkn2v" path="res://2D/GUI/gui/tetris_export.png" id="2_2yaue"]
+[ext_resource type="Texture2D" uid="uid://c6upyeop0eipt" path="res://2D/Bomb/Bombs/Triangle.png" id="3_yg61s"]
+[ext_resource type="Texture2D" uid="uid://bhgcl6v4173d0" path="res://2D/Bomb/Bombs/circle.png" id="4_gnj08"]
+[ext_resource type="Texture2D" uid="uid://vxn645ajnl26" path="res://2D/Bomb/Bombs/Square.png" id="5_6548y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bve6b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_u4vnd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_mbqvb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_5hdml")
+"texture": ExtResource("3_yg61s")
 }],
 "loop": true,
 "name": &"0",
@@ -29,13 +18,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_c5vg8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_76ror")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_sb20k")
+"texture": ExtResource("4_gnj08")
 }],
 "loop": true,
 "name": &"1",
@@ -43,13 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_7dv8u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_sm544")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_f8ee0")
+"texture": ExtResource("5_6548y")
 }],
 "loop": true,
 "name": &"2",
@@ -57,18 +34,28 @@ animations = [{
 }]
 
 [node name="NextBall" type="Node2D"]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_4cnm7")
 
+[node name="Tetris" type="Sprite2D" parent="."]
+position = Vector2(-47, -219)
+scale = Vector2(4, 4)
+texture = ExtResource("2_2yaue")
+
 [node name="3" type="AnimatedSprite2D" parent="."]
+position = Vector2(-182.5, -58.5)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_bve6b")
-animation = &"2"
+animation = &"0"
 
 [node name="2" type="AnimatedSprite2D" parent="."]
-position = Vector2(104, 3)
+position = Vector2(-20, -248)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_bve6b")
 animation = &"2"
 
 [node name="1" type="AnimatedSprite2D" parent="."]
-position = Vector2(207, 2)
+position = Vector2(232, -312)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_bve6b")
 animation = &"2"

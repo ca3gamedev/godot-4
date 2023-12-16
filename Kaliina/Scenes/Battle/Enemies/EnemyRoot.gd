@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var HP : int
 @export var myoff : bool
 @export var id : int
+@export var reward : int
 
 func _ready():
 	id = randi_range(0, 2)
@@ -11,9 +12,6 @@ func _ready():
 
 
 func HIT(ballid, damage, hadouken, superball):
-	
-	print("ENEMY ID ", id)
-	print("********************************")
 	
 	if ballid == id:
 		get_parent().HIT("hit")
@@ -27,7 +25,7 @@ func HIT(ballid, damage, hadouken, superball):
 	else:
 		HP -= damage
 		if randf_range(1, 10) > 8:
-			CombatData.score += 100
+			CombatData.score += reward
 		else:
 			CombatData.score += randi_range(1, 5)
 		get_parent().UpdateCoin()

@@ -18,7 +18,7 @@ func _on_spawn_check_timeout():
 
 func Coin(pos):
 	var tmp = Coin01.instantiate()
-	%Items.add_child(tmp)
+	%Items.call_deferred("add_child", tmp)
 	tmp.global_position = pos
 
 func UpdateCoin():
