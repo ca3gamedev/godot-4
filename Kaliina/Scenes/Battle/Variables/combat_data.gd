@@ -6,3 +6,5 @@ extends Node
 @export var Protected : bool
 
 @export var score : int
+
+@export var IsGame : bool

@@ -28,7 +28,7 @@ MaxSongs = 7
 
 [node name="Intro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_jdwv8")
-bus = &"Intro"
+bus = &"Music"
 
 [node name="Songs" type="Node" parent="."]
 
@@ -76,44 +76,53 @@ one_shot = true
 
 [node name="1" type="AudioStreamPlayer" parent="Sounds/Bounce"]
 stream = ExtResource("11_ou4py")
+bus = &"Sound"
 
 [node name="2" type="AudioStreamPlayer" parent="Sounds/Bounce"]
 stream = ExtResource("12_yemug")
+bus = &"Sound"
 
 [node name="3" type="AudioStreamPlayer" parent="Sounds/Bounce"]
 stream = ExtResource("13_dngk2")
+bus = &"Sound"
 
 [node name="4" type="AudioStreamPlayer" parent="Sounds/Bounce"]
 stream = ExtResource("14_d5plc")
+bus = &"Sound"
 
 [node name="0" type="AudioStreamPlayer" parent="Sounds/Bounce"]
 stream = ExtResource("15_ur6y8")
+bus = &"Sound"
 
 [node name="Shoot" type="Node" parent="Sounds"]
 
 [node name="0" type="AudioStreamPlayer" parent="Sounds/Shoot"]
 stream = ExtResource("16_voo72")
+bus = &"Sound"
 
 [node name="1" type="AudioStreamPlayer" parent="Sounds/Shoot"]
 stream = ExtResource("17_0ucrp")
+bus = &"Sound"
 
 [node name="2" type="AudioStreamPlayer" parent="Sounds/Shoot"]
 stream = ExtResource("18_r1mgj")
+bus = &"Sound"
 
 [node name="3" type="AudioStreamPlayer" parent="Sounds/Shoot"]
 stream = ExtResource("19_lgdib")
+bus = &"Sound"
 
 [node name="Aura" type="Node" parent="Sounds"]
 
 [node name="Aura" type="AudioStreamPlayer" parent="Sounds/Aura"]
 stream = ExtResource("20_rjr71")
-bus = &"Aura"
+bus = &"Sound"
 
 [node name="Win" type="Node" parent="Sounds"]
 
 [node name="Clap" type="AudioStreamPlayer" parent="Sounds/Win"]
 stream = ExtResource("21_06puq")
-bus = &"Aura"
+bus = &"Sound"
 
 [connection signal="finished" from="Songs/0" to="." method="_on__finished"]
 [connection signal="finished" from="Songs/1" to="." method="_on__finished"]

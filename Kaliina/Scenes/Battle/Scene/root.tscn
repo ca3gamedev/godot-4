@@ -229,9 +229,9 @@ visible = false
 unique_name_in_owner = true
 visible = false
 
-[node name="PAUSE" parent="Sub/SubViewport" instance=ExtResource("6_clpwc")]
+[node name="PAUSE" parent="." instance=ExtResource("6_clpwc")]
 unique_name_in_owner = true
-process_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="Pacifica" type="Sprite2D" parent="."]
 position = Vector2(242, 411)

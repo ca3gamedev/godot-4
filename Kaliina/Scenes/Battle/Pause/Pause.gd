@@ -7,7 +7,7 @@ func _ready():
 
 func _process(delta):
 	
-	if Input.is_action_just_released("PAUSE"):
+	if Input.is_action_just_released("PAUSE") and CombatData.IsGame:
 		mypause = !mypause
 		if mypause:
 			get_tree().paused = true

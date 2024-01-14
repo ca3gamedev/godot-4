@@ -26,6 +26,7 @@ func _on_turn_on_button_up():
 
 
 func _on_continue_button_up():
+	CombatData.IsGame = true
 	%Title.hide()
 	var tmp = Battle.instantiate()
 	%Game.add_child(tmp)

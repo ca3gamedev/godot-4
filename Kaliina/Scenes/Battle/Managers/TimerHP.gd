@@ -20,5 +20,5 @@ func _process(delta):
 	
 	if timeleft <= 0 :
 		Music.StopMusic()
-		$"../../../".ShowGameOver()
+		$"../../../../".ShowGameOver()
 		$"../../".queue_free()

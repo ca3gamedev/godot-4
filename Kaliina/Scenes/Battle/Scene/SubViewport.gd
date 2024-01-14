@@ -6,6 +6,7 @@ func _ready():
 	%Title.hide()
 
 func ShowGameOver():
+	CombatData.IsGame = false
 	$GameOver.show()
 	%TurnedOff.hide()
 	$Title.hide()
