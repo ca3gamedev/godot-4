@@ -12,7 +12,7 @@ func KillArea():
 
 func Spawn():
 	var tmp = RosaArea.instantiate()
-	add_child(tmp)
+	self.call_deferred("add_child", tmp)
 	var x = randf_range($TopLeft.global_position.x, $BottomRight.global_position.x)
 	var y = randf_range($TopLeft.global_position.y, $BottomRight.global_position.y)
 	tmp.global_position = Vector2(x, y)

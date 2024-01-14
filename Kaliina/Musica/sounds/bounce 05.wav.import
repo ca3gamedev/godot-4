@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btwl0cq4gjvtn"
+path="res://.godot/imported/bounce 05.wav-7ffe305fa2ee630c3b8b5496ebb8a6b8.sample"
+
+[deps]
+
+source_file="res://Musica/sounds/bounce 05.wav"
+dest_files=["res://.godot/imported/bounce 05.wav-7ffe305fa2ee630c3b8b5496ebb8a6b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

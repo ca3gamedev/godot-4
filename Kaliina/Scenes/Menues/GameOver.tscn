@@ -1,33 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsxs1u81a82g2"]
+[gd_scene load_steps=2 format=3 uid="uid://dsxs1u81a82g2"]
 
-[ext_resource type="Texture2D" uid="uid://cjnn3jradoa7w" path="res://2D/Scenes/06.png" id="1_5dsjj"]
-[ext_resource type="PackedScene" uid="uid://cdhkkm5u8nmaj" path="res://Scenes/Menues/Continue.tscn" id="2_tejaj"]
+[ext_resource type="Script" path="res://Scenes/Menues/GameOver.gd" id="1_v36bx"]
 
 [node name="Title" type="Node2D"]
-
-[node name="06" type="Sprite2D" parent="."]
-position = Vector2(555, 326)
-texture = ExtResource("1_5dsjj")
+script = ExtResource("1_v36bx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -10.0
 offset_top = -8.0
 offset_right = 1168.0
 offset_bottom = 662.0
-color = Color(0.196078, 0.137255, 0.552941, 0.607843)
+color = Color(0.196078, 0.137255, 0.552941, 1)
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 818.0
-offset_top = 488.0
-offset_right = 1104.0
-offset_bottom = 560.0
+offset_left = 264.0
+offset_top = 230.0
+offset_right = 550.0
+offset_bottom = 302.0
 theme_override_font_sizes/font_size = 50
 text = "GAME OVER"
-
-[node name="Continue" parent="." instance=ExtResource("2_tejaj")]
-offset_left = 888.0
-offset_top = 566.0
-offset_right = 1005.0
-offset_bottom = 605.0
-Next = "res://Scenes/Menues/Title.tscn"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://corv7fdj6slws"
+path="res://.godot/imported/Vocal english 01.ogg-669be95032f1e8ae1b00ce466ec7e116.oggvorbisstr"
+
+[deps]
+
+source_file="res://Musica/Vocal english 01.ogg"
+dest_files=["res://.godot/imported/Vocal english 01.ogg-669be95032f1e8ae1b00ce466ec7e116.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

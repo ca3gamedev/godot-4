@@ -1,0 +1,200 @@
+[gd_scene load_steps=12 format=3 uid="uid://cl762nhm1002d"]
+
+[ext_resource type="Texture2D" uid="uid://dlwggg143wdq8" path="res://2D/Overlays/morning.png" id="1_ohinp"]
+[ext_resource type="Script" path="res://Scenes/Battle/GUI/overlay.gd" id="1_p4ldo"]
+[ext_resource type="Script" path="res://Scenes/Battle/Bugs/Bugs.gd" id="2_85dgv"]
+[ext_resource type="PackedScene" uid="uid://d1djsdg7gubfc" path="res://Scenes/Battle/Bugs/butterfly.tscn" id="2_goofw"]
+[ext_resource type="Texture2D" uid="uid://82x50otjiyag" path="res://2D/Overlays/noon.png" id="3_urkkv"]
+[ext_resource type="Texture2D" uid="uid://cx70w747lwkkl" path="res://2D/Overlays/afternoon.png" id="4_24n20"]
+[ext_resource type="Texture2D" uid="uid://dpurlgbcexvn0" path="res://2D/Overlays/night.png" id="5_jj4fs"]
+
+[sub_resource type="Animation" id="Animation_sccjg"]
+resource_name = "End"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("red:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1327, -9), Vector2(-11, -11)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1331, -9), Vector2(1331, -9), Vector2(-14, -9)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("yellow3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1401, -9), Vector2(1401, -9), Vector2(-11, -11)]
+}
+
+[sub_resource type="Animation" id="Animation_3l05n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("yellow3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -9)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("red:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -9)]
+}
+
+[sub_resource type="Animation" id="Animation_1wr24"]
+resource_name = "Start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("yellow3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, -9), Vector2(1318, -9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-11, -9), Vector2(-11, -9), Vector2(1320, -9)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("red:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-11, -9), Vector2(-11, -9), Vector2(1318, -9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8phs6"]
+_data = {
+"End": SubResource("Animation_sccjg"),
+"RESET": SubResource("Animation_3l05n"),
+"Start": SubResource("Animation_1wr24")
+}
+
+[node name="Overlay" type="CanvasLayer"]
+script = ExtResource("1_p4ldo")
+
+[node name="Bugs" type="Node2D" parent="."]
+script = ExtResource("2_85dgv")
+Butterfly = ExtResource("2_goofw")
+
+[node name="TopLeft" type="Marker2D" parent="Bugs"]
+position = Vector2(198, 145)
+
+[node name="BottomRight" type="Marker2D" parent="Bugs"]
+position = Vector2(904, 464)
+
+[node name="Morning" type="Sprite2D" parent="."]
+modulate = Color(0.894118, 0.94902, 0.392157, 0.25098)
+position = Vector2(575.5, 315)
+scale = Vector2(1.57625, 1.26)
+texture = ExtResource("1_ohinp")
+metadata/_edit_lock_ = true
+
+[node name="Noon" type="Sprite2D" parent="."]
+modulate = Color(0.498039, 0.737255, 0.972549, 0.219608)
+position = Vector2(573.5, 325)
+scale = Vector2(1.49125, 1.12333)
+texture = ExtResource("3_urkkv")
+metadata/_edit_lock_ = true
+
+[node name="Afternoon" type="Sprite2D" parent="."]
+modulate = Color(0.792157, 0.654902, 0.25098, 0.227451)
+position = Vector2(569, 314.5)
+scale = Vector2(1.515, 1.17167)
+texture = ExtResource("4_24n20")
+metadata/_edit_lock_ = true
+
+[node name="Night" type="Sprite2D" parent="."]
+modulate = Color(0.419608, 0.454902, 0.772549, 0.266667)
+position = Vector2(572, 322.5)
+scale = Vector2(1.495, 1.14167)
+texture = ExtResource("5_jj4fs")
+metadata/_edit_lock_ = true
+
+[node name="red" type="ColorRect" parent="."]
+offset_left = -11.0
+offset_top = -9.0
+offset_right = 1288.0
+offset_bottom = 729.0
+color = Color(1, 0, 0, 1)
+
+[node name="blue" type="ColorRect" parent="."]
+offset_left = -11.0
+offset_top = -9.0
+offset_right = 1288.0
+offset_bottom = 729.0
+color = Color(0, 0, 1, 1)
+
+[node name="yellow3" type="ColorRect" parent="."]
+offset_left = -11.0
+offset_top = -9.0
+offset_right = 1287.99
+offset_bottom = 729.0
+color = Color(1, 1, 0.203922, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8phs6")
+}

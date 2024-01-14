@@ -1,0 +1,127 @@
+[gd_scene load_steps=22 format=3 uid="uid://cvonnk0bwt8ue"]
+
+[ext_resource type="Script" path="res://Musica/music.gd" id="1_bojiv"]
+[ext_resource type="AudioStream" uid="uid://dvqoy7fcsg24t" path="res://Musica/prelude.ogg" id="1_jdwv8"]
+[ext_resource type="AudioStream" uid="uid://cmli2b7cgqffh" path="res://Musica/Bridge 02.ogg" id="4_omdc1"]
+[ext_resource type="AudioStream" uid="uid://corv7fdj6slws" path="res://Musica/Vocal english 01.ogg" id="4_ukcvy"]
+[ext_resource type="AudioStream" uid="uid://c8helpo06ypci" path="res://Musica/Bridge 01.ogg" id="5_3ueng"]
+[ext_resource type="AudioStream" uid="uid://croqafpkblea8" path="res://Musica/Bridge 03.ogg" id="5_for28"]
+[ext_resource type="AudioStream" uid="uid://hcws5ka6e5xg" path="res://Musica/Lead 01.ogg" id="6_1pe13"]
+[ext_resource type="AudioStream" uid="uid://ckmy5b0xxc2cv" path="res://Musica/Verse 01.ogg" id="7_lblyi"]
+[ext_resource type="AudioStream" uid="uid://ciogs3wj5bc5" path="res://Musica/Vocal Spanish 01.ogg" id="8_p7kj5"]
+[ext_resource type="AudioStream" uid="uid://bmyv4f0qq5wh6" path="res://Musica/placeholder01.ogg" id="9_pd1hh"]
+[ext_resource type="AudioStream" uid="uid://djthcecf2qbrl" path="res://Musica/sounds/bounce 01.wav" id="11_ou4py"]
+[ext_resource type="AudioStream" uid="uid://chovjdt7y2xs7" path="res://Musica/sounds/bounce 02.wav" id="12_yemug"]
+[ext_resource type="AudioStream" uid="uid://b2njx20rh4iis" path="res://Musica/sounds/bounce 03.wav" id="13_dngk2"]
+[ext_resource type="AudioStream" uid="uid://brxku05nnvvmx" path="res://Musica/sounds/bounce 04.wav" id="14_d5plc"]
+[ext_resource type="AudioStream" uid="uid://btwl0cq4gjvtn" path="res://Musica/sounds/bounce 05.wav" id="15_ur6y8"]
+[ext_resource type="AudioStream" uid="uid://byahsf2ktpxox" path="res://Musica/sounds/shoot 01.wav" id="16_voo72"]
+[ext_resource type="AudioStream" uid="uid://ge3ww5gwkeld" path="res://Musica/sounds/shoot 02.wav" id="17_0ucrp"]
+[ext_resource type="AudioStream" uid="uid://nobaen1tymwh" path="res://Musica/sounds/shoot 03.wav" id="18_r1mgj"]
+[ext_resource type="AudioStream" uid="uid://c01wi0wb33siq" path="res://Musica/sounds/shoot 04.wav" id="19_lgdib"]
+[ext_resource type="AudioStream" uid="uid://ctqsawo56csbd" path="res://Musica/sounds/aura.ogg" id="20_rjr71"]
+[ext_resource type="AudioStream" uid="uid://c73rs2uxurths" path="res://Musica/sounds/win clap.ogg" id="21_06puq"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_bojiv")
+MaxSongs = 7
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jdwv8")
+bus = &"Intro"
+
+[node name="Songs" type="Node" parent="."]
+
+[node name="0" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("5_3ueng")
+bus = &"Music"
+
+[node name="1" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("4_omdc1")
+bus = &"Music"
+
+[node name="2" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("5_for28")
+bus = &"Music"
+
+[node name="3" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("6_1pe13")
+bus = &"Music"
+
+[node name="4" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("7_lblyi")
+bus = &"Music"
+
+[node name="5" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("8_p7kj5")
+bus = &"Music"
+
+[node name="6" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("9_pd1hh")
+bus = &"Music"
+
+[node name="7" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource("4_ukcvy")
+bus = &"Music"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Space" type="Timer" parent="."]
+one_shot = true
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Bounce" type="Node" parent="Sounds"]
+
+[node name="1" type="AudioStreamPlayer" parent="Sounds/Bounce"]
+stream = ExtResource("11_ou4py")
+
+[node name="2" type="AudioStreamPlayer" parent="Sounds/Bounce"]
+stream = ExtResource("12_yemug")
+
+[node name="3" type="AudioStreamPlayer" parent="Sounds/Bounce"]
+stream = ExtResource("13_dngk2")
+
+[node name="4" type="AudioStreamPlayer" parent="Sounds/Bounce"]
+stream = ExtResource("14_d5plc")
+
+[node name="0" type="AudioStreamPlayer" parent="Sounds/Bounce"]
+stream = ExtResource("15_ur6y8")
+
+[node name="Shoot" type="Node" parent="Sounds"]
+
+[node name="0" type="AudioStreamPlayer" parent="Sounds/Shoot"]
+stream = ExtResource("16_voo72")
+
+[node name="1" type="AudioStreamPlayer" parent="Sounds/Shoot"]
+stream = ExtResource("17_0ucrp")
+
+[node name="2" type="AudioStreamPlayer" parent="Sounds/Shoot"]
+stream = ExtResource("18_r1mgj")
+
+[node name="3" type="AudioStreamPlayer" parent="Sounds/Shoot"]
+stream = ExtResource("19_lgdib")
+
+[node name="Aura" type="Node" parent="Sounds"]
+
+[node name="Aura" type="AudioStreamPlayer" parent="Sounds/Aura"]
+stream = ExtResource("20_rjr71")
+bus = &"Aura"
+
+[node name="Win" type="Node" parent="Sounds"]
+
+[node name="Clap" type="AudioStreamPlayer" parent="Sounds/Win"]
+stream = ExtResource("21_06puq")
+bus = &"Aura"
+
+[connection signal="finished" from="Songs/0" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/1" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/2" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/3" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/4" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/5" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/6" to="." method="_on__finished"]
+[connection signal="finished" from="Songs/7" to="." method="_on__finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Space" to="." method="_on_space_timeout"]

@@ -13,13 +13,13 @@ func _process(delta):
 	if CombatData.Protected:
 		protectedtimer += delta
 		
-		if $"../".DataPath.MyGUI.get_node("Stamina").value >= 100 and CombatData.StaminaStocks < 5:
-			$"../".DataPath.MyGUI.get_node("Stamina").value = 0
+		if MyGUI.get_node("Stamina").value >= 100 and CombatData.StaminaStocks < 5:
+			MyGUI.get_node("Stamina").value = 0
 			CombatData.StaminaStocks += 1
-			$"../".DataPath.MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
+			MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
 		
-		if $"../".DataPath.MyGUI.get_node("Stamina").value < 100:
-			$"../".DataPath.MyGUI.get_node("Stamina").value += delta * 50
+		if MyGUI.get_node("Stamina").value < 100:
+			MyGUI.get_node("Stamina").value += delta * 50
 	
 	if protectedtimer > maxtimer :
 		CombatData.Protected = false
@@ -39,19 +39,13 @@ func SETID():
 
 func _on_body_entered(body):
 	if body.is_in_group("ROSA"):
+		Music.PlayAura()
 		CombatData.Protected = true
 		$Die.start(10)
 		colortween = create_tween()
 		colortween.tween_property($AreaCircle, "modulate", colormiddle, 10.0)
 		$Active.play("Active")
 		starttimer = true
-	
-	if body.is_in_group("BALL"):
-		if body.hadouken:
-			CombatData.Protected = false
-			get_parent().KillArea()
-			get_parent().Gold()
-			self.queue_free()
 
 
 func _on_body_exited(body):

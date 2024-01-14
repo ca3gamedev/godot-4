@@ -1,33 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dggt88umf255"]
-
-[ext_resource type="Texture2D" uid="uid://cjnn3jradoa7w" path="res://2D/Scenes/06.png" id="1_6tlup"]
-[ext_resource type="PackedScene" uid="uid://cdhkkm5u8nmaj" path="res://Scenes/Menues/Continue.tscn" id="2_x6rki"]
+[gd_scene format=3 uid="uid://dggt88umf255"]
 
 [node name="Title" type="Node2D"]
-
-[node name="06" type="Sprite2D" parent="."]
-position = Vector2(555, 326)
-texture = ExtResource("1_6tlup")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -10.0
 offset_top = -8.0
 offset_right = 1168.0
 offset_bottom = 662.0
-color = Color(0.196078, 0.137255, 0.552941, 0.607843)
+color = Color(0.0823529, 0.0470588, 0.278431, 1)
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 428.0
-offset_top = 334.0
-offset_right = 714.0
-offset_bottom = 406.0
+offset_left = 252.0
+offset_top = 198.0
+offset_right = 538.0
+offset_bottom = 270.0
 theme_override_font_sizes/font_size = 50
 text = "KALIINA"
-
-[node name="Continue" parent="." instance=ExtResource("2_x6rki")]
-offset_left = 516.0
-offset_top = 544.0
-offset_right = 633.0
-offset_bottom = 583.0
-Next = "res://Scenes/Battle/Scene/Levels/01/01.tscn"

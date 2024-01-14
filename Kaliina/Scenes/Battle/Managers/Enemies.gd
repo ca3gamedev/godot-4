@@ -22,7 +22,7 @@ func Coin(pos):
 	tmp.global_position = pos
 
 func UpdateCoin():
-	%GUI.get_node("ScoreLabel").text = str(CombatData.score)
+	MyGUI.get_node("ScoreLabel").text = str(CombatData.score)
 
 func HIT(id):
 	match(id):

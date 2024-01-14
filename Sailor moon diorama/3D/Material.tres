@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cy6vqc32lqpx8"]
+
+[ext_resource type="Texture2D" uid="uid://chem5j8bsv0gx" path="res://3D/sailor moon_usagiC.png" id="1_5kp5c"]
+[ext_resource type="Texture2D" uid="uid://b7faqo8u6bf06" path="res://3D/sailor moon_usagiRM.png" id="2_u65xi"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_5kp5c")
+metallic = 1.0
+metallic_texture = ExtResource("2_u65xi")
+metallic_texture_channel = 2
+roughness = 0.85
+roughness_texture = ExtResource("2_u65xi")
+roughness_texture_channel = 1
+texture_filter = 2

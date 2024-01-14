@@ -11,6 +11,7 @@ func _on_area_2d_body_entered(body):
 	
 	if body.is_in_group("ENEMY"):
 		body.HIT(myid, damage, hadouken, superball)
+		Music.PlayBounce()
 		self.linear_velocity = Vector2.ZERO
 		var angle = (get_parent().jump - self.global_position).normalized() * 800
 		self.apply_impulse(angle)

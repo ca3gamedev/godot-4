@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://croqafpkblea8"
+path="res://.godot/imported/Bridge 03.ogg-afe5dcf6cc1bb261739c44e122f18ba5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Musica/Bridge 03.ogg"
+dest_files=["res://.godot/imported/Bridge 03.ogg-afe5dcf6cc1bb261739c44e122f18ba5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

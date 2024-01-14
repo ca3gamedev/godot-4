@@ -1,0 +1,286 @@
+[gd_scene load_steps=16 format=3 uid="uid://pxickiigisyy"]
+
+[ext_resource type="Texture2D" uid="uid://1y6b1o5lh8nl" path="res://2D/GUI/raw/grid.png" id="1_7tnm0"]
+[ext_resource type="PackedScene" uid="uid://dggt88umf255" path="res://Scenes/Menues/Title.tscn" id="1_dubr0"]
+[ext_resource type="Script" path="res://Scenes/Battle/Scene/SubViewport.gd" id="2_p2pkp"]
+[ext_resource type="PackedScene" uid="uid://t606lfbtruvx" path="res://Scenes/Battle/Scene/turned_off.tscn" id="2_t2563"]
+[ext_resource type="Texture2D" uid="uid://d0gmopf7hgw5o" path="res://2D/GUI/gui/pacifica.png" id="3_f6rtv"]
+[ext_resource type="PackedScene" uid="uid://dsxs1u81a82g2" path="res://Scenes/Menues/GameOver.tscn" id="3_x7a70"]
+[ext_resource type="Texture2D" uid="uid://dukj6so8wlk48" path="res://2D/GUI/gui/rosa.png" id="4_xx43i"]
+[ext_resource type="Script" path="res://Scenes/Battle/Scene/Root/Intro.gd" id="5_6vrb5"]
+[ext_resource type="PackedScene" uid="uid://bgg55csrwwnid" path="res://Scenes/Battle/Pause/pause.tscn" id="6_clpwc"]
+[ext_resource type="PackedScene" uid="uid://pv1v3wbvongi" path="res://Scenes/Battle/Scene/Levels/01/01.tscn" id="9_v760c"]
+[ext_resource type="Script" path="res://Scenes/Battle/Pause/Pause.gd" id="11_0cxou"]
+
+[sub_resource type="Animation" id="Animation_xic04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pacifica:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(242, 411)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rosa:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1093, 401)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rosa:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pacifica:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nl1rp"]
+resource_name = "ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pacifica:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-200, 411)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pacifica:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rosa:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Rosa:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1506, 401)]
+}
+
+[sub_resource type="Animation" id="Animation_4qdg6"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pacifica:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-200, 411), Vector2(242, 411)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rosa:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1506, 401), Vector2(1093, 401)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rosa:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.294118), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pacifica:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.329412), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Intro")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"SisterTween"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fju8"]
+_data = {
+"RESET": SubResource("Animation_xic04"),
+"ready": SubResource("Animation_nl1rp"),
+"start": SubResource("Animation_4qdg6")
+}
+
+[node name="Root" type="Node2D"]
+
+[node name="Grid" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(645, 364)
+texture = ExtResource("1_7tnm0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1292.0
+offset_bottom = 727.0
+metadata/_edit_lock_ = true
+
+[node name="Sub" type="SubViewportContainer" parent="."]
+offset_left = 241.0
+offset_top = 46.0
+offset_right = 1042.0
+offset_bottom = 545.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Sub"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(801, 499)
+size_2d_override = Vector2i(800, 600)
+render_target_update_mode = 4
+script = ExtResource("2_p2pkp")
+
+[node name="TurnedOff" parent="Sub/SubViewport" instance=ExtResource("2_t2563")]
+unique_name_in_owner = true
+
+[node name="Game" type="Node" parent="Sub/SubViewport"]
+unique_name_in_owner = true
+
+[node name="Title" parent="Sub/SubViewport" instance=ExtResource("1_dubr0")]
+unique_name_in_owner = true
+visible = false
+
+[node name="GameOver" parent="Sub/SubViewport" instance=ExtResource("3_x7a70")]
+unique_name_in_owner = true
+visible = false
+
+[node name="PAUSE" parent="Sub/SubViewport" instance=ExtResource("6_clpwc")]
+unique_name_in_owner = true
+process_mode = 2
+
+[node name="Pacifica" type="Sprite2D" parent="."]
+position = Vector2(242, 411)
+texture = ExtResource("3_f6rtv")
+
+[node name="Rosa" type="Sprite2D" parent="."]
+position = Vector2(1093, 401)
+texture = ExtResource("4_xx43i")
+
+[node name="TurnOn" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 608.0
+offset_top = 568.0
+offset_right = 742.0
+offset_bottom = 606.0
+text = "START"
+
+[node name="Continue" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 608.0
+offset_top = 612.0
+offset_right = 742.0
+offset_bottom = 650.0
+text = "BEGIN"
+
+[node name="Reset" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 608.0
+offset_top = 654.0
+offset_right = 742.0
+offset_bottom = 692.0
+text = "RESET"
+
+[node name="Sisters" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_4fju8")
+}
+autoplay = "ready"
+
+[node name="Intro" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_6vrb5")
+Battle = ExtResource("9_v760c")
+
+[node name="Pause" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("11_0cxou")
+
+[connection signal="button_up" from="TurnOn" to="Intro" method="_on_turn_on_button_up"]
+[connection signal="button_up" from="Continue" to="Intro" method="_on_continue_button_up"]
+[connection signal="pressed" from="Reset" to="Sub/SubViewport" method="_on_reset_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://xpoey2kmbvik"]
 
-[ext_resource type="Texture2D" uid="uid://dtmws8vvlmfqy" path="res://2D/Tiles/grass yellow tile.png" id="1_bo8ep"]
+[ext_resource type="Texture2D" uid="uid://iphj715f6ncb" path="res://2D/Tiles/grass yellow tile.png" id="1_bo8ep"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvy5v"]
 texture = ExtResource("1_bo8ep")
@@ -344,5 +344,5 @@ sources/0 = SubResource("TileSetAtlasSource_vvy5v")
 
 [node name="yellow grass" type="TileMap"]
 tile_set = SubResource("TileSet_42h1h")
-cell_quadrant_size = 32
+rendering_quadrant_size = 32
 format = 2

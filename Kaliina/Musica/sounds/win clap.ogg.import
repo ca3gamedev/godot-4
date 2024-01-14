@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c73rs2uxurths"
+path="res://.godot/imported/win clap.ogg-5d36bab8d97dd5bab6d39b0781223e73.oggvorbisstr"
+
+[deps]
+
+source_file="res://Musica/sounds/win clap.ogg"
+dest_files=["res://.godot/imported/win clap.ogg-5d36bab8d97dd5bab6d39b0781223e73.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

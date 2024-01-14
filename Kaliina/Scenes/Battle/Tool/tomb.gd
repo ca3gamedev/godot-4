@@ -6,13 +6,14 @@ extends Node2D
 @export var MaxScore : int
 
 func _ready():
+	MyGUI.GameLoaded()
+	MyGUI.Reset()
 	$Tomb.modulate = Color.DARK_BLUE
-	GUI.get_node("SuperStock").max_value = MaxScore
-	GUI.get_node("SuperStock").value = 0
+	MyGUI.get_node("SuperStock").max_value = MaxScore
 
 func _process(delta):
 	
-	if GUI.get_node("SuperStock").value >= MaxScore:
+	if MyGUI.get_node("SuperStock").value >= MaxScore:
 		print()
 		$Tomb.modulate = Color.RED
 		Filled = true
@@ -23,4 +24,9 @@ func _process(delta):
 
 func _on_tomb_area_body_entered(body):
 	if body.is_in_group("PLAYER") and Filled:
-		get_tree().change_scene_to_file(Next)
+		Music.WinClap()
+		Music.StopMusic()
+		var tmp = load(Next)
+		var nextscene = tmp.instantiate()
+		$"../../".call_deferred("add_child", nextscene)
+		$"../".queue_free()

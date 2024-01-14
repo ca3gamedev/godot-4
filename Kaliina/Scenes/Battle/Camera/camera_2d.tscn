@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://sr4iwyqa3r02"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Camera/camera_2d.gd" id="1_klbvp"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(644, 350)
+zoom = Vector2(0.75, 0.75)
+script = ExtResource("1_klbvp")
+speed = 150.0

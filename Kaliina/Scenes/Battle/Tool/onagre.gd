@@ -11,13 +11,13 @@ extends Node2D
 @export var hadoukenstrenght : float
 @export var normalshot : bool
 @export var specialshot : bool
-@onready var NextBall = %GUI.get_node("NextBall")
+@onready var NextBall = MyGUI.get_node("NextBall")
 
 func _process(delta):
 	
-	if Input.is_action_pressed("SHOOT") and %GUI.get_node("Strenght").value < 100:
+	if Input.is_action_pressed("SHOOT") and MyGUI.get_node("Strenght").value < 100:
 		timerstrenght += delta * 300
-		%GUI.get_node("Strenght").value = timerstrenght
+		MyGUI.get_node("Strenght").value = timerstrenght
 		
 	if Input.is_action_just_released("SHOOT") and timerstrenght > 40:
 		normalshot = true
@@ -37,7 +37,7 @@ func _process(delta):
 			normalshot = false
 			specialshot = false
 			CombatData.StaminaStocks -= 3
-			DataPaths.MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
+			MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
 		else:
 			specialshot = false
 			var id = 0
@@ -47,7 +47,7 @@ func _process(delta):
 				id = 1
 			Spawn(hadoukenstrenght * delta * strenghtlevels / 5, id, false, 7)
 			CombatData.StaminaStocks -= 1
-			DataPaths.MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
+			MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
 	elif normalshot and not specialshot:
 		normalshot = false
 		Spawn(timerstrenght * delta * strenghtlevels * 1.4, 0, false, 3)
@@ -62,10 +62,12 @@ func _process(delta):
 					id = 1
 				Spawn(hadoukenstrenght * delta * strenghtlevels / 5, id, false, 7)
 				CombatData.StaminaStocks -= 1
-				DataPaths.MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
+				MyGUI.get_node("StaminaStocks").text = str(CombatData.StaminaStocks)
 
 
 func Spawn(strenght, id, special, damage):
+	
+	Music.PlayShoot()
 	
 	var bomb
 	
@@ -77,9 +79,9 @@ func Spawn(strenght, id, special, damage):
 	bomb.apply_impulse(GetAngle() * strenght)
 	
 	timerstrenght = 0
-	%GUI.get_node("Strenght").value = timerstrenght
+	MyGUI.get_node("Strenght").value = timerstrenght
 	
-	%GUI.Spawn()
+	MyGUI.Spawn()
 	
 	if special :
 		bomb.SetID("super", 3, damage)

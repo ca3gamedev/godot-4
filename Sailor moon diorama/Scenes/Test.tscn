@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://du72e7nxo5c2d"]
+
+[ext_resource type="Texture2D" uid="uid://b783luctvohuw" path="res://3D/ground/ground_stoney_02_basecolor_export.png" id="1_yq785"]
+[ext_resource type="Texture2D" uid="uid://ceaxmwtq4jvm1" path="res://3D/ground/ground_stoney_02_height_export.png" id="2_airpn"]
+[ext_resource type="Texture2D" uid="uid://djrwhhsovoc5d" path="res://3D/ground/ground_stoney_02_normal_export.png" id="3_2pe4p"]
+[ext_resource type="Texture2D" uid="uid://m02fpppilow6" path="res://3D/ground/ground_stoney_02_roughness_export.png" id="4_jlghd"]
+[ext_resource type="PackedScene" uid="uid://pood116iofh0" path="res://3D/sailor moon.glb" id="5_jblf8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uruby"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_2qldj"]
+sky_material = SubResource("ProceduralSkyMaterial_uruby")
+
+[sub_resource type="Environment" id="Environment_lnlwo"]
+background_mode = 2
+sky = SubResource("Sky_2qldj")
+tonemap_mode = 3
+tonemap_exposure = 1.1
+sdfgi_enabled = true
+sdfgi_energy = 0.1
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.635294, 0.905882, 0.980392, 1)
+adjustment_enabled = true
+adjustment_contrast = 0.9
+adjustment_saturation = 1.15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0038r"]
+albedo_texture = ExtResource("1_yq785")
+metallic_specular = 0.06
+roughness_texture = ExtResource("4_jlghd")
+normal_enabled = true
+normal_texture = ExtResource("3_2pe4p")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_airpn")
+uv1_scale = Vector3(5, 5, 5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_4a6lg"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lnlwo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.515071, -0.742312, 0.428572, -1.49013e-08, 0.499998, 0.866027, -0.857147, -0.446065, 0.257535, 0, 4.3799, 0)
+light_color = Color(0.890196, 0.937255, 0.713726, 1)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, -8.74228e-07, 20, 0, -20, -8.74228e-07, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_0038r")
+mesh = SubResource("QuadMesh_4a6lg")
+
+[node name="sailor moon" parent="." instance=ExtResource("5_jblf8")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.1413, 3.70037)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.992229, -0.0638949, 0.10677, 0, 0.858084, 0.51351, -0.124428, -0.509519, 0.851415, 0.175767, 2.75412, 7.07458)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.08726, 5.40356)
+light_energy = 0.8

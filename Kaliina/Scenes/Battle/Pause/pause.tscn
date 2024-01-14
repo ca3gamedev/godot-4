@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bgg55csrwwnid"]
+
+[node name="PAUSE" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 120.0
+offset_top = -6.0
+offset_right = 1162.0
+offset_bottom = 571.0
+color = Color(0.337255, 0, 0.717647, 0.364706)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 152.0
+offset_top = 19.0
+offset_right = 1127.0
+offset_bottom = 555.0
+color = Color(0.231373, 0, 0.509804, 0.266667)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 128.0
+offset_right = 458.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 80
+text = "PAUSE"

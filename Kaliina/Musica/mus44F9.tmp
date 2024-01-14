@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvonnk0bwt8ue"]
+
+[ext_resource type="Script" path="res://Musica/music.gd" id="1_bojiv"]
+[ext_resource type="AudioStream" uid="uid://dvqoy7fcsg24t" path="res://Musica/prelude.ogg" id="1_jdwv8"]
+[ext_resource type="AudioStream" uid="uid://bmyv4f0qq5wh6" path="res://Musica/placeholder01.ogg" id="3_au10n"]
+[ext_resource type="AudioStream" uid="uid://c4a7en605qlpa" path="res://Musica/placeholder02.ogg" id="4_2l1h1"]
+[ext_resource type="AudioStream" uid="uid://bmg8io7nkfj1m" path="res://Musica/placeholder 03.ogg" id="5_31krt"]
+[ext_resource type="AudioStream" uid="uid://d2sb183kxe3e5" path="res://Musica/placeholder 04.ogg" id="6_w1qrg"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_bojiv")
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jdwv8")
+
+[node name="Placeholders" type="Node" parent="."]
+
+[node name="0" type="AudioStreamPlayer" parent="Placeholders"]
+stream = ExtResource("3_au10n")
+
+[node name="1" type="AudioStreamPlayer" parent="Placeholders"]
+stream = ExtResource("4_2l1h1")
+
+[node name="2" type="AudioStreamPlayer" parent="Placeholders"]
+stream = ExtResource("5_31krt")
+
+[node name="3" type="AudioStreamPlayer" parent="Placeholders"]
+stream = ExtResource("6_w1qrg")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="finished" from="Placeholders/0" to="." method="_on__finished"]
+[connection signal="finished" from="Placeholders/1" to="." method="_on__finished"]
+[connection signal="finished" from="Placeholders/2" to="." method="_on__finished"]
+[connection signal="finished" from="Placeholders/3" to="." method="_on__finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
