@@ -5,11 +5,11 @@ func Start():
 
 func Transition():
 	
-	if %FSM.id == 0 and CombatData.IsPacifica:
-		return
-	
-	if %FSM.id == 1 and not CombatData.IsPacifica:
-		return
+	if %FSM.get_parent().IsCombat:
+		if %FSM.id == 0 and CombatData.IsPacifica:
+			return
+		if %FSM.id == 1 and not CombatData.IsPacifica:
+			return
 	
 	var walk = MyInput.get_node("Check").GetWalk()
 	if walk != Vector2i.ZERO:

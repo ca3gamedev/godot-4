@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://doealn5hro451"]
+
+[ext_resource type="Script" path="res://Scenes/JRPG Mode/Scenes/battle.gd" id="1_cfbn7"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_cfbn7")
+
+[node name="parent" type="Node2D" parent="."]

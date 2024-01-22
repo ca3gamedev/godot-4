@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgg55csrwwnid"]
+[gd_scene load_steps=8 format=3 uid="uid://bgg55csrwwnid"]
 
 [ext_resource type="Script" path="res://Scenes/Battle/Pause/pause gui.gd" id="1_3rldp"]
 [ext_resource type="Texture2D" uid="uid://db5pc6oy3djpm" path="res://2D/GUI/Pause menue/under.png" id="1_qlck0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmw1qntophbkj" path="res://2D/GUI/Pause menue/bar.png" id="3_hmfh3"]
 [ext_resource type="FontFile" uid="uid://xapgxwb6dcqj" path="res://Font/Ordin-Bold.otf" id="4_n72tc"]
 [ext_resource type="Script" path="res://Scenes/Battle/Pause/Arrows.gd" id="6_phc4a"]
+[ext_resource type="Theme" uid="uid://bry8ai6aeiieb" path="res://Themes/Button.tres" id="7_f76ud"]
 
 [node name="PAUSE" type="Node2D"]
 process_mode = 2
@@ -277,8 +278,8 @@ offset_left = 846.0
 offset_top = 135.0
 offset_right = 925.0
 offset_bottom = 168.0
-theme_override_fonts/font = ExtResource("4_n72tc")
-text = "save"
+theme = ExtResource("7_f76ud")
+text = "SAVE"
 
 [node name="savedtimer" type="Timer" parent="SAVE"]
 unique_name_in_owner = true
@@ -286,6 +287,7 @@ one_shot = true
 
 [node name="saved" type="Label" parent="SAVE"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 5.0
 offset_top = 40.0
 offset_right = 85.0
@@ -298,8 +300,8 @@ offset_left = 763.0
 offset_top = 135.0
 offset_right = 842.0
 offset_bottom = 168.0
-theme_override_fonts/font = ExtResource("4_n72tc")
-text = "load"
+theme = ExtResource("7_f76ud")
+text = "LOAD"
 
 [connection signal="button_up" from="Music/MinMusic" to="." method="_on_min_music_button_up"]
 [connection signal="button_up" from="Music/MaxMusic" to="." method="_on_max_music_button_up"]

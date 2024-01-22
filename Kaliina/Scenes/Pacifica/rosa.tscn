@@ -617,103 +617,6 @@ animations = [{
 radius = 19.0
 height = 54.0
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nm1gp"]
-animation = &"IDLE"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eck5m"]
-animation = &"WALK R"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5fuif"]
-animation = &"DASH L"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mmq7u"]
-animation = &"DASH F"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oiocl"]
-animation = &"DASH B"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ac8o5"]
-animation = &"DASH BR"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_75lto"]
-animation = &"DASH BL"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q0vhh"]
-animation = &"DASH FL"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8q4g5"]
-animation = &"DASH FR"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x0c8r"]
-animation = &"WALK L"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4w4xh"]
-animation = &"WALK F"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qt4bn"]
-animation = &"WALK B"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gvvar"]
-animation = &"WALK BR"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lduax"]
-animation = &"WALK BL"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hr7aj"]
-animation = &"WALK FL"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4edct"]
-animation = &"WALK FR"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uvmsa"]
-animation = &"DASH R"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_t2362"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_nm1gp")
-blend_point_0/pos = Vector2(0, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_eck5m")
-blend_point_1/pos = Vector2(0.5, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_x0c8r")
-blend_point_2/pos = Vector2(-0.5, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_4w4xh")
-blend_point_3/pos = Vector2(0, -0.5)
-blend_point_4/node = SubResource("AnimationNodeAnimation_qt4bn")
-blend_point_4/pos = Vector2(0, 0.5)
-blend_point_5/node = SubResource("AnimationNodeAnimation_gvvar")
-blend_point_5/pos = Vector2(0.5, 0.5)
-blend_point_6/node = SubResource("AnimationNodeAnimation_lduax")
-blend_point_6/pos = Vector2(-0.5, 0.5)
-blend_point_7/node = SubResource("AnimationNodeAnimation_hr7aj")
-blend_point_7/pos = Vector2(-0.5, -0.5)
-blend_point_8/node = SubResource("AnimationNodeAnimation_4edct")
-blend_point_8/pos = Vector2(0.5, -0.5)
-blend_point_9/node = SubResource("AnimationNodeAnimation_uvmsa")
-blend_point_9/pos = Vector2(1, 0)
-blend_point_10/node = SubResource("AnimationNodeAnimation_5fuif")
-blend_point_10/pos = Vector2(-1, 0)
-blend_point_11/node = SubResource("AnimationNodeAnimation_mmq7u")
-blend_point_11/pos = Vector2(0, -1)
-blend_point_12/node = SubResource("AnimationNodeAnimation_oiocl")
-blend_point_12/pos = Vector2(0, 1)
-blend_point_13/node = SubResource("AnimationNodeAnimation_ac8o5")
-blend_point_13/pos = Vector2(1, 1)
-blend_point_14/node = SubResource("AnimationNodeAnimation_75lto")
-blend_point_14/pos = Vector2(-1, 1)
-blend_point_15/node = SubResource("AnimationNodeAnimation_q0vhh")
-blend_point_15/pos = Vector2(-1, -1)
-blend_point_16/node = SubResource("AnimationNodeAnimation_8q4g5")
-blend_point_16/pos = Vector2(1, -1)
-snap = Vector2(0.5, 0.5)
-blend_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8d7cp"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_j02d2"]
-states/MOVE/node = SubResource("AnimationNodeBlendSpace2D_t2362")
-states/MOVE/position = Vector2(386.667, 94)
-transitions = ["Start", "MOVE", SubResource("AnimationNodeStateMachineTransition_8d7cp")]
-
 [sub_resource type="Animation" id="Animation_sn4tw"]
 resource_name = "DASH B"
 length = 0.6
@@ -1248,6 +1151,103 @@ _data = {
 "WALK R": SubResource("Animation_72s7x")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nm1gp"]
+animation = &"IDLE"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eck5m"]
+animation = &"WALK R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5fuif"]
+animation = &"DASH L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mmq7u"]
+animation = &"DASH F"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oiocl"]
+animation = &"DASH B"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ac8o5"]
+animation = &"DASH BR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_75lto"]
+animation = &"DASH BL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q0vhh"]
+animation = &"DASH FL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8q4g5"]
+animation = &"DASH FR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x0c8r"]
+animation = &"WALK L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4w4xh"]
+animation = &"WALK F"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qt4bn"]
+animation = &"WALK B"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gvvar"]
+animation = &"WALK BR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lduax"]
+animation = &"WALK BL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hr7aj"]
+animation = &"WALK FL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4edct"]
+animation = &"WALK FR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uvmsa"]
+animation = &"DASH R"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_t2362"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_nm1gp")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_eck5m")
+blend_point_1/pos = Vector2(0.5, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_x0c8r")
+blend_point_2/pos = Vector2(-0.5, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_4w4xh")
+blend_point_3/pos = Vector2(0, -0.5)
+blend_point_4/node = SubResource("AnimationNodeAnimation_qt4bn")
+blend_point_4/pos = Vector2(0, 0.5)
+blend_point_5/node = SubResource("AnimationNodeAnimation_gvvar")
+blend_point_5/pos = Vector2(0.5, 0.5)
+blend_point_6/node = SubResource("AnimationNodeAnimation_lduax")
+blend_point_6/pos = Vector2(-0.5, 0.5)
+blend_point_7/node = SubResource("AnimationNodeAnimation_hr7aj")
+blend_point_7/pos = Vector2(-0.5, -0.5)
+blend_point_8/node = SubResource("AnimationNodeAnimation_4edct")
+blend_point_8/pos = Vector2(0.5, -0.5)
+blend_point_9/node = SubResource("AnimationNodeAnimation_uvmsa")
+blend_point_9/pos = Vector2(1, 0)
+blend_point_10/node = SubResource("AnimationNodeAnimation_5fuif")
+blend_point_10/pos = Vector2(-1, 0)
+blend_point_11/node = SubResource("AnimationNodeAnimation_mmq7u")
+blend_point_11/pos = Vector2(0, -1)
+blend_point_12/node = SubResource("AnimationNodeAnimation_oiocl")
+blend_point_12/pos = Vector2(0, 1)
+blend_point_13/node = SubResource("AnimationNodeAnimation_ac8o5")
+blend_point_13/pos = Vector2(1, 1)
+blend_point_14/node = SubResource("AnimationNodeAnimation_75lto")
+blend_point_14/pos = Vector2(-1, 1)
+blend_point_15/node = SubResource("AnimationNodeAnimation_q0vhh")
+blend_point_15/pos = Vector2(-1, -1)
+blend_point_16/node = SubResource("AnimationNodeAnimation_8q4g5")
+blend_point_16/pos = Vector2(1, -1)
+snap = Vector2(0.5, 0.5)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8d7cp"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_j02d2"]
+states/MOVE/node = SubResource("AnimationNodeBlendSpace2D_t2362")
+states/MOVE/position = Vector2(386.667, 94)
+transitions = ["Start", "MOVE", SubResource("AnimationNodeStateMachineTransition_8d7cp")]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_inkld"]
 radius = 135.004
 
@@ -1256,6 +1256,7 @@ y_sort_enabled = true
 collision_layer = 32
 collision_mask = 200
 script = ExtResource("1_3skmx")
+IsCombat = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 3)
@@ -1287,6 +1288,10 @@ dashspeed = 300.0
 
 [node name="Anim" type="AnimationTree" parent="."]
 unique_name_in_owner = true
+root_node = NodePath("%Anim/..")
+libraries = {
+"": SubResource("AnimationLibrary_ajl65")
+}
 tree_root = SubResource("AnimationNodeStateMachine_j02d2")
 anim_player = NodePath("../AnimationPlayer")
 parameters/MOVE/blend_position = Vector2(0, 0)

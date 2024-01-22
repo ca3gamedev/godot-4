@@ -7,13 +7,14 @@ func Start():
 
 func Transition():
 	
-	if %FSM.id == 0 and CombatData.IsPacifica:
-		%FSM.current = %FSM.get_node("IDLE")
-		%FSM.current.Start()
-	
-	if %FSM.id == 1 and not CombatData.IsPacifica:
-		%FSM.current = %FSM.get_node("IDLE")
-		%FSM.current.Start()
+	if %FSM.get_parent().IsCombat:
+		if %FSM.id == 0 and CombatData.IsPacifica:
+			%FSM.current = %FSM.get_node("IDLE")
+			%FSM.current.Start()
+		
+		if %FSM.id == 1 and not CombatData.IsPacifica:
+			%FSM.current = %FSM.get_node("IDLE")
+			%FSM.current.Start()
 	
 	var idle = MyInput.get_node("Check").GetWalk()
 	

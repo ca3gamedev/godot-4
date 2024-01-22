@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://6sgrbgehoifx"]
+
+[ext_resource type="PackedScene" uid="uid://b6x8mbg1186o7" path="res://Scenes/Battle/Map/map.tscn" id="1_b03qe"]
+[ext_resource type="PackedScene" uid="uid://m0n6jdjvsaaa" path="res://Scenes/Battle/Players/Pacifica/pacficia.tscn" id="2_5g5u3"]
+[ext_resource type="PackedScene" uid="uid://b4rnnobjmhuo" path="res://Scenes/Battle/Players/Pacifica/base.tscn" id="3_51t5d"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("1_b03qe")]
+
+[node name="Base" parent="." instance=ExtResource("3_51t5d")]
+
+[node name="Pacifica" parent="." node_paths=PackedStringArray("Base") instance=ExtResource("2_5g5u3")]
+position = Vector2(493, 363)
+Base = NodePath("../Base")
+pos = 1
+
+[node name="Start" type="Marker2D" parent="."]
+position = Vector2(451, 329)

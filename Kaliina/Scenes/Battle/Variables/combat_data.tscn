@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckwsbqvmrwsog"]
+[gd_scene load_steps=3 format=3 uid="uid://ckwsbqvmrwsog"]
 
 [ext_resource type="Script" path="res://Scenes/Battle/Variables/combat_data.gd" id="1_218c5"]
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/Levels.gd" id="2_ntj5t"]
 
 [node name="CombatData" type="Node"]
 script = ExtResource("1_218c5")
-IsPacifica = true
+
+[node name="Levels" type="Node" parent="."]
+script = ExtResource("2_ntj5t")

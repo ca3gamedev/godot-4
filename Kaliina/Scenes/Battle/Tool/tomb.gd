@@ -23,10 +23,9 @@ func _process(delta):
 
 
 func _on_tomb_area_body_entered(body):
-	if body.is_in_group("PLAYER") and Filled:
-		Music.WinClap()
-		Music.StopMusic()
-		var tmp = load(Next)
-		var nextscene = tmp.instantiate()
-		$"../../".call_deferred("add_child", nextscene)
-		$"../".queue_free()
+	#if body.is_in_group("PLAYER") and Filled:
+	Music.WinClap()
+	Music.StopMusic()
+	var tmp = load(Next)
+	var nextscene = tmp.instantiate()
+	get_tree().get_root().get_node("Root").EndBattle()

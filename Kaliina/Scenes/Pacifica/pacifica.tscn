@@ -1145,6 +1145,7 @@ position = Vector2(0, -1)
 collision_layer = 16
 collision_mask = 136
 script = ExtResource("1_mr3j4")
+IsCombat = true
 
 [node name="Sprite" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -1167,6 +1168,10 @@ libraries = {
 
 [node name="Anim" type="AnimationTree" parent="."]
 unique_name_in_owner = true
+root_node = NodePath("%Anim/..")
+libraries = {
+"": SubResource("AnimationLibrary_3robe")
+}
 tree_root = SubResource("AnimationNodeStateMachine_nppcu")
 anim_player = NodePath("../AnimationPlayer")
 parameters/MOVE/blend_position = Vector2(0.00232017, 0.00581396)

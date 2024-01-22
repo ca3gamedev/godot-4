@@ -1,0 +1,337 @@
+[gd_scene load_steps=33 format=3 uid="uid://wm67fu5emah6"]
+
+[ext_resource type="PackedScene" uid="uid://c5qtuh1ssj5vp" path="res://3D/Sisters/Pacfica/pacifica.glb" id="1_gh68s"]
+[ext_resource type="Script" path="res://Scenes/JRPG Mode/Sisters/Pacifica/Code/FSM.gd" id="2_ahq6s"]
+[ext_resource type="Script" path="res://Scenes/JRPG Mode/Sisters/Pacifica/Code/WALK.gd" id="3_vc2ho"]
+[ext_resource type="Script" path="res://Scenes/JRPG Mode/Sisters/Pacifica/Code/IDLE.gd" id="4_w033n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lj11q"]
+radius = 0.219663
+height = 1.59774
+
+[sub_resource type="BoxMesh" id="BoxMesh_aosdm"]
+
+[sub_resource type="Animation" id="Animation_s5vvh"]
+resource_name = "Front"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8jdhj"]
+resource_name = "Front D"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.765728, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xwpc5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vpryc"]
+resource_name = "Side"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.56191, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7iw6e"]
+resource_name = "Side L"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.58453, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u2j6o"]
+resource_name = "Front L"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.788505, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_76nru"]
+resource_name = "Back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.13322, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t3g1s"]
+resource_name = "Back L"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -2.45051, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y4x2e"]
+resource_name = "Back R"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Target:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.40852, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7bw2j"]
+_data = {
+"Back": SubResource("Animation_76nru"),
+"Back L": SubResource("Animation_t3g1s"),
+"Back R": SubResource("Animation_y4x2e"),
+"Front": SubResource("Animation_s5vvh"),
+"Front D": SubResource("Animation_8jdhj"),
+"Front L": SubResource("Animation_u2j6o"),
+"RESET": SubResource("Animation_xwpc5"),
+"Side": SubResource("Animation_vpryc"),
+"Side L": SubResource("Animation_7iw6e")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0ga71"]
+animation = &"Back"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b3yqy"]
+animation = &"Back L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v1qeh"]
+animation = &"Back R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_athi0"]
+animation = &"Side"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ui82"]
+animation = &"Side L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y0518"]
+animation = &"Front"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t12bm"]
+animation = &"Front D"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aa47a"]
+animation = &"Front L"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_7j7on"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_0ga71")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_b3yqy")
+blend_point_1/pos = Vector2(-1, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_v1qeh")
+blend_point_2/pos = Vector2(1, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_athi0")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_3ui82")
+blend_point_4/pos = Vector2(-1, 0)
+blend_point_5/node = SubResource("AnimationNodeAnimation_y0518")
+blend_point_5/pos = Vector2(0, -1)
+blend_point_6/node = SubResource("AnimationNodeAnimation_t12bm")
+blend_point_6/pos = Vector2(1, -1)
+blend_point_7/node = SubResource("AnimationNodeAnimation_aa47a")
+blend_point_7/pos = Vector2(-1, -1)
+snap = Vector2(1, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lo4sb"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_k8x8m"]
+states/End/position = Vector2(893, 100)
+states/Rotation/node = SubResource("AnimationNodeBlendSpace2D_7j7on")
+states/Rotation/position = Vector2(480, 100)
+states/Start/position = Vector2(268, 100)
+transitions = ["Start", "Rotation", SubResource("AnimationNodeStateMachineTransition_lo4sb")]
+
+[sub_resource type="Animation" id="Animation_d7p5k"]
+resource_name = "Back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Parent/Offset:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.529653, -0.246533, 0.000409735)]
+}
+
+[sub_resource type="Animation" id="Animation_g0bce"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Parent/Offset:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.529653, -0.246533, 0.000409735)]
+}
+
+[sub_resource type="Animation" id="Animation_18k05"]
+resource_name = "Front"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Parent/Offset:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.616678, -0.246891, -0.0065166)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ed3sn"]
+_data = {
+"Back": SubResource("Animation_d7p5k"),
+"Front": SubResource("Animation_18k05"),
+"RESET": SubResource("Animation_g0bce")
+}
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_71ky1"]
+
+[node name="Pacifica" type="CharacterBody3D"]
+transform = Transform3D(0.969231, 0, 0.246153, 0, 1, 0, -0.246153, 0, 0.969231, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754534, -0.107791)
+shape = SubResource("CapsuleShape3D_lj11q")
+
+[node name="Parent" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Offset" type="Node3D" parent="Parent"]
+transform = Transform3D(0.969813, 0.122901, -0.210604, 0.000353593, 0.862982, 0.505233, 0.243842, -0.490058, 0.836888, 0, 0, 0)
+
+[node name="pacifica" parent="Parent/Offset" instance=ExtResource("1_gh68s")]
+transform = Transform3D(0.249976, 0.00349055, 0, -0.00348695, 0.249718, 0.0113407, 0.00015834, -0.0113396, 0.249742, -0.000999972, -2.23517e-08, -0.303)
+
+[node name="Target" type="Node3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
+
+[node name="Target" type="Marker3D" parent="Target"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416534, 0, 1.69966)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Target/Target"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_aosdm")
+skeleton = NodePath("")
+
+[node name="Rotation" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath(".")
+libraries = {
+"": SubResource("AnimationLibrary_7bw2j")
+}
+tree_root = SubResource("AnimationNodeStateMachine_k8x8m")
+anim_player = NodePath("AnimationPlayer")
+parameters/Rotation/blend_position = Vector2(0.786802, 0.762115)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rotation"]
+libraries = {
+"": SubResource("AnimationLibrary_7bw2j")
+}
+
+[node name="RotationZ" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+active = false
+root_node = NodePath(".")
+libraries = {
+"": SubResource("AnimationLibrary_ed3sn")
+}
+tree_root = SubResource("AnimationNodeStateMachine_71ky1")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RotationZ"]
+libraries = {
+"": SubResource("AnimationLibrary_ed3sn")
+}
+
+[node name="FSM" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_ahq6s")
+
+[node name="WALK" type="Node" parent="FSM"]
+script = ExtResource("3_vc2ho")
+
+[node name="IDLE" type="Node" parent="FSM"]
+script = ExtResource("4_w033n")

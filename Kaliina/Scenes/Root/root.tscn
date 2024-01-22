@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://xot1m7ygrfsk"]
+
+[ext_resource type="PackedScene" uid="uid://bdhy0h31afttv" path="res://Scenes/JRPG Mode/Dungeon/dungeon.tscn" id="1_gxmss"]
+[ext_resource type="Script" path="res://Scenes/Root/root.gd" id="1_sgsqs"]
+[ext_resource type="PackedScene" uid="uid://doealn5hro451" path="res://Scenes/Root/battle.tscn" id="2_us5yq"]
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_sgsqs")
+
+[node name="Dungeon" parent="." instance=ExtResource("1_gxmss")]
+unique_name_in_owner = true
+
+[node name="Battle" parent="." instance=ExtResource("2_us5yq")]
+unique_name_in_owner = true

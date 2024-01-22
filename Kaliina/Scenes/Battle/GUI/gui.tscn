@@ -519,6 +519,7 @@ _data = {
 }
 
 [node name="GUI" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_y81y5")
 
 [node name="Grid" type="Sprite2D" parent="."]

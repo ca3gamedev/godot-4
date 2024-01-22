@@ -11,22 +11,28 @@ config_version=5
 [application]
 
 config/name="Kaliina"
-run/main_scene="res://Scenes/Battle/Scene/root.tscn"
+run/main_scene="res://Scenes/Root/root.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MyInput="*res://Scenes/Pacifica/FSM/Input/input.tscn"
-CombatData="*res://Scenes/Battle/Variables/combat_data.gd"
 MyGUI="*res://Scenes/Battle/GUI/gui.tscn"
 Music="*res://Musica/music.tscn"
+CombatData="*res://Scenes/Battle/Variables/combat_data.tscn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
+
+[file_customization]
+
+folder_colors={
+"res://Scenes/JRPG Mode/": "red"
+}
 
 [input]
 
@@ -78,6 +84,7 @@ PAUSE={
 2d_physics/layer_8="Items"
 2d_physics/layer_9="Tomb"
 2d_physics/layer_10="Butterflies"
+2d_physics/layer_11="JRPG Wall"
 
 [rendering]
 

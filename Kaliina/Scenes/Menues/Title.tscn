@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://dggt88umf255"]
+[gd_scene load_steps=3 format=3 uid="uid://dggt88umf255"]
+
+[ext_resource type="Texture2D" uid="uid://b8jy73qpsne0x" path="res://2D/GUI/screens/Title.png" id="1_q0cuj"]
+[ext_resource type="FontFile" uid="uid://c5jylnufbefij" path="res://Font/Caprasimo-Regular.ttf" id="2_hxvkg"]
 
 [node name="Title" type="Node2D"]
 
@@ -10,10 +13,18 @@ offset_bottom = 662.0
 color = Color(0.0823529, 0.0470588, 0.278431, 1)
 metadata/_edit_lock_ = true
 
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(406, 254)
+texture = ExtResource("1_q0cuj")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 252.0
-offset_top = 198.0
-offset_right = 538.0
-offset_bottom = 270.0
+offset_left = 517.0
+offset_top = 283.0
+offset_right = 803.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(0.890196, 0.466667, 0.0980392, 1)
+theme_override_colors/font_outline_color = Color(0.4, 0.298039, 0.105882, 1)
+theme_override_constants/outline_size = 23
+theme_override_fonts/font = ExtResource("2_hxvkg")
 theme_override_font_sizes/font_size = 50
 text = "KALIINA"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7qv1hxujfa7e"]
+
+[ext_resource type="PackedScene" uid="uid://kdeekh3sy4pj" path="res://Scenes/VN Mode/Dialogs/vn_dialog.tscn" id="1_cisap"]
+
+[node name="Dialog 01" type="Node2D"]
+
+[node name="VNDialog" parent="." instance=ExtResource("1_cisap")]
+id = 1
+world = "01"
+dialog = "01"

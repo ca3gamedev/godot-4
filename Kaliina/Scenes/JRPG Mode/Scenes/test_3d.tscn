@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://8gvwpia82gjg"]
+
+[ext_resource type="PackedScene" uid="uid://wm67fu5emah6" path="res://Scenes/JRPG Mode/Sisters/Pacifica/pacifica.tscn" id="1_20lqe"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_plfbl"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_71g1k"]
+sky_material = SubResource("ProceduralSkyMaterial_plfbl")
+
+[sub_resource type="Environment" id="Environment_2vdmp"]
+background_mode = 2
+sky = SubResource("Sky_71g1k")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Test3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2vdmp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999945, -0.00909574, 0.00525141, -1.49013e-08, 0.499998, 0.866027, -0.0105028, -0.865979, 0.49997, 0, 13, 0)
+shadow_enabled = true
+
+[node name="Pacifica" parent="." instance=ExtResource("1_20lqe")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999848, 0.0140744, -0.0103198, 0, 0.59131, 0.806445, 0.0174524, -0.806322, 0.59122, 0.0149402, 4.94377, 3.99307)

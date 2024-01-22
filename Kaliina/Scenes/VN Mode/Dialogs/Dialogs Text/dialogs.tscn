@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs6iblmbkx0p5"]
+
+[ext_resource type="Script" path="res://Scenes/VN Mode/Dialogs/Dialogs Text/dialogs.gd" id="1_fuqd7"]
+[ext_resource type="Script" path="res://Scenes/VN Mode/Dialogs/Dialogs Text/world 01/Dialog 01.gd" id="2_p4qwe"]
+
+[node name="Dialogs" type="Node"]
+script = ExtResource("1_fuqd7")
+
+[node name="01" type="Node" parent="."]
+
+[node name="01" type="Node" parent="01"]
+script = ExtResource("2_p4qwe")

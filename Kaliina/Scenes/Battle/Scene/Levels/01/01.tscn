@@ -40,16 +40,19 @@ layer_0/tile_data = PackedInt32Array(1376293, 131072, 2, 1310757, 131072, 1, 124
 layer_0/tile_data = PackedInt32Array(1179660, 0, 2, 1179661, 65536, 2, 1179662, 65536, 2, 1179663, 65536, 2, 1179664, 65536, 2, 1179669, 65536, 2, 1179670, 65536, 2, 1179671, 65536, 2, 1179672, 65536, 2, 1179668, 0, 2, 1179665, 131072, 2, 1114124, 0, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114128, 393216, 2, 1048592, 0, 1, 983056, 0, 0, 1114129, 131072, 1, 1048593, 131072, 1, 983057, 131072, 0, 1114132, 0, 1, 1114133, 327680, 2, 1048597, 131072, 1, 983061, 131072, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1048596, 0, 1, 983060, 0, 0, 851986, 0, 2, 851987, 131072, 2, 786450, 0, 1, 786451, 131072, 1, 720914, 393216, 1, 720915, 327680, 1, 655378, 65536, 1, 655379, 65536, 1, 589842, 65536, 1, 589843, 65536, 1, 524306, 65536, 1, 524307, 65536, 1, 458770, 65536, 1, 458771, 65536, 1, 393234, 65536, 1, 393235, 65536, 1, 1114127, 65536, 0, 327698, 65536, 1, 131090, 65536, 1, 196626, 65536, 1, 262162, 65536, 1, 131091, 65536, 1, 196627, 65536, 1, 262163, 65536, 1, 327699, 65536, 1, 131085, 0, 2, 131086, 65536, 2, 131087, 65536, 2, 131088, 65536, 2, 131089, 393216, 1, 131092, 327680, 1, 131093, 65536, 2, 131094, 65536, 2, 131095, 65536, 2, 131096, 131072, 2, 196625, 0, 1, 196628, 131072, 1, 65550, 65536, 0, 65551, 65536, 0, 65552, 65536, 0, 65553, 65536, 0, 65554, 65536, 0, 65555, 65536, 0, 65556, 65536, 0, 65557, 65536, 0, 65559, 65536, 0, 65558, 65536, 0, 720913, 0, 2, 655377, 0, 1, 589841, 0, 1, 524305, 0, 1, 458769, 0, 1, 393233, 0, 1, 327697, 0, 1, 262161, 0, 1, 262164, 131072, 1, 327700, 131072, 1, 393236, 131072, 1, 458772, 131072, 1, 524308, 131072, 1, 589844, 131072, 1, 655380, 131072, 1, 720916, 131072, 2, 65548, 0, 3, 65549, 393216, 0, 65560, 327680, 0, 65561, 131072, 3, 1114137, 131072, 0, 1179673, 131072, 2)
 
 [node name="Tomb" parent="." instance=ExtResource("18_4wbfs")]
+visible = false
 position = Vector2(592, 206)
 Next = "res://Scenes/Battle/Scene/Levels/01/01 b.tscn"
 MaxScore = 50
 
 [node name="DataPaths" type="Node2D" parent="." node_paths=PackedStringArray("Onager", "Rosa")]
+visible = false
 script = ExtResource("2_qcfj1")
 Onager = NodePath("../Onagre")
 Rosa = NodePath("../Pacifica/Rosa")
 
 [node name="RosaArea" type="Node2D" parent="." node_paths=PackedStringArray("DataPath")]
+visible = false
 script = ExtResource("3_qik3i")
 RosaArea = ExtResource("4_qvxhv")
 DataPath = NodePath("../DataPaths")
@@ -65,6 +68,7 @@ position = Vector2(1053, 506)
 one_shot = true
 
 [node name="Pacifica" type="Node2D" parent="."]
+visible = false
 y_sort_enabled = true
 
 [node name="Pacifica" parent="Pacifica" node_paths=PackedStringArray("DataPaths") instance=ExtResource("6_cxj1a")]
@@ -77,6 +81,7 @@ position = Vector2(656, 474)
 DataPaths = NodePath("../../DataPaths")
 
 [node name="Onagre" parent="." node_paths=PackedStringArray("DataPaths", "BulletManager") instance=ExtResource("8_81tyx")]
+visible = false
 position = Vector2(576, 568)
 DataPaths = NodePath("../DataPaths")
 BulletManager = NodePath("../Bullets")
@@ -164,6 +169,7 @@ Pacifica = NodePath("../Pacifica/Pacifica")
 Rosa = NodePath("../Pacifica/Rosa")
 
 [node name="Overlay" parent="." instance=ExtResource("16_5t6w0")]
+visible = false
 
 [node name="Code" type="Node" parent="."]
 

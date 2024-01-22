@@ -17,8 +17,4 @@ func _process(delta):
 		var time = (CombatData.score / 500) * delta
 		timeleft -= time
 		MyGUI.get_node("Timer").text = str(int(timeleft))
-	
-	if timeleft <= 0 :
-		Music.StopMusic()
-		$"../../../../".ShowGameOver()
-		$"../../".queue_free()
+
