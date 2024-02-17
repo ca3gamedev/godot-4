@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://bu3kfde4t22t"]
+
+[ext_resource type="PackedScene" uid="uid://coe8edsx62ike" path="res://Scenes/Battle/Player/florence.tscn" id="1_6dwn5"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="2_jn52t"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_dhdkh"]
+[ext_resource type="PackedScene" uid="uid://bf56l0vwr5yyw" path="res://Scenes/Battle/Level01/hospital.tscn" id="4_o567n"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ddgos"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_qxnsp"]
+sky_material = SubResource("ProceduralSkyMaterial_ddgos")
+
+[sub_resource type="Environment" id="Environment_a6ydj"]
+background_mode = 2
+sky = SubResource("Sky_qxnsp")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrfmj"]
+albedo_color = Color(0.231373, 0.231373, 0.231373, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_1cffc"]
+
+[node name="Battle" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999646, 0.0230326, -0.0132979, 2.78059e-08, 0.5, 0.866025, 0.0265958, -0.865719, 0.499823, 0, 28.5911, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a6ydj")
+
+[node name="Florence" parent="." instance=ExtResource("1_6dwn5")]
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.857492, 0.514495, 0, -0.514495, 0.857492, 0, 10, 10)
+script = ExtResource("2_jn52t")
+priority_override = false
+priority = 0
+follow_mode = 2
+follow_target = NodePath("../Florence")
+follow_parameters/target_offset = Vector3(0, 10, 10)
+follow_parameters/damping = false
+look_at_mode = 2
+look_at_target = NodePath("../Florence")
+look_at_parameters/look_at_target_offset = Vector3(0, 4, 0)
+tween_parameters = null
+tween_on_load = false
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.857492, 0.514495, 0, -0.514495, 0.857492, 0, 10, 10)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("3_dhdkh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_nrfmj")
+mesh = SubResource("QuadMesh_1cffc")
+
+[node name="Hospital" parent="." instance=ExtResource("4_o567n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, 0)
