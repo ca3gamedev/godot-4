@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bu3kfde4t22t"]
+[gd_scene load_steps=12 format=3 uid="uid://bu3kfde4t22t"]
 
 [ext_resource type="PackedScene" uid="uid://coe8edsx62ike" path="res://Scenes/Battle/Player/florence.tscn" id="1_6dwn5"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="2_jn52t"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_dhdkh"]
 [ext_resource type="PackedScene" uid="uid://bf56l0vwr5yyw" path="res://Scenes/Battle/Level01/hospital.tscn" id="4_o567n"]
+[ext_resource type="PackedScene" uid="uid://b1cke138uu7ik" path="res://Scenes/Battle/GUI/gui.tscn" id="5_u7pat"]
+[ext_resource type="Texture2D" uid="uid://fdchmgcq0nnu" path="res://2D/GUI/star.png" id="6_7fivu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ddgos"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -64,3 +66,9 @@ mesh = SubResource("QuadMesh_1cffc")
 
 [node name="Hospital" parent="." instance=ExtResource("4_o567n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, 0)
+
+[node name="GUI" parent="." instance=ExtResource("5_u7pat")]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 0, 0.157163, 0)
+texture = ExtResource("6_7fivu")

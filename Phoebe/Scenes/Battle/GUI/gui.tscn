@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1cke138uu7ik"]
+
+[ext_resource type="Texture2D" uid="uid://guaj1uhyffdt" path="res://2D/GUI/face.png" id="1_t3oce"]
+
+[node name="GUI" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Face" type="Sprite2D" parent="."]
+position = Vector2(63, 79)
+scale = Vector2(0.262452, 0.253289)
+texture = ExtResource("1_t3oce")
