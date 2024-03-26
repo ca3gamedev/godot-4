@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvjywnn40cesd"
+path="res://.godot/imported/Tile_ground.obj-0aa5dc177fa6c564be0b5c8bc2b2318a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tile_ground.obj-0aa5dc177fa6c564be0b5c8bc2b2318a.mesh"]
+
+source_file="res://3D/Props/Tiles/Tile_ground.obj"
+dest_files=["res://.godot/imported/Tile_ground.obj-0aa5dc177fa6c564be0b5c8bc2b2318a.mesh", "res://.godot/imported/Tile_ground.obj-0aa5dc177fa6c564be0b5c8bc2b2318a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbchdl0ofuhh7"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvjywnn40cesd" path="res://3D/Props/Tiles/Tile_ground.obj" id="1_82ok6"]
+[ext_resource type="Texture2D" uid="uid://byuln4pjbnk73" path="res://3D/Props/Tiles/texture_1.png" id="2_b7i80"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vm5mh"]
+albedo_texture = ExtResource("2_b7i80")
+texture_filter = 4
+
+[node name="Ground" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_82ok6")
+surface_material_override/0 = SubResource("StandardMaterial3D_vm5mh")

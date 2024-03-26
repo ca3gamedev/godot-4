@@ -19,4 +19,4 @@ func _on_state_machine_player_updated(state, delta):
 
 
 func _on_state_machine_player_transited(from, to):
-	print(from, "  ", to)
+	pass
