@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://qfnhusn4xlec"]
+[gd_scene load_steps=18 format=3 uid="uid://qfnhusn4xlec"]
 
 [ext_resource type="Script" path="res://Scenes/Battle/NPC/Placeholders/patient.gd" id="1_2kjk1"]
 [ext_resource type="Script" path="res://Scenes/Battle/NPC/Placeholders/FSM.gd" id="2_1tfjg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scenes/Battle/NPC/Placeholders/WAIT.gd" id="5_6mw3t"]
 [ext_resource type="Script" path="res://Scenes/Battle/NPC/Placeholders/SLEEP.gd" id="6_k4vm5"]
 [ext_resource type="PackedScene" uid="uid://lvx6iappo0tx" path="res://Scenes/Battle/GUI/dialogs.tscn" id="6_n4gdj"]
+[ext_resource type="PackedScene" uid="uid://nqtlwos883br" path="res://Scenes/Battle/GUI/Cards/card menue.tscn" id="7_j4pw6"]
 [ext_resource type="Script" path="res://Scenes/Battle/NPC/Placeholders/Area3D.gd" id="7_xm112"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4mbsv"]
@@ -142,7 +143,9 @@ unique_name_in_owner = true
 script = ExtResource("5_6mw3t")
 
 [node name="SLEEP" type="Node" parent="FSM"]
+unique_name_in_owner = true
 script = ExtResource("6_k4vm5")
+Medicine = ExtResource("7_j4pw6")
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 3.0

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://nqtlwos883br"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/GUI/Cards/card menue.gd" id="1_cuapu"]
+[ext_resource type="PackedScene" uid="uid://gm1ouvtaut6r" path="res://Scenes/Battle/GUI/Cards/card.tscn" id="1_uy20h"]
+
+[node name="Cards" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_cuapu")
+MaxID = 10
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="3" parent="CanvasLayer" instance=ExtResource("1_uy20h")]
+position = Vector2(565, 583)
+scale = Vector2(1.5, 1.5)
+
+[node name="2" parent="CanvasLayer" instance=ExtResource("1_uy20h")]
+position = Vector2(458, 586)
+scale = Vector2(0.7, 0.7)
+
+[node name="1" parent="CanvasLayer" instance=ExtResource("1_uy20h")]
+position = Vector2(388, 588)
+scale = Vector2(0.7, 0.7)
+
+[node name="0" parent="CanvasLayer" instance=ExtResource("1_uy20h")]
+position = Vector2(320, 589)
+scale = Vector2(0.7, 0.7)
+
+[node name="Progress" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 465.0
+offset_top = 477.0
+offset_right = 655.0
+offset_bottom = 504.0

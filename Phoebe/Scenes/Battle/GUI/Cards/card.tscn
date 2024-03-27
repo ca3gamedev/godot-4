@@ -1,0 +1,50 @@
+[gd_scene load_steps=11 format=3 uid="uid://gm1ouvtaut6r"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/GUI/Cards/card.gd" id="1_2da7g"]
+[ext_resource type="Texture2D" uid="uid://btcy7ebmr0ecv" path="res://2D/Items/01.png" id="1_pyncw"]
+[ext_resource type="Texture2D" uid="uid://cnouko4408o46" path="res://2D/Items/02.png" id="2_esjrj"]
+[ext_resource type="Texture2D" uid="uid://bjy1stntuwuq4" path="res://2D/Items/03.png" id="3_6vpbi"]
+[ext_resource type="Texture2D" uid="uid://m0b6chey7ymc" path="res://2D/Items/04.png" id="4_r2qn6"]
+[ext_resource type="Texture2D" uid="uid://dsldofy7vqalg" path="res://2D/Items/left.png" id="6_grdo5"]
+[ext_resource type="Texture2D" uid="uid://bsetm3to7n5jn" path="res://2D/Items/right.png" id="7_1bdkl"]
+[ext_resource type="Texture2D" uid="uid://c75j8bhsuw2qn" path="res://2D/Items/up.png" id="8_h8rdp"]
+[ext_resource type="Texture2D" uid="uid://ywiywdf465yv" path="res://2D/Items/down.png" id="9_6k0va"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5vsw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pyncw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_esjrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6vpbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r2qn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_grdo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1bdkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h8rdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6k0va")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_2da7g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_x5vsw")

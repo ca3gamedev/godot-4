@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://btxk2b2wt6ovt"]
+
+[ext_resource type="Texture2D" uid="uid://vi78yf6ogvu5" path="res://2D/GUI/timer.png" id="1_kbnqx"]
+
+[node name="Timer" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 1024.0
+offset_top = 12.0
+offset_right = 1129.0
+offset_bottom = 112.0
+color = Color(0, 0, 0, 1)
+
+[node name="Progress" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 1032.0
+offset_top = 17.0
+offset_right = 1332.0
+offset_bottom = 317.0
+scale = Vector2(0.3, 0.3)
+value = 50.0
+fill_mode = 5
+texture_under = ExtResource("1_kbnqx")
+texture_progress = ExtResource("1_kbnqx")
+tint_under = Color(0.74902, 0.141176, 0.0352941, 1)
+tint_progress = Color(0.854902, 0.67451, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 1052.0
+offset_top = 31.0
+offset_right = 1110.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 40
+text = "99"
+horizontal_alignment = 1

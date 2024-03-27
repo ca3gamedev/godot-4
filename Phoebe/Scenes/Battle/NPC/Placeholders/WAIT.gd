@@ -9,9 +9,10 @@ func Update(delta):
 		if pos != Vector3.ZERO:
 			$"../../".global_position = pos
 			%Anim.play("RestBed")
-			%Dialogs.hide()
 			%DialogArea.wait = false
+			%DialogArea.sleep = true
 			%FSM.current = %FSM.get_node("SLEEP")
+			%Dialogs.hide()
 
 func Physics(delta):
 	pass
