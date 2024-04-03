@@ -1,0 +1,23 @@
+res://Scenes/Battle/GUI/Cards/card menue.tscn
+res://Scenes/Battle/Level01/props/Gridmap.tres
+res://Scenes/Battle/Tiles/Tiles.tres
+res://Scenes/Battle/GUI/Cards/card menue.gd
+res://Scenes/Battle/battle.tscn
+res://Scenes/Battle/NPC/Placeholders/patient.tscn
+res://Scenes/Battle/GUI/Progress/progress 3D.tscn
+res://Scenes/Battle/Variables/combat_data.tscn
+res://Scenes/Battle/Variables/data_paths.tscn
+res://Scenes/Battle/GUI/Progress/progress.tscn
+res://Scenes/Menues/Title/title.tscn
+res://Scenes/Battle/Music/music.tscn
+res://Scenes/Battle/NPC/Placeholders/LEAVING.gd
+res://Scenes/Battle/Variables/combat_data.gd
+res://Scenes/Battle/battle.gd
+res://Scenes/Battle/GUI/gui.gd
+res://Scenes/Battle/GUI/gui.tscn
+res://Scenes/Battle/NPC/Placeholders/WAIT2.gd
+res://Scenes/Battle/GUI/dialogs.tscn
+res://Scenes/Battle/GUI/Dialogs/dialogs.gd
+res://Scenes/Battle/NPC/Placeholders/Area3D.gd
+res://Scenes/Battle/NPC/Placeholders/SLEEP.gd
+res://Scenes/Battle/NPC/Placeholders/WAIT.gd
