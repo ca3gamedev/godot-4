@@ -1,0 +1,9 @@
+Node
+CollisionShape3D
+StaticBody3D
+AnimationTree
+Camera3D
+AnimationPlayer
+Area3D
+Node3D
+CharacterBody3D

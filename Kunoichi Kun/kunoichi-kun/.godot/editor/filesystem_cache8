@@ -1,0 +1,28 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1712437939
+icon.svg::CompressedTexture2D::4965467428660021160::1712182710::1712182766::1::::<><>::
+::res://3D/::1712183975
+::res://3D/Maira/::1712186190
+Maira .glb::PackedScene::3623941487940528669::1712179724::1712186190::1::::<><>::
+Maira albedo.tres::StandardMaterial3D::9004852277356418966::1712184598::0::1::::<><>::uid://t10cxl27mv6t::::res://3D/Maira/Maira _Maira_C.png
+Maira _Maira_C.png::CompressedTexture2D::1388784573435058949::1712184065::1712184613::1::::<><>::
+::res://3D/Maira/anims/::1712280230
+IDLE.res::Animation::4652754754873956139::1712280230::0::1::::<><>::
+run.res::Animation::5132534044921602987::1712280230::0::1::::<><>::
+walk.res::Animation::6316376182601293541::1712280230::0::1::::<><>::
+::res://Scenes/::1712184158
+::res://Scenes/Battle/::1712365906
+root.tscn::PackedScene::7885191305444655690::1712365906::0::1::::<><>::uid://bdbloxeies2g7::::res://Scenes/Battle/Player/Maira.tscn
+::res://Scenes/Battle/Player/::1712366087
+Maira.tscn::PackedScene::2599745694982196264::1712366087::0::1::::<><>::uid://brvp10ubfqilx::::res://3D/Maira/Maira .glb<>uid://b7j3gq3rl4tx0::::res://3D/Maira/anims/IDLE.res<>uid://cfeic6ie1hgb0::::res://3D/Maira/anims/run.res<>uid://cv8x17t452ntt::::res://3D/Maira/anims/walk.res<>res://Scenes/Battle/Player/FSM/fsm.gd<>res://Scenes/Battle/Player/FSM/idle.gd<>res://Scenes/Battle/Player/FSM/walk.gd<>res://Scenes/Battle/Player/FSM/dash.gd<>res://Scenes/Battle/Player/Input/input.gd<>res://Scenes/Battle/Player/Input/get_key.gd<>res://Scenes/Battle/Player/FSM/crouch.gd<>res://Scenes/Battle/Player/Input/buffer.gd<>res://Scenes/Battle/Player/Input/command.gd
+::res://Scenes/Battle/Player/FSM/::1712365904
+crouch.gd::GDScript::-1::1712365861::0::1::::<>Node<>::
+dash.gd::GDScript::-1::1712353503::0::1::::<>Node<>::
+fsm.gd::GDScript::-1::1712280293::0::1::::<>Node<>::
+idle.gd::GDScript::-1::1712365861::0::1::::<>Node<>::
+walk.gd::GDScript::-1::1712365904::0::1::::<>Node<>::
+::res://Scenes/Battle/Player/Input/::1712353874
+buffer.gd::GDScript::-1::1712353874::0::1::::<>Node<>::
+command.gd::GDScript::-1::1712353441::0::1::::<>Node<>::
+get_key.gd::GDScript::-1::1712275277::0::1::::<>Node<>::
+input.gd::GDScript::-1::1712192026::0::1::::<>Node<>::

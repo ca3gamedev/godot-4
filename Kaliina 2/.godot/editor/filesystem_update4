@@ -1,0 +1,8 @@
+res://Scenes/Battle/battle.tscn
+res://Scenes/Battle/Players/Ball/ball.tscn
+res://Scenes/Battle/Enemies/Enemies/enemy.tscn
+res://Scenes/Battle/Enemies/enemy_manager.tscn
+res://Scenes/Battle/Enemies/Enemies/enemy.gd
+res://Scenes/Battle/Players/Ball/ball.gd
+res://Scenes/Battle/Players/Canyon/ball.gd
+res://Scenes/Battle/Players/Canyon/canyon.tscn

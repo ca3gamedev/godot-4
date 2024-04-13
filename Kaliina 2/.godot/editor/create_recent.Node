@@ -1,0 +1,13 @@
+ProgressBar
+Marker2D
+Node2D
+ColorRect
+CollisionShape2D
+Area2D
+Node
+StaticBody2D
+CharacterBody2D
+AnimatedSprite2D
+Camera2D
+CanvasLayer
+RigidBody2D

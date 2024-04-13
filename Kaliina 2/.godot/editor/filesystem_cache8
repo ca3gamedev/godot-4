@@ -1,0 +1,120 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1713021175
+icon.svg::CompressedTexture2D::5542461577848064818::1712768585::1712768599::1::::<><>::
+::res://2D/::1712950903
+::res://2D/Ball/::1712938618
+circle.png::CompressedTexture2D::8242810042393070390::1711387515::1712938618::1::::<><>::
+Square.png::CompressedTexture2D::7498701852095981099::1711387515::1712938618::1::::<><>::
+Triangle.png::CompressedTexture2D::8050823959962695795::1711387515::1712938618::1::::<><>::
+::res://2D/Enemies/::1712951134
+soldier_export_dir8.png::CompressedTexture2D::7096217184601655332::1711387515::1712951134::1::::<><>::
+::res://2D/Pacifica/::1712791825
+::res://2D/Pacifica/dash/::1712791890
+pacifica_export_DASH_01.png::CompressedTexture2D::8316964519499899039::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_04.png::CompressedTexture2D::7303065511553324701::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_06.png::CompressedTexture2D::3824704571851406601::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_09.png::CompressedTexture2D::6001608266864250907::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_10.png::CompressedTexture2D::5455532921607596837::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_13.png::CompressedTexture2D::7470207425552909729::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_15.png::CompressedTexture2D::6166099371987233076::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_18.png::CompressedTexture2D::5680777641277522025::1712771746::1712791890::1::::<><>::
+pacifica_export_DASH_19.png::CompressedTexture2D::2598031457229317031::1712771746::1712791890::1::::<><>::
+::res://2D/Pacifica/idle/::1712791890
+pacifica_export_PHOTO POSE -loop_01.png::CompressedTexture2D::8960963576511618911::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_03.png::CompressedTexture2D::2350743598468839517::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_05.png::CompressedTexture2D::7176780347101954520::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_07.png::CompressedTexture2D::3230621763300654191::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_08.png::CompressedTexture2D::5888769134081568584::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_09.png::CompressedTexture2D::7119123532963166020::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_11.png::CompressedTexture2D::7622107263448196595::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_13.png::CompressedTexture2D::5394837104664508746::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_15.png::CompressedTexture2D::6386058367146771710::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_16.png::CompressedTexture2D::7840405087616562486::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_17.png::CompressedTexture2D::8351981058550607438::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_19.png::CompressedTexture2D::6562988539129967953::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_21.png::CompressedTexture2D::9185644204707319384::1712771598::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_23.png::CompressedTexture2D::5230723196628432177::1712771598::1712791890::1::::<><>::
+::res://2D/Rosa/::1712791805
+::res://2D/Rosa/dash/::1712791890
+pacifica_export_DASH_2_dir3_1.png::CompressedTexture2D::1433685974913908600::1712772445::1712791890::1::::<><>::
+pacifica_export_DASH_2_dir3_2.png::CompressedTexture2D::1595318659015847966::1712772445::1712791890::1::::<><>::
+pacifica_export_DASH_2_dir3_3.png::CompressedTexture2D::2292111255975880307::1712772445::1712791890::1::::<><>::
+pacifica_export_DASH_2_dir3_4.png::CompressedTexture2D::5823775660324048792::1712772445::1712791890::1::::<><>::
+pacifica_export_DASH_2_dir3_5.png::CompressedTexture2D::5940939089495709779::1712772445::1712791890::1::::<><>::
+pacifica_export_DASH_2_dir3_6.png::CompressedTexture2D::2530820273573045143::1712772445::1712791890::1::::<><>::
+::res://2D/Rosa/idle/::1712791890
+pacifica_export_PHOTO POSE -loop_2_01.png::CompressedTexture2D::5154901609179178380::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_02.png::CompressedTexture2D::1215379117732036974::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_03.png::CompressedTexture2D::6873159230504077544::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_04.png::CompressedTexture2D::314194815332218878::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_05.png::CompressedTexture2D::4800018285014822295::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_06.png::CompressedTexture2D::1898905833581201353::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_07.png::CompressedTexture2D::82849459837052279::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_08.png::CompressedTexture2D::7727301293578941649::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_09.png::CompressedTexture2D::5062214771191129053::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_10.png::CompressedTexture2D::4352209474846190264::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_11.png::CompressedTexture2D::2055087870921993222::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_12.png::CompressedTexture2D::8983056168527105671::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_13.png::CompressedTexture2D::3069219182379908063::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_14.png::CompressedTexture2D::2440283807553924140::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_15.png::CompressedTexture2D::1204378168890372378::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_16.png::CompressedTexture2D::6371053927177251742::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_17.png::CompressedTexture2D::5608999111893811604::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_18.png::CompressedTexture2D::5049654178522202297::1712772302::1712791890::1::::<><>::
+pacifica_export_PHOTO POSE -loop_2_19.png::CompressedTexture2D::4820816737985342896::1712772302::1712791890::1::::<><>::
+::res://2D/Weapons/::1712794993
+Aim.png::CompressedTexture2D::2024521775578932744::1700427382::1712794993::1::::<><>::
+onager_export.png::CompressedTexture2D::2364017551774110676::1712772660::1712791890::1::::<><>::
+::res://Scenes/::1712791418
+::res://Scenes/Battle/::1712977876
+battle.tscn::PackedScene::2189061301356823776::1712977876::0::1::::<><>::uid://k1qr5uogfliw::::res://Scenes/Battle/Players/Pacifica/pacifica.tscn<>uid://bfcvv0t8dpw3w::::res://Scenes/Battle/Players/Canyon/canyon.tscn<>uid://i7lqxvvp2g8d::::res://Scenes/Battle/GUI/gui.tscn<>res://Scenes/Battle/Camera/camera_2d.gd<>res://Scenes/Battle/Camera/bottom_area.gd<>uid://cqhjppxai2lks::::res://Scenes/Battle/Enemies/enemy_manager.tscn
+::res://Scenes/Battle/Camera/::1712961373
+bottom_area.gd::GDScript::-1::1712952001::0::1::::<>Area2D<>::
+camera_2d.gd::GDScript::-1::1712961373::0::1::::<>Camera2D<>::
+::res://Scenes/Battle/Enemies/::1712978061
+enemy_manager.gd::GDScript::-1::1712977857::0::1::::<>Node2D<>::
+enemy_manager.tscn::PackedScene::5910887573109129002::1712978061::0::1::::<><>::res://Scenes/Battle/Enemies/enemy_manager.gd<>uid://3jwgpmo636d2::::res://Scenes/Battle/Enemies/Enemies/enemy.tscn
+level_manager.gd::GDScript::-1::1712977197::0::1::::<>Node2D<>::
+level_manager.tscn::PackedScene::4392738417814753917::1712977274::0::1::::<><>::uid://fa0myqvl518r::::res://Scenes/Battle/Enemies/Levels/level_01.tscn<>res://Scenes/Battle/Enemies/level_manager.gd
+::res://Scenes/Battle/Enemies/Enemies/::1712977876
+0.gd::GDScript::-1::1712969226::0::1::::<>Node<>::
+1.gd::GDScript::-1::1712973724::0::1::::<>Node<>::
+2.gd::GDScript::-1::1712973694::0::1::::<>Node<>::
+enemy.gd::GDScript::-1::1712977081::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::1985214317322300301::1712977876::0::1::::<><>::res://Scenes/Battle/Enemies/Enemies/enemy.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://c8dpwpi4k3s65::::res://2D/Enemies/soldier_export_dir8.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png<>res://Scenes/Battle/Enemies/Enemies/fsm.gd<>res://Scenes/Battle/Enemies/Enemies/0.gd<>res://Scenes/Battle/Enemies/Enemies/1.gd<>res://Scenes/Battle/Enemies/Enemies/2.gd
+fsm.gd::GDScript::-1::1712976983::0::1::::<>Node<>::
+spawner.gd::GDScript::-1::1712976855::0::1::::<>Area2D<>::
+spawner.tscn::PackedScene::6292118118730988821::1712977274::0::1::::<><>::res://Scenes/Battle/Enemies/Enemies/spawner.gd<>uid://3jwgpmo636d2::::res://Scenes/Battle/Enemies/Enemies/enemy.tscn
+::res://Scenes/Battle/Enemies/Levels/::1712977274
+level_01.tscn::PackedScene::352484858783510299::1712977274::0::1::::<><>::uid://cvv7jbv2evi8l::::res://Scenes/Battle/Enemies/Enemies/spawner.tscn<>uid://i3q0bwfaryw1::::res://Scenes/Battle/Enemies/Levels/stop.tscn
+stop.tscn::PackedScene::620329529686739726::1712965619::0::1::::<><>::
+::res://Scenes/Battle/GUI/::1712965619
+cards.gd::GDScript::-1::1712943258::0::1::::<>Node2D<>::
+cards.tscn::PackedScene::5722931772340113201::1712965619::0::1::::<><>::res://Scenes/Battle/GUI/cards.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png
+gui.gd::GDScript::-1::1712943285::0::1::::<>Node2D<>::
+gui.tscn::PackedScene::628268538310285605::1712965619::0::1::::<><>::res://Scenes/Battle/GUI/gui.gd<>uid://cnsh351w670in::::res://Scenes/Battle/GUI/cards.tscn
+::res://Scenes/Battle/Players/::1712795031
+::res://Scenes/Battle/Players/Ball/::1712977876
+ball.gd::GDScript::-1::1712976941::0::1::::<>RigidBody2D<>::
+ball.tscn::PackedScene::2289952633208328442::1712977876::0::1::::<><>::res://Scenes/Battle/Players/Ball/ball.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png
+::res://Scenes/Battle/Players/Canyon/::1712943122
+ball.gd::GDScript::-1::1712943122::0::1::::<>Node<>::
+canyon.gd::GDScript::-1::1712800126::0::1::::<>Node2D<>::
+canyon.tscn::PackedScene::2742807559850512558::1712880236::0::1::::<><>::res://Scenes/Battle/Players/Canyon/canyon.gd<>res://Scenes/Battle/Players/Canyon/ball.gd<>uid://7vjgkhevtv83::::res://Scenes/Battle/Players/Ball/ball.tscn
+::res://Scenes/Battle/Players/Pacifica/::1712965619
+pacifica.tscn::PackedScene::756565695607440794::1712965619::0::1::::<><>::res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd<>uid://d0w004udl4qix::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_01.png<>uid://8qynyt3nkjrx::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_03.png<>uid://daiqr2qq1mqii::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_05.png<>uid://bma64r6icc784::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_07.png<>uid://cp5tfxmyemxci::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_08.png<>uid://c8os6oxn2bwka::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_09.png<>uid://dgug8064kjhh8::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_11.png<>uid://ci4kgc3g5756u::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_13.png<>uid://cw8ppihw41xpe::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_15.png<>uid://djx7ldgyps3ju::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_16.png<>uid://dq8054n7vw22m::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_17.png<>uid://c0rfpyrgfed0d::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_19.png<>uid://d34uhoa0o568k::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_21.png<>uid://cgr2inloe6wir::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_23.png<>res://Scenes/Battle/Players/Pacifica/FSM/fsm.gd<>res://Scenes/Battle/Players/Pacifica/FSM/idle.gd<>uid://cfpcqgw7sdcrk::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_01.png<>uid://rk0d7w6b7p7c::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_02.png<>res://Scenes/Battle/Players/Pacifica/FSM/walk.gd<>uid://c46n6tfxhauls::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_03.png<>uid://eqg0itig8yo1::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_04.png<>uid://canfunpaghbnb::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_05.png<>uid://2b3x4dqdlpu4::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_06.png<>uid://bgervnc7tsp0::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_07.png<>uid://didfr18b6mbmf::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_08.png<>uid://ceef647xekwen::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_09.png<>uid://b3aiiv3qrgmu7::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_10.png<>uid://4jq85rm6oiu5::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_11.png<>uid://d08pvf1250wmp::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_12.png<>uid://bjy0ud16e01ap::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_13.png<>uid://ba1deafikmiga::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_14.png<>uid://rfn6x7gj2kf7::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_15.png<>uid://cw1gleoqixfvi::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_16.png<>uid://cl6bnpv8habuy::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_17.png<>uid://cd7dci666fs62::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_18.png<>uid://caxifalhy4be3::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_19.png<>uid://uoqul6ee5g8o::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_1.png<>uid://wy1wvanrdn2m::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_2.png<>uid://7wk0cs4rsil4::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_3.png<>uid://co8cy72n047uy::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_4.png<>uid://cqv3ntbkdrsgh::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_5.png<>uid://bcb7ifu114hyd::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_6.png
+::res://Scenes/Battle/Players/Pacifica/FSM/::1712961464
+fsm.gd::GDScript::-1::1712961464::0::1::::<>Node<>::
+idle.gd::GDScript::-1::1712878875::0::1::::<>Node<>::
+pacifica.gd::GDScript::-1::1712961433::0::1::::<>CharacterBody2D<>::
+walk.gd::GDScript::-1::1712880220::0::1::::<>Node<>::
+::res://Scenes/Battle/Players/Rosa/::1712878151
+rosa.tscn::PackedScene::3019032457197636261::1712878151::0::1::::<><>::res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd<>res://Scenes/Battle/Players/Pacifica/FSM/fsm.gd<>res://Scenes/Battle/Players/Rosa/FSM/idle.gd<>res://Scenes/Battle/Players/Rosa/FSM/walk.gd
+::res://Scenes/Battle/Players/Rosa/FSM/::1712873983
+idle.gd::GDScript::-1::1712873127::0::1::::<>Node<>::
+walk.gd::GDScript::-1::1712873983::0::1::::<>Node<>::
+::res://Scenes/Battle/Variables/::1712966428
+combat_data.gd::GDScript::-1::1712966428::0::1::::<>Node<>::
+combat_data.tscn::PackedScene::3982509430149475981::1712961180::0::1::::<><>::res://Scenes/Battle/Variables/combat_data.gd
+data_path.gd::GDScript::-1::1712798909::0::1::::<>Node<>::
+data_path.tscn::PackedScene::9195996379056811013::1712961180::0::1::::<><>::res://Scenes/Battle/Variables/data_path.gd
