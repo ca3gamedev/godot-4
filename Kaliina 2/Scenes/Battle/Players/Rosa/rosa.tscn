@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjapa2famf8dt"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd" id="1_tsy4i"]
+[ext_resource type="Script" path="res://Scenes/Battle/Players/Pacifica/FSM/fsm.gd" id="26_o1mm5"]
+[ext_resource type="Script" path="res://Scenes/Battle/Players/Rosa/FSM/idle.gd" id="27_1fln6"]
+[ext_resource type="Script" path="res://Scenes/Battle/Players/Rosa/FSM/walk.gd" id="28_qh8nc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4psmn"]
+radius = 5.0
+height = 12.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apnve"]
+radius = 23.0
+height = 108.0
+
+[node name="Rosa" type="CharacterBody2D" groups=["Rosa"]]
+collision_layer = 4
+collision_mask = 24
+script = ExtResource("1_tsy4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_4psmn")
+
+[node name="FSM" type="Node" parent="." node_paths=PackedStringArray("current")]
+unique_name_in_owner = true
+script = ExtResource("26_o1mm5")
+current = NodePath("IDLE")
+
+[node name="IDLE" type="Node" parent="FSM"]
+script = ExtResource("27_1fln6")
+
+[node name="WALK" type="Node" parent="FSM"]
+unique_name_in_owner = true
+script = ExtResource("28_qh8nc")
+speed = 200.0
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_apnve")

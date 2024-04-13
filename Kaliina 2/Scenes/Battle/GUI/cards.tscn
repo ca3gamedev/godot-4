@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnsh351w670in"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/GUI/cards.gd" id="1_d4v5h"]
+[ext_resource type="Texture2D" uid="uid://dpo442641530e" path="res://2D/Ball/circle.png" id="1_y4fdx"]
+[ext_resource type="Texture2D" uid="uid://de3or2wsqj7e2" path="res://2D/Ball/Square.png" id="2_gg02p"]
+[ext_resource type="Texture2D" uid="uid://dmx45n5y3r5br" path="res://2D/Ball/Triangle.png" id="3_lhc18"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgcph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y4fdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gg02p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lhc18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cards" type="Node2D"]
+script = ExtResource("1_d4v5h")
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="0" type="AnimatedSprite2D" parent="Sprites"]
+position = Vector2(57, -53)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_qgcph")
+
+[node name="1" type="AnimatedSprite2D" parent="Sprites"]
+position = Vector2(57, -133)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_qgcph")
+
+[node name="2" type="AnimatedSprite2D" parent="Sprites"]
+position = Vector2(59, -182)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_qgcph")
+
+[node name="3" type="AnimatedSprite2D" parent="Sprites"]
+position = Vector2(58, -241)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_qgcph")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw0fl328gl88p"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Variables/combat_data.gd" id="1_qrpra"]
+
+[node name="CombatData" type="Node"]
+script = ExtResource("1_qrpra")

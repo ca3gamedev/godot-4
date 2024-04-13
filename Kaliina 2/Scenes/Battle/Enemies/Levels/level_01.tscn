@@ -1,0 +1,137 @@
+[gd_scene load_steps=3 format=3 uid="uid://fa0myqvl518r"]
+
+[ext_resource type="PackedScene" uid="uid://cvv7jbv2evi8l" path="res://Scenes/Battle/Enemies/Enemies/spawner.tscn" id="2_6fl0m"]
+[ext_resource type="PackedScene" uid="uid://i3q0bwfaryw1" path="res://Scenes/Battle/Enemies/Levels/stop.tscn" id="2_kmcow"]
+
+[node name="Level01" type="Node2D"]
+
+[node name="Stop" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(493, -184)
+
+[node name="Stop5" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(513, -763)
+
+[node name="Stop6" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(510, -1274)
+
+[node name="Stop2" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(486, -1770)
+
+[node name="Stop7" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(510, -2403)
+
+[node name="Stop3" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(554, -2958)
+
+[node name="Stop4" parent="." instance=ExtResource("2_kmcow")]
+position = Vector2(577, -3676)
+
+[node name="Spawner" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(272, -77)
+
+[node name="Spawner2" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(521, -77)
+
+[node name="Spawner3" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(780, -77)
+
+[node name="Spawner4" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(350, -410)
+
+[node name="Spawner5" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(474, -514)
+
+[node name="Spawner6" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(592, -427)
+
+[node name="Spawner7" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(295, -893)
+
+[node name="Spawner8" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(753, -1050)
+
+[node name="Spawner9" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(355, -1431)
+
+[node name="Spawner10" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(495, -1575)
+
+[node name="Spawner11" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(614, -1469)
+
+[node name="Spawner12" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(233, -2206)
+
+[node name="Spawner13" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(725, -1973)
+
+[node name="Spawner14" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(348, -2732)
+
+[node name="Spawner15" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(348, -2609)
+
+[node name="Spawner16" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(539, -2736)
+
+[node name="Spawner17" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(547, -2617)
+
+[node name="Spawner18" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(174, -3414)
+
+[node name="Spawner19" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(530, -3062)
+
+[node name="Spawner20" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(928, -3401)
+
+[node name="Spawner21" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(292, -3821)
+
+[node name="Spawner22" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(546, -3948)
+
+[node name="Spawner23" parent="." instance=ExtResource("2_6fl0m")]
+position = Vector2(783, -3829)
+
+[node name="ColorRect" type="ColorRect" parent="Spawner23"]
+offset_left = -178.0
+offset_top = -130.0
+offset_right = -127.0
+offset_bottom = -76.0
+
+[node name="ColorRect2" type="ColorRect" parent="Spawner23"]
+auto_translate_mode = 1
+offset_left = -160.0
+offset_top = 658.0
+offset_right = -109.0
+offset_bottom = 712.0
+
+[node name="ColorRect3" type="ColorRect" parent="Spawner23"]
+auto_translate_mode = 1
+offset_left = -163.0
+offset_top = 1446.0
+offset_right = -112.0
+offset_bottom = 1500.0
+
+[node name="ColorRect4" type="ColorRect" parent="Spawner23"]
+auto_translate_mode = 1
+offset_left = -177.0
+offset_top = 2252.0
+offset_right = -126.0
+offset_bottom = 2306.0
+
+[node name="ColorRect5" type="ColorRect" parent="Spawner23"]
+auto_translate_mode = 1
+offset_left = -174.0
+offset_top = 3093.0
+offset_right = -123.0
+offset_bottom = 3147.0
+
+[node name="ColorRect6" type="ColorRect" parent="Spawner23"]
+auto_translate_mode = 1
+offset_left = -141.0
+offset_top = 3768.0
+offset_right = -90.0
+offset_bottom = 3822.0

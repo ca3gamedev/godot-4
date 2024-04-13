@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3t403rijtu7f"]
+
+[ext_resource type="PackedScene" uid="uid://fa0myqvl518r" path="res://Scenes/Battle/Enemies/Levels/level_01.tscn" id="1_da1kg"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/level_manager.gd" id="1_sqlwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py03o"]
+size = Vector2(1206, 91)
+
+[node name="LevelManager" type="Node2D"]
+script = ExtResource("1_sqlwp")
+
+[node name="Level01" parent="." instance=ExtResource("1_da1kg")]
+
+[node name="Monster" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster"]
+position = Vector2(590, 255)
+shape = SubResource("RectangleShape2D_py03o")
+
+[connection signal="area_entered" from="Monster" to="." method="_on_monster_area_entered"]
+[connection signal="body_entered" from="Monster" to="." method="_on_monster_body_entered"]
