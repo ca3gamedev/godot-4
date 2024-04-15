@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Kaliina 2"
-run/main_scene="res://Scenes/Battle/battle.tscn"
+run/main_scene="res://Scenes/Root/root.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -71,6 +71,7 @@ CHANGE={
 2d_physics/layer_4="Ball"
 2d_physics/layer_5="Walls"
 2d_physics/layer_6="Enemies"
+2d_physics/layer_7="Enemy Bullet"
 
 [rendering]
 

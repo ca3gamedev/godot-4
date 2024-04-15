@@ -12,3 +12,5 @@ position = Vector2(164, 115)
 
 [node name="BottomRight" type="Marker2D" parent="."]
 position = Vector2(966, 514)
+
+[node name="Bullets" type="Node" parent="."]

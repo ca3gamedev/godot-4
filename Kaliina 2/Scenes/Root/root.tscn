@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1x00311t0vq"]
+
+[ext_resource type="PackedScene" uid="uid://6gnrw5rpve53" path="res://Scenes/Battle/battle.tscn" id="1_x1uf5"]
+[ext_resource type="PackedScene" uid="uid://i7lqxvvp2g8d" path="res://Scenes/Battle/GUI/gui.tscn" id="2_a823l"]
+[ext_resource type="Texture2D" uid="uid://dq6db8gps701y" path="res://2D/GUI/pacifica.png" id="3_aj8oa"]
+[ext_resource type="Texture2D" uid="uid://dinkx4xkip4un" path="res://2D/GUI/rosa.png" id="4_f417q"]
+[ext_resource type="Texture2D" uid="uid://de8vpqwoc1tj7" path="res://2D/GUI/flowers_export.png" id="5_heoda"]
+
+[node name="Root" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1161.0
+offset_bottom = 662.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+custom_minimum_size = Vector2(800, 600)
+offset_left = 194.0
+offset_top = 29.0
+offset_right = 994.0
+offset_bottom = 629.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="Battle" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_x1uf5")]
+
+[node name="GUI" parent="." instance=ExtResource("2_a823l")]
+
+[node name="Pacifica" type="Sprite2D" parent="."]
+position = Vector2(171, 368)
+scale = Vector2(0.75, 0.738)
+texture = ExtResource("3_aj8oa")
+
+[node name="Rosa" type="Sprite2D" parent="."]
+position = Vector2(1024, 371)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_f417q")
+
+[node name="FlowersExport" type="Sprite2D" parent="."]
+position = Vector2(154, 526)
+texture = ExtResource("5_heoda")

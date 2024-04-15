@@ -1,25 +1,27 @@
 [gd_scene load_steps=11 format=3 uid="uid://6gnrw5rpve53"]
 
 [ext_resource type="PackedScene" uid="uid://k1qr5uogfliw" path="res://Scenes/Battle/Players/Pacifica/pacifica.tscn" id="1_0jwoa"]
+[ext_resource type="PackedScene" uid="uid://b3t403rijtu7f" path="res://Scenes/Battle/Enemies/level_manager.tscn" id="1_t3vam"]
 [ext_resource type="PackedScene" uid="uid://bfcvv0t8dpw3w" path="res://Scenes/Battle/Players/Canyon/canyon.tscn" id="3_yahit"]
-[ext_resource type="PackedScene" uid="uid://i7lqxvvp2g8d" path="res://Scenes/Battle/GUI/gui.tscn" id="4_usjd0"]
 [ext_resource type="Script" path="res://Scenes/Battle/Camera/camera_2d.gd" id="4_v7hw8"]
 [ext_resource type="Script" path="res://Scenes/Battle/Camera/bottom_area.gd" id="5_pkepa"]
 [ext_resource type="PackedScene" uid="uid://cqhjppxai2lks" path="res://Scenes/Battle/Enemies/enemy_manager.tscn" id="6_1okek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp3ik"]
-size = Vector2(1221, 102)
+size = Vector2(1350, 102)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oa608"]
 size = Vector2(272, 900)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ct0i"]
-size = Vector2(1148, 60)
+size = Vector2(1424, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdauu"]
-size = Vector2(1194, 79.5)
+size = Vector2(1374, 79.5)
 
 [node name="Battle" type="Node2D"]
+
+[node name="LevelManager" parent="." instance=ExtResource("1_t3vam")]
 
 [node name="Player" type="Node2D" parent="."]
 
@@ -27,80 +29,65 @@ size = Vector2(1194, 79.5)
 position = Vector2(593, 471)
 Pacifica = true
 
+[node name="Camera2D" type="Camera2D" parent="Player/Pacifica"]
+zoom = Vector2(0.9, 0.9)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("4_v7hw8")
+
 [node name="Canyon" parent="Player" node_paths=PackedStringArray("BallsManager") instance=ExtResource("3_yahit")]
 position = Vector2(584, 319)
 BallsManager = NodePath("../../BallsManager")
 
-[node name="GUI" parent="." instance=ExtResource("4_usjd0")]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, 320)
-script = ExtResource("4_v7hw8")
-
-[node name="Bottom Area" type="Area2D" parent="Camera2D"]
-position = Vector2(-578, -320)
-script = ExtResource("5_pkepa")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Bottom Area"]
-position = Vector2(573.5, 614)
-shape = SubResource("RectangleShape2D_vp3ik")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Camera2D" groups=["Wall"]]
-position = Vector2(-773, -337)
-collision_layer = 16
-collision_mask = 15
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/StaticBody2D"]
-position = Vector2(120, 337)
-shape = SubResource("RectangleShape2D_oa608")
-
-[node name="ColorRect" type="ColorRect" parent="Camera2D/StaticBody2D"]
-offset_top = -103.0
-offset_right = 256.0
-offset_bottom = 779.0
-color = Color(0, 0, 0, 1)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Camera2D" groups=["Wall"]]
-position = Vector2(524, -331)
-collision_layer = 16
-collision_mask = 14
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/StaticBody2D2"]
-position = Vector2(120, 334)
-shape = SubResource("RectangleShape2D_oa608")
-
-[node name="ColorRect2" type="ColorRect" parent="Camera2D/StaticBody2D2"]
-auto_translate_mode = 1
-offset_left = -17.0
-offset_top = -111.0
-offset_right = 249.0
-offset_bottom = 773.0
-color = Color(0, 0, 0, 1)
-
-[node name="BOTTOM" type="StaticBody2D" parent="Camera2D" groups=["Bottom"]]
-collision_layer = 16
-collision_mask = 47
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/BOTTOM"]
-position = Vector2(-6, 350)
-shape = SubResource("RectangleShape2D_2ct0i")
-
-[node name="TOP" type="StaticBody2D" parent="Camera2D"]
-collision_layer = 16
-collision_mask = 15
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/TOP"]
-position = Vector2(8, -362.25)
-shape = SubResource("RectangleShape2D_sdauu")
-
 [node name="BallsManager" type="Node2D" parent="."]
 
 [node name="EnemyManager" parent="." instance=ExtResource("6_1okek")]
+
+[node name="Bottom Area" type="Area2D" parent="."]
+position = Vector2(-62, 134)
+script = ExtResource("5_pkepa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Area"]
+position = Vector2(638, 614)
+shape = SubResource("RectangleShape2D_vp3ik")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2(-323, -19)
+collision_layer = 16
+collision_mask = 15
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(120, 337)
+shape = SubResource("RectangleShape2D_oa608")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2(1232, -9)
+collision_layer = 16
+collision_mask = 14
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(120, 334)
+shape = SubResource("RectangleShape2D_oa608")
+
+[node name="BOTTOM" type="StaticBody2D" parent="." groups=["Bottom", "Wall"]]
+position = Vector2(576, 380)
+collision_layer = 16
+collision_mask = 47
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BOTTOM"]
+position = Vector2(1, 350)
+shape = SubResource("RectangleShape2D_2ct0i")
+
+[node name="TOP" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2(574, 256)
+collision_layer = 16
+collision_mask = 15
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TOP"]
+position = Vector2(2, -362.25)
+shape = SubResource("RectangleShape2D_sdauu")
