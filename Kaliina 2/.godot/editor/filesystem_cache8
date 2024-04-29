@@ -1,21 +1,36 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713143871
+::res://::1714343941
 icon.svg::CompressedTexture2D::5542461577848064818::1713029775::1713029775::1::::<><>::
-::res://2D/::1713144465
+::res://2D/::1714352998
 ::res://2D/Ball/::1713029775
 circle.png::CompressedTexture2D::8242810042393070390::1713029775::1713029775::1::::<><>::
 Square.png::CompressedTexture2D::7498701852095981099::1713029775::1713029775::1::::<><>::
 Triangle.png::CompressedTexture2D::8050823959962695795::1713029775::1713029775::1::::<><>::
+::res://2D/Buttleflies/::1714353000
+butterfly1.png::CompressedTexture2D::4916026709967299192::1714352907::1714353005::1::::<><>::
+butterfly2.png::CompressedTexture2D::136199767506115728::1714352911::1714353005::1::::<><>::
+butterfly3.png::CompressedTexture2D::1775704368334307897::1714352918::1714353005::1::::<><>::
+butterfly4.png::CompressedTexture2D::1481188319507027658::1714352923::1714353005::1::::<><>::
 ::res://2D/Enemies/::1713134838
 soldier_export_dir8.png::CompressedTexture2D::7096217184601655332::1713029775::1713029775::1::::<><>::
 ::res://2D/Enemies/bullets/::1713134867
 Bullet.png::CompressedTexture2D::2071479648723734209::1713134863::1713134867::1::::<><>::
-::res://2D/GUI/::1713145598
+::res://2D/Flor/::1714334232
+flor_export_dir7.png::CompressedTexture2D::6739137280050015769::1714148938::1714334232::1::::<><>::
+::res://2D/GUI/::1713223175
 flowers_export.png::CompressedTexture2D::7509444610271186766::1711387515::1713145624::1::::<><>::
+Game Over.png::CompressedTexture2D::3901297551036355157::1711387515::1713215621::1::::<><>::
+lifebar.png::CompressedTexture2D::1237738293387727681::1713218742::1713218871::1::::<><>::
 pacifica.png::CompressedTexture2D::8346464939682132848::1711387515::1713144816::1::::<><>::
 rosa.png::CompressedTexture2D::7748259513347141025::1711387515::1713144816::1::::<><>::
 tetris_export.png::CompressedTexture2D::6356605755459243571::1711387515::1713145624::1::::<><>::
 timer_export.png::CompressedTexture2D::815197047068151176::1711387515::1713145624::1::::<><>::
+Title.png::CompressedTexture2D::4862953344009722311::1711387515::1713223175::1::::<><>::
+::res://2D/Overlay/::1714350481
+afternoon.png::CompressedTexture2D::830286372134937698::1714350257::1714350481::1::::<><>::
+morning.png::CompressedTexture2D::4171944057403579235::1714350264::1714350480::1::::<><>::
+night.png::CompressedTexture2D::8556781218409697881::1714350272::1714350480::1::::<><>::
+noon.png::CompressedTexture2D::911570326072283507::1714350278::1714350480::1::::<><>::
 ::res://2D/Pacifica/::1713029775
 ::res://2D/Pacifica/dash/::1713029775
 pacifica_export_DASH_01.png::CompressedTexture2D::8316964519499899039::1713029775::1713029775::1::::<><>::
@@ -73,25 +88,157 @@ pacifica_export_PHOTO POSE -loop_2_19.png::CompressedTexture2D::4820816737985342
 ::res://2D/Weapons/::1713029775
 Aim.png::CompressedTexture2D::2024521775578932744::1713029775::1713029775::1::::<><>::
 onager_export.png::CompressedTexture2D::2364017551774110676::1713029775::1713029775::1::::<><>::
-::res://Scenes/::1713143703
-::res://Scenes/Battle/::1713145543
-battle.tscn::PackedScene::2189061301356823776::1713145543::0::1::::<><>::uid://k1qr5uogfliw::::res://Scenes/Battle/Players/Pacifica/pacifica.tscn<>uid://b3t403rijtu7f::::res://Scenes/Battle/Enemies/level_manager.tscn<>uid://bfcvv0t8dpw3w::::res://Scenes/Battle/Players/Canyon/canyon.tscn<>res://Scenes/Battle/Camera/camera_2d.gd<>res://Scenes/Battle/Camera/bottom_area.gd<>uid://cqhjppxai2lks::::res://Scenes/Battle/Enemies/enemy_manager.tscn
+::res://3D/::1714166285
+::res://3D/Flor/::1714157397
+flor.glb::PackedScene::5814253716683633068::1714148429::1714156702::1::::<><>::uid://cdgs6tqnefiw3::::res://3D/Flor/Material.tres
+flor_flor_C.png::CompressedTexture2D::3220653710111305658::1714155932::1714157397::1::::<><>::
+Material.tres::StandardMaterial3D::4996943453562241840::1714156702::0::1::::<><>::uid://bl5dxwwa5lruw::::res://3D/Flor/flor_flor_C.png
+::res://3D/Tiles/::1714250023
+::res://3D/Tiles/Egypt/::1714168612
+egypt ground 01.png::CompressedTexture2D::25522032342805512::1714165358::1714168612::1::::<><>::
+egypt ground 2.obj::Mesh::1861964453209673154::1714166418::1714168028::1::::<><>::uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png
+egypt ground 02.png::CompressedTexture2D::6151987231984147997::1714165482::1714168612::1::::<><>::
+egypt ground 3.obj::Mesh::6556761502609216128::1714166540::1714168028::1::::<><>::uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png
+egypt ground 03.png::CompressedTexture2D::6889887214562404624::1714165606::1714168612::1::::<><>::
+egypt ground 4.obj::Mesh::6798775304443147::1714166725::1714168028::1::::<><>::uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png
+egypt ground 04.png::CompressedTexture2D::4600307930995271207::1714165660::1714168612::1::::<><>::
+egypt ground 5.obj::Mesh::3251586862338878549::1714166822::1714168028::1::::<><>::uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png
+egypt ground 05.png::CompressedTexture2D::690640901399199604::1714165671::1714168612::1::::<><>::
+Ground01.obj::Mesh::6325625004645771035::1714166295::1714167815::1::::<><>::uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png
+texture_1.png::CompressedTexture2D::6185146368072360396::1714166822::1714168612::1::::<><>::
+::res://3D/Tiles/egypt tiles/::1714250072
+ground01.png::CompressedTexture2D::3339245064196305019::1714248388::1714250072::1::::<><>::
+::res://addons/::1714175274
+::res://addons/phantom_camera/::1714175276
+plugin.cfg::TextFile::-1::1714175276::0::1::::<><>::
+plugin.gd::GDScript::-1::1714175276::0::1::::<>EditorPlugin<>::
+::res://addons/phantom_camera/assets/::1714175277
+PhantomCameraBtnPrimaryDefault.png::CompressedTexture2D::5081567352117042767::1714175274::1714175277::1::::<><>::
+PhantomCameraBtnPrimaryHover.png::CompressedTexture2D::1097276340276520798::1714175275::1714175277::1::::<><>::
+::res://addons/phantom_camera/examples/::1714175275
+credits.txt::TextFile::-1::1714175275::0::1::::<><>::
+::res://addons/phantom_camera/examples/example_scenes/::1714175275
+::res://addons/phantom_camera/examples/example_scenes/2D/::1714175275
+2DExampleScene.tscn::PackedScene::8396109236837500942::1714175275::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+2DFollowFramedExampleScene.tscn::PackedScene::4041101467758950601::1714175275::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres
+2DFollowGroupExampleScene.tscn::PackedScene::3615519047096694654::1714175275::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+2DFollowPathExampleScene.tscn::PackedScene::1090052207262972448::1714175275::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres
+2DLimitExampleScene.tscn::PackedScene::1601450723493897600::1714175275::0::1::::<><>::res://addons/phantom_camera/examples/scripts/2D/2d_room_limit_tween.gd<>uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd
+2DTweeningExampleScene.tscn::PackedScene::5875330861835730161::1714175275::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>res://addons/phantom_camera/examples/scripts/2D/2D_trigger_area.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+::res://addons/phantom_camera/examples/example_scenes/3D/::1714175275
+3DExampleScene.tscn::PackedScene::5389709161117818686::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/examples/scripts/3D/NPC.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://cptfoggk2ok67::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera3DTween.tres<>res://addons/phantom_camera/examples/scripts/3D/3D_trigger_area.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://c1v786g5agaw5::::res://addons/phantom_camera/examples/resources/tween/FixedCameraTween.tres
+3DFollowFramedExampleScene.tscn::PackedScene::6831697141640160960::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DFollowGluedExampleScene.tscn::PackedScene::8760621557405770743::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DFollowGroupExampleScene.tscn::PackedScene::7240303035488103663::1714175275::0::1::::<><>::uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd
+3DFollowPathExampleScene.tscn::PackedScene::8823052630826975221::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/examples/scripts/3D/path_follow.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+3DFollowSimpleExampleScene.tscn::PackedScene::3803289718966625666::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/scripts/resources/camera_3D_resource.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DFollowThirdPersonExampleScene.tscn::PackedScene::2053817529390837519::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/scripts/resources/camera_3D_resource.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller_third_person.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+3DLookAtExampleScene.tscn::PackedScene::2612475775293339696::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DTweeningExampleScene.tscn::PackedScene::2154332734917685671::1714175275::0::1::::<><>::uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cptfoggk2ok67::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera3DTween.tres<>res://addons/phantom_camera/examples/scripts/3D/3D_trigger_area.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+::res://addons/phantom_camera/examples/models/::1714175275
+3DPrototypeCubeDark.tscn::PackedScene::5382540856779240661::1714175275::0::1::::<><>::uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+::res://addons/phantom_camera/examples/resources/::1714175275
+::res://addons/phantom_camera/examples/resources/tween/::1714175275
+FixedCameraTween.tres::Resource/Resource::6643106748633668090::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+InventoryPhantomCamera2DTween.tres::Resource/Resource::5568910264892302066::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+ItemFocusPhantomCamera2DTween.tres::Resource/Resource::5058781781655307589::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+PlayerPhantomCamera2DTween.tres::Resource/Resource::9514768340188899::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+PlayerPhantomCamera3DTween.tres::Resource/Resource::5865226110262250054::1714175275::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+::res://addons/phantom_camera/examples/scripts/::1714175275
+::res://addons/phantom_camera/examples/scripts/2D/::1714175275
+2d_room_limit_tween.gd::GDScript::-1::1714175275::0::1::::<>Node2D<>::
+2D_trigger_area.gd::GDScript::-1::1714175275::0::1::::<>Area2D<>::
+PlayerCharacterBody2D.gd::GDScript::-1::1714175275::0::1::::<>CharacterBody2D<>::
+::res://addons/phantom_camera/examples/scripts/3D/::1714175275
+3D_trigger_area.gd::GDScript::-1::1714175275::0::1::::<>Area3D<>::
+NPC.gd::GDScript::-1::1714175275::0::1::::<>Node3D<>::
+path_follow.gd::GDScript::-1::1714175275::0::1::::<>Node<>::
+player_controller.gd::GDScript::-1::1714175275::0::1::::<>CharacterBody3D<>::
+player_controller_third_person.gd::GDScript::-1::1714175275::0::1::::<><>::
+::res://addons/phantom_camera/examples/textures/::1714175275
+::res://addons/phantom_camera/examples/textures/2D/::1714175277
+inventory_container.png::CompressedTexture2D::4637741338914361246::1714175275::1714175277::1::::<><>::
+level_spritesheet.png::CompressedTexture2D::7085760997330170155::1714175275::1714175277::1::::<><>::
+PhantomCamera2DSprite.png::CompressedTexture2D::6326209594840534622::1714175275::1714175277::1::::<><>::
+sign_prompt.png::CompressedTexture2D::3188285415853117228::1714175275::1714175277::1::::<><>::
+::res://addons/phantom_camera/examples/textures/3D/::1714175278
+CheckerPatternDark.png::CompressedTexture2D::7037516729818178126::1714175275::1714175278::1::::<><>::
+::res://addons/phantom_camera/examples/ui/::1714175275
+UIInventory.tscn::PackedScene::7647500821014000442::1714175275::0::1::::<><>::uid://b7cs6me43ufh3::::res://addons/phantom_camera/examples/textures/2D/inventory_container.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+UISign.tscn::PackedScene::596403574585461246::1714175275::0::1::::<><>::uid://bloouh2jtndx1::::res://addons/phantom_camera/examples/textures/2D/sign_prompt.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+::res://addons/phantom_camera/fonts/::1714175277
+Nunito-Black.ttf::FontFile::6833869716374227054::1714175275::1714175277::1::::<><>::
+Nunito-Regular.ttf::FontFile::8643449995156224464::1714175275::1714175277::1::::<><>::
+::res://addons/phantom_camera/gizmos/::1714175275
+CustomGizmo.gd::GDScript::-1::1714175275::0::1::::CustomPluginGizmo<>EditorNode3DGizmoPlugin<>::
+phantom_camera_gizmo_plugin_3D.gd::GDScript::-1::1714175275::0::1::::<>CustomPluginGizmo<>::
+::res://addons/phantom_camera/icons/::1714175277
+Chevron.svg::CompressedTexture2D::1745133219077516325::1714175275::1714175277::1::::<><>::
+PhantomCameraGizmoIcon2D.svg::CompressedTexture2D::4629927649471389476::1714175275::1714175277::1::::<><>::
+PhantomCameraGizmoIcon3D.svg::CompressedTexture2D::1466881276638961705::1714175275::1714175277::1::::<><>::
+PhantomCameraGizmoIcon.svg::CompressedTexture2D::1247439452673462146::1714175275::1714175277::1::::<><>::
+PhantomCameraGlowLogo.png::CompressedTexture2D::5427785683244604059::1714175276::1714175277::1::::<><>::
+PhantomCameraHostIcon.svg::CompressedTexture2D::1569278523430150114::1714175276::1714175277::1::::<><>::
+PhantomCameraIcon2D.svg::CompressedTexture2D::7158192983046750063::1714175276::1714175277::1::::<><>::
+PhantomCameraIcon3D.svg::CompressedTexture2D::5118178094743450707::1714175276::1714175277::1::::<><>::
+PhantomCameraIcon.svg::CompressedTexture2D::4500271091572974045::1714175276::1714175277::1::::<><>::
+phantom_camera_logo.png::CompressedTexture2D::4966186125554950581::1714175276::1714175277::1::::<><>::
+Pin.svg::CompressedTexture2D::3711434493768362550::1714175276::1714175277::1::::<><>::
+::res://addons/phantom_camera/icons/misc/::1714175277
+PriorityOverride.svg::CompressedTexture2D::8912176182624502929::1714175276::1714175277::1::::<><>::
+::res://addons/phantom_camera/icons/viewfinder/::1714175277
+Camera2DIcon.svg::CompressedTexture2D::4941179596290591277::1714175276::1714175277::1::::<><>::
+Camera3DIcon.svg::CompressedTexture2D::7877918109027130005::1714175276::1714175277::1::::<><>::
+SceneTypesIcon.svg::CompressedTexture2D::7928082713000371025::1714175276::1714175277::1::::<><>::
+::res://addons/phantom_camera/inspector/::1714175276
+phantom_camera_inspector_plugin.gd::GDScript::-1::1714175276::0::1::::<>EditorInspectorPlugin<>::
+::res://addons/phantom_camera/panel/::1714175276
+editor.gd::GDScript::-1::1714175276::0::1::::<>VBoxContainer<>::
+editor.tscn::PackedScene::5130828868618714074::1714175276::0::1::::<><>::res://addons/phantom_camera/panel/editor.gd<>uid://cuqkqsp3ikv5u::::res://addons/phantom_camera/panel/updater/UpdateButton.tscn<>uid://dbkr3d716wtx0::::res://addons/phantom_camera/panel/viewfinder/viewfinder_panel.tscn
+::res://addons/phantom_camera/panel/updater/::1714175276
+download_update_panel.tscn::PackedScene::4343775578160032417::1714175276::0::1::::<><>::res://addons/phantom_camera/scripts/panel/updater/download_update_panel.gd<>uid://cc0wmici0eic8::::res://addons/phantom_camera/icons/phantom_camera_logo.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://censw3w53gldn::::res://addons/phantom_camera/assets/PhantomCameraBtnPrimaryDefault.png
+UpdateButton.tscn::PackedScene::6210284996717618932::1714175276::0::1::::<><>::uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>res://addons/phantom_camera/scripts/panel/updater/update_button.gd<>uid://b25fl4usw0nlp::::res://addons/phantom_camera/panel/updater/download_update_panel.tscn
+::res://addons/phantom_camera/panel/viewfinder/::1714175276
+deadzone_style_box.tres::StyleBoxFlat::8214081647515075988::1714175276::0::1::::<><>::
+viewfinder_panel.tscn::PackedScene::7251177071591726931::1714175276::0::1::::<><>::res://addons/phantom_camera/scripts/panel/viewfinder/viewfinder.gd<>uid://dpa7yvxlq043a::::res://addons/phantom_camera/panel/viewfinder/deadzone_style_box.tres<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://b671h5enwiljg::::res://addons/phantom_camera/icons/PhantomCameraGizmoIcon2D.svg<>uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://dy8eifa6aw2en::::res://addons/phantom_camera/icons/misc/PriorityOverride.svg
+::res://addons/phantom_camera/scripts/::1714175276
+group_names.gd::GDScript::-1::1714175276::0::1::::<>RefCounted<>::
+::res://addons/phantom_camera/scripts/panel/::1714175276
+::res://addons/phantom_camera/scripts/panel/updater/::1714175276
+download_update_panel.gd::GDScript::-1::1714175276::0::1::::<>Control<>::
+updater_constants.gd::GDScript::-1::1714175276::0::1::::<>RefCounted<>::
+update_button.gd::GDScript::-1::1714175276::0::1::::<>Button<>::
+::res://addons/phantom_camera/scripts/panel/viewfinder/::1714175276
+viewfinder.gd::GDScript::-1::1714175276::0::1::::<>Control<>::
+::res://addons/phantom_camera/scripts/phantom_camera/::1714175276
+phantom_camera_2D.gd::GDScript::-1::1714175276::0::1::::PhantomCamera2D<>Node2D<>res://addons/phantom_camera/icons/PhantomCameraIcon2D.svg::
+phantom_camera_3D.gd::GDScript::-1::1714175276::0::1::::PhantomCamera3D<>Node3D<>res://addons/phantom_camera/icons/PhantomCameraIcon3D.svg::
+phantom_camera_constants.gd::GDScript::-1::1714175276::0::1::::<>RefCounted<>::
+phantom_camera_properties.gd::GDScript::-1::1714175276::0::1::::<>RefCounted<>::
+::res://addons/phantom_camera/scripts/phantom_camera_host/::1714175276
+phantom_camera_host.gd::GDScript::-1::1714175276::0::1::::PhantomCameraHost<>Node<>res://addons/phantom_camera/icons/PhantomCameraHostIcon.svg::
+::res://addons/phantom_camera/scripts/resources/::1714175276
+camera_3D_resource.gd::GDScript::-1::1714175276::0::1::::Camera3DResource<>Resource<>::
+tween_resource.gd::GDScript::-1::1714175276::0::1::::PhantomCameraTween<>Resource<>::
+::res://Scenes/::1714157222
+::res://Scenes/Battle/::1714352364
+battle.tscn::PackedScene::2189061301356823776::1714352364::0::1::::<><>::uid://k1qr5uogfliw::::res://Scenes/Battle/Players/Pacifica/pacifica.tscn<>uid://b3t403rijtu7f::::res://Scenes/Battle/Enemies/level_manager.tscn<>uid://bfcvv0t8dpw3w::::res://Scenes/Battle/Players/Canyon/canyon.tscn<>res://Scenes/Battle/Camera/camera_2d.gd<>res://Scenes/Battle/Camera/bottom_area.gd<>uid://cqhjppxai2lks::::res://Scenes/Battle/Enemies/enemy_manager.tscn<>uid://qfn3qsriwn88::::res://Scenes/Battle/Overlay/overlay.tscn
 ::res://Scenes/Battle/Camera/::1713029775
 bottom_area.gd::GDScript::-1::1713029775::0::1::::<>Area2D<>::
 camera_2d.gd::GDScript::-1::1713029775::0::1::::<>Camera2D<>::
-::res://Scenes/Battle/Enemies/::1713141503
-enemy_manager.gd::GDScript::-1::1713029775::0::1::::<>Node2D<>::
+::res://Scenes/Battle/Enemies/::1714350930
+enemy_bullet.gd::GDScript::-1::1713214968::0::1::::<>CharacterBody2D<>::
+enemy_bullet.tscn::PackedScene::3188884149995367481::1713141503::0::1::::<><>::res://Scenes/Battle/Enemies/enemy_bullet.gd<>uid://4ro75bs1fdsj::::res://2D/Enemies/bullets/Bullet.png
+enemy_manager.gd::GDScript::-1::1714350930::0::1::::<>Node2D<>::
 enemy_manager.tscn::PackedScene::5910887573109129002::1713141503::0::1::::<><>::res://Scenes/Battle/Enemies/enemy_manager.gd<>uid://3jwgpmo636d2::::res://Scenes/Battle/Enemies/Enemies/enemy.tscn
 level_manager.gd::GDScript::-1::1713029775::0::1::::<>Node2D<>::
 level_manager.tscn::PackedScene::4392738417814753917::1713141503::0::1::::<><>::uid://pv1v3wbvongi::::res://Scenes/Battle/Enemies/Levels/Scene/Levels/01/01.tscn
-enemy_bullet.tscn::PackedScene::3188884149995367481::1713141503::0::1::::<><>::res://Scenes/Battle/Enemies/enemy_bullet.gd<>uid://4ro75bs1fdsj::::res://2D/Enemies/bullets/Bullet.png
-enemy_bullet.gd::GDScript::-1::1713139272::0::1::::<>CharacterBody2D<>::
-::res://Scenes/Battle/Enemies/Enemies/::1713141587
-0.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-1.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-2.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-enemy.gd::GDScript::-1::1713141500::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::1985214317322300301::1713141587::0::1::::<><>::res://Scenes/Battle/Enemies/Enemies/enemy.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://c8dpwpi4k3s65::::res://2D/Enemies/soldier_export_dir8.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://bloyprgsgl7yr::::res://Scenes/Battle/Enemies/enemy_bullet.tscn<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png<>res://Scenes/Battle/Enemies/Enemies/fsm.gd<>res://Scenes/Battle/Enemies/Enemies/0.gd<>res://Scenes/Battle/Enemies/Enemies/1.gd<>res://Scenes/Battle/Enemies/Enemies/2.gd
+::res://Scenes/Battle/Enemies/Enemies/::1714350967
+0.gd::GDScript::-1::1714350938::0::1::::<>Node<>::
+1.gd::GDScript::-1::1714350962::0::1::::<>Node<>::
+2.gd::GDScript::-1::1714350967::0::1::::<>Node<>::
+enemy.gd::GDScript::-1::1713215106::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::1985214317322300301::1714183860::0::1::::<><>::res://Scenes/Battle/Enemies/Enemies/enemy.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://c8dpwpi4k3s65::::res://2D/Enemies/soldier_export_dir8.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://bloyprgsgl7yr::::res://Scenes/Battle/Enemies/enemy_bullet.tscn<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png<>res://Scenes/Battle/Enemies/Enemies/fsm.gd<>res://Scenes/Battle/Enemies/Enemies/0.gd<>res://Scenes/Battle/Enemies/Enemies/1.gd<>res://Scenes/Battle/Enemies/Enemies/2.gd
 fsm.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
 spawner.gd::GDScript::-1::1713029775::0::1::::<>Area2D<>::
 spawner.tscn::PackedScene::6292118118730988821::1713029775::0::1::::<><>::res://Scenes/Battle/Enemies/Enemies/spawner.gd<>uid://3jwgpmo636d2::::res://Scenes/Battle/Enemies/Enemies/enemy.tscn
@@ -187,11 +334,14 @@ violet_flowers.tscn::PackedScene::7196811751981246044::1713029674::0::1::::<><>:
 yellow dirt.png::CompressedTexture2D::4532727384379096922::1713029673::1713029864::1::::<><>::
 yellow_dirt.tscn::PackedScene::7310898444492626305::1713030092::0::1::::<><>::uid://b5txmfuht3ues::::res://Scenes/Battle/Enemies/Levels/Tiles/yellow dirt.png
 yellow_grass.tscn::PackedScene::1646167553800568374::1713030049::0::1::::<><>::uid://iphj715f6ncb::::res://Scenes/Battle/Enemies/Levels/Tiles/grass yellow tile.png
-::res://Scenes/Battle/GUI/::1713145514
+::res://Scenes/Battle/GUI/::1713224904
 cards.gd::GDScript::-1::1713029775::0::1::::<>Node2D<>::
-cards.tscn::PackedScene::5722931772340113201::1713145211::0::1::::<><>::res://Scenes/Battle/GUI/cards.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png
-gui.gd::GDScript::-1::1713029775::0::1::::<>Node2D<>::
-gui.tscn::PackedScene::628268538310285605::1713145514::0::1::::<><>::res://Scenes/Battle/GUI/gui.gd<>uid://cnsh351w670in::::res://Scenes/Battle/GUI/cards.tscn
+cards.tscn::PackedScene::5722931772340113201::1713215116::0::1::::<><>::res://Scenes/Battle/GUI/cards.gd<>uid://dpo442641530e::::res://2D/Ball/circle.png<>uid://cwtgmrrbqhoc6::::res://2D/GUI/tetris_export.png<>uid://de3or2wsqj7e2::::res://2D/Ball/Square.png<>uid://dmx45n5y3r5br::::res://2D/Ball/Triangle.png
+gui.gd::GDScript::-1::1713221279::0::1::::<>Node2D<>::
+gui.tscn::PackedScene::628268538310285605::1713224904::0::1::::<><>::res://Scenes/Battle/GUI/gui.gd<>uid://cnsh351w670in::::res://Scenes/Battle/GUI/cards.tscn<>uid://lu5f804f3fsa::::res://2D/GUI/timer_export.png<>uid://rvtmsnr560t6::::res://2D/GUI/lifebar.png
+::res://Scenes/Battle/Overlay/::1714352466
+overlay.tscn::PackedScene::1134183579078173703::1714352466::0::1::::<><>::uid://l3gxvx24dl2y::::res://2D/Overlay/afternoon.png<>res://Scenes/Battle/Overlay/overlay.gd<>uid://b0o6krk0flwu2::::res://2D/Overlay/morning.png<>uid://dt5763uopjrxp::::res://2D/Overlay/night.png<>uid://m8tovggreuyd::::res://2D/Overlay/noon.png
+overlay.gd::GDScript::-1::1714352362::0::1::::<>Node2D<>::
 ::res://Scenes/Battle/Players/::1713029775
 ::res://Scenes/Battle/Players/Ball/::1713029775
 ball.gd::GDScript::-1::1713029775::0::1::::<>RigidBody2D<>::
@@ -200,22 +350,59 @@ ball.tscn::PackedScene::2289952633208328442::1713029775::0::1::::<><>::res://Sce
 ball.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
 canyon.gd::GDScript::-1::1713034365::0::1::::<>Node2D<>::
 canyon.tscn::PackedScene::2742807559850512558::1713029775::0::1::::<><>::res://Scenes/Battle/Players/Canyon/canyon.gd<>res://Scenes/Battle/Players/Canyon/ball.gd<>uid://7vjgkhevtv83::::res://Scenes/Battle/Players/Ball/ball.tscn
-::res://Scenes/Battle/Players/Pacifica/::1713029775
-pacifica.tscn::PackedScene::756565695607440794::1713029775::0::1::::<><>::res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd<>uid://d0w004udl4qix::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_01.png<>uid://8qynyt3nkjrx::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_03.png<>uid://daiqr2qq1mqii::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_05.png<>uid://bma64r6icc784::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_07.png<>uid://cp5tfxmyemxci::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_08.png<>uid://c8os6oxn2bwka::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_09.png<>uid://dgug8064kjhh8::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_11.png<>uid://ci4kgc3g5756u::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_13.png<>uid://cw8ppihw41xpe::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_15.png<>uid://djx7ldgyps3ju::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_16.png<>uid://dq8054n7vw22m::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_17.png<>uid://c0rfpyrgfed0d::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_19.png<>uid://d34uhoa0o568k::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_21.png<>uid://cgr2inloe6wir::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_23.png<>res://Scenes/Battle/Players/Pacifica/FSM/fsm.gd<>res://Scenes/Battle/Players/Pacifica/FSM/idle.gd<>uid://cfpcqgw7sdcrk::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_01.png<>uid://rk0d7w6b7p7c::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_02.png<>res://Scenes/Battle/Players/Pacifica/FSM/walk.gd<>uid://c46n6tfxhauls::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_03.png<>uid://eqg0itig8yo1::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_04.png<>uid://canfunpaghbnb::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_05.png<>uid://2b3x4dqdlpu4::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_06.png<>uid://bgervnc7tsp0::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_07.png<>uid://didfr18b6mbmf::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_08.png<>uid://ceef647xekwen::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_09.png<>uid://b3aiiv3qrgmu7::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_10.png<>uid://4jq85rm6oiu5::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_11.png<>uid://d08pvf1250wmp::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_12.png<>uid://bjy0ud16e01ap::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_13.png<>uid://ba1deafikmiga::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_14.png<>uid://rfn6x7gj2kf7::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_15.png<>uid://cw1gleoqixfvi::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_16.png<>uid://cl6bnpv8habuy::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_17.png<>uid://cd7dci666fs62::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_18.png<>uid://caxifalhy4be3::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_19.png<>uid://uoqul6ee5g8o::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_1.png<>uid://wy1wvanrdn2m::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_2.png<>uid://7wk0cs4rsil4::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_3.png<>uid://co8cy72n047uy::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_4.png<>uid://cqv3ntbkdrsgh::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_5.png<>uid://bcb7ifu114hyd::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_6.png
-::res://Scenes/Battle/Players/Pacifica/FSM/::1713029775
+::res://Scenes/Battle/Players/Pacifica/::1713215116
+pacifica.tscn::PackedScene::756565695607440794::1713215116::0::1::::<><>::res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd<>uid://d0w004udl4qix::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_01.png<>uid://8qynyt3nkjrx::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_03.png<>uid://daiqr2qq1mqii::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_05.png<>uid://bma64r6icc784::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_07.png<>uid://cp5tfxmyemxci::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_08.png<>uid://c8os6oxn2bwka::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_09.png<>uid://dgug8064kjhh8::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_11.png<>uid://ci4kgc3g5756u::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_13.png<>uid://cw8ppihw41xpe::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_15.png<>uid://djx7ldgyps3ju::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_16.png<>uid://dq8054n7vw22m::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_17.png<>uid://c0rfpyrgfed0d::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_19.png<>uid://d34uhoa0o568k::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_21.png<>uid://cgr2inloe6wir::::res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_23.png<>res://Scenes/Battle/Players/Pacifica/FSM/fsm.gd<>res://Scenes/Battle/Players/Pacifica/FSM/idle.gd<>uid://cfpcqgw7sdcrk::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_01.png<>uid://rk0d7w6b7p7c::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_02.png<>res://Scenes/Battle/Players/Pacifica/FSM/walk.gd<>uid://c46n6tfxhauls::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_03.png<>uid://eqg0itig8yo1::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_04.png<>uid://canfunpaghbnb::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_05.png<>uid://2b3x4dqdlpu4::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_06.png<>uid://bgervnc7tsp0::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_07.png<>uid://didfr18b6mbmf::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_08.png<>uid://ceef647xekwen::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_09.png<>uid://b3aiiv3qrgmu7::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_10.png<>uid://4jq85rm6oiu5::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_11.png<>uid://d08pvf1250wmp::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_12.png<>uid://bjy0ud16e01ap::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_13.png<>uid://ba1deafikmiga::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_14.png<>uid://rfn6x7gj2kf7::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_15.png<>uid://cw1gleoqixfvi::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_16.png<>uid://cl6bnpv8habuy::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_17.png<>uid://cd7dci666fs62::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_18.png<>uid://caxifalhy4be3::::res://2D/Rosa/idle/pacifica_export_PHOTO POSE -loop_2_19.png<>uid://uoqul6ee5g8o::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_1.png<>uid://wy1wvanrdn2m::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_2.png<>uid://7wk0cs4rsil4::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_3.png<>uid://co8cy72n047uy::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_4.png<>uid://cqv3ntbkdrsgh::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_5.png<>uid://bcb7ifu114hyd::::res://2D/Rosa/dash/pacifica_export_DASH_2_dir3_6.png
+::res://Scenes/Battle/Players/Pacifica/FSM/::1714350913
 fsm.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-idle.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-pacifica.gd::GDScript::-1::1713029775::0::1::::<>CharacterBody2D<>::
-walk.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
+idle.gd::GDScript::-1::1714350896::0::1::::<>Node<>::
+pacifica.gd::GDScript::-1::1713213524::0::1::::<>CharacterBody2D<>::
+walk.gd::GDScript::-1::1714350913::0::1::::<>Node<>::
 ::res://Scenes/Battle/Players/Rosa/::1713029775
 rosa.tscn::PackedScene::3019032457197636261::1713029775::0::1::::<><>::res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd<>res://Scenes/Battle/Players/Pacifica/FSM/fsm.gd<>res://Scenes/Battle/Players/Rosa/FSM/idle.gd<>res://Scenes/Battle/Players/Rosa/FSM/walk.gd
 ::res://Scenes/Battle/Players/Rosa/FSM/::1713029775
 idle.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
 walk.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-::res://Scenes/Battle/Variables/::1713029775
-combat_data.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-combat_data.tscn::PackedScene::3982509430149475981::1713029775::0::1::::<><>::res://Scenes/Battle/Variables/combat_data.gd
-data_path.gd::GDScript::-1::1713029775::0::1::::<>Node<>::
-data_path.tscn::PackedScene::9195996379056811013::1713029775::0::1::::<><>::res://Scenes/Battle/Variables/data_path.gd
-::res://Scenes/Root/::1713145514
-root.tscn::PackedScene::195494002117989430::1713145514::0::1::::<><>::uid://6gnrw5rpve53::::res://Scenes/Battle/battle.tscn<>uid://i7lqxvvp2g8d::::res://Scenes/Battle/GUI/gui.tscn<>uid://dq6db8gps701y::::res://2D/GUI/pacifica.png<>uid://dinkx4xkip4un::::res://2D/GUI/rosa.png
+::res://Scenes/Battle/Transition/::1714352364
+transition.gd::GDScript::-1::1714343907::0::1::::<>Node<>::
+transition.tscn::PackedScene::4703569856430666408::1714352364::0::1::::<><>::res://Scenes/Battle/Transition/transition.gd
+::res://Scenes/Battle/Variables/::1714352364
+combat_data.gd::GDScript::-1::1714345179::0::1::::<>Node<>::
+combat_data.tscn::PackedScene::3982509430149475981::1714352364::0::1::::<><>::res://Scenes/Battle/Variables/combat_data.gd<>uid://c1x00311t0vq::::res://Scenes/Root/root.tscn
+data_path.gd::GDScript::-1::1714336308::0::1::::<>Node<>::
+data_path.tscn::PackedScene::9195996379056811013::1714352364::0::1::::<><>::res://Scenes/Battle/Variables/data_path.gd
+::res://Scenes/Dungeon/::1714157424
+::res://Scenes/Dungeon/Dungeons/::1714344016
+dungeon.gd::GDScript::-1::1714344016::0::1::::<>Node2D<>::
+::res://Scenes/Dungeon/Dungeons/Egypt/::1714250820
+block cell 01.tscn::PackedScene::2185765395798485236::1714183860::0::1::::<><>::uid://bvcspdsey5rcl::::res://Scenes/Dungeon/Dungeons/Egypt/Tiles/ground.tres
+block ground 4 cells square.tscn::PackedScene::5319167703715881006::1714183860::0::1::::<><>::uid://6e2ibwhpejr5::::res://Scenes/Dungeon/Dungeons/Egypt/block cell 01.tscn
+egypt_ground.tscn::PackedScene::7096262650803746957::1714250796::0::1::::<><>::uid://bnts44mga5ix4::::res://3D/Tiles/egypt tiles/ground01.png
+::res://Scenes/Dungeon/Dungeons/Egypt/Ground levels/::1714352364
+01.tscn::PackedScene::1222554376785163290::1714352364::0::1::::<><>::uid://bnts44mga5ix4::::res://3D/Tiles/egypt tiles/ground01.png<>res://Scenes/Dungeon/Dungeons/dungeon.gd<>uid://cdihp87vc3sfy::::res://Scenes/Dungeon/Player/flor.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>uid://rd044grdxjlb::::res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.tscn
+ground_01.tscn::PackedScene::120992415724727507::1714252313::0::1::::<><>::uid://rohj6rrv7mfq::::res://Scenes/Dungeon/Dungeons/Egypt/Ground levels/01.tscn
+::res://Scenes/Dungeon/Dungeons/Egypt/Tiles/::1714251602
+egypt_ground.tscn::PackedScene::6129941109082067296::1714183860::0::1::::<><>::uid://ctwclirp3cv0h::::res://3D/Tiles/Egypt/egypt ground 02.png<>uid://1r7jutxsuccw::::res://3D/Tiles/Egypt/egypt ground 2.obj<>uid://c0oe50asten3e::::res://3D/Tiles/Egypt/egypt ground 3.obj<>uid://c5fro21vr0r7u::::res://3D/Tiles/Egypt/egypt ground 03.png<>uid://dj8e57m0qjr::::res://3D/Tiles/Egypt/egypt ground 4.obj<>uid://b6sont3lyogyp::::res://3D/Tiles/Egypt/egypt ground 04.png<>uid://bmldfpuwa0end::::res://3D/Tiles/Egypt/egypt ground 5.obj<>uid://j3s0wqndotdc::::res://3D/Tiles/Egypt/egypt ground 05.png<>uid://cwegeckm008jn::::res://3D/Tiles/Egypt/Ground01.obj<>uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png
+ground.tres::MeshLibrary::3865635033969812995::1714251602::0::1::::<><>::uid://cueepsk0taigq::::res://3D/Tiles/Egypt/texture_1.png<>uid://c5fro21vr0r7u::::res://3D/Tiles/Egypt/egypt ground 03.png<>uid://b6sont3lyogyp::::res://3D/Tiles/Egypt/egypt ground 04.png<>uid://j3s0wqndotdc::::res://3D/Tiles/Egypt/egypt ground 05.png
+::res://Scenes/Dungeon/Dungeons/GUI/::1714352364
+dungeon_gui.gd::GDScript::-1::1714185215::0::1::::<>Node2D<>::
+dungeon_gui.tscn::PackedScene::1200974721174440099::1714352364::0::1::::<><>::res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.gd
+::res://Scenes/Dungeon/Dungeons/Levels/::1714251592
+::res://Scenes/Dungeon/Dungeons/Levels/Egypt/::1714334038
+01.tscn::PackedScene::3691615287658230671::1714334038::0::1::::<><>::res://Scenes/Dungeon/Dungeons/dungeon.gd<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://byuyy5d4pynr::::res://Scenes/Dungeon/Dungeons/Egypt/Ground levels/ground_01.tscn<>uid://b7244m3easlwv::::res://Scenes/Dungeon/Dungeons/Test/dungeon_test.VoxelGI_data.res<>uid://cdihp87vc3sfy::::res://Scenes/Dungeon/Player/flor.tscn<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>uid://rd044grdxjlb::::res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.tscn
+::res://Scenes/Dungeon/Dungeons/Test/::1714183860
+dungeon_test.tscn::PackedScene::713994415042764298::1714183860::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://b7244m3easlwv::::res://Scenes/Dungeon/Dungeons/Test/dungeon_test.VoxelGI_data.res<>uid://cdihp87vc3sfy::::res://Scenes/Dungeon/Player/flor.tscn<>res://Scenes/Dungeon/Dungeons/dungeon.gd<>uid://ch1v6dw2mfmbu::::res://Scenes/Dungeon/Dungeons/Egypt/block ground 4 cells square.tscn<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>uid://rd044grdxjlb::::res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.tscn
+dungeon_test.VoxelGI_data.res::VoxelGIData::4690015134000408765::1714158620::0::1::::<><>::
+::res://Scenes/Dungeon/Player/::1714352364
+flor.tscn::PackedScene::5000376509852950314::1714352364::0::1::::<><>::uid://c3aquvabati7b::::res://2D/Flor/flor_export_dir7.png<>res://Scenes/Dungeon/Player/FSM/fsm.gd<>res://Scenes/Dungeon/Player/FSM/idle.gd<>res://Scenes/Dungeon/Player/FSM/walk.gd
+::res://Scenes/Dungeon/Player/FSM/::1714350989
+fsm.gd::GDScript::-1::1714176840::0::1::::<>Node<>::
+idle.gd::GDScript::-1::1714350978::0::1::::<>Node<>::
+walk.gd::GDScript::-1::1714350989::0::1::::<>Node<>::
+::res://Scenes/Menues/::1714352364
+game_over.gd::GDScript::-1::1713225180::0::1::::<>Node2D<>::
+game_over.tscn::PackedScene::6614443972250800660::1714183860::0::1::::<><>::uid://bvt22ht48vvsf::::res://2D/GUI/Game Over.png<>res://Scenes/Menues/game_over.gd
+title.gd::GDScript::-1::1714336705::0::1::::<>Node2D<>::
+title.tscn::PackedScene::6416527792829242077::1714352364::0::1::::<><>::uid://cbjwepsltofjb::::res://2D/GUI/Title.png<>res://Scenes/Menues/title.gd
+::res://Scenes/Root/::1714352364
+root.gd::GDScript::-1::1714337176::0::1::::<>Node2D<>::
+root.tscn::PackedScene::195494002117989430::1714352364::0::1::::<><>::res://Scenes/Root/root.gd<>uid://6gnrw5rpve53::::res://Scenes/Battle/battle.tscn<>uid://i7lqxvvp2g8d::::res://Scenes/Battle/GUI/gui.tscn<>uid://dq6db8gps701y::::res://2D/GUI/pacifica.png<>uid://dinkx4xkip4un::::res://2D/GUI/rosa.png<>uid://de8vpqwoc1tj7::::res://2D/GUI/flowers_export.png

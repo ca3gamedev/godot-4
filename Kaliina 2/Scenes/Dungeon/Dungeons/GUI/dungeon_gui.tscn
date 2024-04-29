@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://rd044grdxjlb"]
+
+[ext_resource type="Script" path="res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.gd" id="1_8inl6"]
+
+[node name="DungeonGUI" type="Node2D"]
+script = ExtResource("1_8inl6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NextBattle" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 25.0
+offset_top = 605.0
+offset_right = 194.0
+offset_bottom = 632.0

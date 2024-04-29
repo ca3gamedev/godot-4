@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://6gnrw5rpve53"]
+[gd_scene load_steps=12 format=3 uid="uid://6gnrw5rpve53"]
 
 [ext_resource type="PackedScene" uid="uid://k1qr5uogfliw" path="res://Scenes/Battle/Players/Pacifica/pacifica.tscn" id="1_0jwoa"]
 [ext_resource type="PackedScene" uid="uid://b3t403rijtu7f" path="res://Scenes/Battle/Enemies/level_manager.tscn" id="1_t3vam"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/Battle/Camera/camera_2d.gd" id="4_v7hw8"]
 [ext_resource type="Script" path="res://Scenes/Battle/Camera/bottom_area.gd" id="5_pkepa"]
 [ext_resource type="PackedScene" uid="uid://cqhjppxai2lks" path="res://Scenes/Battle/Enemies/enemy_manager.tscn" id="6_1okek"]
+[ext_resource type="PackedScene" uid="uid://qfn3qsriwn88" path="res://Scenes/Battle/Overlay/overlay.tscn" id="7_8iejd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp3ik"]
 size = Vector2(1350, 102)
@@ -27,7 +28,6 @@ size = Vector2(1374, 79.5)
 
 [node name="Pacifica" parent="Player" instance=ExtResource("1_0jwoa")]
 position = Vector2(593, 471)
-Pacifica = true
 
 [node name="Camera2D" type="Camera2D" parent="Player/Pacifica"]
 zoom = Vector2(0.9, 0.9)
@@ -91,3 +91,19 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TOP"]
 position = Vector2(2, -362.25)
 shape = SubResource("RectangleShape2D_sdauu")
+
+[node name="Overlay" parent="." node_paths=PackedStringArray("TopLeft", "BottomRight") instance=ExtResource("7_8iejd")]
+position = Vector2(-371, -330)
+scale = Vector2(2.55897, 2.75538)
+TopLeft = NodePath("../Markers/TopLeft")
+BottomRight = NodePath("../Markers/BottomRight")
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Marker2D" parent="Markers"]
+position = Vector2(99, 73)
+scale = Vector2(2.55897, 2.75538)
+
+[node name="BottomRight" type="Marker2D" parent="Markers"]
+position = Vector2(1040, 550)
+scale = Vector2(2.55897, 2.75538)

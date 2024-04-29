@@ -1,4 +1,17 @@
+res://Scenes/Battle/Overlay
+res://Scenes/Battle/Transition
+res://Scenes/Dungeon/Dungeons
+res://Scenes/Dungeon/Player/FSM
+res://Scenes/Dungeon/Player
+res://Scenes/Dungeon/Dungeons/Levels/Egypt
+res://Scenes/Dungeon/Dungeons/Egypt/Ground levels
+res://Scenes/Dungeon/Dungeons/Egypt
 res://Scenes/Root
+res://Scenes/Dungeon/Dungeons/GUI
+res://Scenes/Dungeon/Dungeons/Egypt/Tiles
+res://Scenes/Dungeon/Dungeons/Test
+res://3D/Flor
+res://Scenes/Menues
 res://Scenes/Battle/Enemies
 res://Scenes/Battle/Enemies/Enemies
 res://Scenes/Battle/Enemies/Levels
@@ -7,8 +20,3 @@ res://Scenes/Battle/GUI
 res://Scenes/Battle/Players/Rosa/FSM
 res://Scenes/Battle/Players/Pacifica/FSM
 res://Scenes/Battle/Players/Ball
-res://Scenes/Battle/Players/Canyon
-res://Scenes/Battle/Variables
-res://Scenes/Battle/Players/Rosa
-res://Scenes/Battle/Players/Pacifica
-res://Scenes/Battle

@@ -12,7 +12,7 @@ func Transition():
 		$"../../".Pacifica = !$"../../".Pacifica
 		$"../../".ChangeSprite()
 	
-func Update(delta):
+func Update(_delta):
 	dir = Vector2.ZERO
 	if Input.is_action_pressed("LEFT"):
 		dir.x = -1

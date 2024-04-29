@@ -9,8 +9,8 @@ func Transition():
 		$"../../".Pacifica = !$"../../".Pacifica
 		$"../../".ChangeSprite()
 	
-func Update(delta):
+func Update(_delta):
 	pass
 
-func Physics(delta):
+func Physics(_delta):
 	pass

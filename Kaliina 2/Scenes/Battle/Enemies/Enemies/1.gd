@@ -3,7 +3,7 @@ extends Node
 @export var right : int
 @export var speed : float
 
-func Update(delta):
+func Update(_delta):
 	pass
 
 func Physics(delta):

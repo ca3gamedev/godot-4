@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var Damage : int
 @export var HP : int
 @export var id : int
 @export var shield : int
@@ -36,7 +37,6 @@ func HIT(newid, strenght, pos):
 	$HP.value = HP
 	
 	if HP < 1 :
-		CombatData.EnemiesLeft -= 1
 		self.queue_free()
 	
 func _ready() -> void:
@@ -77,3 +77,4 @@ func _on_timer_timeout() -> void:
 	if id == 2:
 		dir = target - self.global_position
 	tmp.dir = dir.normalized()
+	tmp.damage = Damage

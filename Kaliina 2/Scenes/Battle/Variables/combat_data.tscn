@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw0fl328gl88p"]
+[gd_scene load_steps=3 format=3 uid="uid://bw0fl328gl88p"]
 
 [ext_resource type="Script" path="res://Scenes/Battle/Variables/combat_data.gd" id="1_qrpra"]
+[ext_resource type="PackedScene" uid="uid://c1x00311t0vq" path="res://Scenes/Root/root.tscn" id="2_ae86n"]
 
 [node name="CombatData" type="Node"]
 script = ExtResource("1_qrpra")
+HP = 100
+MaxHP = 100
+Battle = ExtResource("2_ae86n")
+
+[node name="FadeIn" type="Timer" parent="."]
+one_shot = true
+
+[node name="FadeOut" type="Timer" parent="."]
+one_shot = true
+
+[node name="StartBattleTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="FadeIn" to="." method="_on_fade_in_timeout"]
+[connection signal="timeout" from="FadeOut" to="." method="_on_fade_out_timeout"]
+[connection signal="timeout" from="StartBattleTimer" to="." method="_on_start_battle_timer_timeout"]

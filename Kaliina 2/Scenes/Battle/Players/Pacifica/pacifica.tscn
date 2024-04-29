@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://k1qr5uogfliw"]
+[gd_scene load_steps=47 format=3 uid="uid://k1qr5uogfliw"]
 
 [ext_resource type="Script" path="res://Scenes/Battle/Players/Pacifica/FSM/pacifica.gd" id="1_p2wnr"]
 [ext_resource type="Texture2D" uid="uid://d0w004udl4qix" path="res://2D/Pacifica/idle/pacifica_export_PHOTO POSE -loop_01.png" id="1_xn4xn"]
@@ -183,12 +183,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qau52"]
-radius = 3.0
-height = 8.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vhgsm"]
-radius = 32.0
-height = 158.0
+radius = 6.0
+height = 14.0
 
 [node name="Pacifica" type="CharacterBody2D" groups=["Pacifica"]]
 collision_layer = 2
@@ -212,7 +208,7 @@ sprite_frames = SubResource("SpriteFrames_d2vqq")
 animation = &"IDLE"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 7)
+position = Vector2(-1, 18)
 shape = SubResource("CapsuleShape2D_qau52")
 
 [node name="FSM" type="Node" parent="." node_paths=PackedStringArray("current")]
@@ -229,14 +225,3 @@ unique_name_in_owner = true
 script = ExtResource("18_beyo5")
 walk_speed = 400.0
 dir = Vector2i(0, 1)
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, 2)
-shape = SubResource("CapsuleShape2D_vhgsm")
-metadata/_edit_lock_ = true
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=16 format=3 uid="uid://ctlnh8bwajbto"]
+
+[ext_resource type="Texture2D" uid="uid://ctwclirp3cv0h" path="res://3D/Tiles/Egypt/egypt ground 02.png" id="1_ksvvb"]
+[ext_resource type="ArrayMesh" uid="uid://1r7jutxsuccw" path="res://3D/Tiles/Egypt/egypt ground 2.obj" id="2_4s340"]
+[ext_resource type="ArrayMesh" uid="uid://c0oe50asten3e" path="res://3D/Tiles/Egypt/egypt ground 3.obj" id="3_v4pxt"]
+[ext_resource type="Texture2D" uid="uid://c5fro21vr0r7u" path="res://3D/Tiles/Egypt/egypt ground 03.png" id="4_fd2fp"]
+[ext_resource type="ArrayMesh" uid="uid://dj8e57m0qjr" path="res://3D/Tiles/Egypt/egypt ground 4.obj" id="5_plswi"]
+[ext_resource type="Texture2D" uid="uid://b6sont3lyogyp" path="res://3D/Tiles/Egypt/egypt ground 04.png" id="6_5v173"]
+[ext_resource type="ArrayMesh" uid="uid://bmldfpuwa0end" path="res://3D/Tiles/Egypt/egypt ground 5.obj" id="7_kfh75"]
+[ext_resource type="Texture2D" uid="uid://j3s0wqndotdc" path="res://3D/Tiles/Egypt/egypt ground 05.png" id="8_78a0q"]
+[ext_resource type="ArrayMesh" uid="uid://cwegeckm008jn" path="res://3D/Tiles/Egypt/Ground01.obj" id="9_fu6dg"]
+[ext_resource type="Texture2D" uid="uid://cueepsk0taigq" path="res://3D/Tiles/Egypt/texture_1.png" id="10_rpraq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myo70"]
+albedo_texture = ExtResource("1_ksvvb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sevhq"]
+albedo_texture = ExtResource("4_fd2fp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x336b"]
+albedo_texture = ExtResource("6_5v173")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umpc2"]
+albedo_texture = ExtResource("8_78a0q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24t1h"]
+albedo_texture = ExtResource("10_rpraq")
+
+[node name="Egypt ground" type="Node3D"]
+
+[node name="EgyptGround2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+material_override = SubResource("StandardMaterial3D_myo70")
+mesh = ExtResource("2_4s340")
+
+[node name="EgyptGround3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+mesh = ExtResource("3_v4pxt")
+skeleton = NodePath("../EgyptGround2")
+surface_material_override/0 = SubResource("StandardMaterial3D_sevhq")
+
+[node name="EgyptGround4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+mesh = ExtResource("5_plswi")
+surface_material_override/0 = SubResource("StandardMaterial3D_x336b")
+
+[node name="EgyptGround5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+mesh = ExtResource("7_kfh75")
+skeleton = NodePath("../EgyptGround4")
+surface_material_override/0 = SubResource("StandardMaterial3D_umpc2")
+
+[node name="Ground01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 7)
+mesh = ExtResource("9_fu6dg")
+skeleton = NodePath("../EgyptGround5")
+surface_material_override/0 = SubResource("StandardMaterial3D_24t1h")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxohjmhwru3yn"]
+
+[ext_resource type="Texture2D" uid="uid://cbjwepsltofjb" path="res://2D/GUI/Title.png" id="1_cinh3"]
+[ext_resource type="Script" path="res://Scenes/Menues/title.gd" id="1_grdye"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_grdye")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(578.5, 325)
+scale = Vector2(1.42073, 1.28794)
+texture = ExtResource("1_cinh3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 735.0
+offset_top = 369.0
+offset_right = 1113.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(0.83334, 0, 0.109002, 1)
+theme_override_colors/font_outline_color = Color(0.975681, 0.281234, 0.277936, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 80
+text = "KALIINA 2"
+
+[node name="START" type="Button" parent="."]
+offset_left = 988.0
+offset_top = 575.0
+offset_right = 1119.0
+offset_bottom = 628.0
+text = "START"
+
+[connection signal="button_up" from="START" to="." method="_on_start_button_up"]

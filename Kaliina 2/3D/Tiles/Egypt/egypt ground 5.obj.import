@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmldfpuwa0end"
+path="res://.godot/imported/egypt ground 5.obj-7bb84e6f0595d82042ecd81dd3ae0f0d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/egypt ground 5.obj-7bb84e6f0595d82042ecd81dd3ae0f0d.mesh"]
+
+source_file="res://3D/Tiles/Egypt/egypt ground 5.obj"
+dest_files=["res://.godot/imported/egypt ground 5.obj-7bb84e6f0595d82042ecd81dd3ae0f0d.mesh", "res://.godot/imported/egypt ground 5.obj-7bb84e6f0595d82042ecd81dd3ae0f0d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

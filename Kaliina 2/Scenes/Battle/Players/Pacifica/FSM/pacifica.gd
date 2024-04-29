@@ -3,10 +3,7 @@ extends CharacterBody2D
 @export var Pacifica : bool
 
 func _ready() -> void:
-	if Pacifica:
-		DataPath.Pacifica = self
-	else:
-		DataPath.Rosa = self
+	DataPath.Pacifica = self
 	ChangeSprite()
 
 

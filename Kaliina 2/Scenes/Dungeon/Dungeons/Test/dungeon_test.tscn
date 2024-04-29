@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://kf4nbs67br4e"]
+
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_38wx2"]
+[ext_resource type="VoxelGIData" uid="uid://b7244m3easlwv" path="res://Scenes/Dungeon/Dungeons/Test/dungeon_test.VoxelGI_data.res" id="1_avmxk"]
+[ext_resource type="PackedScene" uid="uid://cdihp87vc3sfy" path="res://Scenes/Dungeon/Player/flor.tscn" id="1_f4gwe"]
+[ext_resource type="Script" path="res://Scenes/Dungeon/Dungeons/dungeon.gd" id="1_pw08f"]
+[ext_resource type="PackedScene" uid="uid://ch1v6dw2mfmbu" path="res://Scenes/Dungeon/Dungeons/Egypt/block ground 4 cells square.tscn" id="3_6d3jm"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_qfqf3"]
+[ext_resource type="PackedScene" uid="uid://rd044grdxjlb" path="res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.tscn" id="7_7t8k1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjq5a"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_cg188"]
+sky_material = SubResource("ProceduralSkyMaterial_hjq5a")
+
+[sub_resource type="Environment" id="Environment_xttbr"]
+background_mode = 2
+sky = SubResource("Sky_cg188")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Dungeon Test" type="Node3D"]
+script = ExtResource("1_pw08f")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xttbr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.450719, -0.892533, 0.0154091, 0.216461, 0.126025, 0.968123, -0.866023, -0.433016, 0.250001, 0, 44.378, 0)
+light_energy = 0.8
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.223242, -0.407542, -0.885479, -0.376733, 0.801744, -0.463982, 0.899019, 0.43717, 0.0254488, 0, 0, 0)
+light_color = Color(0.827516, 0.81707, 0.563623, 1)
+light_energy = 0.25
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(-0.395927, -0.792277, 0.464261, 0.0094173, 0.502046, 0.86479, -0.918234, 0.346766, -0.191313, 0, 0, 0)
+light_color = Color(0.233644, 0.30019, 0.831054, 1)
+light_energy = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.894427, 0.447213, 0, -0.447213, 0.894427, 0, 16.967, 20)
+fov = 69.8551
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("1_38wx2")
+
+[node name="VoxelGI" type="VoxelGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629, 0, -0.255)
+size = Vector3(99.7826, 53.8583, 102.195)
+data = ExtResource("1_avmxk")
+
+[node name="Node3D" parent="VoxelGI" instance=ExtResource("3_6d3jm")]
+
+[node name="Node3D2" parent="VoxelGI" instance=ExtResource("3_6d3jm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.857, 0, 0)
+
+[node name="Node3D3" parent="VoxelGI" instance=ExtResource("3_6d3jm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96.0636)
+
+[node name="Node3D4" parent="VoxelGI" instance=ExtResource("3_6d3jm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.857, 0, -96.0636)
+
+[node name="Flor" parent="." instance=ExtResource("1_f4gwe")]
+transform = Transform3D(0.90248, 0, -0.430732, 0, 1, 0, 0.430732, 0, 0.90248, 0, 6.967, 0)
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.894427, 0.447213, 0, -0.447213, 0.894427, 0, 16.967, 20)
+script = ExtResource("5_qfqf3")
+priority_override = false
+priority = 0
+follow_mode = 2
+follow_target = NodePath("../Flor")
+follow_parameters/target_offset = Vector3(0, 10, 20)
+follow_parameters/damping = false
+look_at_mode = 2
+look_at_target = NodePath("../Flor")
+look_at_parameters/look_at_target_offset = Vector3(0, 0, 0)
+tween_parameters = null
+tween_on_load = false
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="DungeonGUI" parent="." instance=ExtResource("7_7t8k1")]

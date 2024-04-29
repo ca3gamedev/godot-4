@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch1v6dw2mfmbu"]
+
+[ext_resource type="PackedScene" uid="uid://6e2ibwhpejr5" path="res://Scenes/Dungeon/Dungeons/Egypt/block cell 01.tscn" id="1_oyklw"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GridMap" parent="." instance=ExtResource("1_oyklw")]
+
+[node name="GridMap2" parent="." instance=ExtResource("1_oyklw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 47.986)
+
+[node name="GridMap3" parent="." instance=ExtResource("1_oyklw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.9376, 0, 0)
+
+[node name="GridMap4" parent="." instance=ExtResource("1_oyklw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.9376, 0, 47.986)
