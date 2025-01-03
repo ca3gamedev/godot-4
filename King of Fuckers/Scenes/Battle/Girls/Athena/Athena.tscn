@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://43kcje14kg1r"]
+
+[ext_resource type="PackedScene" uid="uid://5lkiu0ktmooo" path="res://Scenes/Battle/Girls/Base/Oponent.tscn" id="1_ckfw6"]
+[ext_resource type="Texture2D" uid="uid://dytt4mg3jk2j3" path="res://2D/Characters/Athena/diagonal front.png" id="2_mvco7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f0sfj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mvco7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="athena" instance=ExtResource("1_ckfw6")]
+
+[node name="Node2D" parent="." index="0"]
+position = Vector2(-1, -13)
+
+[node name="AnimatedSprite2D" parent="Node2D" index="0"]
+sprite_frames = SubResource("SpriteFrames_f0sfj")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-1, -10)

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2pbyexmdi7oq"]
+
+[ext_resource type="Texture2D" uid="uid://dfdscy5nuxdjx" path="res://2D/story/chapter 01/player/01.png" id="1_i1ao1"]
+[ext_resource type="Script" path="res://Battle/Scene01/player_1.gd" id="1_s873n"]
+[ext_resource type="Texture2D" uid="uid://cmj271bd0dux" path="res://2D/story/chapter 01/player/02.png" id="2_v4ab1"]
+[ext_resource type="Texture2D" uid="uid://4jkmufjcpq86" path="res://2D/story/chapter 01/player/03.png" id="3_roo5j"]
+[ext_resource type="Script" path="res://Battle/Scene01/code.gd" id="4_6w20r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rf64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i1ao1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_roo5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v4ab1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player1" type="Node2D"]
+script = ExtResource("1_s873n")
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2, -17)
+sprite_frames = SubResource("SpriteFrames_7rf64")
+
+[node name="Code" type="Node" parent="."]
+script = ExtResource("4_6w20r")
+dir = 1

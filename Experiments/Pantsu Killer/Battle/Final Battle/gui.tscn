@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddlsb5oamjavf"]
+
+[ext_resource type="Script" path="res://Battle/Final Battle/gui.gd" id="1_yjmix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23twm"]
+bg_color = Color(0.277073, 0, 0.00480935, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdunf"]
+bg_color = Color(1, 0, 0.12549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78i5m"]
+bg_color = Color(0.995323, 0, 0.16736, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nchek"]
+bg_color = Color(2.88785e-07, 0.732583, 0.0800331, 1)
+
+[node name="GUI" type="Node2D"]
+script = ExtResource("1_yjmix")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -13.0
+offset_right = 808.0
+offset_bottom = 51.0
+color = Color(0, 0, 0, 1)
+
+[node name="BOSSHP" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 723.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.344648, 0, 0.0300621, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_23twm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bdunf")
+value = 50.0
+
+[node name="HPboss" type="Label" parent="CanvasLayer"]
+offset_left = 740.0
+offset_top = 13.0
+offset_right = 780.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 0.0745098, 0.129412, 1)
+theme_override_colors/font_outline_color = Color(1, 0.407876, 0.333112, 1)
+theme_override_constants/outline_size = 2
+text = "999 "
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = -6.0
+offset_top = 483.0
+offset_right = 245.0
+offset_bottom = 604.0
+color = Color(0.383016, 0.669133, 0.789762, 1)
+
+[node name="HPBAR" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 25.0
+offset_top = 551.0
+offset_right = 161.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_styles/background = SubResource("StyleBoxFlat_78i5m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nchek")
+max_value = 10.0
+value = 5.0
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 182.0
+offset_top = 548.0
+offset_right = 223.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0.24766, 0.000102037, 0.838003, 1)
+theme_override_colors/font_outline_color = Color(0.0577199, 4.81308e-08, 0.455768, 1)
+theme_override_font_sizes/font_size = 30
+text = "HP"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 499.0
+offset_right = 63.0
+offset_bottom = 541.0
+theme_override_colors/font_color = Color(0.24766, 0.000102037, 0.838003, 1)
+theme_override_colors/font_outline_color = Color(0.0577199, 4.81308e-08, 0.455768, 1)
+theme_override_font_sizes/font_size = 30
+text = "KILL"
+
+[node name="deads" type="Label" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 497.0
+offset_right = 157.0
+offset_bottom = 539.0
+theme_override_colors/font_color = Color(0.24766, 0.000102037, 0.838003, 1)
+theme_override_colors/font_outline_color = Color(0.0577199, 4.81308e-08, 0.455768, 1)
+theme_override_font_sizes/font_size = 30
+text = "0000"
+
+[node name="Critical" type="Label" parent="CanvasLayer"]
+offset_left = 629.0
+offset_top = 56.0
+offset_right = 791.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.439013, 0, 0.0367256, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 30
+text = "CRITICAL!!!!"
+
+[node name="Critical" type="Timer" parent="."]
+one_shot = true
+
+[node name="damage" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Critical" to="." method="_on_critical_timeout"]
+[connection signal="timeout" from="damage" to="." method="_on_damage_timeout"]

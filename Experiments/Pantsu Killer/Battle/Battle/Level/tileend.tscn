@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://biqgqegci5epr"]
+
+[ext_resource type="Texture2D" uid="uid://by1im3cbbgy42" path="res://2D/story/chapter 01/levels/street 04.png" id="1_mejsl"]
+[ext_resource type="Script" path="res://Battle/Battle/Level/tileend.gd" id="1_utypq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nu8t3"]
+size = Vector2(821, 237)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgoti"]
+size = Vector2(320.5, 651)
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1_utypq")
+
+[node name="Street04" type="Sprite2D" parent="."]
+scale = Vector2(-1, 1)
+texture = ExtResource("1_mejsl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.5, 483.5)
+shape = SubResource("RectangleShape2D_nu8t3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-14, -576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-1.5, 388.5)
+shape = SubResource("RectangleShape2D_nu8t3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(668, -14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-211.25, 138)
+shape = SubResource("RectangleShape2D_kgoti")
+
+[node name="BOTTOMRIGHT" type="Marker2D" parent="."]
+position = Vector2(209, 297)

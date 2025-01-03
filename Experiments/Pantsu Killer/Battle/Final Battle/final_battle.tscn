@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://clhij1m35806f"]
+
+[ext_resource type="PackedScene" uid="uid://c244s4tya8pci" path="res://Battle/Final Level/final_level.tscn" id="1_mobvo"]
+[ext_resource type="Script" path="res://Battle/Final Battle/final_battle.gd" id="1_y4lj6"]
+[ext_resource type="PackedScene" uid="uid://c5nablkaq6mfb" path="res://Battle/Battle/Player/player.tscn" id="2_ke04n"]
+[ext_resource type="PackedScene" uid="uid://dkwh7awlajlld" path="res://Battle/Boss/Bullet/bullet.tscn" id="2_tcpwc"]
+[ext_resource type="Script" path="res://Battle/Final Battle/camera_2d.gd" id="3_p5m4q"]
+[ext_resource type="PackedScene" uid="uid://2866foy0shv5" path="res://Battle/Boss/boss.tscn" id="4_8b1tf"]
+[ext_resource type="PackedScene" uid="uid://ddlsb5oamjavf" path="res://Battle/Final Battle/gui.tscn" id="7_brt1i"]
+
+[node name="FinalBattle" type="Node2D"]
+script = ExtResource("1_y4lj6")
+panties = ExtResource("2_tcpwc")
+
+[node name="Final Level" parent="." instance=ExtResource("1_mobvo")]
+z_index = -100
+
+[node name="Player" parent="." instance=ExtResource("2_ke04n")]
+unique_name_in_owner = true
+position = Vector2(383, 544)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(417, 399)
+script = ExtResource("3_p5m4q")
+
+[node name="target" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(219, 143)
+
+[node name="BOSS" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_8b1tf")]
+position = Vector2(371, 384)
+target = NodePath("../Center")
+walk_speed = 50.0
+
+[node name="Center" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(375, 388)
+
+[node name="Right" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1086, 413)
+
+[node name="Left" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-324, 435)
+
+[node name="SpawnLeftTop" type="Marker2D" parent="."]
+position = Vector2(-594, 298)
+
+[node name="SpawnLeftBottom" type="Marker2D" parent="."]
+position = Vector2(-585, 600)
+
+[node name="SpawnRightTop" type="Marker2D" parent="."]
+position = Vector2(1367, 301)
+
+[node name="Bullets" type="Node2D" parent="."]
+
+[node name="GUI" parent="." instance=ExtResource("7_brt1i")]

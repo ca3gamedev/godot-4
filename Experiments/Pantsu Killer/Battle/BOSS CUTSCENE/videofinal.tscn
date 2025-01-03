@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://jgupyeoq8yne"]
+
+[ext_resource type="Script" path="res://Battle/BOSS CUTSCENE/videofinal.gd" id="1_0it52"]
+[ext_resource type="Texture2D" uid="uid://7jdj0wl7a2cq" path="res://2D/story/chapter 01/boss/kick02.png" id="1_5v0yp"]
+
+[sub_resource type="Animation" id="Animation_sdjte"]
+resource_name = "Start"
+length = 5.00005
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Kick02:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(467, -407), Vector2(467, -407), Vector2(383, 405)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_tqdix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Kick02:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(467, -407)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6y56l"]
+_data = {
+"RESET": SubResource("Animation_tqdix"),
+"Start": SubResource("Animation_sdjte")
+}
+
+[node name="VIDEOFINAL" type="Node2D"]
+script = ExtResource("1_0it52")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 805.0
+offset_bottom = 608.0
+color = Color(0, 0, 0, 1)
+
+[node name="Kick02" type="Sprite2D" parent="."]
+position = Vector2(467, -407)
+texture = ExtResource("1_5v0yp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6y56l")
+}
+autoplay = "Start"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 153.0
+offset_top = 39.0
+offset_right = 687.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(1, 0.184314, 0.184314, 1)
+theme_override_font_sizes/font_size = 80
+text = "HAHAHA
+
+TIME TO LOSE
+DEAR"
+horizontal_alignment = 1
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

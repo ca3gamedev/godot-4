@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://ciepht0kb4icy"]
+
+[ext_resource type="Script" path="res://Battle/Battle/GUI/gui.gd" id="1_7tdb1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdwoc"]
+bg_color = Color(0.0859838, 0.0859838, 0.0859837, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjbg2"]
+bg_color = Color(0.356967, 0.797571, 0.764674, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u8w0"]
+bg_color = Color(0.394353, 0.394353, 0.394353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yahy"]
+bg_color = Color(0.982343, 0.982342, 0.982342, 1)
+
+[node name="GUI" type="Node2D"]
+script = ExtResource("1_7tdb1")
+time_left = 100.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 316.0
+offset_bottom = 60.0
+color = Color(0.06787, 0.0744284, 0.169641, 1)
+
+[node name="TIMELEFT" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 201.0
+offset_bottom = 47.0
+theme_override_styles/background = SubResource("StyleBoxFlat_hdwoc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jjbg2")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 217.0
+offset_top = 18.0
+offset_right = 294.0
+offset_bottom = 41.0
+text = "TIME LEFT"
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = -7.0
+offset_top = 549.0
+offset_right = 206.0
+offset_bottom = 604.0
+
+[node name="EXP" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 561.0
+offset_right = 95.0
+offset_bottom = 592.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_1u8w0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6yahy")
+max_value = 10.0
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 105.0
+offset_top = 562.0
+offset_right = 145.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "EXP"
+
+[node name="Level" type="Label" parent="CanvasLayer"]
+offset_left = 155.0
+offset_top = 541.0
+offset_right = 195.0
+offset_bottom = 610.0
+theme_override_colors/font_color = Color(0.299713, 0.176088, 0.863935, 1)
+theme_override_colors/font_outline_color = Color(0.135019, 0.000115225, 0.412424, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer"]
+offset_left = 688.0
+offset_top = 503.0
+offset_right = 807.0
+offset_bottom = 609.0
+color = Color(0.702647, 0.6079, 0.311607, 1)
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 708.0
+offset_top = 513.0
+offset_right = 764.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0.469271, 0.148614, 0.0197914, 1)
+theme_override_colors/font_outline_color = Color(0.28975, 0.0814001, 0.00497558, 1)
+theme_override_font_sizes/font_size = 15
+text = "SCORE:"
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 711.0
+offset_top = 532.0
+offset_right = 757.0
+offset_bottom = 587.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "00"

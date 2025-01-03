@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://5lkiu0ktmooo"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Girls/Base/oponent.gd" id="1_jog34"]
+[ext_resource type="PackedScene" uid="uid://d3col4wthfquu" path="res://Scenes/Battle/Fireball/enemy_bullet.tscn" id="2_dsqnp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cs0le"]
+
+[node name="Girl" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 6
+script = ExtResource("1_jog34")
+walk_speed = 50.0
+bullet = ExtResource("2_dsqnp")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cs0le")
+
+[node name="Bullet" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Bullet" to="." method="_on_bullet_timeout"]

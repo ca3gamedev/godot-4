@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b48a11nua64vd"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Tiles/belt.gd" id="1_1wq7e"]
+[ext_resource type="PackedScene" uid="uid://dstpja1txmm1f" path="res://Scenes/Battle/Tiles/tile.tscn" id="2_khqkm"]
+
+[node name="Belt" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_1wq7e")
+Tile = ExtResource("2_khqkm")
+offset = 40.0
+size = 10

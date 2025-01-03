@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwf750bcnb872"]
+
+[ext_resource type="Texture2D" uid="uid://by1bjtns6qt86" path="res://2D/story/chapter 01/levels/bed.png" id="1_rusfg"]
+[ext_resource type="Texture2D" uid="uid://cng602p3udpp7" path="res://2D/story/chapter 01/player/sleep/01.png" id="2_tivua"]
+[ext_resource type="Texture2D" uid="uid://8xwms1v1g6yt" path="res://2D/story/chapter 01/player/sleep/02.png" id="3_nnjxe"]
+[ext_resource type="Texture2D" uid="uid://dh13fxnc60iwn" path="res://2D/story/chapter 01/player/sleep/03.png" id="4_avswl"]
+[ext_resource type="Texture2D" uid="uid://bj0eotisdxkc4" path="res://2D/story/chapter 01/player/sleep/04.png" id="5_fk5xt"]
+[ext_resource type="PackedScene" uid="uid://d2pbyexmdi7oq" path="res://Battle/Scene01/player_1.tscn" id="6_vqd0v"]
+[ext_resource type="Script" path="res://Battle/Scene01/movie.gd" id="7_ko2co"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41jsr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tivua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nnjxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_avswl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fk5xt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Scene01" type="Node2D"]
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(403, 334)
+texture = ExtResource("1_rusfg")
+
+[node name="Sleep" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(400, 332)
+sprite_frames = SubResource("SpriteFrames_41jsr")
+autoplay = "default"
+
+[node name="Player1" parent="." instance=ExtResource("6_vqd0v")]
+unique_name_in_owner = true
+position = Vector2(392, 332)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(404, 299)
+
+[node name="Code" type="Node" parent="."]
+
+[node name="Movie" type="Node" parent="Code"]
+script = ExtResource("7_ko2co")
+
+[node name="Start" type="Timer" parent="Code/Movie"]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 251.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PRESS SPACE or Enter TO CONTINUE"
+
+[connection signal="timeout" from="Code/Movie/Start" to="Code/Movie" method="_on_start_timeout"]

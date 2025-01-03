@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://c360n4pb5xcar"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/GUI/gui.gd" id="1_fou8o"]
+[ext_resource type="Texture2D" uid="uid://58olg5466j4x" path="res://2D/GUI/GUI/kensou.png" id="1_xu485"]
+[ext_resource type="Texture2D" uid="uid://crps0opftmqkj" path="res://2D/GUI/GUI/athena.png" id="2_2dxwq"]
+[ext_resource type="Texture2D" uid="uid://bomiw3oxefgn7" path="res://2D/GUI/GUI/leona.png" id="3_8vado"]
+[ext_resource type="Texture2D" uid="uid://bvk6xve1sgu24" path="res://2D/GUI/Pantsus/athena pantsu.png" id="4_u8cho"]
+[ext_resource type="Texture2D" uid="uid://de0t1t0ypel0j" path="res://2D/GUI/Pantsus/leona pantsu.png" id="5_upalb"]
+[ext_resource type="Texture2D" uid="uid://duuq8txrrr3dv" path="res://2D/GUI/GUI/kensou face.png" id="7_fj08j"]
+
+[node name="GUI" type="Node2D"]
+script = ExtResource("1_fou8o")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="KensouFace" type="Sprite2D" parent="GUI"]
+position = Vector2(71, 549)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_fj08j")
+
+[node name="Kensou" type="Sprite2D" parent="GUI"]
+position = Vector2(71, 547)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_xu485")
+
+[node name="Athena" type="Sprite2D" parent="GUI"]
+position = Vector2(1079, 550)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_2dxwq")
+
+[node name="Leona" type="Sprite2D" parent="GUI"]
+position = Vector2(954, 548)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_8vado")
+
+[node name="AthenaPantsu" type="Sprite2D" parent="GUI"]
+position = Vector2(1079, 547)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_u8cho")
+
+[node name="LeonaPantsu" type="Sprite2D" parent="GUI"]
+position = Vector2(952, 546)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_upalb")
+
+[node name="Girl1" type="Timer" parent="."]
+one_shot = true
+
+[node name="Girl2" type="Timer" parent="."]
+one_shot = true
+
+[node name="Kensou" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Girl1" to="." method="_on_girl_1_timeout"]
+[connection signal="timeout" from="Girl2" to="." method="_on_girl_2_timeout"]
+[connection signal="timeout" from="Kensou" to="." method="_on_kensou_timeout"]

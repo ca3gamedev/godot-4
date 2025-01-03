@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd0k15spcyogq"]
+
+[ext_resource type="PackedScene" uid="uid://b8bjsc4n21ffk" path="res://Scenes/Battle/Player/yasir.tscn" id="1_ptl34"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2olt4"]
+size = Vector2(43.5, 42)
+
+[node name="Battle" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 190.0
+offset_top = 160.0
+offset_right = 230.0
+offset_bottom = 200.0
+color = Color(0.921569, 0.0862745, 0.145098, 1)
+
+[node name="Area2D" type="Area2D" parent="ColorRect" groups=["ENEMY"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D"]
+position = Vector2(20.25, 20)
+shape = SubResource("RectangleShape2D_2olt4")
+
+[node name="Yasir" parent="." instance=ExtResource("1_ptl34")]
+position = Vector2(572, 312)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 320)

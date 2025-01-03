@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccmqbgxah2sh2"]
+
+[ext_resource type="Texture2D" uid="uid://krodv7ur0pvq" path="res://2D/BoardGame/player.png" id="1_6crsj"]
+[ext_resource type="Script" path="res://Scenes/Battle/Tiles/player.gd" id="1_8tla2"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_8tla2")
+
+[node name="Player" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_6crsj")

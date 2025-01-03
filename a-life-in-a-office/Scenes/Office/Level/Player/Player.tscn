@@ -1,0 +1,53 @@
+[gd_scene load_steps=14 format=3 uid="uid://cblrghwftrxfb"]
+
+[ext_resource type="Script" path="res://Scenes/Office/Level/Player/fsm.gd" id="1_0r1lq"]
+[ext_resource type="Script" path="res://Scenes/Office/Level/Player/player.gd" id="1_utr2j"]
+[ext_resource type="Script" path="res://Scenes/Office/Level/Player/idle.gd" id="2_uxjwn"]
+[ext_resource type="Script" path="res://Scenes/Office/Level/Player/walk.gd" id="3_lj75n"]
+[ext_resource type="PackedScene" uid="uid://dbb5mgs0qo1d7" path="res://3D/Player/Charlie.glb" id="4_hrdsm"]
+[ext_resource type="Shader" path="res://3D/Player/textures/Player.gdshader" id="5_f132l"]
+[ext_resource type="Texture2D" uid="uid://cvsikeq2e6js4" path="res://3D/Player/textures/albedo_C.png" id="7_ktbj3"]
+[ext_resource type="Texture2D" uid="uid://csc0a6tmb4opn" path="res://3D/Player/textures/Shadow_C.png" id="7_x8frj"]
+[ext_resource type="Texture2D" uid="uid://dtqgiti8rm67o" path="res://3D/Player/textures/specular_C.png" id="9_7is5d"]
+[ext_resource type="Texture2D" uid="uid://c76bqt4ocehqr" path="res://3D/Player/textures/Shadow Mask_C.png" id="9_atlwd"]
+[ext_resource type="Texture2D" uid="uid://do0x7j77cfrq2" path="res://3D/Player/textures/Specular mask_C.png" id="11_gevyg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vj5j8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_arfrc"]
+render_priority = 0
+shader = ExtResource("5_f132l")
+shader_parameter/light_angle = 0.135
+shader_parameter/myalbedo = ExtResource("7_ktbj3")
+shader_parameter/myshadow = ExtResource("7_x8frj")
+shader_parameter/myspecular = ExtResource("9_7is5d")
+shader_parameter/myshadowmask = ExtResource("9_atlwd")
+shader_parameter/myspecularmask = ExtResource("11_gevyg")
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("mesh") groups=["PLAYER"]]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_utr2j")
+mesh = NodePath("Charlie/Plane_002")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vj5j8")
+
+[node name="FSM" type="Node" parent="."]
+script = ExtResource("1_0r1lq")
+walk_speed = 100.0
+dir = Vector2i(0, 1)
+rot_speed = 5.0
+
+[node name="IDLE" type="Node" parent="FSM"]
+script = ExtResource("2_uxjwn")
+
+[node name="WALK" type="Node" parent="FSM"]
+script = ExtResource("3_lj75n")
+
+[node name="Charlie" parent="." instance=ExtResource("4_hrdsm")]
+transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 0.778021, 0)
+
+[node name="Plane_002" parent="Charlie" index="0"]
+material_override = SubResource("ShaderMaterial_arfrc")
+
+[editable path="Charlie"]

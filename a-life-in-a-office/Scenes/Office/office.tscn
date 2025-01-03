@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://rx38t8tnq0si"]
+
+[ext_resource type="PackedScene" uid="uid://ba3h52hiq3rja" path="res://Scenes/Office/Level/office_3d.tscn" id="1_5ei8w"]
+[ext_resource type="FontFile" uid="uid://djstotj6cek6t" path="res://Fonts/CutiveMono-Regular.ttf" id="2_5lqn3"]
+[ext_resource type="Shader" path="res://Scenes/Office/office.gdshader" id="2_auhx5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sca28"]
+shader = ExtResource("2_auhx5")
+shader_parameter/r_displacement = Vector2(0.5, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-0.5, 0)
+
+[node name="Office" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 1210.0
+offset_bottom = 808.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 190.0
+offset_top = 97.0
+offset_right = 969.0
+offset_bottom = 698.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(779, 601)
+render_target_update_mode = 4
+
+[node name="Office3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_5ei8w")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 204.0
+offset_top = 111.0
+offset_right = 244.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0.692195, 0.0522434, 0.116148, 1)
+theme_override_colors/font_outline_color = Color(0.811124, 0.0878449, 0.196221, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_5lqn3")
+theme_override_font_sizes/font_size = 30
+text = "REC"
+
+[node name="CRT" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_sca28")
+offset_left = 186.0
+offset_top = 94.0
+offset_right = 969.0
+offset_bottom = 700.0

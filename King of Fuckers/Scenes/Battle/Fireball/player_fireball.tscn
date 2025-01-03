@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnwc8uen06svy"]
+
+[ext_resource type="Texture2D" uid="uid://fikgnyvlx1ks" path="res://2D/fireballs/fireball.png" id="1_1ohhn"]
+[ext_resource type="Script" path="res://Scenes/Battle/Fireball/player_fireball.gd" id="1_c1cgv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xe5kc"]
+radius = 4.47214
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ojwr4"]
+radius = 9.0
+
+[node name="PlayerFireball" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_c1cgv")
+angle = Vector2(0, -1)
+speed = 100.0
+
+[node name="Fireball" type="Sprite2D" parent="."]
+modulate = Color(0.104597, 0.46257, 0.794085, 1)
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1ohhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xe5kc")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ojwr4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
