@@ -25,10 +25,12 @@ func Update(delta):
 	
 	if dir != Vector2i.ZERO:
 		%FSM.dir = dir
+	
+	var angle = %Anim.get("parameters/MOVE/blend_position")
+	angle = lerp(Vector2(angle.x, angle.y), Vector2(0.5, 0.0), delta * 10)
+	%Anim.set("parameters/MOVE/blend_position", angle)
 
 func Physics(delta):
-	%Anim.set("parameters/MOVE/blend_position", %FSM.dir)
 	
-	var speed = %FSM.dir * delta * %FSM.walk_speed * Vector2(1, -1) * %FSM.walk_multi
-	$"../..".velocity = speed
-	$"../..".move_and_slide()
+	var speed = %FSM.dir * delta * %FSM.walk_speed * Vector2(1, -1)
+	$"../..".move_and_collide(Vector3(speed.x, 0, speed.y))

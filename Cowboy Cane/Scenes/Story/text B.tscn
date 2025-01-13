@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmqipe2f3pfiy"]
+
+[ext_resource type="Script" path="res://Scenes/Story/text_a.gd" id="1_5j8s7"]
+
+[node name="Text" type="Node2D" node_paths=PackedStringArray("target")]
+script = ExtResource("1_5j8s7")
+max_pages = 9
+target = NodePath("0")
+idle = true
+
+[node name="0" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="0"]
+offset_right = 432.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "We arrived at the door..."
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2(2, 144)
+
+[node name="Label" type="Label" parent="1"]
+offset_left = -28.0
+offset_top = -3.0
+offset_right = 404.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "What we're looking for, exist at the other side..."
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2(15, 312)
+
+[node name="Label" type="Label" parent="2"]
+offset_left = -28.0
+offset_top = -3.0
+offset_right = 404.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "I expected everything to be
+much more simpler."
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2(16, 427)
+
+[node name="Label" type="Label" parent="3"]
+offset_left = -41.0
+offset_top = -3.0
+offset_right = 391.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Let's hope that nothing too 
+complicated starts from now
+on..."
+
+[node name="4" type="Node2D" parent="."]
+position = Vector2(9, 590)
+
+[node name="Label" type="Label" parent="4"]
+offset_left = -41.0
+offset_top = -3.0
+offset_right = 391.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The secret door to the treasure..."
+
+[node name="Parent" type="Node2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Parent"]
+position = Vector2(115, 53)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -12,11 +12,11 @@ func Physics(delta):
 
 func Start():
 	%Anim.set("parameters/conditions/hurt", true)
-	%Anim.set("parameters/HURT/blend_position", %FSM.dir)
 
 func HIT():
 	%FSM.current = %FSM.get_node("HURT")
 	%FSM.current.Start()
+	Variables.GUI.HIT()
 
 func _on_hitbox_area_entered(area):
 	

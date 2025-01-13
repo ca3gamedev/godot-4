@@ -1,0 +1,137 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqrnk43yqhf4y"]
+
+[ext_resource type="Script" path="res://Scenes/Story/text_a.gd" id="1_6y75s"]
+
+[node name="Text" type="Node2D" node_paths=PackedStringArray("target")]
+script = ExtResource("1_6y75s")
+max_pages = 9
+target = NodePath("0")
+idle = true
+
+[node name="0" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="0"]
+offset_right = 432.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "And so, our story has began..."
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2(2, 144)
+
+[node name="Label" type="Label" parent="1"]
+offset_left = -28.0
+offset_top = -3.0
+offset_right = 404.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Without making a too big of a fuzz
+I realized this journey was gonna be
+much more dificult than anticipated..."
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2(15, 312)
+
+[node name="Label" type="Label" parent="2"]
+offset_left = -28.0
+offset_top = -3.0
+offset_right = 404.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "I expected everything to be
+much more simpler."
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2(16, 427)
+
+[node name="Label" type="Label" parent="3"]
+offset_left = -41.0
+offset_top = -3.0
+offset_right = 391.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thankfully now I can relly on
+him even more, because he's
+the one that brought me
+to this adventure."
+
+[node name="4" type="Node2D" parent="."]
+position = Vector2(16, 427)
+
+[node name="Label" type="Label" parent="4"]
+offset_left = -35.0
+offset_top = 175.0
+offset_right = 397.0
+offset_bottom = 276.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Enduring all that has happened
+so far
+It's just an indication of my will power"
+
+[node name="5" type="Node2D" parent="."]
+position = Vector2(6, 741)
+
+[node name="Label" type="Label" parent="5"]
+offset_left = -30.0
+offset_right = 402.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The moment I was called
+to find the last treasure of 
+the mochas, I felt it was gonna be 
+diferent."
+
+[node name="6" type="Node2D" parent="."]
+position = Vector2(5, 900)
+
+[node name="Label" type="Label" parent="6"]
+offset_left = -30.0
+offset_right = 402.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "It seems nobody has tried
+to follow up the traces of the last remains."
+
+[node name="7" type="Node2D" parent="."]
+position = Vector2(10, 1003)
+
+[node name="Label" type="Label" parent="7"]
+offset_left = -30.0
+offset_right = 402.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Everyone used to think the last place was more upwards north.
+But they didn't realize my idea was correct."
+
+[node name="8" type="Node2D" parent="."]
+position = Vector2(2, 1116)
+
+[node name="Label" type="Label" parent="8"]
+offset_left = -30.0
+offset_right = 402.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "But I can't give up, I can't give in, of that feeling of
+ despair that my soul keeps pestering
+me"
+
+[node name="9" type="Node2D" parent="."]
+position = Vector2(4, 1238)
+
+[node name="Label" type="Label" parent="9"]
+offset_left = -30.0
+offset_right = 402.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "I must continue"
+
+[node name="Parent" type="Node2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Parent"]
+position = Vector2(115, 53)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

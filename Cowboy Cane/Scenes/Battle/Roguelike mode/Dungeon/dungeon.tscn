@@ -1,0 +1,84 @@
+[gd_scene load_steps=19 format=3 uid="uid://dov2i4ty4utlh"]
+
+[ext_resource type="Texture2D" uid="uid://pyboaboyl16q" path="res://2D/tiles/black.png" id="1_4knnl"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/Dungeon/dungeon.gd" id="1_vt0ju"]
+[ext_resource type="Texture2D" uid="uid://ctpp04mkxlft" path="res://2D/tiles/dirt.png" id="2_lvfow"]
+[ext_resource type="Texture2D" uid="uid://bh152h3c4jsd" path="res://2D/tiles/flower.png" id="3_5teg8"]
+[ext_resource type="Texture2D" uid="uid://2cdy22xocfy2" path="res://2D/tiles/grass.png" id="4_eiuxg"]
+[ext_resource type="Texture2D" uid="uid://v2thfy5n87wf" path="res://2D/tiles/rock.png" id="5_7b47c"]
+[ext_resource type="Texture2D" uid="uid://dx8jdpcquu5dk" path="res://2D/tiles/sand.png" id="6_um8xb"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/Dungeon/base.gd" id="8_sebq8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_faa82"]
+texture = ExtResource("1_4knnl")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ikvqm"]
+texture = ExtResource("2_lvfow")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_hh6it"]
+vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
+agent_radius = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eic0h"]
+texture = ExtResource("3_5teg8")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_hh6it")
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kq84v"]
+vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
+agent_radius = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqbbo"]
+texture = ExtResource("4_eiuxg")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_kq84v")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aecr2"]
+texture = ExtResource("5_7b47c")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_diati"]
+vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
+agent_radius = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ongll"]
+texture = ExtResource("6_um8xb")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_diati")
+
+[sub_resource type="TileSet" id="TileSet_a0cwi"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+sources/0 = SubResource("TileSetAtlasSource_faa82")
+sources/1 = SubResource("TileSetAtlasSource_ikvqm")
+sources/2 = SubResource("TileSetAtlasSource_eic0h")
+sources/3 = SubResource("TileSetAtlasSource_sqbbo")
+sources/4 = SubResource("TileSetAtlasSource_aecr2")
+sources/5 = SubResource("TileSetAtlasSource_ongll")
+
+[node name="Dungeon" type="Node2D"]
+script = ExtResource("1_vt0ju")
+DungeonSize = Vector2i(100, 100)
+NumberofRooms = 20
+RoomsSize = 25
+
+[node name="Base" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_a0cwi")
+script = ExtResource("8_sebq8")

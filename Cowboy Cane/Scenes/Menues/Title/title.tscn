@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://6nlyhvy0hxm5"]
+
+[ext_resource type="Script" path="res://Scenes/Menues/Title/continue.gd" id="1_ne56u"]
+
+[node name="TITLE" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1159.0
+offset_bottom = 661.0
+color = Color(0.0990331, 0.149366, 0.345745, 1)
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 301.0
+offset_top = 243.0
+offset_right = 885.0
+offset_bottom = 353.0
+theme_override_font_sizes/font_size = 80
+text = "COWBOY CANE"
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 515.0
+offset_top = 538.0
+offset_right = 627.0
+offset_bottom = 591.0
+text = "START"
+script = ExtResource("1_ne56u")
+Next = "Intro"
+
+[connection signal="pressed" from="Continue" to="Continue" method="_on_pressed"]

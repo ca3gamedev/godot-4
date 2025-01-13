@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmv8wmqnv3gr4"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Battle/battle.gd" id="1_txtjj"]
+[ext_resource type="PackedScene" uid="uid://dov2i4ty4utlh" path="res://Scenes/Battle/Roguelike mode/Dungeon/dungeon.tscn" id="2_jub5p"]
+[ext_resource type="PackedScene" uid="uid://crgrx4agh1k6j" path="res://Scenes/Battle/Traps/misile.tscn" id="3_dxjwp"]
+[ext_resource type="PackedScene" uid="uid://b8bjsc4n21ffk" path="res://Scenes/Battle/Player/yasir.tscn" id="4_ymp8m"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/camera_2d.gd" id="5_5psv3"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/coins.gd" id="7_xg1m4"]
+[ext_resource type="PackedScene" uid="uid://bxu06msr42ii2" path="res://Scenes/Battle/Coin/coin story.tscn" id="8_n8uvk"]
+[ext_resource type="PackedScene" uid="uid://f0oov7im5rav" path="res://Scenes/Battle/Roguelike mode/gui.tscn" id="9_1h3ou"]
+[ext_resource type="PackedScene" uid="uid://c272m6ttm7i7u" path="res://Scenes/Battle/Level Goals/teleport.tscn" id="9_8kyni"]
+
+[node name="Battle rogue" type="Node2D" node_paths=PackedStringArray("TOPLEFT", "BOTTOMRIGHT")]
+script = ExtResource("1_txtjj")
+TOPLEFT = NodePath("TOPLEFT")
+BOTTOMRIGHT = NodePath("BOTTOMRIGHT")
+
+[node name="Dungeon" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_jub5p")]
+camera = NodePath("../Camera2D")
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="Misile" parent="Traps" instance=ExtResource("3_dxjwp")]
+
+[node name="Misile2" parent="Traps" instance=ExtResource("3_dxjwp")]
+position = Vector2(520, 4)
+
+[node name="Misile3" parent="Traps" instance=ExtResource("3_dxjwp")]
+position = Vector2(1110, 8)
+
+[node name="Misile4" parent="Traps" instance=ExtResource("3_dxjwp")]
+position = Vector2(1116, 606)
+
+[node name="Misile5" parent="Traps" instance=ExtResource("3_dxjwp")]
+position = Vector2(554, 608)
+
+[node name="Misile6" parent="Traps" instance=ExtResource("3_dxjwp")]
+position = Vector2(0, 600)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("Target")]
+position = Vector2(577, 320)
+script = ExtResource("5_5psv3")
+Target = NodePath("../CameraTarget")
+
+[node name="TOPLEFT" type="Marker2D" parent="."]
+position = Vector2(96, 98)
+
+[node name="BOTTOMRIGHT" type="Marker2D" parent="."]
+position = Vector2(998, 556)
+
+[node name="Yasir" parent="." instance=ExtResource("4_ymp8m")]
+position = Vector2(568, 324)
+
+[node name="CameraTarget" type="Node2D" parent="."]
+
+[node name="Coins" type="Node2D" parent="."]
+script = ExtResource("7_xg1m4")
+coin = ExtResource("8_n8uvk")
+
+[node name="Teleport" parent="." instance=ExtResource("9_8kyni")]
+Next = "Roguelike"
+
+[node name="GUI" parent="." instance=ExtResource("9_1h3ou")]

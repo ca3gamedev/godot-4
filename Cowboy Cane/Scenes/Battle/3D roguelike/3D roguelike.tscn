@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://cal2pe7hj0d51"]
+
+[ext_resource type="PackedScene" uid="uid://clkxmwrvkhkrg" path="res://Scenes/Battle/Player/yasir 3d.tscn" id="1_lp2k7"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/camera_2d.gd" id="2_gi7qx"]
+[ext_resource type="PackedScene" uid="uid://dm8q58w3u431s" path="res://Scenes/Battle/3D roguelike/dungeon.tscn" id="3_ui663"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/coins.gd" id="4_v0n3b"]
+[ext_resource type="PackedScene" uid="uid://cmomlu26d7uva" path="res://Scenes/Battle/3D roguelike/teleport_3d.tscn" id="5_s56ld"]
+[ext_resource type="PackedScene" uid="uid://dfxh0rm06jlas" path="res://Scenes/Battle/Coin/coin 3D.tscn" id="5_w03s3"]
+[ext_resource type="PackedScene" uid="uid://f0oov7im5rav" path="res://Scenes/Battle/Roguelike mode/gui.tscn" id="7_owx3h"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne7k1"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ecb61"]
+sky_material = SubResource("ProceduralSkyMaterial_ne7k1")
+
+[sub_resource type="Environment" id="Environment_55ydf"]
+background_mode = 2
+sky = SubResource("Sky_ecb61")
+tonemap_mode = 3
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.194853, 0.567103, 0.834513, 1)
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 0.8
+
+[node name="Battle" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_55ydf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.905289, -0.367885, 0.212397, -1.49013e-08, 0.499998, 0.866027, -0.424796, -0.784004, 0.452643, 0, 12.5355, 0)
+light_energy = 0.9
+shadow_enabled = true
+
+[node name="Yasir" parent="." instance=ExtResource("1_lp2k7")]
+
+[node name="Target" type="Node3D" parent="."]
+
+[node name="CameraParent" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraParent" node_paths=PackedStringArray("Target")]
+transform = Transform3D(0.999815, 0.0114134, -0.015482, 0.00171918, 0.748667, 0.662944, 0.0191573, -0.662849, 0.748508, -0.203622, 9.00618, 10.7123)
+script = ExtResource("2_gi7qx")
+Target = NodePath("../../Target")
+
+[node name="Dungeon" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("3_ui663")]
+DungeonSize = Vector2i(100, 100)
+NumberofRooms = 25
+RoomsSize = 15
+camera = NodePath("../CameraParent/Camera3D")
+
+[node name="Coins" type="Node3D" parent="."]
+script = ExtResource("4_v0n3b")
+coin = ExtResource("5_w03s3")
+
+[node name="Teleport3D" parent="." instance=ExtResource("5_s56ld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
+Next = "Roguelike"
+
+[node name="GUI" parent="." instance=ExtResource("7_owx3h")]

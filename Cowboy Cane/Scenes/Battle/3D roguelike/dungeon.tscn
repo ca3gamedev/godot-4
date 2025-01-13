@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm8q58w3u431s"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/3D roguelike/dungeon.gd" id="1_xam3u"]
+[ext_resource type="MeshLibrary" uid="uid://cwil4qh4yhhrb" path="res://3D/tiles/tiles 2.tres" id="2_0i4qm"]
+[ext_resource type="Script" path="res://Scenes/Battle/3D roguelike/grid_map.gd" id="3_r1ths"]
+
+[node name="Dungeon" type="Node3D"]
+script = ExtResource("1_xam3u")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("2_0i4qm")
+cell_octant_size = 16
+script = ExtResource("3_r1ths")

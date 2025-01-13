@@ -10,7 +10,9 @@ func _ready():
 
 func _process(delta):
 	current.Transition()
-	current.Update(delta)
+	current.Update(delta) 
 
 func _physics_process(delta):
 	current.Physics(delta)
+	
+	$"..".rotation.y = lerp_angle($"..".rotation.y, atan2(dir.x, dir.y*-1), delta * 10)

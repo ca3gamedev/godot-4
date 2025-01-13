@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://2pnqm02jahav"]
+
+[ext_resource type="PackedScene" uid="uid://clkxmwrvkhkrg" path="res://Scenes/Battle/Player/yasir 3d.tscn" id="1_p2yew"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/camera_2d.gd" id="2_twtsb"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/coins.gd" id="4_vxwxd"]
+[ext_resource type="PackedScene" uid="uid://dfxh0rm06jlas" path="res://Scenes/Battle/Coin/coin 3D.tscn" id="5_urau4"]
+[ext_resource type="PackedScene" uid="uid://cmomlu26d7uva" path="res://Scenes/Battle/3D roguelike/teleport_3d.tscn" id="6_luqso"]
+[ext_resource type="Texture2D" uid="uid://5v6o3vd180qh" path="res://2D/Maps/tiles/01.png" id="6_m78c1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne7k1"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ecb61"]
+sky_material = SubResource("ProceduralSkyMaterial_ne7k1")
+
+[sub_resource type="Environment" id="Environment_55ydf"]
+background_mode = 2
+sky = SubResource("Sky_ecb61")
+tonemap_mode = 3
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.194853, 0.567103, 0.834513, 1)
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 0.8
+
+[node name="Battle" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_55ydf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.905289, -0.367885, 0.212397, -1.49013e-08, 0.499998, 0.866027, -0.424796, -0.784004, 0.452643, 0, 12.5355, 0)
+light_energy = 0.9
+shadow_enabled = true
+
+[node name="Yasir" parent="." instance=ExtResource("1_p2yew")]
+
+[node name="Target" type="Node3D" parent="."]
+
+[node name="CameraParent" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraParent" node_paths=PackedStringArray("Target")]
+transform = Transform3D(0.999815, 0.0114134, -0.015482, 0.00171918, 0.748666, 0.662944, 0.0191573, -0.662848, 0.748508, -0.203622, 9.00618, 7.77658)
+script = ExtResource("2_twtsb")
+Target = NodePath("../../Target")
+
+[node name="Coins" type="Node3D" parent="."]
+script = ExtResource("4_vxwxd")
+coin = ExtResource("5_urau4")
+
+[node name="Teleport3D" parent="." instance=ExtResource("6_luqso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
+Next = "Roguelike"
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 60.9397, 0, 0)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, -61.0934, 0, 0)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, -60.8256)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 60.9397, 0, -60.8256)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, -61.0934, 0, -60.8256)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 59.8403)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 60.9397, 0, 59.8403)
+texture = ExtResource("6_m78c1")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Map"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, -61.0934, 0, 59.8403)
+texture = ExtResource("6_m78c1")

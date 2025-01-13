@@ -1,0 +1,92 @@
+[gd_scene load_steps=16 format=3 uid="uid://djveey03lvyec"]
+
+[ext_resource type="Texture2D" uid="uid://c4ulw7fx384mu" path="res://2D/Story/tmp/01.png" id="1_vy7fw"]
+[ext_resource type="Texture2D" uid="uid://dxa1m1k103eil" path="res://2D/Story/tmp/02.png" id="2_1ktvd"]
+[ext_resource type="Texture2D" uid="uid://c8cxlws3frqv3" path="res://2D/Story/tmp/03.png" id="3_g2gf3"]
+[ext_resource type="Texture2D" uid="uid://b0q0d8w8l38jf" path="res://2D/Story/tmp/04.png" id="4_16uw3"]
+[ext_resource type="Texture2D" uid="uid://nxxtdw2e3g7j" path="res://2D/Story/tmp/05.png" id="5_wpsgf"]
+[ext_resource type="Texture2D" uid="uid://bgnwgluwcoaxf" path="res://2D/Story/tmp/06.png" id="6_gl47k"]
+[ext_resource type="Texture2D" uid="uid://bgq7ti56rjmc6" path="res://2D/Story/tmp/07.png" id="7_akscj"]
+[ext_resource type="Texture2D" uid="uid://ccb3xgabxjlts" path="res://2D/Story/tmp/08.png" id="8_5teyf"]
+[ext_resource type="Texture2D" uid="uid://ti5vd10c0mne" path="res://2D/Story/tmp/09.png" id="9_72r45"]
+[ext_resource type="PackedScene" uid="uid://bmqipe2f3pfiy" path="res://Scenes/Story/text B.tscn" id="9_a3bx3"]
+[ext_resource type="Texture2D" uid="uid://cff5cbe44hrja" path="res://2D/Story/tmp/10.png" id="10_acfb3"]
+[ext_resource type="Texture2D" uid="uid://cxxfa8eryj1ay" path="res://2D/Story/tmp/11.png" id="11_6m3p8"]
+[ext_resource type="Texture2D" uid="uid://b6mosvyfgfsqn" path="res://2D/Story/tmp/12.png" id="12_jd1wq"]
+[ext_resource type="Texture2D" uid="uid://bbaoumys08cim" path="res://2D/Story/tmp/13.png" id="13_2jtyf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hs77r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vy7fw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1ktvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g2gf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_16uw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wpsgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gl47k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_akscj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5teyf")
+}],
+"loop": true,
+"name": &"story A",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_72r45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_acfb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6m3p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jd1wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2jtyf")
+}],
+"loop": true,
+"name": &"story B",
+"speed": 5.0
+}]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Story" type="AnimatedSprite2D" parent="."]
+position = Vector2(581, 310)
+sprite_frames = SubResource("SpriteFrames_hs77r")
+animation = &"story B"
+frame = 4
+
+[node name="Story2" type="SubViewportContainer" parent="."]
+offset_left = 340.0
+offset_top = 484.0
+offset_right = 755.0
+offset_bottom = 599.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Story2"]
+handle_input_locally = false
+size = Vector2i(415, 115)
+render_target_update_mode = 4
+
+[node name="Text" parent="Story2/SubViewport" instance=ExtResource("9_a3bx3")]
+max_pages = 4
+Next = "Roguelike"

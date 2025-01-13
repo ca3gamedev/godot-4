@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://bunxd8yyw2oc6"]
+
+[ext_resource type="PackedScene" uid="uid://clkxmwrvkhkrg" path="res://Scenes/Battle/Player/yasir 3d.tscn" id="1_xfqmf"]
+[ext_resource type="Script" path="res://Scenes/Battle/3D basic level/camera_3d follow path.gd" id="2_5p06c"]
+[ext_resource type="PackedScene" uid="uid://dfxh0rm06jlas" path="res://Scenes/Battle/Coin/coin 3D.tscn" id="3_6ccg7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ne7k1"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ecb61"]
+sky_material = SubResource("ProceduralSkyMaterial_ne7k1")
+
+[sub_resource type="Environment" id="Environment_55ydf"]
+background_mode = 2
+sky = SubResource("Sky_ecb61")
+tonemap_mode = 3
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.194853, 0.567103, 0.834513, 1)
+adjustment_enabled = true
+adjustment_contrast = 1.07
+adjustment_saturation = 1.02
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_id4rx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jx54b"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vrn18"]
+noise = SubResource("FastNoiseLite_jx54b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lddw"]
+albedo_color = Color(0.279967, 0.279967, 0.279967, 1)
+roughness_texture = SubResource("NoiseTexture2D_vrn18")
+uv1_scale = Vector3(20, 20, 20)
+
+[node name="Battle" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_55ydf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.905289, -0.367885, 0.212397, -1.49013e-08, 0.499998, 0.866027, -0.424796, -0.784004, 0.452643, 0, 12.5355, 0)
+shadow_enabled = true
+
+[node name="Yasir" parent="." instance=ExtResource("1_xfqmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, 0)
+
+[node name="Target" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_id4rx")
+surface_material_override/0 = SubResource("StandardMaterial3D_7lddw")
+
+[node name="CameraParent" type="Node3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -4.19617e-05, 0, 7.15256e-06)
+
+[node name="Camera3D" type="Camera3D" parent="CameraParent"]
+transform = Transform3D(0.999815, 0.0114134, -0.015482, 0, 0.804916, 0.593389, 0.0192343, -0.593279, 0.804767, -0.203622, 6.16623, 7.96574)
+script = ExtResource("2_5p06c")
+walk_speed = 0.001
+dist = 10.0
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Area3D" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.920368, 0)
+
+[node name="Area3D2" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.920368, -3.62341)
+
+[node name="Area3D3" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.920368, -8.23973)
+
+[node name="Area3D4" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.920368, -12.358)
+
+[node name="Area3D5" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22253, 0.920368, 0)
+
+[node name="Area3D6" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22253, 0.920368, -3.62341)
+
+[node name="Area3D7" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22253, 0.920368, -8.23973)
+
+[node name="Area3D8" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22253, 0.920368, -12.358)
+
+[node name="Area3D9" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5262, 0.920368, 0)
+
+[node name="Area3D10" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5262, 0.920368, -3.62341)
+
+[node name="Area3D11" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5262, 0.920368, -8.23973)
+
+[node name="Area3D12" parent="Node3D" instance=ExtResource("3_6ccg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5262, 0.920368, -12.358)

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4mi3td4qkc5l"]
+
+[ext_resource type="PackedScene" uid="uid://cmf6he541xktp" path="res://Scenes/Battle/Levels/Maps/level_1_map.tscn" id="1_e46yv"]
+[ext_resource type="PackedScene" uid="uid://b8bjsc4n21ffk" path="res://Scenes/Battle/Player/yasir.tscn" id="1_sc6jc"]
+[ext_resource type="Script" path="res://Scenes/Battle/Roguelike mode/camera_2d.gd" id="2_misr5"]
+[ext_resource type="PackedScene" uid="uid://bxu06msr42ii2" path="res://Scenes/Battle/Coin/coin story.tscn" id="4_ik6ei"]
+[ext_resource type="PackedScene" uid="uid://c272m6ttm7i7u" path="res://Scenes/Battle/Level Goals/teleport.tscn" id="5_i48ov"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Level1Map" parent="." instance=ExtResource("1_e46yv")]
+
+[node name="Yasir" parent="." instance=ExtResource("1_sc6jc")]
+position = Vector2(372, 305)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("Target")]
+position = Vector2(572, 323)
+script = ExtResource("2_misr5")
+Target = NodePath("../Target")
+
+[node name="Target" type="Node2D" parent="."]
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(219, 83)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(-240, 90)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(761, 107)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(233, 771)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(-328, 781)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(852, 771)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(289, 1413)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(289, 1837)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("4_ik6ei")]
+position = Vector2(306, 2671)
+
+[node name="Teleport" parent="." instance=ExtResource("5_i48ov")]
+position = Vector2(281, 2780)
+Next = "Level 2"

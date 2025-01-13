@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c272m6ttm7i7u"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Level Goals/teleport.gd" id="1_bj1o8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgwom"]
+size = Vector2(61, 67)
+
+[node name="Teleport" type="Area2D"]
+script = ExtResource("1_bj1o8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 62.0
+offset_bottom = 67.0
+color = Color(0.135339, 0.676782, 0.546121, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31.5, 34.5)
+shape = SubResource("RectangleShape2D_mgwom")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

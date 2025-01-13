@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxu06msr42ii2"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Coin/coin_story.gd" id="1_b3irw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtbwe"]
+size = Vector2(27, 43)
+
+[node name="Coin" type="Node2D"]
+script = ExtResource("1_b3irw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 25.0
+offset_bottom = 40.0
+color = Color(0.788258, 0.643457, 0.0268011, 1)
+
+[node name="Coin" type="Area2D" parent="." groups=["COIN"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
+position = Vector2(12.5, 19.5)
+shape = SubResource("RectangleShape2D_xtbwe")
+
+[connection signal="area_entered" from="Coin" to="." method="_on_coin_area_entered"]

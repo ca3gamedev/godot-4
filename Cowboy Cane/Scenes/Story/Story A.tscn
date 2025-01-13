@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl4jur5u7d5qg"]
+
+[ext_resource type="Texture2D" uid="uid://c4ulw7fx384mu" path="res://2D/Story/tmp/01.png" id="1_llgka"]
+[ext_resource type="Texture2D" uid="uid://dxa1m1k103eil" path="res://2D/Story/tmp/02.png" id="2_sphfj"]
+[ext_resource type="Texture2D" uid="uid://c8cxlws3frqv3" path="res://2D/Story/tmp/03.png" id="3_u056p"]
+[ext_resource type="Texture2D" uid="uid://b0q0d8w8l38jf" path="res://2D/Story/tmp/04.png" id="4_1x18q"]
+[ext_resource type="Texture2D" uid="uid://nxxtdw2e3g7j" path="res://2D/Story/tmp/05.png" id="5_mnrqr"]
+[ext_resource type="Texture2D" uid="uid://bgnwgluwcoaxf" path="res://2D/Story/tmp/06.png" id="6_72gkg"]
+[ext_resource type="Texture2D" uid="uid://bgq7ti56rjmc6" path="res://2D/Story/tmp/07.png" id="7_om3be"]
+[ext_resource type="Texture2D" uid="uid://ccb3xgabxjlts" path="res://2D/Story/tmp/08.png" id="8_ye6hw"]
+[ext_resource type="PackedScene" uid="uid://cqrnk43yqhf4y" path="res://Scenes/Story/text A.tscn" id="9_hrv38"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hs77r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_llgka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sphfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u056p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1x18q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mnrqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_72gkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_om3be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ye6hw")
+}],
+"loop": true,
+"name": &"story A",
+"speed": 5.0
+}]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Story" type="AnimatedSprite2D" parent="."]
+position = Vector2(581, 310)
+sprite_frames = SubResource("SpriteFrames_hs77r")
+animation = &"story A"
+
+[node name="Story2" type="SubViewportContainer" parent="."]
+offset_left = 340.0
+offset_top = 484.0
+offset_right = 755.0
+offset_bottom = 599.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Story2"]
+handle_input_locally = false
+size = Vector2i(415, 115)
+render_target_update_mode = 4
+
+[node name="Text" parent="Story2/SubViewport" instance=ExtResource("9_hrv38")]
+Next = "Level 1"
