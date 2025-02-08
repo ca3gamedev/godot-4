@@ -22,3 +22,8 @@ func END():
 
 func _on_anim_animation_finished(anim_name):
 	END()
+
+
+func _on_hitbox_hit_body_entered(body):
+	if body.is_in_group("ENEMY"):
+		body.HIT()

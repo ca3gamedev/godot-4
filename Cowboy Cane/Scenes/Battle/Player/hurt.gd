@@ -16,6 +16,7 @@ func Start():
 func HIT():
 	%FSM.current = %FSM.get_node("HURT")
 	%FSM.current.Start()
+	Variables.HP -= 5
 	Variables.GUI.HIT()
 
 func _on_hitbox_area_entered(area):

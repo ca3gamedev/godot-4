@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3l1hoegnyi57"]
 
-[ext_resource type="AudioStream" uid="uid://d2am53becvnir" path="res://Music/NAT KING COLE    ANSIEDAD HD.mp3" id="1_fvrdy"]
+[ext_resource type="AudioStream" uid="uid://chcg85grs7jcc" path="res://Music/Battle Theme 01.ogg" id="1_fvrdy"]
 [ext_resource type="Script" path="res://Scenes/Battle/Music/music.gd" id="1_ouy2f"]
 
 [node name="Music" type="Node"]
 script = ExtResource("1_ouy2f")
 
-[node name="Ansiedad" type="AudioStreamPlayer" parent="."]
+[node name="Battle Theme01" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_fvrdy")
 volume_db = -10.024

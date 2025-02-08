@@ -25,6 +25,6 @@ offset_right = 1035.0
 offset_bottom = 565.0
 text = "GO BACK"
 script = ExtResource("1_3a7ea")
-Next = "res://Scenes/Menues/Title/title.tscn"
+Next = "Title"
 
 [connection signal="pressed" from="Continue" to="Continue" method="_on_pressed"]

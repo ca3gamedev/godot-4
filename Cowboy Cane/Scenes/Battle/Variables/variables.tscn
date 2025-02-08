@@ -4,3 +4,4 @@
 
 [node name="Variables" type="Node"]
 script = ExtResource("1_ikfus")
+HP = 100

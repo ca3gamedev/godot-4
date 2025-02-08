@@ -1,28 +1,11 @@
-res://Scenes/Dungeon/Dungeons/Levels/Egypt/01.tscn
-res://Scenes/Dungeon/Dungeons/dungeon.gd
-res://Scenes/Dungeon/Dungeons/Egypt/Ground levels/01.tscn
-res://Scenes/Dungeon/Player/flor.tscn
 res://Scenes/Menues/title.tscn
 res://Scenes/Battle/Variables/combat_data.tscn
 res://Scenes/Battle/Variables/data_path.tscn
 res://Scenes/Root/root.tscn
 res://Scenes/Battle/battle.tscn
 res://Scenes/Dungeon/Dungeons/GUI/dungeon_gui.tscn
-res://Scenes/Dungeon/Player/FSM/idle.gd
-res://Scenes/Dungeon/Player/FSM/walk.gd
-res://Scenes/Battle/Variables/data_path.gd
-res://Scenes/Battle/Variables/combat_data.gd
-res://Scenes/Menues/title.gd
-res://Scenes/Root/root.gd
+res://Scenes/Dungeon/Dungeons/Egypt/Ground levels/01.tscn
+res://Scenes/Dungeon/Player/flor.tscn
 res://Scenes/Battle/Transition/transition.tscn
-res://Scenes/Battle/Transition/transition.gd
 res://Scenes/Battle/Overlay/overlay.tscn
-res://Scenes/Battle/Players/Pacifica/FSM/idle.gd
-res://Scenes/Battle/Players/Pacifica/FSM/walk.gd
-res://Scenes/Battle/Enemies/enemy_manager.gd
-res://Scenes/Battle/Enemies/Enemies/0.gd
-res://Scenes/Battle/Enemies/Enemies/1.gd
-res://Scenes/Battle/Enemies/Enemies/2.gd
-res://Scenes/Battle/Overlay/overlay.gd
 res://Scenes/Battle/Overlay/buttlefly.tscn
-res://Scenes/Battle/Overlay/buttlefly.gd

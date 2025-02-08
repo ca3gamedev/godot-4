@@ -1,0 +1,179 @@
+[gd_scene load_steps=29 format=3 uid="uid://qotrj83v8seq"]
+
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/slime.gd" id="1_i4nby"]
+[ext_resource type="PackedScene" uid="uid://kiwdjijl0m6c" path="res://3D/enemies/slime/slime.glb" id="1_xoyak"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/slime/fsm.gd" id="2_n345n"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/wait.gd" id="3_ba2t6"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/idle.gd" id="5_u2f7v"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/walk.gd" id="6_mpay8"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/attack.gd" id="7_2rgo5"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/attackbox.gd" id="8_4dim1"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/hurt.gd" id="8_4ja13"]
+[ext_resource type="Script" path="res://Scenes/Battle/Enemies/die.gd" id="9_n62wn"]
+[ext_resource type="PackedScene" uid="uid://dly0y3uvbua7x" path="res://Scenes/Battle/Enemies/hp_3d.tscn" id="10_1pu7x"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ldml2"]
+height = 3.66417
+radius = 1.23717
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5e4s2"]
+animation = &"ATTACK"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_riioy"]
+animation = &"DEAD"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_arp4q"]
+animation = &"HURT"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wsucx"]
+animation = &"IDLE"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y8f7m"]
+animation = &"IDLE"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_owbdp"]
+animation = &"WALK"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_qxnu3"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_wsucx")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_y8f7m")
+blend_point_1/pos = Vector2(0, 0.5)
+blend_point_2/node = SubResource("AnimationNodeAnimation_owbdp")
+blend_point_2/pos = Vector2(0.5, 0)
+snap = Vector2(0.5, 0.5)
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7sfoi"]
+advance_mode = 2
+advance_condition = &"hurt"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_an5bq"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w71ip"]
+advance_mode = 2
+advance_condition = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vt5nt"]
+advance_mode = 2
+advance_condition = &"hurt"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h8w20"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f6tch"]
+advance_mode = 2
+advance_condition = &"dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rr2an"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s1wcx"]
+states/ATTACK/node = SubResource("AnimationNodeAnimation_5e4s2")
+states/ATTACK/position = Vector2(510.667, 51.3333)
+states/DEAD/node = SubResource("AnimationNodeAnimation_riioy")
+states/DEAD/position = Vector2(236, 158)
+states/HURT/node = SubResource("AnimationNodeAnimation_arp4q")
+states/HURT/position = Vector2(502.667, 175.778)
+states/MOVE/node = SubResource("AnimationNodeBlendSpace2D_qxnu3")
+states/MOVE/position = Vector2(336, 51.926)
+states/Start/position = Vector2(201.333, 50.6667)
+transitions = ["ATTACK", "HURT", SubResource("AnimationNodeStateMachineTransition_7sfoi"), "ATTACK", "MOVE", SubResource("AnimationNodeStateMachineTransition_an5bq"), "MOVE", "ATTACK", SubResource("AnimationNodeStateMachineTransition_w71ip"), "MOVE", "HURT", SubResource("AnimationNodeStateMachineTransition_vt5nt"), "HURT", "MOVE", SubResource("AnimationNodeStateMachineTransition_h8w20"), "MOVE", "DEAD", SubResource("AnimationNodeStateMachineTransition_f6tch"), "Start", "MOVE", SubResource("AnimationNodeStateMachineTransition_rr2an")]
+graph_offset = Vector2(-89.5754, -14.6027)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_40kll"]
+height = 3.30476
+radius = 7.87535
+
+[node name="slime" type="CharacterBody3D" groups=["ENEMY"]]
+script = ExtResource("1_i4nby")
+HP = 20
+
+[node name="lookat" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="slime" parent="." instance=ExtResource("1_xoyak")]
+unique_name_in_owner = true
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.422868, 0)
+
+[node name="Skeleton3D" parent="slime/Armature" index="0"]
+bones/0/position = Vector3(0.176877, -0.542833, 0.00590129)
+bones/0/rotation = Quaternion(-0.000555743, -0.000148264, -0.00679803, 0.999977)
+bones/1/rotation = Quaternion(0.000269956, -0.00119998, -0.0242403, 0.999705)
+bones/2/position = Vector3(1.30217e-05, -1.08335, -0.000373079)
+bones/4/rotation = Quaternion(-0.230402, -0.133659, -0.0465898, 0.962746)
+bones/5/rotation = Quaternion(0.205558, 0.771413, 0.583416, -0.149308)
+bones/6/rotation = Quaternion(-0.271033, 0.101963, 0.0240423, 0.956852)
+bones/8/rotation = Quaternion(-0.315481, 0.0375927, -0.0193735, 0.947989)
+bones/10/rotation = Quaternion(-0.347592, 0.0188129, -0.00705863, 0.937431)
+bones/12/rotation = Quaternion(-0.293723, 0.0187751, 0.00869199, 0.955667)
+bones/14/rotation = Quaternion(-0.292321, 0.00982036, 0.0402447, 0.955423)
+
+[node name="AnimationPlayer" parent="slime" index="1"]
+autoplay = "IDLE"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["ENEMY"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.441, 0)
+shape = SubResource("CylinderShape3D_ldml2")
+
+[node name="Ani" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%slime")
+tree_root = SubResource("AnimationNodeStateMachine_s1wcx")
+anim_player = NodePath("../slime/AnimationPlayer")
+parameters/conditions/attack = false
+parameters/conditions/dead = false
+parameters/conditions/hurt = false
+parameters/MOVE/blend_position = Vector2(0, 0)
+
+[node name="FSM" type="Node" parent="." node_paths=PackedStringArray("current")]
+unique_name_in_owner = true
+script = ExtResource("2_n345n")
+current = NodePath("WAIT")
+walk_speed = 2.0
+
+[node name="WAIT" type="Node" parent="FSM"]
+script = ExtResource("3_ba2t6")
+
+[node name="IDLE" type="Node" parent="FSM"]
+script = ExtResource("5_u2f7v")
+
+[node name="WALK" type="Node" parent="FSM" node_paths=PackedStringArray("Root")]
+script = ExtResource("6_mpay8")
+Root = NodePath("../..")
+
+[node name="ATTACK" type="Node" parent="FSM"]
+script = ExtResource("7_2rgo5")
+
+[node name="HURT" type="Node" parent="FSM"]
+script = ExtResource("8_4ja13")
+
+[node name="DIE" type="Node" parent="FSM"]
+script = ExtResource("9_n62wn")
+
+[node name="WALK" type="Timer" parent="."]
+
+[node name="ATTACK" type="Timer" parent="."]
+
+[node name="Agent" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+
+[node name="ATTACKBOX" type="Area3D" parent="."]
+script = ExtResource("8_4dim1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ATTACKBOX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17406, 0)
+shape = SubResource("CylinderShape3D_40kll")
+
+[node name="HP3D" parent="." instance=ExtResource("10_1pu7x")]
+transform = Transform3D(0.994106, 0, -0.108416, 0, 1, 0, 0.108416, 0, 0.994106, 0, 0.900551, 0.40809)
+
+[connection signal="animation_finished" from="Ani" to="FSM/ATTACK" method="_on_ani_animation_finished"]
+[connection signal="timeout" from="WALK" to="FSM/WALK" method="_on_walk_timeout"]
+[connection signal="timeout" from="ATTACK" to="FSM/ATTACK" method="_on_attack_timeout"]
+[connection signal="body_entered" from="ATTACKBOX" to="ATTACKBOX" method="_on_body_entered"]
+[connection signal="body_exited" from="ATTACKBOX" to="ATTACKBOX" method="_on_body_exited"]
+
+[editable path="slime"]

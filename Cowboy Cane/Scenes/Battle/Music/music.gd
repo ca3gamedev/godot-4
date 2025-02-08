@@ -3,7 +3,7 @@ extends Node
 func Play(song):
 	
 	match (song):
-		"Test" : pass
+		"Battle01" : $"Battle Theme01".play()
 
 func Stop():
-	$Ansiedad.stop()
+	$"Battle Theme01".stop()
