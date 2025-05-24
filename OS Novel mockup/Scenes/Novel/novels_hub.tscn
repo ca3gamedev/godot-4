@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://gn7hju6uhj8k"]
+
+[ext_resource type="Texture2D" uid="uid://iir6k0e128j3" path="res://2D/2D backgrounds/novels.png" id="1_7pcdp"]
+[ext_resource type="Script" path="res://Scenes/Novel/ButtonNovel.gd" id="2_adusc"]
+[ext_resource type="Texture2D" uid="uid://bru4hhkfkrxhp" path="res://2D/GUI/frame.png" id="3_bo13l"]
+[ext_resource type="PackedScene" uid="uid://3veuxbfjrb4m" path="res://Scenes/Novel/page_frame.tscn" id="4_eij55"]
+[ext_resource type="PackedScene" uid="uid://c7crtrydadeuo" path="res://Scenes/Common GUI/return.tscn" id="5_60cvd"]
+
+[node name="NovelsHub" type="Node2D"]
+
+[node name="Novels" type="Sprite2D" parent="."]
+position = Vector2(574.5, 324.25)
+scale = Vector2(1.0182, 0.975771)
+texture = ExtResource("1_7pcdp")
+metadata/_edit_lock_ = true
+
+[node name="Chapter1" type="TextureButton" parent="."]
+offset_left = 119.0
+offset_top = 249.0
+offset_right = 188.0
+offset_bottom = 521.0
+script = ExtResource("2_adusc")
+
+[node name="Frame" type="Sprite2D" parent="Chapter1"]
+position = Vector2(33, 131.5)
+scale = Vector2(1.21875, 19.5625)
+texture = ExtResource("3_bo13l")
+
+[node name="Chapter2" type="TextureButton" parent="."]
+offset_left = 214.0
+offset_top = 252.0
+offset_right = 283.0
+offset_bottom = 524.0
+script = ExtResource("2_adusc")
+page = 2
+
+[node name="Frame" type="Sprite2D" parent="Chapter2"]
+position = Vector2(33, 131.5)
+scale = Vector2(1.21875, 19.5625)
+texture = ExtResource("3_bo13l")
+
+[node name="Chapter3" type="TextureButton" parent="."]
+offset_left = 312.0
+offset_top = 255.0
+offset_right = 381.0
+offset_bottom = 527.0
+script = ExtResource("2_adusc")
+page = 3
+
+[node name="Frame" type="Sprite2D" parent="Chapter3"]
+position = Vector2(33, 131.5)
+scale = Vector2(1.21875, 19.5625)
+texture = ExtResource("3_bo13l")
+
+[node name="PageFrame" parent="." instance=ExtResource("4_eij55")]
+unique_name_in_owner = true
+position = Vector2(184, 655)
+
+[node name="Return" parent="." instance=ExtResource("5_60cvd")]
+
+[connection signal="mouse_entered" from="Chapter1" to="Chapter1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Chapter1" to="Chapter1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Chapter1" to="Chapter1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Chapter2" to="Chapter2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Chapter2" to="Chapter2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Chapter2" to="Chapter2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Chapter3" to="Chapter3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Chapter3" to="Chapter3" method="_on_mouse_exited"]
+[connection signal="pressed" from="Chapter3" to="Chapter3" method="_on_pressed"]

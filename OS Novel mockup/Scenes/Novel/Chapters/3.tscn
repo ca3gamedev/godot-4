@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bpqixic6nkrhj"]
+
+[node name="3" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 38.0
+offset_top = 129.0
+offset_right = 686.0
+offset_bottom = 578.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Usagi’s breath came in sharp bursts as she sprinted down the street, her mind racing. The shadow moved again, this time vanishing around the corner of an old, deserted building. Her instincts kicked in, the familiar rush of adrenaline filling her veins.
+
+\"Moon Prism Power, Make Up!\" she cried, the transformation words spilling from her lips as she raised her hand toward the sky. In a flash of light, her Sailor Moon form materialized, her fuku shimmering in the moonlight. The familiar warmth of the Moon Crystal pulsed at her chest, giving her strength.
+
+Luna appeared beside her, eyes wide with concern but also trust. \"Be careful, Usagi,\" she warned, her voice tinged with urgency. \"This energy—it’s not something we’ve dealt with before.\"
+
+Sailor Moon nodded, her gaze fixed on the dark alley ahead. The air around her felt charged, like the world was holding its breath. Every step she took seemed to echo louder in the silence of the night.
+
+She turned the corner, her heart pounding as she scanned the shadows. \"Who’s there?\" she called out, her voice steady despite the knot in her stomach. \"Show yourself!\"
+
+For a moment, there was nothing but the sound of her own breath and the distant hum of the city. But then, a figure stepped out from the darkness—tall, cloaked in black, with eyes that gleamed like cold silver.
+
+Sailor Moon froze. There was something hauntingly familiar about those eyes. A wave of recognition washed over her, though she couldn’t place it.
+
+The figure tilted their head, a faint smirk playing at the corners of their lips. \"Ah, Sailor Moon,\" they said, their voice low and mocking. \"It’s been a long time, hasn’t it?\"
+
+Her blood ran cold. Something inside her stirred—an old, forgotten memory pushing its way to the surface. Something deep within her that, for the first time in years, was starting to make sense."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 30.0
+offset_right = 713.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.0596694, 1.51371e-05, 0.266106, 1)
+theme_override_font_sizes/font_size = 30
+text = "Sailor Moon: Echoes of the Moonlit Past (Page 3)"

@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqvdam3bbyyh8"]
+
+[ext_resource type="Script" path="res://Menu Scenes/Tutorial/tutorial.gd" id="1_avwtc"]
+[ext_resource type="Texture2D" uid="uid://1lhjhn84vcsc" path="res://2D/GUI/tutorial.png" id="1_ltcwm"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_avwtc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 1167.0
+offset_bottom = 656.0
+color = Color(0.0558818, 0.0128995, 0.23442, 1)
+metadata/_edit_lock_ = true
+
+[node name="Tutorial" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.478431)
+position = Vector2(310, 331)
+scale = Vector2(1.71459, 1.68571)
+texture = ExtResource("1_ltcwm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 594.0
+offset_top = 64.0
+offset_right = 1044.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.544154, 0.735156, 0.998348, 1)
+theme_override_font_sizes/font_size = 50
+text = "Comiket Simulator"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 645.0
+offset_top = 178.0
+offset_right = 1000.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(0.803325, 0.803325, 0.803325, 1)
+theme_override_font_sizes/font_size = 25
+text = "This is more a mockup to test
+random ideas on how 
+Should I make the ideas I
+have in my mind."
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 589.0
+offset_top = 541.0
+offset_right = 858.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 20
+text = "Use the arrow keys to move
+or press the mobile D pad"
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 972.0
+offset_top = 550.0
+offset_right = 1099.0
+offset_bottom = 613.0
+text = "CONTINUE"
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

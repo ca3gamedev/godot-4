@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bi1yy1nj3rik6"
+path="res://.godot/imported/Celestial Gathering.mp3-f506c9a2ad55e3a70f16c778ce3bbba3.mp3str"
+
+[deps]
+
+source_file="res://Music/Celestial Gathering.mp3"
+dest_files=["res://.godot/imported/Celestial Gathering.mp3-f506c9a2ad55e3a70f16c778ce3bbba3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

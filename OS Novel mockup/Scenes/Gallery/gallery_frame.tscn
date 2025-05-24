@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwb2e5k5lno4k"]
+
+[ext_resource type="Script" path="res://Scenes/Gallery/gallery_frame.gd" id="1_fetsg"]
+[ext_resource type="PackedScene" uid="uid://c1loj6akh6piy" path="res://Scenes/Gallery/gallery.tscn" id="1_oup6y"]
+[ext_resource type="PackedScene" uid="uid://yrms6wnqes2c" path="res://Scenes/Gallery/gallery Bigger.tscn" id="2_ft38n"]
+[ext_resource type="Texture2D" uid="uid://ibban66kvsnu" path="res://2D/gallery/desktop.png" id="4_d5f77"]
+[ext_resource type="PackedScene" uid="uid://c7crtrydadeuo" path="res://Scenes/Common GUI/return.tscn" id="5_m5t10"]
+
+[node name="GalleryFrame" type="Node2D"]
+script = ExtResource("1_fetsg")
+
+[node name="Desktop" type="Sprite2D" parent="."]
+position = Vector2(582.5, 319)
+scale = Vector2(1.02166, 1)
+texture = ExtResource("4_d5f77")
+metadata/_edit_lock_ = true
+
+[node name="Gallery" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(58, 76)
+rotation = -0.322886
+skew = 0.280998
+
+[node name="Gallery2" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(58, 283)
+rotation = -0.322886
+skew = 0.361283
+myframe = 1
+
+[node name="Gallery3" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(267, 59)
+myframe = 2
+
+[node name="Gallery4" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(413, 54)
+myframe = 4
+
+[node name="Gallery5" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(597, 53)
+myframe = 5
+
+[node name="Gallery6" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(848, 255)
+skew = 0.0802851
+myframe = 6
+
+[node name="Gallery7" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(235, 419)
+skew = 0.361283
+myframe = 7
+
+[node name="Gallery8" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(377, 418)
+skew = 0.16057
+myframe = 8
+
+[node name="Gallery9" parent="." instance=ExtResource("1_oup6y")]
+position = Vector2(622, 420)
+skew = -0.240855
+
+[node name="Bigger" parent="." instance=ExtResource("2_ft38n")]
+visible = false
+position = Vector2(88, 3)
+
+[node name="Return" parent="." instance=ExtResource("5_m5t10")]

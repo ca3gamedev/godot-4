@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bvpx6lgv6k1jh"]
+
+[node name="1" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 22.0
+offset_top = 125.0
+offset_right = 670.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "
+The moonlight bathed Tokyo in a soft, silver glow, casting long shadows across the quiet streets. In a cozy apartment, Usagi Tsukino sat by the window, her eyes tracing the curves of the glowing orb above. There was a strange quiet in her heart tonight—like something she couldn't quite remember but felt she should. Her fingers brushed against the locket that hung around her neck, a gift from Mamoru, its surface cool against her skin.
+
+She had saved the world countless times, fought alongside her friends, and even experienced the loss of loved ones. Yet, tonight, as she stared at the stars, she felt an eerie pull toward something beyond her understanding.
+
+\"Why do I feel like there's something I should remember?\" she whispered to herself, her voice lost in the stillness of the night.
+
+The sound of footsteps from the hallway broke her reverie. She quickly wiped the stray tear that had escaped her eye. The door creaked open, revealing her ever-present guardian, Luna. The black cat’s golden eyes glinted with concern as she stepped into the room.
+
+\"Usagi, I know you’re thinking about the past, but you need to focus on the present,\" Luna said softly, her voice a quiet reminder of everything they had been through together.
+
+Usagi turned toward her, offering a small smile that didn’t quite reach her eyes. \"I know, Luna. But sometimes, it feels like there’s more to the story. Like I’m missing something important.\"
+
+Luna hopped onto the windowsill, gazing out into the night. \"The past is always a mystery, Usagi. But sometimes, you just have to trust that the future will make sense of it.\"
+
+But Usagi couldn’t shake the feeling that something was coming—something tied to the moon. Something she couldn’t yet remember."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 24.0
+offset_right = 620.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.0596694, 1.51371e-05, 0.266106, 1)
+theme_override_font_sizes/font_size = 30
+text = "Sailor Moon: Echoes of the Moonlit Past"

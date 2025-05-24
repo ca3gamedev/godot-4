@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfou35qpd8m3l"]
+
+[ext_resource type="AudioStream" uid="uid://xhhtw588brdb" path="res://Music/Celestial Dreams.mp3" id="1_ornd2"]
+[ext_resource type="Script" path="res://Scenes/Music/music.gd" id="1_wkux1"]
+[ext_resource type="AudioStream" uid="uid://bi1yy1nj3rik6" path="res://Music/Celestial Gathering.mp3" id="2_ui0xs"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_wkux1")
+
+[node name="Song1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ornd2")
+volume_db = -20.0
+
+[node name="Song2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ui0xs")
+volume_db = -20.0
+
+[connection signal="finished" from="Song1" to="." method="_on_song_1_finished"]
+[connection signal="finished" from="Song2" to="." method="_on_song_2_finished"]
