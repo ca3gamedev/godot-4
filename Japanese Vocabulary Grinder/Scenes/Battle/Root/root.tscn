@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw1sy7m6d0sge"]
+
+[ext_resource type="PackedScene" uid="uid://dcyuoskkw4tyl" path="res://Scenes/Battle/Player/Player.tscn" id="1_dn0rv"]
+[ext_resource type="Script" uid="uid://cndye00kj24ag" path="res://Scenes/Battle/Managers/coins.gd" id="2_4i7af"]
+[ext_resource type="PackedScene" uid="uid://c5h56iwwk37ek" path="res://Scenes/Battle/Items/Coin/coin.tscn" id="3_fvhhu"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_dn0rv")]
+position = Vector2(201, 145)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(201, 150)
+zoom = Vector2(2, 2)
+
+[node name="Coins" type="Node2D" parent="."]
+script = ExtResource("2_4i7af")
+Coin = ExtResource("3_fvhhu")

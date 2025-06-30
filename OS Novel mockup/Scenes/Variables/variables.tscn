@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0vrkng6tanor"]
-
-[ext_resource type="Script" path="res://Scenes/Variables/variables.gd" id="1_paf34"]
-
-[node name="Variables" type="Node"]
-script = ExtResource("1_paf34")
-coins = 100
-max_manga = 0

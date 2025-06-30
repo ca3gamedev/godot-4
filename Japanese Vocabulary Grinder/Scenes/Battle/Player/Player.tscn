@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcyuoskkw4tyl"]
+
+[ext_resource type="Texture2D" uid="uid://bs3i6x4jwp36g" path="res://2D/pistolero/WALK/front/front walk1.png" id="1_dqt2y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnx0d"]
+radius = 4.12311
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="FrontWalk1" type="Sprite2D" parent="."]
+position = Vector2(1, -10)
+texture = ExtResource("1_dqt2y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mnx0d")

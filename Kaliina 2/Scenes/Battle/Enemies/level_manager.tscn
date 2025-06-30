@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3t403rijtu7f"]
-
-[ext_resource type="PackedScene" uid="uid://pv1v3wbvongi" path="res://Scenes/Battle/Enemies/Levels/Scene/Levels/01/01.tscn" id="1_pt5r1"]
-
-[node name="LevelManager" type="Node2D"]
-
-[node name="Battle" parent="." instance=ExtResource("1_pt5r1")]
