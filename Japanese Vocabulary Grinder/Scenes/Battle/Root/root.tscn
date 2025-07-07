@@ -1,18 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw1sy7m6d0sge"]
+[gd_scene load_steps=13 format=3 uid="uid://cw1sy7m6d0sge"]
 
+[ext_resource type="Texture2D" uid="uid://nfseali3rtsb" path="res://2D/Tiles/empty.png" id="1_4pvt3"]
 [ext_resource type="PackedScene" uid="uid://dcyuoskkw4tyl" path="res://Scenes/Battle/Player/Player.tscn" id="1_dn0rv"]
 [ext_resource type="Script" uid="uid://cndye00kj24ag" path="res://Scenes/Battle/Managers/coins.gd" id="2_4i7af"]
+[ext_resource type="Script" uid="uid://degg5oa578lxb" path="res://Scenes/Battle/Root/camera_2d.gd" id="2_qu7hk"]
+[ext_resource type="Texture2D" uid="uid://e1ilqpwiqs0x" path="res://2D/Tiles/tile basic.png" id="2_ti8j5"]
 [ext_resource type="PackedScene" uid="uid://c5h56iwwk37ek" path="res://Scenes/Battle/Items/Coin/coin.tscn" id="3_fvhhu"]
+[ext_resource type="Script" uid="uid://gcelhgps3a5u" path="res://Scenes/Battle/Root/dungeon.gd" id="3_ti8j5"]
+[ext_resource type="PackedScene" uid="uid://bg4p3f8ey2nkd" path="res://Scenes/Battle/Mira/lock_mira.tscn" id="4_2b3gx"]
+[ext_resource type="Script" uid="uid://b3lo7huhv43vg" path="res://Scenes/Battle/Managers/bullets.gd" id="5_v4rq0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8olkg"]
+texture = ExtResource("1_4pvt3")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_anhs0"]
+texture = ExtResource("2_ti8j5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d1uhc"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_8olkg")
+sources/1 = SubResource("TileSetAtlasSource_anhs0")
 
 [node name="Root" type="Node2D"]
+
+[node name="Dungeon" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+z_index = -800
+tile_set = SubResource("TileSet_d1uhc")
+script = ExtResource("3_ti8j5")
 
 [node name="Player" parent="." instance=ExtResource("1_dn0rv")]
 position = Vector2(201, 145)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(201, 150)
 zoom = Vector2(2, 2)
+script = ExtResource("2_qu7hk")
 
 [node name="Coins" type="Node2D" parent="."]
 script = ExtResource("2_4i7af")
 Coin = ExtResource("3_fvhhu")
+spawn = 20
+
+[node name="Bullets" type="Node2D" parent="."]
+script = ExtResource("5_v4rq0")
+
+[node name="LockMira" parent="." instance=ExtResource("4_2b3gx")]
+unique_name_in_owner = true
+position = Vector2(130, 66)

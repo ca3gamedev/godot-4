@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd86t37uistr3"]
+
+[ext_resource type="Script" uid="uid://bseq4n7vwmlak" path="res://Scenes/Change Scene/ChangeScene.gd" id="1_osiwi"]
+[ext_resource type="PackedScene" uid="uid://cw1sy7m6d0sge" path="res://Scenes/Battle/Root/root.tscn" id="2_osiwi"]
+[ext_resource type="PackedScene" uid="uid://ca4k6osrttxdl" path="res://Scenes/Battle/Word GUI/word.tscn" id="3_wovcp"]
+
+[node name="Parent" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1162.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 1)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 40.0
+offset_top = 89.0
+offset_right = 680.0
+offset_bottom = 569.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(640, 480)
+render_target_update_mode = 4
+script = ExtResource("1_osiwi")
+
+[node name="Root" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_osiwi")]
+
+[node name="Word" parent="." instance=ExtResource("3_wovcp")]

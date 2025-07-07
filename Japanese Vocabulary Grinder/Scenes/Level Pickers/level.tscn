@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccgv2f73y24r3"]
+
+[ext_resource type="Script" uid="uid://g8mq7vhtin2c" path="res://Scenes/Level Pickers/level.gd" id="1_rnji7"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_rnji7")
+select_color = Color(0.188288, 0.307766, 0.669775, 1)
+
+[node name="LevelName" type="Label" parent="."]
+offset_left = -109.0
+offset_top = -20.0
+offset_right = 138.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "LEVEL 60"
+horizontal_alignment = 1
+
+[node name="Words" type="Label" parent="."]
+offset_left = 140.0
+offset_top = -10.0
+offset_right = 221.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.103744, 0.103744, 0.103744, 1)
+text = "Words : 60"
+
+[node name="Correct" type="Label" parent="."]
+offset_left = 281.0
+offset_top = -10.0
+offset_right = 370.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.051667, 0.237328, 0.223896, 1)
+text = "Correct : 60"
+
+[node name="Wrong" type="Label" parent="."]
+offset_left = 382.0
+offset_top = -10.0
+offset_right = 464.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.267989, 0.00294698, 0.0504895, 1)
+text = "Wrong : 60"

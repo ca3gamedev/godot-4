@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7le37q2yulrs"]
+
+[ext_resource type="Script" uid="uid://ctmtxugolyey0" path="res://Scenes/Level Pickers/levels.gd" id="1_2y0fp"]
+[ext_resource type="PackedScene" uid="uid://ccgv2f73y24r3" path="res://Scenes/Level Pickers/level.tscn" id="2_d2ipx"]
+[ext_resource type="Texture2D" uid="uid://bicbsg05rdcgx" path="res://2D/SVG/level selection.svg" id="3_7ob6v"]
+
+[node name="LevelsPickers" type="Node2D"]
+
+[node name="Back" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
+z_index = -500
+z_as_relative = false
+offset_left = -25.0
+offset_top = -101.0
+offset_right = 707.0
+offset_bottom = 556.0
+pivot_offset = Vector2(35, 102)
+
+[node name="Levels" type="Node2D" parent="."]
+position = Vector2(123, 42)
+script = ExtResource("1_2y0fp")
+selector = ExtResource("2_d2ipx")
+y_off = 50.0
+
+[node name="LevelSelection" type="Sprite2D" parent="Levels"]
+position = Vector2(14.5, 0)
+scale = Vector2(0.413395, 0.556604)
+texture = ExtResource("3_7ob6v")
+
+[node name="Clear" type="Timer" parent="Levels"]
+one_shot = true
+
+[node name="Camera" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(121, 41)
+
+[node name="Camera2D" type="Camera2D" parent="Camera"]
+position = Vector2(315, 186)
+
+[connection signal="timeout" from="Levels/Clear" to="Levels" method="_on_clear_timeout"]

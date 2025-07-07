@@ -1,15 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcyuoskkw4tyl"]
+[gd_scene load_steps=10 format=3 uid="uid://dcyuoskkw4tyl"]
 
+[ext_resource type="Script" uid="uid://bpjdqqqvrolsg" path="res://Scenes/Battle/Player/player.gd" id="1_16lna"]
 [ext_resource type="Texture2D" uid="uid://bs3i6x4jwp36g" path="res://2D/pistolero/WALK/front/front walk1.png" id="1_dqt2y"]
+[ext_resource type="Script" uid="uid://dp4ffteelhnsy" path="res://Scenes/Battle/Player/FSM/fsm.gd" id="2_coerg"]
+[ext_resource type="Script" uid="uid://ckosyqic1a3sf" path="res://Scenes/Battle/Player/FSM/data.gd" id="3_1a2vn"]
+[ext_resource type="Script" uid="uid://bbag3t2umf105" path="res://Scenes/Battle/Player/FSM/idle.gd" id="3_bud8b"]
+[ext_resource type="Script" uid="uid://b3odn7qptth83" path="res://Scenes/Battle/Player/FSM/input.gd" id="3_c71q5"]
+[ext_resource type="Script" uid="uid://c4heea4e23x1h" path="res://Scenes/Battle/Player/FSM/walk.gd" id="4_wu7c6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mnx0d"]
 radius = 4.12311
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16lna"]
+size = Vector2(10, 24)
+
+[node name="Player" type="CharacterBody2D" groups=["PLAYER"]]
+script = ExtResource("1_16lna")
 
 [node name="FrontWalk1" type="Sprite2D" parent="."]
-position = Vector2(1, -10)
+position = Vector2(0, 8)
 texture = ExtResource("1_dqt2y")
+offset = Vector2(1, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_mnx0d")
+
+[node name="FSM" type="Node" parent="." node_paths=PackedStringArray("current")]
+unique_name_in_owner = true
+script = ExtResource("2_coerg")
+current = NodePath("IDLE")
+
+[node name="DATA" type="Node" parent="FSM"]
+unique_name_in_owner = true
+script = ExtResource("3_1a2vn")
+walk_speed = 50.0
+
+[node name="INPUT" type="Node" parent="FSM"]
+unique_name_in_owner = true
+script = ExtResource("3_c71q5")
+
+[node name="IDLE" type="Node" parent="FSM"]
+script = ExtResource("3_bud8b")
+
+[node name="WALK" type="Node" parent="FSM"]
+script = ExtResource("4_wu7c6")
+
+[node name="HITBOX" type="Area2D" parent="." groups=["PLAYER"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HITBOX"]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_16lna")
+
+[node name="Tired" type="Timer" parent="."]

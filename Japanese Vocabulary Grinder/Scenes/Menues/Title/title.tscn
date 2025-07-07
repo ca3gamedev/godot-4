@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6qcmi301qtpi"]
+
+[ext_resource type="Script" uid="uid://cajjf2ejotl4a" path="res://Scenes/Menues/Title/title.gd" id="1_mcccm"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_mcccm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 1157.0
+offset_bottom = 656.0
+color = Color(0.0780307, 0.225329, 0.314483, 1)
+metadata/_edit_lock_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 377.0
+offset_top = 230.0
+offset_right = 677.0
+offset_bottom = 436.0
+rotation = -0.368338
+theme_override_colors/font_color = Color(0.941386, 0.781373, 0.0103454, 1)
+theme_override_colors/font_outline_color = Color(0.931279, 0.113242, 0.0140657, 1)
+theme_override_constants/outline_size = 80
+theme_override_font_sizes/font_size = 150
+text = "語彙"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 322.0
+offset_right = 1144.0
+offset_bottom = 522.0
+theme_override_colors/font_color = Color(0.131206, 0.687683, 0.753993, 1)
+theme_override_colors/font_outline_color = Color(0.0797736, 0.0715227, 0.290992, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 80
+text = "GOI GRINDER"
+horizontal_alignment = 1
+
+[node name="NewGame" type="Button" parent="."]
+offset_left = 359.0
+offset_top = 508.0
+offset_right = 525.0
+offset_bottom = 561.0
+text = "START GAME"
+
+[node name="OptionsGame" type="Button" parent="."]
+offset_left = 557.0
+offset_top = 509.0
+offset_right = 723.0
+offset_bottom = 562.0
+text = "OPTIONS"
+
+[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="OptionsGame" to="." method="_on_options_game_pressed"]

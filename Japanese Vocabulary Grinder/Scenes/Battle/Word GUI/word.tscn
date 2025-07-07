@@ -1,0 +1,305 @@
+[gd_scene load_steps=9 format=3 uid="uid://ca4k6osrttxdl"]
+
+[ext_resource type="Script" uid="uid://bo5d5axif7c7q" path="res://Scenes/Battle/Word GUI/word.gd" id="1_heob6"]
+[ext_resource type="Texture2D" uid="uid://8d37xim6bd6h" path="res://2D/SVG/rectangle.svg" id="2_p0c5h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heob6"]
+bg_color = Color(0.808137, 3.32102e-06, 4.81307e-07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.953422, 0.586705, 2.31028e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0c5h"]
+bg_color = Color(0.980392, 0.647059, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02xnl"]
+bg_color = Color(0.662745, 0.101961, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rt781"]
+bg_color = Color(0.2046, 0.93, 0.24087, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2mrh"]
+bg_color = Color(0.142049, 0.247884, 0.537699, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tl5cm"]
+bg_color = Color(0.171864, 0.675343, 0.723933, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_blend = true
+
+[node name="Word" type="Node2D"]
+script = ExtResource("1_heob6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 693.0
+offset_top = 276.0
+offset_right = 1119.0
+offset_bottom = 618.0
+
+[node name="JapaneseWord" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 728.0
+offset_top = 287.0
+offset_right = 1096.0
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(0.690272, 0, 0.196483, 1)
+theme_override_font_sizes/font_size = 30
+text = "JAPANESE WORD"
+horizontal_alignment = 1
+
+[node name="JapaneseWordKana" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 728.0
+offset_top = 339.0
+offset_right = 1099.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0.556766, 0.263877, 0.274181, 1)
+theme_override_font_sizes/font_size = 20
+text = "JAPANESE WORD"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 726.0
+offset_top = 388.0
+offset_right = 766.0
+offset_bottom = 411.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "A:"
+
+[node name="AWord" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 763.0
+offset_top = 388.0
+offset_right = 1090.0
+offset_bottom = 437.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "First Word
+First"
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 725.0
+offset_top = 446.0
+offset_right = 765.0
+offset_bottom = 469.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "B:"
+
+[node name="BWord" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 762.0
+offset_top = 446.0
+offset_right = 1087.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "First Word
+Second"
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 725.0
+offset_top = 500.0
+offset_right = 765.0
+offset_bottom = 523.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "C:"
+
+[node name="CWord" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 761.0
+offset_top = 499.0
+offset_right = 1093.0
+offset_bottom = 548.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "Third Word
+Third"
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="CanvasLayer"]
+offset_left = 722.0
+offset_top = 553.0
+offset_right = 762.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "D:"
+
+[node name="DWord" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 759.0
+offset_top = 553.0
+offset_right = 1089.0
+offset_bottom = 602.0
+theme_override_colors/font_color = Color(0.161078, 0.285456, 0.559804, 1)
+text = "Fourth Word
+Fourth"
+autowrap_mode = 3
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = 691.0
+offset_top = 195.0
+offset_right = 1119.0
+offset_bottom = 262.0
+color = Color(0.193702, 0.195794, 0.450497, 1)
+
+[node name="Result" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 720.0
+offset_top = 207.0
+offset_right = 1098.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 30
+text = "WAITING..."
+horizontal_alignment = 1
+
+[node name="EnemyHP" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 716.0
+offset_top = 152.0
+offset_right = 1010.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.945329, 0.529465, 0.0631439, 1)
+theme_override_colors/font_outline_color = Color(0.452937, 0.239759, 0.0120961, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/background = SubResource("StyleBoxFlat_heob6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p0c5h")
+value = 50.0
+
+[node name="PlayerHP" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 83.0
+offset_top = 596.0
+offset_right = 273.0
+offset_bottom = 623.0
+theme_override_colors/font_color = Color(0.945329, 0.529465, 0.0631439, 1)
+theme_override_colors/font_outline_color = Color(0.452937, 0.239759, 0.0120961, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/background = SubResource("StyleBoxFlat_02xnl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rt781")
+value = 50.0
+
+[node name="Stamina" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 369.0
+offset_top = 591.0
+offset_right = 559.0
+offset_bottom = 618.0
+theme_override_colors/font_color = Color(0.945329, 0.529465, 0.0631439, 1)
+theme_override_colors/font_outline_color = Color(0.452937, 0.239759, 0.0120961, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/background = SubResource("StyleBoxFlat_d2mrh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tl5cm")
+value = 50.0
+
+[node name="Label5" type="Label" parent="CanvasLayer"]
+offset_left = 1021.0
+offset_top = 150.0
+offset_right = 1119.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Enemy HP"
+
+[node name="Label6" type="Label" parent="CanvasLayer"]
+offset_left = 285.0
+offset_top = 579.0
+offset_right = 340.0
+offset_bottom = 634.0
+theme_override_colors/font_color = Color(0.273199, 0.825042, 0.714542, 1)
+theme_override_colors/font_outline_color = Color(0.0657187, 0.209709, 0.120944, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 40
+text = "HP"
+
+[node name="Label10" type="Label" parent="CanvasLayer"]
+offset_left = 575.0
+offset_top = 574.0
+offset_right = 630.0
+offset_bottom = 629.0
+theme_override_colors/font_color = Color(0.375852, 0.774581, 0.960156, 1)
+theme_override_colors/font_outline_color = Color(0.094096, 0.14314, 0.396327, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 40
+text = "ST"
+
+[node name="Rectangle" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+position = Vector2(905, 579)
+scale = Vector2(1.50943, 0.647059)
+texture = ExtResource("2_p0c5h")
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer"]
+offset_left = 691.0
+offset_top = 18.0
+offset_right = 1123.0
+offset_bottom = 136.0
+
+[node name="Label7" type="Label" parent="CanvasLayer"]
+offset_left = 720.0
+offset_top = 35.0
+offset_right = 823.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.188785, 0.0864156, 0.450647, 1)
+text = "FOR REVIEW :"
+
+[node name="ReviewWords" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 850.0
+offset_top = 35.0
+offset_right = 953.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.188785, 0.0864156, 0.450647, 1)
+text = "100"
+
+[node name="Label8" type="Label" parent="CanvasLayer"]
+offset_left = 720.0
+offset_top = 65.0
+offset_right = 823.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.0442798, 0.220192, 0.16608, 1)
+text = "CORRECT :"
+
+[node name="CorrectWords" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 850.0
+offset_top = 65.0
+offset_right = 953.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.0419446, 0.217163, 0.194407, 1)
+text = "0"
+
+[node name="Label9" type="Label" parent="CanvasLayer"]
+offset_left = 720.0
+offset_top = 95.0
+offset_right = 823.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.336673, 0.0913725, 0.0085313, 1)
+text = "WRONG :"
+
+[node name="WrongWords" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 850.0
+offset_top = 95.0
+offset_right = 953.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.358137, 0.0400761, 0.0809217, 1)
+text = "0"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Reset" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Reset" to="." method="_on_reset_timeout"]

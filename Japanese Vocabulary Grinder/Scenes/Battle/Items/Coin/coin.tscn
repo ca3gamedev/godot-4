@@ -1,7 +1,9 @@
-[gd_scene load_steps=33 format=3 uid="uid://c5h56iwwk37ek"]
+[gd_scene load_steps=37 format=3 uid="uid://c5h56iwwk37ek"]
 
 [ext_resource type="Texture2D" uid="uid://be52crch7jet1" path="res://2D/Items/basic coin/coin_Nueva animación_01.png" id="1_7pwfe"]
+[ext_resource type="Script" uid="uid://h8oo2mhws6fg" path="res://Scenes/Battle/Items/Coin/coin.gd" id="1_gopfj"]
 [ext_resource type="Texture2D" uid="uid://cn3i6ejrlmmkl" path="res://2D/Items/basic coin/coin_Nueva animación_02.png" id="2_327cr"]
+[ext_resource type="PackedScene" uid="uid://dd3tphmfkrdjm" path="res://Scenes/Battle/Bullet/bullet.tscn" id="2_i0aqn"]
 [ext_resource type="Texture2D" uid="uid://c03wxpxd3v5em" path="res://2D/Items/basic coin/coin_Nueva animación_03.png" id="3_y4mir"]
 [ext_resource type="Texture2D" uid="uid://cis45u5l5i8d4" path="res://2D/Items/basic coin/coin_Nueva animación_04.png" id="4_4wgi7"]
 [ext_resource type="Texture2D" uid="uid://dm0rr70w20cvc" path="res://2D/Items/basic coin/coin_Nueva animación_05.png" id="5_okqdm"]
@@ -30,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://can37t5ic4ic" path="res://2D/Items/basic coin/coin_Nueva animación_28.png" id="28_iq2yt"]
 [ext_resource type="Texture2D" uid="uid://cnjtlsbr566fy" path="res://2D/Items/basic coin/coin_Nueva animación_29.png" id="29_kd61h"]
 [ext_resource type="Texture2D" uid="uid://cx32vqmyaklh1" path="res://2D/Items/basic coin/coin_Nueva animación_30.png" id="30_a15no"]
+[ext_resource type="Texture2D" uid="uid://crkrigfpppris" path="res://2D/SVG/circle.svg" id="33_ffbd6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pgksk"]
 animations = [{
@@ -132,7 +135,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_lh8n1"]
 radius = 9.05539
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_q2dxq"]
+radius = 132.306
+
 [node name="Coin" type="CharacterBody2D"]
+script = ExtResource("1_gopfj")
+HP = 100
+Bullet = ExtResource("2_i0aqn")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pgksk")
@@ -141,3 +150,22 @@ frame_progress = 0.69363
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lh8n1")
+
+[node name="CoinArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoinArea"]
+shape = SubResource("CircleShape2D_q2dxq")
+
+[node name="SpawnBullet" type="Timer" parent="."]
+one_shot = true
+
+[node name="Circle" type="Sprite2D" parent="."]
+z_index = -20
+z_as_relative = false
+position = Vector2(-9.05991e-06, 5.24521e-06)
+scale = Vector2(0.849673, 0.852564)
+texture = ExtResource("33_ffbd6")
+
+[connection signal="body_entered" from="CoinArea" to="." method="_on_coin_area_body_entered"]
+[connection signal="body_exited" from="CoinArea" to="." method="_on_coin_area_body_exited"]
+[connection signal="timeout" from="SpawnBullet" to="." method="_on_spawn_bullet_timeout"]

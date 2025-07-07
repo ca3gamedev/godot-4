@@ -1,8 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf4i8y6o5cdht"]
+[gd_scene load_steps=5 format=3 uid="uid://bf4i8y6o5cdht"]
 
+[ext_resource type="Script" uid="uid://c8dfram4v25tb" path="res://Scenes/Battle/Variables/variables.gd" id="1_uxvhv"]
 [ext_resource type="Script" uid="uid://dyhxxn8tt5lbg" path="res://Scenes/Battle/Variables/code.gd" id="1_wl5g0"]
+[ext_resource type="Script" uid="uid://2p1mofgytln1" path="res://Scenes/Battle/Variables/paths.gd" id="3_51opl"]
+[ext_resource type="Script" uid="uid://65acokn2bjhj" path="res://Scenes/Battle/Variables/options.gd" id="4_vceqm"]
 
 [node name="Variables" type="Node"]
+script = ExtResource("1_uxvhv")
+Stamina = 100.0
 
 [node name="Code" type="Node" parent="."]
 script = ExtResource("1_wl5g0")
+
+[node name="Paths" type="Node" parent="."]
+script = ExtResource("3_51opl")
+LevelSelection = "res://Scenes/Level Pickers/Level Picker Root.tscn"
+Battle = "res://Scenes/Battle/Root/Battle Root.tscn"
+NewGame = "res://Scenes/Menues/NewGame/new_game.tscn"
+Tutorial = "res://Scenes/Tutorial/tutorial.tscn"
+Title = "res://Scenes/Menues/Title/title.tscn"
+Options = "res://Scenes/Options/options.tscn"
+
+[node name="Options" type="Node" parent="."]
+script = ExtResource("4_vceqm")

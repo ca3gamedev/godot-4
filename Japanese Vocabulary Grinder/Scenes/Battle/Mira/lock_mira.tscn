@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg4p3f8ey2nkd"]
+
+[ext_resource type="Texture2D" uid="uid://ykhsoqumomv" path="res://2D/Tiles/lock mira.png" id="1_3lgtr"]
+[ext_resource type="Script" uid="uid://df2qlnpqb4vj4" path="res://Scenes/Battle/Mira/lock_mira.gd" id="2_gr1d6"]
+
+[node name="LockMira" type="Sprite2D"]
+texture = ExtResource("1_3lgtr")
+script = ExtResource("2_gr1d6")

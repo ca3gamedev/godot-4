@@ -1,0 +1,353 @@
+[gd_scene load_steps=35 format=3 uid="uid://dd5v7loon4k0o"]
+
+[ext_resource type="Script" uid="uid://4vlhgsdsrleb" path="res://Scenes/Tutorial/tutorial.gd" id="1_bu5db"]
+[ext_resource type="Texture2D" uid="uid://bwtwap3jmajk0" path="res://2D/pistolero/KICK/Front Diagonal/front diagonal3.png" id="1_oc6bj"]
+[ext_resource type="Texture2D" uid="uid://be52crch7jet1" path="res://2D/Items/basic coin/coin_Nueva animación_01.png" id="2_n138o"]
+[ext_resource type="Texture2D" uid="uid://cn3i6ejrlmmkl" path="res://2D/Items/basic coin/coin_Nueva animación_02.png" id="3_bu5db"]
+[ext_resource type="Texture2D" uid="uid://c03wxpxd3v5em" path="res://2D/Items/basic coin/coin_Nueva animación_03.png" id="4_iy1n2"]
+[ext_resource type="Texture2D" uid="uid://cis45u5l5i8d4" path="res://2D/Items/basic coin/coin_Nueva animación_04.png" id="5_tmlxl"]
+[ext_resource type="Texture2D" uid="uid://dm0rr70w20cvc" path="res://2D/Items/basic coin/coin_Nueva animación_05.png" id="6_owuam"]
+[ext_resource type="Texture2D" uid="uid://b6vvjsa6nt7t4" path="res://2D/Items/basic coin/coin_Nueva animación_06.png" id="7_0k0xk"]
+[ext_resource type="Texture2D" uid="uid://4gonlhha4ip1" path="res://2D/Items/basic coin/coin_Nueva animación_07.png" id="8_y3e03"]
+[ext_resource type="Texture2D" uid="uid://c3tjk0anxhws4" path="res://2D/Items/basic coin/coin_Nueva animación_08.png" id="9_yl63t"]
+[ext_resource type="Texture2D" uid="uid://b8gqr1rsyhasg" path="res://2D/Items/basic coin/coin_Nueva animación_09.png" id="10_h1ysv"]
+[ext_resource type="Texture2D" uid="uid://bbm86eovk3e0i" path="res://2D/Items/basic coin/coin_Nueva animación_10.png" id="11_lqnmj"]
+[ext_resource type="Texture2D" uid="uid://4u32rnqkhebi" path="res://2D/Items/basic coin/coin_Nueva animación_11.png" id="12_k80gw"]
+[ext_resource type="Texture2D" uid="uid://cxtj5k10s3hks" path="res://2D/Items/basic coin/coin_Nueva animación_12.png" id="13_ocoud"]
+[ext_resource type="Texture2D" uid="uid://b713ovv3s0sv8" path="res://2D/Items/basic coin/coin_Nueva animación_13.png" id="14_hm67q"]
+[ext_resource type="Texture2D" uid="uid://2epuevuy5lvi" path="res://2D/Items/basic coin/coin_Nueva animación_14.png" id="15_6bjiy"]
+[ext_resource type="Texture2D" uid="uid://crwifv08rns3w" path="res://2D/Items/basic coin/coin_Nueva animación_15.png" id="16_vae86"]
+[ext_resource type="Texture2D" uid="uid://cwr88lk8et1cv" path="res://2D/Items/basic coin/coin_Nueva animación_16.png" id="17_5cc4l"]
+[ext_resource type="Texture2D" uid="uid://ct3lge48xdpyk" path="res://2D/Items/basic coin/coin_Nueva animación_17.png" id="18_12mlg"]
+[ext_resource type="Texture2D" uid="uid://ckkfxvglswk0a" path="res://2D/Items/basic coin/coin_Nueva animación_18.png" id="19_iykd5"]
+[ext_resource type="Texture2D" uid="uid://b56lslqgaxdcp" path="res://2D/Items/basic coin/coin_Nueva animación_19.png" id="20_bnqov"]
+[ext_resource type="Texture2D" uid="uid://cexp71rpypejc" path="res://2D/Items/basic coin/coin_Nueva animación_20.png" id="21_tualj"]
+[ext_resource type="Texture2D" uid="uid://b17au4lqcshdm" path="res://2D/Items/basic coin/coin_Nueva animación_21.png" id="22_w5pm4"]
+[ext_resource type="Texture2D" uid="uid://vcfmbqnr42cx" path="res://2D/Items/basic coin/coin_Nueva animación_22.png" id="23_30gu2"]
+[ext_resource type="Texture2D" uid="uid://34ynn355lss" path="res://2D/Items/basic coin/coin_Nueva animación_23.png" id="24_iw1py"]
+[ext_resource type="Texture2D" uid="uid://erl7n3vv42at" path="res://2D/Items/basic coin/coin_Nueva animación_24.png" id="25_jcipq"]
+[ext_resource type="Texture2D" uid="uid://lkysf3p7wi0o" path="res://2D/Items/basic coin/coin_Nueva animación_25.png" id="26_yep4s"]
+[ext_resource type="Texture2D" uid="uid://biqkxo66rl7h5" path="res://2D/Items/basic coin/coin_Nueva animación_26.png" id="27_sifmd"]
+[ext_resource type="Texture2D" uid="uid://dt3rkfxr62xfg" path="res://2D/Items/basic coin/coin_Nueva animación_27.png" id="28_uq8aa"]
+[ext_resource type="Texture2D" uid="uid://can37t5ic4ic" path="res://2D/Items/basic coin/coin_Nueva animación_28.png" id="29_riswq"]
+[ext_resource type="Texture2D" uid="uid://cnjtlsbr566fy" path="res://2D/Items/basic coin/coin_Nueva animación_29.png" id="30_2425i"]
+[ext_resource type="Texture2D" uid="uid://cx32vqmyaklh1" path="res://2D/Items/basic coin/coin_Nueva animación_30.png" id="31_u5umu"]
+[ext_resource type="Texture2D" uid="uid://crkrigfpppris" path="res://2D/SVG/circle.svg" id="32_o2bix"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7sxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n138o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bu5db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iy1n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tmlxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_owuam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0k0xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y3e03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yl63t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h1ysv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lqnmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_k80gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ocoud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hm67q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6bjiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vae86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5cc4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_12mlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_iykd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_bnqov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tualj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_w5pm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_30gu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_iw1py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jcipq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yep4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sifmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_uq8aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_riswq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2425i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u5umu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_bu5db")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -271.0
+offset_top = -206.0
+offset_right = 5609.0
+offset_bottom = 2782.0
+color = Color(0.112468, 0.225493, 0.284535, 1)
+metadata/_edit_lock_ = true
+
+[node name="SpacingBlock" type="Node2D" parent="."]
+position = Vector2(4617, 2122)
+metadata/_edit_group_ = true
+
+[node name="Spacing" type="ColorRect" parent="SpacingBlock"]
+offset_left = -600.0
+offset_top = -333.0
+offset_right = 584.0
+offset_bottom = 341.0
+color = Color(0.0650588, 0.0568457, 0.123797, 1)
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(577, 326)
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_left = -595.0
+offset_top = -336.0
+offset_right = 589.0
+offset_bottom = 338.0
+color = Color(0.0650588, 0.0568457, 0.123797, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background2" type="Node2D" parent="."]
+position = Vector2(1859, 347)
+
+[node name="ColorRect" type="ColorRect" parent="Background2"]
+offset_left = -595.0
+offset_top = -336.0
+offset_right = 589.0
+offset_bottom = 338.0
+color = Color(0.0650588, 0.0568457, 0.123797, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background3" type="Node2D" parent="."]
+position = Vector2(1780, 1241)
+
+[node name="ColorRect" type="ColorRect" parent="Background3"]
+offset_left = -595.0
+offset_top = -336.0
+offset_right = 589.0
+offset_bottom = 338.0
+color = Color(0.0650588, 0.0568457, 0.123797, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background4" type="Node2D" parent="."]
+position = Vector2(3217, 1228)
+
+[node name="ColorRect" type="ColorRect" parent="Background4"]
+offset_left = -595.0
+offset_top = -336.0
+offset_right = 589.0
+offset_bottom = 338.0
+color = Color(0.0650588, 0.0568457, 0.123797, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background5" type="Node2D" parent="."]
+position = Vector2(4679, 1211)
+
+[node name="ColorRect" type="ColorRect" parent="Background5"]
+offset_left = -595.0
+offset_top = -336.0
+offset_right = 589.0
+offset_bottom = 338.0
+color = Color(0.0650588, 0.0568457, 0.123797, 1)
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 326)
+
+[node name="Pages" type="Node2D" parent="."]
+
+[node name="0" type="Node2D" parent="Pages"]
+position = Vector2(580, 321)
+
+[node name="Label" type="Label" parent="Pages/0"]
+offset_left = -234.0
+offset_top = -120.0
+offset_right = 247.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 100
+text = "TUTORIAL"
+
+[node name="Label2" type="Label" parent="Pages/0"]
+offset_left = -542.0
+offset_top = 204.0
+offset_right = -93.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(0.436681, 0.962897, 0.872276, 1)
+theme_override_font_sizes/font_size = 30
+text = "Press right to continue.
+Press left to go to previous."
+
+[node name="1" type="Node2D" parent="Pages"]
+position = Vector2(1860, 344)
+
+[node name="Label" type="Label" parent="Pages/1"]
+offset_left = -489.0
+offset_top = -255.0
+offset_right = 14.0
+offset_bottom = -26.0
+theme_override_font_sizes/font_size = 40
+text = "The goal of the game is
+to grind the 6k flashcard deck
+until  you can do a perfect
+run."
+
+[node name="Label2" type="Label" parent="Pages/1"]
+offset_left = -43.0
+offset_top = 152.0
+offset_right = 463.0
+offset_bottom = 253.0
+theme_override_font_sizes/font_size = 35
+text = "Game is set around 60 chunks
+of 100 words each one."
+
+[node name="2" type="Node2D" parent="Pages"]
+position = Vector2(1786, 1244)
+
+[node name="FrontDiagonal3" type="Sprite2D" parent="Pages/2"]
+position = Vector2(232, 106)
+scale = Vector2(10, 10)
+texture = ExtResource("1_oc6bj")
+
+[node name="Label" type="Label" parent="Pages/2"]
+offset_left = -507.0
+offset_top = -273.0
+offset_right = -467.0
+offset_bottom = -250.0
+theme_override_font_sizes/font_size = 30
+text = "You control Tom Smith.
+You use the arrow keys to move him around.
+There's an stamina bar that is depleted once you get near the
+enemies."
+
+[node name="Label2" type="Label" parent="Pages/2"]
+offset_left = -511.0
+offset_top = 118.0
+offset_right = -124.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 30
+text = "When the stamina is
+depleted, your turn ends
+and enemy turns begins."
+
+[node name="3" type="Node2D" parent="Pages"]
+position = Vector2(3214, 1228)
+
+[node name="Label" type="Label" parent="Pages/3"]
+offset_left = -501.0
+offset_top = -254.0
+offset_right = -461.0
+offset_bottom = -212.0
+theme_override_font_sizes/font_size = 30
+text = " Enemies are in a magic circle.
+You can only attack them,
+using A, B, C, D options buttons.
+
+Getting inside this circle 
+depletes your stamina, so be
+careful.
+
+They have an HP you need
+to deplete and can shoot you
+magical bullets to hurt you."
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pages/3"]
+position = Vector2(334, 22)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_w7sxn")
+autoplay = "default"
+frame_progress = 0.693261
+
+[node name="Circle" type="Sprite2D" parent="Pages/3"]
+position = Vector2(328, 21)
+texture = ExtResource("32_o2bix")
+
+[node name="4" type="Node2D" parent="Pages"]
+position = Vector2(4683, 1212)
+
+[node name="Label" type="Label" parent="Pages/4"]
+offset_left = -511.0
+offset_top = -267.0
+offset_right = 470.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 30
+text = "You have to pick the correct choice of
+Japanese meaning in English.
+
+This is is meant to grind your passive
+Vocabulary, nothing else.
+
+A good choice can hurt the enemy HP.
+A bad choice has no effect except
+increasing your mistake counter.
+
+The mistake counter bar only is saved once the number of 
+words reviewed is bigger than your last record of the same number."
+
+[node name="5" type="Node2D" parent="Pages"]
+position = Vector2(4622, 2131)
+
+[node name="Label" type="Label" parent="Pages/5"]
+offset_left = -460.0
+offset_top = 159.0
+offset_right = -101.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 40
+text = "Press A to return..."

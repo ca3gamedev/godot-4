@@ -1,0 +1,128 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqf1sob2old2v"]
+
+[ext_resource type="Script" uid="uid://d31rn6ecx047q" path="res://Scenes/Menues/NewGame/new_game.gd" id="1_me2pq"]
+[ext_resource type="Texture2D" uid="uid://bwp4qrd8ugmne" path="res://2D/SVG/rectangle simple.svg" id="2_31tem"]
+
+[node name="NewGame" type="Node2D"]
+script = ExtResource("1_me2pq")
+unable_color = Color(0.28936, 0.460498, 0.487534, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 1157.0
+offset_bottom = 656.0
+color = Color(0.0780307, 0.225329, 0.314483, 1)
+metadata/_edit_lock_ = true
+
+[node name="RectangleSimple" type="Sprite2D" parent="."]
+position = Vector2(299, 95)
+scale = Vector2(0.760234, 0.676471)
+texture = ExtResource("2_31tem")
+
+[node name="Options" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="0" type="Node2D" parent="Options"]
+position = Vector2(271, 93)
+
+[node name="label" type="Label" parent="Options/0"]
+offset_left = -100.0
+offset_top = -22.0
+offset_right = 117.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 30
+text = "FILE 1"
+horizontal_alignment = 1
+
+[node name="1" type="Node2D" parent="Options"]
+position = Vector2(275, 196)
+
+[node name="label" type="Label" parent="Options/1"]
+offset_left = -100.0
+offset_top = -22.0
+offset_right = 117.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 30
+text = "FILE 2"
+horizontal_alignment = 1
+
+[node name="2" type="Node2D" parent="Options"]
+position = Vector2(277, 312)
+
+[node name="label" type="Label" parent="Options/2"]
+offset_left = -100.0
+offset_top = -22.0
+offset_right = 117.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 30
+text = "FILE 3"
+horizontal_alignment = 1
+
+[node name="3" type="Node2D" parent="Options"]
+position = Vector2(279, 417)
+
+[node name="label" type="Label" parent="Options/3"]
+offset_left = -100.0
+offset_top = -22.0
+offset_right = 117.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 30
+text = "FILE 4"
+horizontal_alignment = 1
+
+[node name="SecondMenue" type="Node2D" parent="."]
+position = Vector2(493, 54)
+
+[node name="ColorRect" type="ColorRect" parent="SecondMenue"]
+offset_right = 240.0
+offset_bottom = 174.0
+color = Color(0.12549, 0.141176, 0.254902, 0.709804)
+
+[node name="RectangleSimple" type="Sprite2D" parent="SecondMenue"]
+position = Vector2(118.5, 43.5)
+scale = Vector2(0.646199, 0.715686)
+texture = ExtResource("2_31tem")
+metadata/_edit_lock_ = true
+
+[node name="0" type="Node2D" parent="SecondMenue"]
+position = Vector2(113, 50)
+
+[node name="label" type="Label" parent="SecondMenue/0"]
+offset_left = -92.0
+offset_top = -26.0
+offset_right = 99.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
+text = "New Game"
+horizontal_alignment = 1
+
+[node name="1" type="Node2D" parent="SecondMenue"]
+position = Vector2(117, 131)
+
+[node name="label" type="Label" parent="SecondMenue/1"]
+offset_left = -94.0
+offset_top = -25.0
+offset_right = 93.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
+text = "Load Game"
+horizontal_alignment = 1
+
+[node name="Tutorial" type="Button" parent="."]
+offset_left = 936.0
+offset_top = 532.0
+offset_right = 1088.0
+offset_bottom = 597.0
+text = "TUTORIAL"
+
+[node name="Return" type="Button" parent="."]
+offset_left = 937.0
+offset_top = 456.0
+offset_right = 1089.0
+offset_bottom = 521.0
+text = "RETURN"
+
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
