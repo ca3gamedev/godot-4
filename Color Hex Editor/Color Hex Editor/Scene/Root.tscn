@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://4pykvx77t25r"]
+
+[ext_resource type="Script" uid="uid://ca6xalvjvkxaa" path="res://Scene/Root/open.gd" id="1_56bmw"]
+[ext_resource type="Script" uid="uid://dbba6tkuc0jv" path="res://Scene/Root/data.gd" id="2_68nop"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Code" type="Node" parent="."]
+
+[node name="Open" type="Node" parent="Code"]
+script = ExtResource("1_56bmw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Open" type="Button" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 89.0
+offset_bottom = 40.0
+text = "OPEN"
+
+[node name="OpenDialog" type="FileDialog" parent="CanvasLayer"]
+unique_name_in_owner = true
+title = "Open a File"
+initial_position = 1
+size = Vector2i(800, 550)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+
+[node name="OpenProgress" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 109.0
+offset_top = 12.0
+offset_right = 335.0
+offset_bottom = 43.0
+
+[node name="Data" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_68nop")
+
+[node name="HexGridContainer" type="GridContainer" parent="Data"]
+unique_name_in_owner = true
+offset_left = 43.0
+offset_top = 76.0
+offset_right = 1119.0
+offset_bottom = 603.0
+columns = 3
+
+[connection signal="pressed" from="CanvasLayer/Open" to="Code/Open" method="_on_open_pressed"]
+[connection signal="file_selected" from="CanvasLayer/OpenDialog" to="Code/Open" method="_on_open_dialog_file_selected"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1qhayqj1wyyf"]
+[gd_scene load_steps=2 format=3 uid="uid://d1qhayqj1wyyf"]
 
 [ext_resource type="Script" uid="uid://vg37rvxgtw46" path="res://Scenes/Options/options.gd" id="1_oxfvm"]
-[ext_resource type="Texture2D" uid="uid://qnb3bqdoa6no" path="res://2D/pistolero/WALK/front diagonal/front diagonal walk1.png" id="2_7ldl8"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_oxfvm")
@@ -29,12 +28,6 @@ offset_right = 1396.0
 offset_bottom = 777.0
 rotation = -0.546288
 color = Color(1, 1, 1, 0.462745)
-
-[node name="FrontDiagonalWalk1" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.403922)
-position = Vector2(595, 201)
-scale = Vector2(11, 11)
-texture = ExtResource("2_7ldl8")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 133.0
